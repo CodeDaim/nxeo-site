@@ -1584,3 +1584,4 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 .mailm ul{list-style:none;margin:0;padding:0;display:grid;gap:7px;color:var(--body)}
 .mailm li{display:flex;align-items:center;gap:8px;line-height:1.3}
 .mailm li::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+.mailm li{align-items:flex-start}.mailm li::before{margin-top:.45em}
