@@ -1347,3 +1347,8 @@ html.at-top .site-header .bar{box-shadow:none}
 .site-header.on-light .bar{background:linear-gradient(180deg,rgba(20,62,255,.9),rgba(0,46,254,.9));-webkit-backdrop-filter:blur(28px) saturate(140%);backdrop-filter:blur(28px) saturate(140%)}
 .site-header.on-dark .bar{background:rgba(255,255,255,.14);-webkit-backdrop-filter:blur(28px) saturate(170%);backdrop-filter:blur(28px) saturate(170%);box-shadow:0 18px 44px -20px rgba(0,20,120,.5)}
 html.at-top .site-header .bar{background:transparent;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none}
+/* header: een vloeiende kleurwissel, alleen effen kleur zodat hij kan overvloeien */
+.site-header .bar,.site-header.on-light .bar,.site-header.on-dark .bar{background-image:none;-webkit-backdrop-filter:blur(28px) saturate(160%);backdrop-filter:blur(28px) saturate(160%);transition:background-color 700ms var(--liquid),box-shadow 700ms var(--liquid),transform 420ms var(--liquid)}
+.site-header .bar,.site-header.on-light .bar{background-color:rgba(0,46,254,.9)}
+.site-header.on-dark .bar{background-color:rgba(255,255,255,.14)}
+html.at-top .site-header .bar{background-color:transparent;-webkit-backdrop-filter:none;backdrop-filter:none}
