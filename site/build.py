@@ -122,6 +122,7 @@ def build_page(lang,page):
     extra=[faq_schema(body)] if page=='faq' else []
     hdr,ftr=chrome(lang,page,d)
     doc=head(lang,page,d,extra)+hdr+'\n\n<main>\n'+body+'\n</main>\n\n'+ftr+'\n\n<script src="%s" defer></script>\n</body>\n</html>\n'%asset(d,'script.js')
+    if 'class="hero hero-c' in body or 'hero-c' in body: doc=doc.replace('<html lang=','<html class="at-top" lang=',1)
     doc=rewrite_links(doc,lang,d)
     doc=re.sub(r'{{(\w+)}}',lambda m:asset(d,'img/%s.png'%m.group(1)),doc)
     assert '{{' not in doc
