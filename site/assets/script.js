@@ -2,6 +2,11 @@
   // a fresh page starts at the top; back and forward keep their place
   try{var nav=performance.getEntriesByType('navigation')[0];if(nav&&nav.type==='navigate'&&!location.hash){window.scrollTo(0,0);}}catch(e){}
   var mnav=document.getElementById('mnav');
+  // on a page that opens with the blue block, the bar stays invisible until you scroll
+  if(document.querySelector('.hero-c')){
+    var atTop=function(){document.documentElement.classList.toggle('at-top',window.scrollY<24);};
+    atTop();window.addEventListener('scroll',atTop,{passive:true});
+  }
   function closeMenu(){mnav.classList.remove('is-open');}
 
   // In page jumps; links to a section on another page are plain links
