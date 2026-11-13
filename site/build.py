@@ -35,8 +35,13 @@ def href(from_dir,lang,page,frag=''):
     r=rel(from_dir,d+'index.html')
     return r+frag
 
+import hashlib
+def ver(path):
+    try: return '?v='+hashlib.md5(open(S+'assets/'+path,'rb').read()).hexdigest()[:8]
+    except OSError: return ''
 def asset(from_dir,path):
-    return ('/assets/'+path) if MODE=='prod' else rel(from_dir,'assets/'+path)
+    q=ver(path) if path.endswith(('.css','.js')) else ''
+    return (('/assets/'+path) if MODE=='prod' else rel(from_dir,'assets/'+path))+q
 
 def read(lang,name): return open(S+'content/%s/%s.html'%(lang,name)).read()
 
