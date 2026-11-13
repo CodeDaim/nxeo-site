@@ -1341,3 +1341,5 @@ html.vt .site-header{view-transition-name:site-header}
 @media (min-width:761px){.hero-c{padding-top:clamp(7.5rem,10vw,8.75rem)}}
 .site-header .bar{transition:background 420ms var(--liquid),box-shadow 420ms var(--liquid),border-color 420ms var(--liquid),transform 420ms var(--liquid)}
 html.at-top .site-header .bar{transform:translateY(12px)}
+.site-header .bar{border:0;box-shadow:0 18px 44px -18px rgba(0,46,254,.45)}
+html.at-top .site-header .bar{box-shadow:none}
