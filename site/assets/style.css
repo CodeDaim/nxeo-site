@@ -1676,3 +1676,11 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 .faq-teaser summary::after,.faq-teaser details[open] summary::after{content:"+";width:28px;height:28px;border:1px solid var(--line-2);border-radius:50%;background:transparent;color:var(--ink);display:grid;place-items:center;font-weight:400;font-size:1.1rem;transform:none;transition:background-color 150ms ease}
 .faq-teaser details[open] summary::after{content:"–"}
 .faq-teaser summary:hover::after{background-color:var(--blue-wash)}
+/* inklappen: alleen de bestaande animatie, geen tweede erbovenop */
+.faq-teaser details::details-content,.faq-teaser details[open]::details-content{block-size:auto;opacity:1;overflow:visible;transition:none}
+.faq-teaser details .body{overflow:hidden}
+.faq-teaser details{transition:none}
+/* plusje: blauw en dikker, zonder vlak of draaien */
+.faq-teaser summary::after,.faq-teaser details[open] summary::after{content:"";width:32px;height:32px;border:1.5px solid rgba(0,46,254,.28);background:linear-gradient(var(--blue),var(--blue)) center/12px 2.5px no-repeat,linear-gradient(var(--blue),var(--blue)) center/2.5px 12px no-repeat;transition:border-color 200ms ease}
+.faq-teaser details[open] summary::after{background:linear-gradient(var(--blue),var(--blue)) center/12px 2.5px no-repeat}
+.faq-teaser summary:hover::after{border-color:var(--blue);background-color:transparent}
