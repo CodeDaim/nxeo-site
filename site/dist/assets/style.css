@@ -1561,3 +1561,16 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 .bento2{grid-template-columns:repeat(3,minmax(0,1fr))}.bx,.bx-also,.bx-browser,.bx-text{min-width:0}
 @media (max-width:1000px){.bento2{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:760px){.bento2{grid-template-columns:minmax(0,1fr)}.bx-browser{flex:none}.bx-web .bx-text{flex:none}}
+/* wat je krijgt: terug naar strak en wit, kleur alleen als accent */
+.bx-web,.bx-lav,.bx-tint{background:var(--glass-strong,#fff);border:1px solid rgba(255,255,255,.9);color:var(--ink);box-shadow:var(--sh-soft)}
+.bx-web{padding:32px;gap:32px;align-items:stretch}
+.bx-web .bx-text{justify-content:center}
+.bx-web h4{color:var(--ink);font-size:clamp(1.4rem,2vw,1.7rem)}
+.bx-web p{color:var(--body);font-size:1rem}
+.bx-cms{margin-top:0;padding-top:24px}
+.bx-cms .k{color:var(--muted)}
+.bx-cms .m{background:#fff;box-shadow:0 1px 0 #fff inset,0 8px 18px -10px rgba(26,35,50,.3);border:1px solid rgba(26,35,50,.05)}
+.bx-web .bx-well{flex:1 1 52%;border-radius:var(--r);background:rgba(26,35,50,.035);box-shadow:inset 0 1px 3px rgba(26,35,50,.05);padding:28px;display:grid;align-content:center;min-width:0}
+.bx-browser{flex:none;align-self:auto;box-shadow:0 1px 0 #fff inset,0 18px 40px -18px rgba(26,35,50,.3)}
+.bx-lav .bx-art,.bx-tint .bx-art{background:rgba(26,35,50,.035);box-shadow:inset 0 1px 3px rgba(26,35,50,.05)}
+@media (max-width:760px){.bx-web{padding:24px;gap:24px}.bx-web .bx-well{padding:16px}}
