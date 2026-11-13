@@ -1367,3 +1367,10 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 .nav-pill{position:absolute;left:0;top:50%;height:36px;margin-top:-18px;width:0;border-radius:var(--pill);background:rgba(255,255,255,.16);box-shadow:0 1px 0 rgba(255,255,255,.28) inset,0 6px 16px -8px rgba(0,20,120,.45);opacity:0;pointer-events:none;z-index:0;transition:transform 460ms var(--liquid),width 460ms var(--liquid),opacity 260ms ease}
 .nav-pill.is-on{opacity:1}
 @media (prefers-reduced-motion:reduce){.nav-pill{transition:opacity 200ms ease}}
+/* rechterkant van de header: zelfde glijdende pil, en een knop die oplicht */
+.site-header .hdr-actions{position:relative;isolation:isolate;gap:.15rem}
+.site-header .hdr-actions .lang,.site-header .hdr-actions .hdr-contact{position:relative;z-index:1;border:0;border-radius:var(--pill);padding:.5rem .85rem;height:36px;display:inline-flex;align-items:center;background:transparent;color:rgba(255,255,255,.82);box-shadow:none;transition:color 260ms ease,transform 200ms var(--liquid)}
+.site-header .hdr-actions .lang:hover,.site-header .hdr-actions .hdr-contact:hover{color:#fff;background:transparent}
+.site-header .hdr-actions .hdr-cta{position:relative;z-index:1;margin-left:.45rem;transition:transform 320ms var(--liquid),box-shadow 320ms var(--liquid)}
+@media (hover:hover) and (pointer:fine){.site-header .hdr-actions .hdr-cta:hover{transform:translateY(-1px) scale(1.03);box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 0 0 5px rgba(255,255,255,.16),0 14px 30px -10px rgba(0,20,120,.55)}}
+.site-header .hdr-actions .hdr-cta:active{transform:scale(.96)}
