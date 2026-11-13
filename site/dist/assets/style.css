@@ -1654,3 +1654,4 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 .of2-more:hover .arr{transform:translateX(3px)}
 @media (max-width:960px){.of2{grid-template-columns:minmax(0,1fr);gap:32px}.of2-card{padding:28px 24px}}
 @media (max-width:560px){.of2-steps{grid-template-columns:minmax(0,1fr)}.of2-steps li{display:grid;grid-template-columns:110px 1fr;align-items:center;padding:16px 18px}.of2-steps span{margin:0}}
+@media (max-width:560px){.of2-steps li{grid-template-columns:118px 1fr;column-gap:8px}.of2-steps b{font-size:1.3rem;white-space:nowrap}}
