@@ -1574,3 +1574,13 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 .bx-browser{flex:none;align-self:auto;box-shadow:0 1px 0 #fff inset,0 18px 40px -18px rgba(26,35,50,.3)}
 .bx-lav .bx-art,.bx-tint .bx-art{background:rgba(26,35,50,.035);box-shadow:inset 0 1px 3px rgba(26,35,50,.05)}
 @media (max-width:760px){.bx-web{padding:24px;gap:24px}.bx-web .bx-well{padding:16px}}
+/* weekrapport als mailtje */
+.mailm{position:static;padding:16px 18px;display:grid;gap:10px;font-size:.85rem;border-radius:14px}
+.mailm .mh{display:flex;align-items:center;gap:10px}
+.mailm .mh img{width:24px;height:24px;border-radius:7px}
+.mailm .mh b{font-weight:600;color:var(--ink)}
+.mailm .mh span{margin-left:auto;color:var(--muted);font-size:.78rem}
+.mailm .ms{font-weight:600;color:var(--ink);font-size:.95rem}
+.mailm ul{list-style:none;margin:0;padding:0;display:grid;gap:7px;color:var(--body)}
+.mailm li{display:flex;align-items:center;gap:8px;line-height:1.3}
+.mailm li::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--blue)}
