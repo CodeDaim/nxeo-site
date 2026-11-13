@@ -1338,3 +1338,4 @@ html.at-top .site-header .bar{background:transparent;border-color:transparent;bo
 /* de naam staat alleen tijdens een paginawissel op de header, anders blokkeert hij de blur */
 .site-header{view-transition-name:none}
 html.vt .site-header{view-transition-name:site-header}
+@media (min-width:761px){.hero-c{padding-top:clamp(7.5rem,10vw,8.75rem)}}
