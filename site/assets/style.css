@@ -1260,3 +1260,6 @@ html.nm-open{overflow:hidden;scroll-behavior:auto}
 /* bovenaan een blauwe hero: de balk is onzichtbaar, alleen logo en links; bij scrollen wordt het glas */
 .site-header .bar{transition:background 420ms var(--liquid),box-shadow 420ms var(--liquid),border-color 420ms var(--liquid),backdrop-filter 420ms ease}
 html.at-top .site-header .bar{background:transparent;border-color:transparent;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none}
+/* het merkverloop uit het app icoon: alleen op de hero */
+:root{--blue-2:#4E6BFF}
+.hero-c{background:linear-gradient(135deg,#002EFE 0%,#4E6BFF 100%)}
