@@ -1830,3 +1830,5 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 .plans3 .plan .amount small{font-size:.9rem;flex:none}
 @media (max-width:900px){.plans3 .plan .amount{font-size:2.9rem}}
 @media (min-width:901px) and (max-width:1180px){.plans3 .plan .for{min-height:2.8em}.plans3 .plan{padding:32px 26px}}
+.pr-faq{padding-top:clamp(2rem,4vw,3.5rem)}
+.pr-strip{padding-bottom:0}
