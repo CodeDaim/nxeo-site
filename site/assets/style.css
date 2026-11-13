@@ -1444,3 +1444,6 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 .dark .btn-blue,.band-blue .btn-blue,.dark .btn-blue:hover,.band-blue .btn-blue:hover{background-color:#fff;background-image:none}
 .btn .arr{transition:transform 320ms var(--liquid)}
 @media (hover:none){.btn-blue:hover{transform:none}}
+/* knoppen tillen nergens op bij hover */
+.btn:hover,.btn-blue:hover,.site-header .hdr-actions .hdr-cta:hover{transform:none}
+.btn:active,.btn-blue:active,.site-header .hdr-actions .hdr-cta:active{transform:scale(.97)}
