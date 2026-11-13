@@ -91,7 +91,7 @@ def head(lang,page,from_dir,extra_schema):
             '<meta name="theme-color" content="#002EFE">\n<link rel="icon" href="%s" type="image/png">\n'
             '<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
             '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600;700;800&display=swap">\n'
-            '<link rel="stylesheet" href="%s">\n%s</head>\n<body>\n')%(
+            '<link rel="stylesheet" href="%s">\n<script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/assets/*"}}]},"eagerness":"moderate"}]}</script>\n%s</head>\n<body>\n')%(
             lang,html.escape(t['fpnote']),html.escape(t['pct']),html.escape(p['title']),html.escape(p['description']),abs_url(lang,page),alts,
             t['locale'],html.escape(p['title']),html.escape(p['description']),abs_url(lang,page),DOMAIN,asset(from_dir,'img/nxeo.png'),asset(from_dir,'style.css'),ld)
 

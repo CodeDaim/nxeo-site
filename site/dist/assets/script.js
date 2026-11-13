@@ -1,4 +1,6 @@
 (function(){
+  // a fresh page starts at the top; back and forward keep their place
+  try{var nav=performance.getEntriesByType('navigation')[0];if(nav&&nav.type==='navigate'&&!location.hash){window.scrollTo(0,0);}}catch(e){}
   var mnav=document.getElementById('mnav');
   function closeMenu(){mnav.classList.remove('is-open');}
 

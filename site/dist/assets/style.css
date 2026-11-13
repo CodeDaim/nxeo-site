@@ -12,7 +12,7 @@
 }
 *{box-sizing:border-box}
 [hidden]{display:none!important}
-html{scroll-behavior:smooth;-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%}
+html{scroll-behavior:auto;-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--body);font-family:var(--text);font-size:16px;line-height:1.6;font-weight:450;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
 .dark,.band-blue{background:var(--blue)}
@@ -1141,3 +1141,15 @@ a:not(.btn):hover{color:var(--accent)}
 @media (prefers-reduced-motion:reduce){.nulmodal[open] .nm-form,.nulmodal[open] .nm-ok{animation:none}}
 
 html.nm-open{overflow:hidden;scroll-behavior:auto}
+
+/* page to page: a soft crossfade between documents (browsers that support it), instant top of page */
+@view-transition{navigation:auto}
+::view-transition-old(root){animation:vt-out 220ms var(--liquid) both}
+::view-transition-new(root){animation:vt-in 380ms var(--liquid) both}
+@keyframes vt-out{to{opacity:0;transform:translateY(-6px)}}
+@keyframes vt-in{from{opacity:0;transform:translateY(10px)}}
+.site-header{view-transition-name:site-header}
+::view-transition-old(site-header),::view-transition-new(site-header){animation:none}
+@media (prefers-reduced-motion:reduce){::view-transition-old(root),::view-transition-new(root){animation:none}}
+/* the first screen never waits on a reveal */
+.hero-stack>*{animation-duration:420ms}
