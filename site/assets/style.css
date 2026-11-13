@@ -1379,3 +1379,29 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 .site-header .nav a,.site-header .hdr-actions a{white-space:nowrap}
 @media (max-width:1040px){.site-header .nav a,.site-header .hdr-actions .lang,.site-header .hdr-actions .hdr-contact{padding-inline:.6rem}.site-header .bar{gap:1rem}}
 @media (max-width:960px){.site-header .hdr-actions .hdr-contact{display:none}}
+/* logoband: gelijke tussenruimte, gelijke optische grootte, een basislijn */
+.logo-strip{padding-top:clamp(3rem,5vw,4.5rem)}
+.logo-strip+.sec{padding-top:clamp(4rem,6.5vw,6rem)}
+.logos-note{margin:0 0 2rem;line-height:1.4}
+.logo-tiles{--lg:72px;height:40px;align-items:center;mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent)}
+.logo-tiles .track{gap:var(--lg);padding-right:var(--lg);align-items:center;height:40px;animation:marquee 46s linear infinite;will-change:transform;backface-visibility:hidden}
+.logo-tiles span,.logo-tiles .track span{width:auto;height:40px;display:flex;align-items:center;border:0}
+.logo-tiles span img,.logo-tiles img{display:block;width:auto;height:22px;opacity:.5;filter:brightness(0);transition:opacity 320ms var(--liquid)}
+@media (hover:hover) and (pointer:fine){.logo-tiles span:hover img{opacity:.85;filter:brightness(0)}}
+.logo-tiles span:nth-child(1) img{height:22px}
+.logo-tiles span:nth-child(2) img{height:25px;transform:translateY(-2px)}
+.logo-tiles span:nth-child(3) img{height:20px}
+.logo-tiles span:nth-child(4) img{height:24px;transform:translateY(2px)}
+.logo-tiles span:nth-child(5) img{height:21px}
+.logo-tiles span:nth-child(6) img{height:22px}
+.logo-tiles span:nth-child(7) img{height:15px}
+.logo-tiles span:nth-child(8) img{height:23px}
+@media (max-width:900px){.logo-tiles{--lg:52px}.logo-tiles span,.logo-tiles .track span{width:auto}}
+@media (prefers-reduced-motion:reduce){.logo-tiles{height:auto}.logo-tiles .track{flex-wrap:wrap;justify-content:center;height:auto;padding-right:0;row-gap:1rem}}
+.logo-tiles span:nth-child(1) img{height:22px;transform:translateY(1px)}
+.logo-tiles span:nth-child(2) img{height:23px;transform:translateY(-2px)}
+.logo-tiles span:nth-child(4) img{height:22px;transform:translateY(2px)}
+.logo-tiles span:nth-child(5) img{height:20px}
+.logo-tiles span:nth-child(6) img{height:22px;transform:translateY(1px)}
+.logo-tiles span:nth-child(7) img{height:15px;transform:translateY(1px)}
+.logo-tiles span:nth-child(8) img{height:23px;transform:translateY(-1px)}
