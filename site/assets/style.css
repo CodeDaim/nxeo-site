@@ -1272,3 +1272,61 @@ input:focus,select:focus,textarea:focus,.fl input:focus,.fl textarea:focus{borde
 .combo:focus-within,.combo:has(input:focus-visible){border-color:var(--line-2);box-shadow:0 0 0 4px var(--blue-tint),0 10px 30px rgba(20,23,31,.06)}
 .hero-c .combo:focus-within,.hero-c .combo:has(input:focus-visible){border-color:rgba(255,255,255,.32);box-shadow:0 0 0 4px rgba(255,255,255,.18)}
 .fl input:user-invalid,.fl textarea:user-invalid{border-color:var(--line-2);box-shadow:0 0 0 4px #FDECEA}
+
+/* ============================================================
+   Liquid glass, lichte modus. Zachte diepte: melkwit glas op een lichtgrijze pagina,
+   een dunne witte lichtrand aan de bovenkant, brede zachte schaduwen, knoppen met glans.
+   ============================================================ */
+:root{--bg:#F2F3F7;--tile:#FFFFFF;--paper:#FFFFFF;--line:rgba(26,35,50,.07);--line-2:rgba(26,35,50,.11);
+  --glass:rgba(255,255,255,.72);--glass-strong:rgba(255,255,255,.88);--edge:rgba(255,255,255,.95);
+  --sh-soft:0 1px 0 var(--edge) inset,0 24px 60px -24px rgba(26,35,50,.22),0 2px 8px rgba(26,35,50,.04);
+  --sh-float:0 1px 0 var(--edge) inset,0 30px 70px -20px rgba(26,35,50,.28),0 4px 14px rgba(26,35,50,.06)}
+body,body::before{background:var(--bg)}
+.hero-c~*,.logo-strip{position:relative}
+/* glass cards */
+.step-card,.b-card,.res-card,.case-big,.plan,.offer-card,.c-card,.rep-item,.how-step,.post,.summary,.why-card,.audit,.pricing-notes .card,.demo-cta,.bl-form,.faq-teaser details,.nulmodal>*,.res-next{
+  background:var(--glass);border:1px solid rgba(255,255,255,.9);box-shadow:var(--sh-soft);-webkit-backdrop-filter:blur(24px) saturate(150%);backdrop-filter:blur(24px) saturate(150%)}
+.res-quote,.cb-left{background:linear-gradient(160deg,#1B45FF,#002EFE);border-color:transparent;box-shadow:0 1px 0 rgba(255,255,255,.25) inset,0 30px 60px -20px rgba(0,46,254,.45)}
+.plan.featured,.plan[data-featured]{box-shadow:var(--sh-float)}
+.step-card .art,.b-art,.res-empty,.why-card .art,.day .d,.post .pic{background:rgba(26,35,50,.035);border-color:rgba(26,35,50,.05);box-shadow:inset 0 1px 3px rgba(26,35,50,.05)}
+.mini,.cal,.ring .node,.msg.ai .li .rank,.own span{background:#fff;border-color:rgba(255,255,255,.9);box-shadow:0 1px 0 var(--edge) inset,0 10px 24px -10px rgba(26,35,50,.18)}
+.msg.ai .li{background:rgba(26,35,50,.04)}
+/* the answer card and the dialog float a little higher */
+.msg.ai,.hero-c .msg.ai{background:var(--glass-strong);border-color:rgba(255,255,255,.95);box-shadow:var(--sh-float);-webkit-backdrop-filter:blur(30px) saturate(160%);backdrop-filter:blur(30px) saturate(160%)}
+.nulmodal>*{background:var(--glass-strong)}
+/* buttons with a light edge on top */
+.btn-blue,.hdr-cta,.btn-white{box-shadow:0 1px 0 rgba(255,255,255,.35) inset,0 12px 28px -8px rgba(0,46,254,.45)}
+.btn-blue{background:linear-gradient(180deg,#2E52FF 0%,#002EFE 100%)}
+.btn-white,.btn-ghost{background:var(--glass-strong);color:var(--ink);border-color:rgba(255,255,255,.95);box-shadow:0 1px 0 var(--edge) inset,0 12px 28px -12px rgba(26,35,50,.25);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px)}
+.btn-white{color:var(--blue)}
+.hero-c .combo .btn{background:#fff;color:var(--blue);box-shadow:0 1px 0 #fff inset,0 12px 28px -10px rgba(0,0,0,.25)}
+/* segmented controls and chips */
+.toggle,.chat .tab,.ftab,.chipopt span,.trust-chip,.ai-src,.res-src,.chips .chip,.rep-item .n{background:var(--glass);border-color:rgba(255,255,255,.9);box-shadow:0 1px 0 var(--edge) inset,0 8px 20px -10px rgba(26,35,50,.18);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+.thumb{box-shadow:0 1px 0 rgba(255,255,255,.3) inset,0 8px 18px -6px rgba(0,46,254,.45);background:linear-gradient(180deg,#2E52FF,#002EFE)}
+.chipopt input:checked+span{background:linear-gradient(180deg,#2E52FF,#002EFE);color:#fff;border-color:transparent;box-shadow:0 1px 0 rgba(255,255,255,.3) inset,0 10px 24px -8px rgba(0,46,254,.45)}
+/* fields sit slightly into the surface */
+input:not([type=radio]):not([type=checkbox]),textarea,select,.combo{background:#fff;border-color:rgba(26,35,50,.08);box-shadow:inset 0 1px 2px rgba(26,35,50,.06)}
+input:focus,textarea:focus,select:focus,.fl input:focus,.fl textarea:focus{border-color:rgba(26,35,50,.08);box-shadow:inset 0 1px 2px rgba(26,35,50,.06),0 0 0 4px var(--blue-tint)}
+.combo:focus-within,.combo:has(input:focus-visible){border-color:rgba(26,35,50,.08);box-shadow:inset 0 1px 2px rgba(26,35,50,.06),0 0 0 4px var(--blue-tint)}
+.hero-c .combo,.hero-c .audit-combo{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.45);box-shadow:0 1px 0 rgba(255,255,255,.35) inset,0 20px 50px -20px rgba(0,0,0,.35)}
+.hero-c .combo:focus-within,.hero-c .combo:has(input:focus-visible){border-color:rgba(255,255,255,.55);box-shadow:0 1px 0 rgba(255,255,255,.35) inset,0 0 0 4px rgba(255,255,255,.2)}
+.hero-c .trust-chip,.hero-c .chat .tab,.hero-c .ai-src{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.4);box-shadow:0 1px 0 rgba(255,255,255,.3) inset;color:#fff}
+.hero-c .chat .tabs .thumb{background:#fff;box-shadow:0 8px 18px -6px rgba(0,0,0,.3)}
+.hero-c .bubble{box-shadow:0 1px 0 #fff inset,0 16px 40px -12px rgba(0,0,0,.3)}
+/* header bar: glass with a light edge */
+.site-header .bar{box-shadow:0 1px 0 rgba(255,255,255,.22) inset,0 16px 40px -16px rgba(0,46,254,.5)}
+html.at-top .site-header .bar{box-shadow:none}
+/* footer and faq on the grey page */
+.footer{background:var(--bg)}
+.partners,.trust .badge{background:var(--glass);border-color:rgba(255,255,255,.9);box-shadow:0 1px 0 var(--edge) inset,0 8px 20px -12px rgba(26,35,50,.18)}
+.faq-list details{border-color:rgba(26,35,50,.08)}
+.faq-list .chev{background:var(--glass);border-color:rgba(255,255,255,.9);box-shadow:0 1px 0 var(--edge) inset,0 6px 14px -8px rgba(26,35,50,.2)}
+/* hover: lift, soft */
+@media (hover:hover) and (pointer:fine){
+  .step-card:hover,.b-card:hover,.plan:hover,.post:hover,.rep-item:hover,.how-step:hover{transform:translateY(-2px);box-shadow:var(--sh-float)}
+  .step-card,.b-card,.plan,.post,.rep-item,.how-step{transition:transform 420ms var(--liquid),box-shadow 420ms var(--liquid)}
+}
+.combo input,.combo input:focus,.combo input:focus-visible{background:transparent;box-shadow:none;border:0}
+.ai-src,.hero-c .ai-src{background:transparent;border:0;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none}
+form.combo input[name]:not([type=radio]):not([type=checkbox]),form.combo input[name]:not([type=radio]):not([type=checkbox]):focus{background:transparent!important;box-shadow:none!important;border:0!important}
+@media (max-width:640px){.trust-chip{border-radius:22px}}
