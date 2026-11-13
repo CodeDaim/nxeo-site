@@ -1422,3 +1422,7 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 .step-card .chips .chip{white-space:nowrap}
 .step-card .chips{flex-direction:column;align-items:flex-start;flex-wrap:nowrap}
 .step-card p{min-height:3.1em}
+/* eigen bedrijf in het antwoord: blauwe rij, witte tekst */
+.chat .msg.ai .list .li.you,.hero-c .msg.ai .li.you{background:linear-gradient(135deg,#002EFE,#4E6BFF);color:#fff;border-color:transparent;box-shadow:0 12px 28px -10px rgba(0,46,254,.45)}
+.chat .msg.ai .list .li.you .rank,.hero-c .msg.ai .li.you .rank{background:#fff;color:var(--blue);border-color:#fff;box-shadow:none}
+.chat .msg.ai .list .li.you .dim,.hero-c .msg.ai .li.you .dim{color:rgba(255,255,255,.85)}
