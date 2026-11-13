@@ -1215,3 +1215,39 @@ html.nm-open{overflow:hidden;scroll-behavior:auto}
 .msg.ai mark.good{background:#E6F5EC;color:#1B8A4A}
 .msg.ai .cursor{height:1em;width:.12em;margin-left:.2em;vertical-align:-.15em}
 @media (max-width:560px){.msg.ai{padding:1.1rem 1.1rem 1rem;border-radius:22px 22px 22px 6px}.msg.ai .li{font-size:.92rem;padding:.65rem .8rem}.msg.ai .li .dim{font-size:.78rem}.chat-head{justify-content:center}.ai-src{display:none}}
+
+/* ============================================================
+   Hero als het campagnebord: vlak NXEO blauw, witte tekst, glas voor de elementen
+   ============================================================ */
+.hero-c{background:var(--blue);color:#fff;margin:-78px 12px 0;border-radius:32px;padding:clamp(9rem,15vw,12.5rem) 0 clamp(3rem,6vw,5rem);overflow:hidden}
+@media (max-width:760px){.hero-c{margin:-78px 8px 0;border-radius:24px;padding-top:7.5rem}}
+.hero-c .hero-stack{color:#fff}
+.hero-c h1,.hero-c .def,.hero-c .rot-inline,.hero-c .eyebrow{color:#fff}
+.hero-c .def{opacity:.92}
+.hero-c .eyebrow{opacity:.8}
+.hero-c .bubble,.hero-c .bubble-blue{background:#fff;color:var(--blue);box-shadow:0 10px 30px rgba(0,0,0,.12)}
+.hero-c .hero-note{color:rgba(255,255,255,.72)}
+.hero-c .trust-chip{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.28);color:rgba(255,255,255,.9);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.hero-c .trust-chip b{color:#fff}
+.hero-c .combo,.hero-c .audit-combo{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.32);box-shadow:none;-webkit-backdrop-filter:blur(16px) saturate(140%);backdrop-filter:blur(16px) saturate(140%)}
+.hero-c .combo:focus-within,.hero-c .combo:has(input:focus-visible){border-color:rgba(255,255,255,.7);box-shadow:0 0 0 4px rgba(255,255,255,.18)}
+.hero-c .combo .ico{color:rgba(255,255,255,.75)}
+.hero-c .combo input{color:#fff}
+.hero-c .combo input::placeholder{color:rgba(255,255,255,.7)}
+.hero-c .combo .btn{background:#fff;color:var(--blue);box-shadow:none}
+.hero-c .combo .btn:hover{background:#fff}
+.hero-c .audit-logos img{filter:brightness(0) invert(1);opacity:.75}
+/* the answer inside the blue block */
+.hero-c .chat{margin-top:clamp(2.5rem,5vw,3.5rem)}
+.hero-c .ai-src{color:rgba(255,255,255,.8)}
+.hero-c .ai-src img{filter:brightness(0) invert(1)}
+.hero-c .chat .tab{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.3);color:#fff;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.hero-c .chat .tab[aria-selected="true"]{color:var(--blue)}
+.hero-c .chat .tabs .thumb{background:#fff}
+.hero-c .chat .tab[data-demo="after"]:not([aria-selected="true"]){border-color:#fff;color:#fff}
+.hero-c .chat .tab[data-demo="after"]:not([aria-selected="true"])::after{background:#fff}
+.hero-c .msg.ai{background:rgba(255,255,255,.94);border-color:rgba(255,255,255,.7);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);box-shadow:0 30px 80px rgba(0,0,0,.18)}
+.hero-c .msg.ai .li{background:var(--tile)}
+/* logos below the block, on white */
+.logo-strip{padding-top:clamp(2.5rem,5vw,4rem)}
+.logo-strip .logo-band{padding-block:0}
