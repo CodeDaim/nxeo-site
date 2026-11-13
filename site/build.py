@@ -111,6 +111,7 @@ def chrome(lang,page,from_dir):
     opts=''.join('<option value="%s"%s>%s</option>'%(href(from_dir,l,page),' selected' if l==lang else '',I18N[l]['name']) for l in LANGS)
     ftr=re.sub(r'(<select id="langsel"[^>]*>).*?(</select>)',lambda m:m.group(1)+opts+m.group(2),ftr,flags=re.S)
     hdr=re.sub(r'data-nav="(\w+)"',lambda m:m.group(0)+(' aria-current="page"' if m.group(1)==page else ''),hdr)
+    if page in ('aanvraag','sales'): ftr=ftr.replace('<footer class="end">','<footer class="end no-cta">',1)
     return hdr,ftr
 
 def build_page(lang,page):
