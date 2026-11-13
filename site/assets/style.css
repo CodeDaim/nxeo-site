@@ -1684,3 +1684,5 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 .faq-teaser summary::after,.faq-teaser details[open] summary::after{content:"";width:32px;height:32px;border:1.5px solid rgba(0,46,254,.28);background:linear-gradient(var(--blue),var(--blue)) center/12px 2.5px no-repeat,linear-gradient(var(--blue),var(--blue)) center/2.5px 12px no-repeat;transition:border-color 200ms ease}
 .faq-teaser details[open] summary::after{background:linear-gradient(var(--blue),var(--blue)) center/12px 2.5px no-repeat}
 .faq-teaser summary:hover::after{border-color:var(--blue);background-color:transparent}
+.faq-teaser summary:hover::after{border-color:var(--blue);background:linear-gradient(var(--blue),var(--blue)) center/12px 2.5px no-repeat,linear-gradient(var(--blue),var(--blue)) center/2.5px 12px no-repeat}
+.faq-teaser details[open] summary:hover::after{background:linear-gradient(var(--blue),var(--blue)) center/12px 2.5px no-repeat}
