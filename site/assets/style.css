@@ -1671,3 +1671,8 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 .faq-teaser details[open]::details-content{block-size:auto;opacity:1}
 :root{interpolate-size:allow-keywords}
 @media (max-width:640px){.faq-teaser details{padding:0 18px}.faq-teaser summary{font-size:1rem;padding:18px 0}.faq-teaser details p{padding-right:0}.faq-teaser summary::before{right:17px}}
+/* plusje terug naar hoe het was: dun rondje met een plus, min als hij open is */
+.faq-teaser summary::before{display:none}
+.faq-teaser summary::after,.faq-teaser details[open] summary::after{content:"+";width:28px;height:28px;border:1px solid var(--line-2);border-radius:50%;background:transparent;color:var(--ink);display:grid;place-items:center;font-weight:400;font-size:1.1rem;transform:none;transition:background-color 150ms ease}
+.faq-teaser details[open] summary::after{content:"–"}
+.faq-teaser summary:hover::after{background-color:var(--blue-wash)}
