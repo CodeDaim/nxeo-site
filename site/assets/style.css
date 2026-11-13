@@ -1359,3 +1359,11 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 .site-header.drop .bar{animation:hdrdrop 560ms var(--liquid) both}
 @keyframes hdrdrop{from{transform:translateY(-140%);opacity:0}to{transform:none;opacity:1}}
 @media (prefers-reduced-motion:reduce){.site-header.drop .bar{animation:none}}
+/* menu: glazen pil die naar het item onder de muis glijdt */
+.site-header .nav{position:relative;gap:.15rem;isolation:isolate}
+.site-header .nav a{position:relative;z-index:1;padding:.5rem .85rem;border-radius:var(--pill);color:rgba(255,255,255,.82);transition:color 260ms ease,transform 200ms var(--liquid)}
+.site-header .nav a:hover,.site-header .nav a[aria-current]{color:#fff}
+.site-header .nav a:active{transform:scale(.96)}
+.nav-pill{position:absolute;left:0;top:50%;height:36px;margin-top:-18px;width:0;border-radius:var(--pill);background:rgba(255,255,255,.16);box-shadow:0 1px 0 rgba(255,255,255,.28) inset,0 6px 16px -8px rgba(0,20,120,.45);opacity:0;pointer-events:none;z-index:0;transition:transform 460ms var(--liquid),width 460ms var(--liquid),opacity 260ms ease}
+.nav-pill.is-on{opacity:1}
+@media (prefers-reduced-motion:reduce){.nav-pill{transition:opacity 200ms ease}}
