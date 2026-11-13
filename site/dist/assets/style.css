@@ -1159,3 +1159,9 @@ html.nm-open{overflow:hidden;scroll-behavior:auto}
 .ring .hub img{height:100%;width:100%;filter:none;object-fit:cover}
 .ring .node img{height:22px;max-width:28px;width:auto}
 .ring .node.wide img{height:12px;max-width:32px}
+/* tweede accent, lavendel: alleen voor zachte hulplijnen en vulbalken, nooit voor tekst of knoppen */
+:root{--accent-2:#A79CFF}
+.ring::before{border-color:var(--accent-2)}
+.tl-light .tl-row .bar::after{background:var(--accent-2)}
+.cmp-mini .row i::after{background:var(--accent-2)}
+.steps-bar i{background:#EDEBFF}
