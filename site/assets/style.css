@@ -1437,3 +1437,10 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 .step-card .mini-score svg{margin-right:4px}
 .step-card .mini-row .lbl{line-height:18px;padding-top:1px}
 .step-card .mini-row{align-items:center}
+/* blauwe knop: hover die vloeit in plaats van springt */
+.btn-blue{background-color:#002EFE;background-image:linear-gradient(180deg,rgba(255,255,255,.2),rgba(255,255,255,0));transition:transform 320ms var(--liquid),box-shadow 320ms var(--liquid),background-color 320ms ease,filter 320ms ease}
+.btn-blue:hover{background-color:#1F47FF;background-image:linear-gradient(180deg,rgba(255,255,255,.2),rgba(255,255,255,0));box-shadow:0 1px 0 rgba(255,255,255,.4) inset,0 16px 32px -8px rgba(0,46,254,.55);transform:translateY(-1px)}
+.btn-blue:active{transform:scale(.97)}
+.dark .btn-blue,.band-blue .btn-blue,.dark .btn-blue:hover,.band-blue .btn-blue:hover{background-color:#fff;background-image:none}
+.btn .arr{transition:transform 320ms var(--liquid)}
+@media (hover:none){.btn-blue:hover{transform:none}}
