@@ -1153,3 +1153,9 @@ html.nm-open{overflow:hidden;scroll-behavior:auto}
 @media (prefers-reduced-motion:reduce){::view-transition-old(root),::view-transition-new(root){animation:none}}
 /* the first screen never waits on a reveal */
 .hero-stack>*{animation-duration:420ms}
+
+/* CMS ring: app icon in the middle, marks around it */
+.ring .hub{background:transparent;box-shadow:0 10px 24px rgba(0,46,254,.28);border-radius:16px;overflow:hidden}
+.ring .hub img{height:100%;width:100%;filter:none;object-fit:cover}
+.ring .node img{height:22px;max-width:28px;width:auto}
+.ring .node.wide img{height:12px;max-width:32px}
