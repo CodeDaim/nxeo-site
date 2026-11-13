@@ -1585,3 +1585,10 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 .mailm li{display:flex;align-items:center;gap:8px;line-height:1.3}
 .mailm li::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--blue)}
 .mailm li{align-items:flex-start}.mailm li::before{margin-top:.45em}
+/* browservenster: duidelijk los van het vak eromheen */
+.bx-browser{border:1px solid rgba(26,35,50,.1);box-shadow:0 1px 0 #fff inset,0 22px 44px -18px rgba(26,35,50,.38)}
+.bx-browser .bar{background:#E3E6EF;border-bottom:1px solid rgba(26,35,50,.1)}
+.bx-browser .bar i{background:#A9B0C2}
+.bx-browser .bar i:first-child{background:#FF6B5E}.bx-browser .bar i:nth-child(2){background:#FFBD2E}.bx-browser .bar i:nth-child(3){background:#28C840}
+.bx-browser .url{color:var(--body);box-shadow:0 1px 2px rgba(26,35,50,.08)}
+.bx-browser .ln{background:#DFE3EC}
