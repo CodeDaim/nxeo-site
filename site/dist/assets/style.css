@@ -1251,3 +1251,8 @@ html.nm-open{overflow:hidden;scroll-behavior:auto}
 /* logos below the block, on white */
 .logo-strip{padding-top:clamp(2.5rem,5vw,4rem)}
 .logo-strip .logo-band{padding-block:0}
+/* blauwe blok los van de bovenrand; geen draaiend bolletje meer */
+.hero-c{margin-top:-64px}
+@media (max-width:760px){.hero-c{margin-top:-68px}}
+.chat .tab[data-demo="after"]:not([aria-selected="true"])::after,.demo .tab[data-demo="after"]:not([aria-selected="true"])::after{content:none;animation:none}
+.hero-c .chat .tab[data-demo="after"]:not([aria-selected="true"]){border-color:rgba(255,255,255,.55)}
