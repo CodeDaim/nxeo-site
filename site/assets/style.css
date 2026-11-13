@@ -1460,3 +1460,12 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 .btn:not(.hdr-contact):active,.btn-blue:active,.site-header .hdr-actions .hdr-cta:active{transform:scale(1.08,.85);transition-duration:140ms;transition-timing-function:ease-out}
 .combo .btn:active,.btn-block:active{transform:scale(1.03,.88)}
 @media (prefers-reduced-motion:reduce){.btn:hover,.btn:active,.btn:hover .bt{transform:none!important}}
+/* veer veel rustiger: nauwelijks zichtbaar bij hover, zachte deuk bij klik */
+:root{--soft-spring:linear(0,0.006,0.025 2.8%,0.101 6.1%,0.539 18.9%,0.721 25.3%,0.849 31.5%,0.937 38.1%,0.968 41.8%,0.991 45.7%,1.006 50.1%,1.015 55%,1.017 63.9%,1.001 85.9%,1)}
+.btn .bt{transition:none;transform:none!important}
+.btn:not(.hdr-contact),.site-header .hdr-actions .hdr-cta{transition:transform 520ms var(--soft-spring),box-shadow 320ms ease,background-color 320ms ease,border-color 200ms ease,color 200ms ease}
+@media (hover:hover) and (pointer:fine){
+  .btn:not(.hdr-contact):hover,.btn-blue:hover,.site-header .hdr-actions .hdr-cta:hover{transform:scale(1.02,.98)}
+  .combo .btn:hover,.btn-block:hover{transform:scale(1.01,.985)}
+}
+.btn:not(.hdr-contact):active,.btn-blue:active,.site-header .hdr-actions .hdr-cta:active,.combo .btn:active,.btn-block:active{transform:scale(1.02,.94);transition-duration:120ms;transition-timing-function:ease-out}
