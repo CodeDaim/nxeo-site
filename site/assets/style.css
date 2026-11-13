@@ -1343,3 +1343,7 @@ html.vt .site-header{view-transition-name:site-header}
 html.at-top .site-header .bar{transform:translateY(12px)}
 .site-header .bar{border:0;box-shadow:0 18px 44px -18px rgba(0,46,254,.45)}
 html.at-top .site-header .bar{box-shadow:none}
+/* header leest de kleur eronder */
+.site-header.on-light .bar{background:linear-gradient(180deg,rgba(20,62,255,.9),rgba(0,46,254,.9));-webkit-backdrop-filter:blur(28px) saturate(140%);backdrop-filter:blur(28px) saturate(140%)}
+.site-header.on-dark .bar{background:rgba(255,255,255,.14);-webkit-backdrop-filter:blur(28px) saturate(170%);backdrop-filter:blur(28px) saturate(170%);box-shadow:0 18px 44px -20px rgba(0,20,120,.5)}
+html.at-top .site-header .bar{background:transparent;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none}

@@ -7,6 +7,16 @@
     var atTop=function(){document.documentElement.classList.toggle('at-top',window.scrollY<24);};
     atTop();window.addEventListener('scroll',atTop,{passive:true});
   }
+  // The bar reads the colour underneath it: glass on blue, close to solid brand blue on light
+  (function(){
+    var hdr=document.getElementById('hdr');if(!hdr)return;var bar=hdr.querySelector('.bar');var tick=false;
+    function dark(c){var m=c&&c.match(/rgba?\(([^)]+)\)/);if(!m)return null;var v=m[1].split(/[ ,\/]+/).map(parseFloat);if(v.length>3&&v[3]<.5)return null;return (0.2126*v[0]+0.7152*v[1]+0.0722*v[2])/255<.5;}
+    function read(){tick=false;var r=bar.getBoundingClientRect();var els=document.elementsFromPoint(r.left+r.width/2,r.top+r.height/2);var res=false;
+      for(var i=0;i<els.length;i++){var e=els[i];if(hdr.contains(e))continue;var cs=getComputedStyle(e);var d=cs.backgroundImage!=='none'?dark(cs.backgroundImage):dark(cs.backgroundColor);if(d===null)continue;res=d;break;}
+      hdr.classList.toggle('on-dark',res);hdr.classList.toggle('on-light',!res);}
+    function q(){if(!tick){tick=true;requestAnimationFrame(read);}}
+    read();window.addEventListener('scroll',q,{passive:true});window.addEventListener('resize',q);window.addEventListener('load',q);
+  })();
   function closeMenu(){mnav.classList.remove('is-open');}
 
   // In page jumps; links to a section on another page are plain links
