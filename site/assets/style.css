@@ -1374,3 +1374,8 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 .site-header .hdr-actions .hdr-cta{position:relative;z-index:1;margin-left:.45rem;transition:transform 320ms var(--liquid),box-shadow 320ms var(--liquid)}
 @media (hover:hover) and (pointer:fine){.site-header .hdr-actions .hdr-cta:hover{transform:translateY(-1px) scale(1.03);box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 0 0 5px rgba(255,255,255,.16),0 14px 30px -10px rgba(0,20,120,.55)}}
 .site-header .hdr-actions .hdr-cta:active{transform:scale(.96)}
+/* rechterknop rustiger: geen ring en geen groei, alleen optillen en gloed */
+@media (hover:hover) and (pointer:fine){.site-header .hdr-actions .hdr-cta:hover{transform:translateY(-1px);box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 12px 26px -8px rgba(0,16,110,.6)}}
+.site-header .nav a,.site-header .hdr-actions a{white-space:nowrap}
+@media (max-width:1040px){.site-header .nav a,.site-header .hdr-actions .lang,.site-header .hdr-actions .hdr-contact{padding-inline:.6rem}.site-header .bar{gap:1rem}}
+@media (max-width:960px){.site-header .hdr-actions .hdr-contact{display:none}}

@@ -93,12 +93,12 @@ def head(lang,page,from_dir,extra_schema):
             '<meta property="og:type" content="website">\n<meta property="og:site_name" content="NXEO">\n<meta property="og:locale" content="%s">\n'
             '<meta property="og:title" content="%s">\n<meta property="og:description" content="%s">\n<meta property="og:url" content="%s">\n'
             '<meta property="og:image" content="%s/assets/img/nxeo.png">\n<meta name="twitter:card" content="summary_large_image">\n'
-            '<meta name="theme-color" content="#002EFE">\n<link rel="icon" href="%s" type="image/png">\n'
+            '<meta name="theme-color" content="#002EFE">\n<link rel="icon" href="%s" type="image/png" sizes="192x192">\n'
             '<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
             '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600;700;800&display=swap">\n'
             '<link rel="stylesheet" href="%s">\n<script>(function(){var h=document.documentElement;addEventListener("pagereveal",function(e){if(e.viewTransition){h.classList.add("vt");e.viewTransition.finished.finally(function(){h.classList.remove("vt")})}else{h.classList.remove("vt")}});addEventListener("pageswap",function(e){if(e.viewTransition)h.classList.add("vt")})})()</script>\n<script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/assets/*"}}]},"eagerness":"moderate"}]}</script>\n%s</head>\n<body>\n')%(
             lang,html.escape(t['fpnote']),html.escape(t['pct']),html.escape(p['title']),html.escape(p['description']),abs_url(lang,page),alts,
-            t['locale'],html.escape(p['title']),html.escape(p['description']),abs_url(lang,page),DOMAIN,asset(from_dir,'img/nxeo.png'),asset(from_dir,'style.css'),ld)
+            t['locale'],html.escape(p['title']),html.escape(p['description']),abs_url(lang,page),DOMAIN,asset(from_dir,'img/favicon.png'),asset(from_dir,'style.css'),ld)
 
 def chrome(lang,page,from_dir):
     t=I18N[lang]
