@@ -1165,3 +1165,21 @@ html.nm-open{overflow:hidden;scroll-behavior:auto}
 .tl-light .tl-row .bar::after{background:var(--accent-2)}
 .cmp-mini .row i::after{background:var(--accent-2)}
 .steps-bar i{background:#EDEBFF}
+
+/* campagnetaal: tekstballon, grote kop, lavendel cursor */
+.bubble{display:inline-block;background:#fff;color:var(--blue);font-family:var(--display);font-weight:700;font-size:clamp(1rem,1.5vw,1.2rem);line-height:1;padding:.85rem 1.4rem;border-radius:28px 28px 28px 8px;letter-spacing:-.01em;box-shadow:0 1px 2px rgba(20,23,31,.04)}
+.bubble-blue{background:var(--blue);color:#fff;box-shadow:0 8px 24px rgba(0,46,254,.22)}
+.hero-c .bubble{margin-bottom:.2rem}
+.hero-c h1{font-size:clamp(3rem,7.2vw,5.6rem);letter-spacing:-.045em}
+.hero-c .def{font-size:clamp(1.15rem,1.7vw,1.4rem);max-width:none}
+.cursor{display:inline-block;width:.075em;height:.82em;background:var(--accent-2);border-radius:.03em;margin-left:.12em;vertical-align:-.04em;animation:blink 1.1s steps(1,end) infinite}
+@keyframes blink{0%,55%{opacity:1}56%,100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.cursor{animation:none}}
+.rot-inline{vertical-align:baseline;font-weight:700;color:var(--ink)}
+.rot-inline .rot-item{justify-content:flex-start}
+.closer .bubble{margin-bottom:1.2rem}
+.closer h2{font-size:clamp(2.6rem,6vw,4.8rem);letter-spacing:-.045em;line-height:1;margin-bottom:1rem}
+.closer .lead{font-size:1.15rem}
+.rot-inline{transition:width 520ms var(--liquid);overflow:visible;white-space:nowrap}
+.rot-inline .rot-item{width:max-content}
+.cursor{min-width:3px;min-height:1em}

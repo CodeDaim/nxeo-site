@@ -112,8 +112,11 @@
   var rot=document.querySelector('.rot');
   if(rot&&!reduce){
     var items=Array.prototype.slice.call(rot.querySelectorAll('.rot-item')),ri=0;
+    function fit(it){rot.style.width=it.getBoundingClientRect().width+'px';}
+    if(rot.classList.contains('rot-inline')){fit(items[0]);window.addEventListener('resize',function(){rot.style.width='';fit(items[ri]);});}
     setInterval(function(){
       var cur=items[ri];ri=(ri+1)%items.length;var nxt=items[ri];
+      if(rot.classList.contains('rot-inline')){rot.style.width='';var w=nxt.getBoundingClientRect().width;rot.style.width=cur.getBoundingClientRect().width+'px';void rot.offsetWidth;rot.style.width=w+'px';}
       cur.classList.remove('is-on');cur.classList.add('is-out');
       nxt.classList.remove('is-out');nxt.classList.add('is-on');
       setTimeout(function(){cur.classList.remove('is-out');},700);
