@@ -1512,3 +1512,7 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 .c2-stats{border-top-color:rgba(26,35,50,.08)}
 @media (max-width:900px){.c2-tl li,.c2-tl li.hit{grid-template-columns:auto 1fr;column-gap:12px;height:auto;min-height:52px;padding:8px 14px 8px 8px;font-size:.95rem}.c2-tl .wk{min-width:68px}}
 .c2-who img.av{width:52px;height:52px;border-radius:50%;object-fit:cover;background:none;box-shadow:0 0 0 2px rgba(255,255,255,.85)}
+/* lichte knop: bij hover een blauwe rand en blauwe tekst, geen donkere lijn */
+.btn-white:hover,.btn-ghost:hover{border-color:var(--blue);color:var(--blue);box-shadow:0 1px 0 var(--edge,#fff) inset,0 0 0 4px rgba(0,46,254,.1),0 12px 28px -12px rgba(0,46,254,.35)}
+.dark .btn-white:hover,.hero-c .btn-white:hover{border-color:transparent;box-shadow:0 12px 28px -10px rgba(0,0,0,.3)}
+.c2-who img.av{width:60px;height:60px}
