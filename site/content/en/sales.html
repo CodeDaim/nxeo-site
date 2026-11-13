@@ -1,0 +1,33 @@
+<section class="page" id="page-sales">
+  <div class="sec">
+    <div class="wrap form2">
+      <div class="form2-side">
+        <span class="eyebrow">Book a call</span>
+        <h1>Fifteen minutes.<br>No sales pitch.</h1>
+        <p class="lead">We show you how AI describes your company today, which package fits and what to expect in 90 days.</p>
+        <ul class="checks"><li>You see live how ChatGPT and Google name you today</li><li>You hear which package fits you</li><li>You get honest advice, even if NXEO is not a fit</li></ul>
+        <div class="side-card">
+          <p class="small">On working days we reply within 24 hours.</p>
+          <p class="small" style="margin-top:.6rem"><b>Prefer direct?</b> <a href="mailto:sales@nxeo.io">sales@nxeo.io</a></p>
+        </div>
+      </div>
+      <form id="form-sales" class="form-card" novalidate>
+        <div class="form-body">
+          <p class="form-title">Tell us briefly who you are</p>
+          <div class="fl-grid"><div class="fl"><input id="s-name" name="name" type="text" placeholder=" " required autocomplete="name"><label for="s-name">Full name</label></div><div class="fl"><input id="s-company" name="company" type="text" placeholder=" " required autocomplete="organization"><label for="s-company">Company</label></div></div>
+          <div class="fl-grid"><div class="fl"><input id="s-email" name="email" type="email" placeholder=" " required autocomplete="email"><label for="s-email">Work email</label></div><div class="fl"><input id="s-phone" name="phone" type="tel" placeholder=" " required autocomplete="tel"><label for="s-phone">Phone number</label></div></div>
+          <div class="field"><span class="flabel">How many people work at your company?</span><div class="chipset" role="radiogroup"><label class="chipopt"><input type="radio" name="size" value="1 to 20" id="ss0" required><span>1 to 20</span></label><label class="chipopt"><input type="radio" name="size" value="20 to 100" id="ss1" ><span>20 to 100</span></label><label class="chipopt"><input type="radio" name="size" value="100 to 500" id="ss2" ><span>100 to 500</span></label><label class="chipopt"><input type="radio" name="size" value="500+" id="ss3" ><span>500+</span></label></div></div>
+          <div class="field"><span class="flabel">What is it about?</span><div class="chipset" role="radiogroup"><label class="chipopt"><input type="radio" name="topic" value="Introduction" id="st0" required><span>Introduction</span></label><label class="chipopt"><input type="radio" name="topic" value="Question about a package" id="st1" ><span>Question about a package</span></label><label class="chipopt"><input type="radio" name="topic" value="Free baseline measurement" id="st2" ><span>Free baseline measurement</span></label><label class="chipopt"><input type="radio" name="topic" value="Enterprise" id="st3" ><span>Enterprise</span></label></div></div>
+          <div class="fl fl-area"><textarea id="s-msg" name="message" placeholder=" " required rows="3"></textarea><label for="s-msg">What would you like to discuss?</label></div>
+          <button class="btn btn-blue btn-block" type="submit">Book my call <span class="arr">→</span></button>
+          <p class="consent">By sending you agree to our <a href="#privacy" data-link>privacy policy</a>. No newsletter, no spam.</p>
+        </div>
+        <div class="form-ok" hidden data-ok>
+          <span class="okmark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path class="tick" d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+          <h3>Done. We will be in touch within 24 hours.</h3>
+          <p>You will get a proposal for a 15 minute slot. Want to know now how AI describes you? Send your website to <a href="mailto:sales@nxeo.io">sales@nxeo.io</a>.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

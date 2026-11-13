@@ -1,0 +1,65 @@
+{
+  "code": "en",
+  "locale": "en_GB",
+  "name": "English",
+  "switch_aria": "Switch to English",
+  "switch_label": "EN",
+  "switch_text": "English version",
+  "fpnote": "",
+  "pct": "% completed",
+  "site_name": "NXEO",
+  "org_description": "NXEO measures every day how ChatGPT, Gemini, Perplexity and Google mention your company, and adjusts your website and LinkedIn every week until you are in the answer. Fixed subscription, one weekly report.",
+  "pages": {
+    "home": {
+      "slug": "",
+      "title": "NXEO | Get mentioned by ChatGPT, Gemini and Google",
+      "description": "Your customers ask ChatGPT. NXEO measures daily whether you are mentioned and adjusts your website and LinkedIn weekly until you are in the answer. From €99 per month."
+    },
+    "over": {
+      "slug": "about",
+      "title": "About NXEO | The founders and the idea",
+      "description": "NXEO is a collaboration between IQ Script and The AI Doctor. Meet the people behind it and why we built one fixed subscription for visibility in AI, Search and LinkedIn."
+    },
+    "prijzen": {
+      "slug": "pricing",
+      "title": "Pricing | NXEO plans from €99 per month",
+      "description": "Launch €99, Growth €179 and Scale €299 per month, excluding VAT. Minimum 6 months, then cancel monthly. A year paid at once is 11 months. One time setup fee €195."
+    },
+    "contact": {
+      "slug": "contact",
+      "title": "Contact | NXEO",
+      "description": "Questions about NXEO, sales or support? Email us or book a 15 minute introduction. We reply within one working day."
+    },
+    "sales": {
+      "slug": "book-a-call",
+      "title": "Book a call | NXEO",
+      "description": "Book a 15 minute introduction with NXEO. We show how AI mentions your company today and what can change in 90 days. No obligations."
+    },
+    "aanvraag": {
+      "slug": "get-started",
+      "title": "Start with NXEO | Pick your package",
+      "description": "Pick Launch, Growth or Scale and start with NXEO. Minimum 6 months, or a year at once with one month off. Within one working day we schedule your onboarding call, within 48 hours your baseline is ready."
+    },
+    "faq": {
+      "slug": "faq",
+      "title": "Frequently asked questions | NXEO",
+      "description": "Everything about NXEO: what an AI Presence score is, how GEO differs from SEO, which access we need, what it costs and what happens when you stop."
+    },
+    "blog": {
+      "slug": "blog",
+      "title": "Blog | NXEO on AI visibility, GEO and LinkedIn",
+      "description": "Articles on how ChatGPT, Gemini and Perplexity pick companies, what GEO is and how B2B companies get into the answer."
+    },
+    "privacy": {
+      "slug": "privacy",
+      "title": "Privacy policy | NXEO",
+      "description": "How NXEO handles personal data, cookies and measurement data. GDPR compliant, no ad tracking, your data stays yours."
+    },
+    "nulmeting": {
+      "slug": "free-check",
+      "title": "Free baseline check | Does ChatGPT mention your company? | NXEO",
+      "description": "Enter your website and receive within 48 hours a report on how ChatGPT, Claude, Gemini, Perplexity and Google mention your company today and which questions you lose. Free, no obligation."
+    }
+  },
+  "breadcrumb_home": "Home"
+}

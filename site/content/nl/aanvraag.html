@@ -1,0 +1,42 @@
+<section class="page" id="page-aanvraag">
+  <div class="sec">
+    <div class="wrap form2 form2-rev">
+      <aside class="apply-side">
+        <span class="eyebrow">Starten</span>
+        <h1>Start met NXEO</h1>
+        <p class="lead">Vijf korte stappen. Binnen één werkdag plannen we je intake.</p>
+        <div class="summary">
+          <div class="sum-head"><span>Jouw keuze</span><b data-sum-out="price">nog te kiezen</b></div>
+          <dl>
+            <dt>Naam</dt><dd data-sum-out="name"><i>nog in te vullen</i></dd>
+            <dt>Bedrijf</dt><dd data-sum-out="company"><i>nog in te vullen</i></dd>
+            <dt>Sector en regio</dt><dd data-sum-out="sector"><i>nog in te vullen</i></dd>
+            <dt>Pakket</dt><dd data-sum-out="pkg"><i>nog in te vullen</i></dd>
+            <dt>Looptijd</dt><dd data-sum-out="term"><i>nog in te vullen</i></dd>
+          </dl>
+          <span class="slots">Live binnen 48 uur · geen advertentiebudget</span>
+        </div>
+      </aside>
+      <form id="form-fp" class="form-card apply" novalidate>
+        <div class="steps-bar" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i></div>
+        <div class="form-body">
+          <div class="q is-on" data-step="1"><p class="qn">Stap 1 van 5</p><h2 class="ask">Wie ben je?</h2><div class="fl-grid"><div class="fl"><input id="f-name" name="name" type="text" placeholder=" " required autocomplete=name data-sum=name><label for="f-name">Voor- en achternaam</label></div><div class="fl"><input id="f-company" name="company" type="text" placeholder=" " required autocomplete=organization data-sum=company><label for="f-company">Bedrijfsnaam</label></div></div><div class="fl"><input id="f-site" name="site" type="url" placeholder=" "  autocomplete=url><label for="f-site">Website</label></div></div><div class="q" data-step="2"><p class="qn">Stap 2 van 5</p><h2 class="ask">Hoe bereiken we je?</h2><div class="fl-grid"><div class="fl"><input id="f-email" name="email" type="email" placeholder=" " required autocomplete=email><label for="f-email">Werk e-mail</label></div><div class="fl"><input id="f-phone" name="phone" type="tel" placeholder=" " autocomplete=tel><label for="f-phone">Telefoonnummer</label></div></div><p class=hint>We bellen alleen om de intake in te plannen.</p></div><div class="q" data-step="3"><p class="qn">Stap 3 van 5</p><h2 class="ask">In welke sector en regio werk je?</h2><div class="fl-grid"><div class="fl"><input id="f-sector" name="sector" type="text" placeholder=" " required data-sum=sector><label for="f-sector">Sector</label></div><div class="fl"><input id="f-region" name="region" type="text" placeholder=" " required data-sum=region><label for="f-region">Regio</label></div></div><p class=hint>Zo stellen we alvast je concurrentielijst en vragenlijst samen.</p></div><div class="q" data-step="4"><p class="qn">Stap 4 van 5</p><h2 class="ask">Welk pakket past bij je?</h2><div class="chipset chipset-pkg" role="radiogroup"><label class="chipopt"><input type="radio" name="pkg" data-sum="pkg" value="Launch" data-price="€99 per maand" id="fp0" required><span>Launch <small>€99 per maand</small></span></label><label class="chipopt"><input type="radio" name="pkg" data-sum="pkg" value="Groei" data-price="€179 per maand" id="fp1"><span>Groei <small>€179 per maand</small></span></label><label class="chipopt"><input type="radio" name="pkg" data-sum="pkg" value="Schaal" data-price="€299 per maand" id="fp2"><span>Schaal <small>€299 per maand</small></span></label></div><h3 class="ask-sub">Hoe wil je betalen?</h3><div class="chipset" role="radiogroup"><label class="chipopt"><input type="radio" name="term" data-sum="term" value="Per maand" data-term="month" id="ft0" required><span>Per maand <small>minimaal 6 maanden</small></span></label><label class="chipopt"><input type="radio" name="term" data-sum="term" value="Per jaar" data-term="year" id="ft1"><span>Per jaar <small>11 maanden betalen</small></span></label></div><p class=hint>Twijfel je? Kies Groei, dat kiezen de meeste klanten. Wisselen kan altijd.</p></div><div class="q" data-step="5"><p class="qn">Stap 5 van 5</p><h2 class="ask">Welke vraag zou een klant aan ChatGPT stellen waarop jij het antwoord wilt zijn?</h2><div class="fl fl-area"><textarea id="f-msg" name="message" placeholder=" " required rows="3"></textarea><label for="f-msg">Bijvoorbeeld: welke accountant in Den Haag is gespecialiseerd in horeca?</label></div><p class=hint>Dit wordt de eerste vraag in je nulmeting.</p></div>
+          <div class="step-nav">
+            <span class="hint enter">Enter ↵ voor volgende</span>
+            <div class="step-btns">
+              <button type="button" class="btn btn-ghost" data-prev disabled>Vorige</button>
+              <button type="button" class="btn btn-blue" data-next>Volgende <span class="arr">→</span></button>
+              <button type="submit" class="btn btn-blue" data-submit hidden>Start met NXEO <span class="arr">→</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="form-ok" hidden data-done>
+          <span class="okmark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path class="tick" d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+          <h3>Aanvraag ontvangen</h3>
+          <p>Binnen één werkdag nemen we contact op om je intake in te plannen en de betaling te regelen.</p>
+          <div class="next3"><div><b>Binnen 1 werkdag</b><span>We plannen je intake</span></div><div><b>Intake van 1 uur</b><span>We stellen je vragenlijst op</span></div><div><b>48 uur later</b><span>Je nulmeting staat</span></div></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

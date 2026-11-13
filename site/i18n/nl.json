@@ -1,0 +1,65 @@
+{
+  "code": "nl",
+  "locale": "nl_NL",
+  "name": "Nederlands",
+  "switch_aria": "Schakel naar Nederlands",
+  "switch_label": "NL",
+  "switch_text": "Nederlandse versie",
+  "fpnote": "",
+  "pct": "% voltooid",
+  "site_name": "NXEO",
+  "org_description": "NXEO meet elke dag hoe ChatGPT, Gemini, Perplexity en Google jouw bedrijf noemen en past elke week je website en LinkedIn aan tot je in het antwoord staat. Vast abonnement, één weekrapport.",
+  "pages": {
+    "home": {
+      "slug": "",
+      "title": "NXEO | Word genoemd door ChatGPT, Gemini en Google",
+      "description": "Jouw klanten vragen het aan ChatGPT. NXEO meet dagelijks of je genoemd wordt en past wekelijks je website en LinkedIn aan tot je in het antwoord staat. Vanaf €99 per maand."
+    },
+    "over": {
+      "slug": "over",
+      "title": "Over NXEO | De founders en het idee",
+      "description": "NXEO is een samenwerking van IQ Script en The AI Doctor. Lees wie erachter zit en waarom we één vast abonnement bouwden voor zichtbaarheid in AI, Search en LinkedIn."
+    },
+    "prijzen": {
+      "slug": "prijzen",
+      "title": "Prijzen | NXEO abonnementen vanaf €99 per maand",
+      "description": "Launch €99, Groei €179 en Schaal €299 per maand, exclusief btw. Minimaal 6 maanden, daarna maandelijks opzegbaar. Een jaar in één keer is 11 maanden betalen. Eenmalige opstartkosten €195."
+    },
+    "contact": {
+      "slug": "contact",
+      "title": "Contact | NXEO",
+      "description": "Vragen over NXEO, sales of support? Mail ons of plan een kennismaking van 15 minuten. We reageren binnen één werkdag."
+    },
+    "sales": {
+      "slug": "plan-een-gesprek",
+      "title": "Plan een gesprek | NXEO",
+      "description": "Plan een kennismaking van 15 minuten met NXEO. We laten zien hoe AI jouw bedrijf nu noemt en wat er in 90 dagen kan veranderen. Geen verplichtingen."
+    },
+    "aanvraag": {
+      "slug": "start",
+      "title": "Start met NXEO | Kies je pakket",
+      "description": "Kies Launch, Groei of Schaal en start met NXEO. Minimaal 6 maanden, of een jaar in één keer met een maand korting. Binnen één werkdag plannen we je intake, binnen 48 uur staat je nulmeting."
+    },
+    "faq": {
+      "slug": "veelgestelde-vragen",
+      "title": "Veelgestelde vragen | NXEO",
+      "description": "Alles over NXEO: wat een AI Presence score is, hoe GEO verschilt van SEO, welke toegang we nodig hebben, wat het kost en wat er gebeurt als je stopt."
+    },
+    "blog": {
+      "slug": "blog",
+      "title": "Blog | NXEO over AI zichtbaarheid, GEO en LinkedIn",
+      "description": "Artikelen over hoe ChatGPT, Gemini en Perplexity bedrijven kiezen, wat GEO is en hoe je als B2B bedrijf in het antwoord komt."
+    },
+    "privacy": {
+      "slug": "privacy",
+      "title": "Privacyverklaring | NXEO",
+      "description": "Hoe NXEO omgaat met persoonsgegevens, cookies en de data uit metingen. AVG proof, geen advertentie tracking, je data blijft van jou."
+    },
+    "nulmeting": {
+      "slug": "nulmeting",
+      "title": "Gratis nulmeting | Noemt ChatGPT jouw bedrijf? | NXEO",
+      "description": "Vul je website in en ontvang binnen 48 uur een rapport met hoe ChatGPT, Claude, Gemini, Perplexity en Google jouw bedrijf nu noemen en welke vragen je verliest. Gratis, zonder verplichting."
+    }
+  },
+  "breadcrumb_home": "Home"
+}
