@@ -1794,3 +1794,5 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 .cmp .n{display:inline-block;width:10px;height:2px;border-radius:1px;background:var(--line-2);vertical-align:middle}
 .pricing-notes{max-width:1080px;margin-inline:auto;margin-top:48px}
 @media (max-width:900px){.plans3{grid-template-columns:minmax(0,1fr);max-width:520px}.plans3 .plan{padding:32px 28px}.cmp{padding:0 20px}.ent-strip{padding:20px}}
+.plans3 .feat{font-size:.92rem;gap:12px}
+.plans3 .feat li{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
