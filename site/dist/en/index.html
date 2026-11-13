@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="/assets/style.css?v=4cffc3fa">
+<link rel="stylesheet" href="/assets/style.css?v=b517e84e">
 <script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/assets/*"}}]},"eagerness":"moderate"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "NXEO", "url": "https://nxeo.io/", "logo": "https://nxeo.io/assets/img/nxeo.png", "description": "NXEO measures every day how ChatGPT, Gemini, Perplexity and Google mention your company, and adjusts your website and LinkedIn every week until you are in the answer. Fixed subscription, one weekly report.", "email": "hello@nxeo.io", "sameAs": ["https://www.linkedin.com/"], "parentOrganization": [{"@type": "Organization", "name": "IQ Script", "url": "https://iqscript.com/"}, {"@type": "Organization", "name": "The AI Doctor", "url": "https://theaidoctor.nl/"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "NXEO", "url": "https://nxeo.io/", "inLanguage": "en"}</script>
@@ -76,36 +76,28 @@
     </div>
 
     <div class="wrap">
-      <div class="demo-float">
-      <div class="demo" aria-label="Example of an AI answer with and without NXEO">
-        <div class="bar"><i></i><i></i><i></i><span style="margin-left:.4rem">This is what an AI answer looks like</span></div>
-        <div class="prompt"><span class="av">You</span><p>"Which agency in South Holland helps B2B companies with lead generation on LinkedIn?"</p></div>
-        <div class="tabs" role="tablist">
-          <button class="tab" role="tab" aria-selected="true" data-demo="before">Without NXEO</button>
-          <button class="tab" role="tab" aria-selected="false" data-demo="after">After 90 days of NXEO</button>
-        </div>
-        <div class="panes">
-        <div class="ans is-on" data-demo-pane="before">
-          <p>Frequently mentioned providers are:</p>
-          <div class="list">
-            <div class="li"><span class="rank">1</span>Competitor A<span class="dim">8 of 10 answers</span></div>
-            <div class="li"><span class="rank">2</span>Competitor B<span class="dim">6 of 10</span></div>
-            <div class="li"><span class="rank">3</span>Competitor C<span class="dim">4 of 10</span></div>
+      <div class="chat" aria-label="Answer from ChatGPT, Gemini, Perplexity and Google">
+        <div class="chat-head">
+          <span class="ai-src"><img src="/assets/img/openai_mark.png" alt=""><img src="/assets/img/claude_mark.png" alt="">Answer from ChatGPT, Gemini, Perplexity and Google</span>
+          <div class="tabs" role="tablist">
+            <button class="tab" role="tab" aria-selected="true" data-demo="before">Without NXEO</button>
+            <button class="tab" role="tab" aria-selected="false" data-demo="after">After 90 days of NXEO</button>
           </div>
-          <p><mark>Your company is not mentioned.</mark></p>
         </div>
-        <div class="ans" data-demo-pane="after">
-          <p>A frequently mentioned specialist for this question is:</p>
-          <div class="list">
-            <div class="li you"><span class="rank">1</span>Your company<span class="dim">7 of 10 answers</span></div>
-            <div class="li"><span class="rank">2</span>Competitor A<span class="dim">6 of 10</span></div>
-            <div class="li"><span class="rank">3</span>Competitor B<span class="dim">3 of 10</span></div>
+        <div class="msg ai">
+          <div class="panes">
+            <div class="ans is-on" data-demo-pane="before">
+              <p>Frequently mentioned providers are:</p>
+              <div class="list"><div class="li"><span class="rank">1</span>Competitor A<span class="dim">8 of 10 answers</span></div><div class="li"><span class="rank">2</span>Competitor B<span class="dim">6 of 10</span></div><div class="li"><span class="rank">3</span>Competitor C<span class="dim">4 of 10</span></div></div>
+              <p><mark>Your company is not mentioned.</mark><span class="cursor" aria-hidden="true"></span></p>
+            </div>
+            <div class="ans" data-demo-pane="after">
+              <p>A frequently mentioned specialist for this question is:</p>
+              <div class="list"><div class="li you"><span class="rank">1</span>Your company<span class="dim">7 of 10 answers</span></div><div class="li"><span class="rank">2</span>Competitor A<span class="dim">6 of 10</span></div><div class="li"><span class="rank">3</span>Competitor B<span class="dim">3 of 10</span></div></div>
+              <p><mark class="good">Mentioned, with the right description and a link to your site.</mark><span class="cursor" aria-hidden="true"></span></p>
+            </div>
           </div>
-          <p><mark class="good">Mentioned, with the right description and a link to your site.</mark></p>
         </div>
-        </div>
-        <div class="foot"><span>ChatGPT · Gemini · Perplexity · Google</span><span class="score" data-demo-score>Presence score <b>12</b></span></div>
-      </div>
       </div>
     </div>
 
@@ -405,6 +397,6 @@
 </div>
 
 
-<script src="/assets/script.js?v=59d5682e" defer></script>
+<script src="/assets/script.js?v=db05ef60" defer></script>
 </body>
 </html>

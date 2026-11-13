@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="/assets/style.css?v=4cffc3fa">
+<link rel="stylesheet" href="/assets/style.css?v=b517e84e">
 <script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/assets/*"}}]},"eagerness":"moderate"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "NXEO", "url": "https://nxeo.io/", "logo": "https://nxeo.io/assets/img/nxeo.png", "description": "NXEO meet elke dag hoe ChatGPT, Gemini, Perplexity en Google jouw bedrijf noemen en past elke week je website en LinkedIn aan tot je in het antwoord staat. Vast abonnement, één weekrapport.", "email": "hello@nxeo.io", "sameAs": ["https://www.linkedin.com/"], "parentOrganization": [{"@type": "Organization", "name": "IQ Script", "url": "https://iqscript.com/"}, {"@type": "Organization", "name": "The AI Doctor", "url": "https://theaidoctor.nl/"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "NXEO", "url": "https://nxeo.io/", "inLanguage": "nl"}</script>
@@ -76,36 +76,28 @@
     </div>
 
     <div class="wrap">
-      <div class="demo-float">
-      <div class="demo" aria-label="Voorbeeld van een AI antwoord met en zonder NXEO">
-        <div class="bar"><i></i><i></i><i></i><span style="margin-left:.4rem">Zo ziet een AI antwoord eruit</span></div>
-        <div class="prompt"><span class="av">Jij</span><p>"Welk bureau in Zuid-Holland helpt B2B bedrijven met leadgeneratie via LinkedIn?"</p></div>
-        <div class="tabs" role="tablist">
-          <button class="tab" role="tab" aria-selected="true" data-demo="before">Zonder NXEO</button>
-          <button class="tab" role="tab" aria-selected="false" data-demo="after">Na 90 dagen NXEO</button>
-        </div>
-        <div class="panes">
-        <div class="ans is-on" data-demo-pane="before">
-          <p>Veelgenoemde partijen zijn:</p>
-          <div class="list">
-            <div class="li"><span class="rank">1</span>Concurrent A<span class="dim">8 van 10 antwoorden</span></div>
-            <div class="li"><span class="rank">2</span>Concurrent B<span class="dim">6 van 10</span></div>
-            <div class="li"><span class="rank">3</span>Concurrent C<span class="dim">4 van 10</span></div>
+      <div class="chat" aria-label="Antwoord van ChatGPT, Gemini, Perplexity en Google">
+        <div class="chat-head">
+          <span class="ai-src"><img src="/assets/img/openai_mark.png" alt=""><img src="/assets/img/claude_mark.png" alt="">Antwoord van ChatGPT, Gemini, Perplexity en Google</span>
+          <div class="tabs" role="tablist">
+            <button class="tab" role="tab" aria-selected="true" data-demo="before">Zonder NXEO</button>
+            <button class="tab" role="tab" aria-selected="false" data-demo="after">Na 90 dagen NXEO</button>
           </div>
-          <p><mark>Jouw bedrijf wordt niet genoemd.</mark></p>
         </div>
-        <div class="ans" data-demo-pane="after">
-          <p>Een vaak genoemde specialist voor deze vraag is:</p>
-          <div class="list">
-            <div class="li you"><span class="rank">1</span>Jouw bedrijf<span class="dim">7 van 10 antwoorden</span></div>
-            <div class="li"><span class="rank">2</span>Concurrent A<span class="dim">6 van 10</span></div>
-            <div class="li"><span class="rank">3</span>Concurrent B<span class="dim">3 van 10</span></div>
+        <div class="msg ai">
+          <div class="panes">
+            <div class="ans is-on" data-demo-pane="before">
+              <p>Veelgenoemde partijen zijn:</p>
+              <div class="list"><div class="li"><span class="rank">1</span>Concurrent A<span class="dim">8 van 10 antwoorden</span></div><div class="li"><span class="rank">2</span>Concurrent B<span class="dim">6 van 10</span></div><div class="li"><span class="rank">3</span>Concurrent C<span class="dim">4 van 10</span></div></div>
+              <p><mark>Jouw bedrijf wordt niet genoemd.</mark><span class="cursor" aria-hidden="true"></span></p>
+            </div>
+            <div class="ans" data-demo-pane="after">
+              <p>Een vaak genoemde specialist voor deze vraag is:</p>
+              <div class="list"><div class="li you"><span class="rank">1</span>Jouw bedrijf<span class="dim">7 van 10 antwoorden</span></div><div class="li"><span class="rank">2</span>Concurrent A<span class="dim">6 van 10</span></div><div class="li"><span class="rank">3</span>Concurrent B<span class="dim">3 van 10</span></div></div>
+              <p><mark class="good">Genoemd, met de juiste omschrijving en een link naar je site.</mark><span class="cursor" aria-hidden="true"></span></p>
+            </div>
           </div>
-          <p><mark class="good">Genoemd, met de juiste omschrijving en een link naar je site.</mark></p>
         </div>
-        </div>
-        <div class="foot"><span>ChatGPT · Gemini · Perplexity · Google</span><span class="score" data-demo-score>Presence score <b>12</b></span></div>
-      </div>
       </div>
     </div>
 
@@ -405,6 +397,6 @@
 </div>
 
 
-<script src="/assets/script.js?v=59d5682e" defer></script>
+<script src="/assets/script.js?v=db05ef60" defer></script>
 </body>
 </html>

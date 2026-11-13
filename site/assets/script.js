@@ -28,7 +28,7 @@
     th.style.width=br.width+'px';th.style.transform='translateX('+(br.left-cr.left-c.clientLeft)+'px)';if(c.classList.contains('tabs')||c.classList.contains('faq-tabs')){th.style.top=(br.top-cr.top-c.clientTop)+'px';th.style.height=br.height+'px';}
     if(!animate){void th.offsetWidth;th.style.transition='';}
   }
-  var segs=Array.prototype.slice.call(document.querySelectorAll('.toggle,.seg,.demo .tabs,.faq-tabs'));
+  var segs=Array.prototype.slice.call(document.querySelectorAll('.toggle,.seg,.demo .tabs,.chat .tabs,.faq-tabs'));
   segs.forEach(function(c){
     var th=document.createElement('i');th.className='thumb';th.setAttribute('aria-hidden','true');c.insertBefore(th,c.firstChild);c.classList.add('has-thumb');
     placeThumb(c,false);
@@ -42,11 +42,11 @@
       if(t.getAttribute('aria-selected')==='true')return;
       document.querySelectorAll('[data-demo]').forEach(function(x){x.setAttribute('aria-selected',x===t?'true':'false');});
       placeThumb(t.parentNode,true);
-      var panes=document.querySelector('.demo .panes');
+      var panes=document.querySelector('.demo .panes, .chat .panes');
       panes.classList.add('is-switching');
       setTimeout(function(){
         document.querySelectorAll('[data-demo-pane]').forEach(function(p){p.classList.toggle('is-on',p.getAttribute('data-demo-pane')===k);});
-        document.querySelector('[data-demo-score]').innerHTML=k==='after'?'Presence score <b>74</b><span class="d">↑ +62</span>':'Presence score <b>12</b>';
+        var sc=document.querySelector('[data-demo-score]');if(sc)sc.innerHTML=k==='after'?'Presence score <b>74</b><span class="d">↑ +62</span>':'Presence score <b>12</b>';
         panes.classList.remove('is-switching');
       },260);
     });
