@@ -1426,3 +1426,14 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 .chat .msg.ai .list .li.you,.hero-c .msg.ai .li.you{background:linear-gradient(135deg,#002EFE,#4E6BFF);color:#fff;border-color:transparent;box-shadow:0 12px 28px -10px rgba(0,46,254,.45)}
 .chat .msg.ai .list .li.you .rank,.hero-c .msg.ai .li.you .rank{background:#fff;color:var(--blue);border-color:#fff;box-shadow:none}
 .chat .msg.ai .list .li.you .dim,.hero-c .msg.ai .li.you .dim{color:rgba(255,255,255,.85)}
+/* meetrijen: beeldmerk in een vast vakje, labels op een lijn */
+.mini-row .mk{flex:none;width:18px;height:18px;display:grid;place-items:center}
+.mini-row .mk img{width:16px;height:16px;object-fit:contain;filter:brightness(0);opacity:.8}
+.step-card .mini-row{gap:10px;padding:10px 12px;height:40px}
+.step-card .mini-row .lbl{font-size:.8rem;line-height:1}
+.step-card .mini-row .st{font-size:.68rem;font-weight:600;padding:5px 9px;line-height:1;letter-spacing:0}
+.mini-row .st.mid{background:#FFF4DC;color:#9A6400}
+.mini-score svg{overflow:visible}
+.step-card .mini-score svg{margin-right:4px}
+.step-card .mini-row .lbl{line-height:18px;padding-top:1px}
+.step-card .mini-row{align-items:center}
