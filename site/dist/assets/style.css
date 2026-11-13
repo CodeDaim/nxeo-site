@@ -1183,3 +1183,4 @@ html.nm-open{overflow:hidden;scroll-behavior:auto}
 .rot-inline{transition:width 520ms var(--liquid);overflow:visible;white-space:nowrap}
 .rot-inline .rot-item{width:max-content}
 .cursor{min-width:3px;min-height:1em}
+.hero-bg{display:none}
