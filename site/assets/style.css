@@ -1766,3 +1766,31 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 @media (max-width:1100px){.plans{grid-template-columns:repeat(2,minmax(0,1fr))}.plan .desc{min-height:4.5em}}
 @media (max-width:760px){.pricing-notes,.stats{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:640px){.plans{grid-template-columns:minmax(0,1fr)}.plan .for,.plan .desc{min-height:0}.plan{padding:24px}}
+/* prijzen: drie rustige kaarten, de rest in een uitklapbare vergelijking */
+.plans3{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;max-width:1080px;margin-inline:auto}
+.plans3 .plan{padding:40px 36px}
+.plans3 .plan .top{margin-bottom:8px}
+.plans3 .plan h3{font-size:1.5rem}
+.plans3 .plan .for{min-height:0;margin:0;color:var(--body);font-weight:500}
+.plans3 .plan .amount{font-size:3.6rem;margin-top:32px;letter-spacing:-.05em}
+.plans3 .plan .amount small{font-size:.95rem}
+.plans3 .plan .btn{margin-top:20px;padding-block:1rem}
+.plans3 .feat{margin-top:32px;padding-top:32px;border-top:1px solid var(--line);gap:16px;font-size:1rem}
+.ent-strip{max-width:1080px;margin:24px auto 0;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;padding:24px 32px;border-radius:var(--r-lg);background:var(--glass,rgba(255,255,255,.6));border:1px solid rgba(255,255,255,.9)}
+.ent-strip b{display:block;font-size:1.1rem;font-weight:600;color:var(--ink)}
+.ent-strip span{display:block;margin-top:4px;color:var(--body);font-size:.95rem}
+.cmp{max-width:1080px;margin:16px auto 0;border-radius:var(--r-lg);background:var(--glass-strong,#fff);border:1px solid rgba(255,255,255,.9);box-shadow:var(--sh-soft);padding:0 32px}
+.cmp summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:22px 0;font-weight:600;font-size:1.1rem;color:var(--ink)}
+.cmp summary::-webkit-details-marker{display:none}
+.cmp summary::after{content:"";width:32px;height:32px;border-radius:50%;border:1.5px solid rgba(0,46,254,.28);background:linear-gradient(var(--blue),var(--blue)) center/12px 2.5px no-repeat,linear-gradient(var(--blue),var(--blue)) center/2.5px 12px no-repeat;transition:background-size 520ms var(--liquid)}
+.cmp[open] summary::after{background-size:12px 2.5px,2.5px 0px}
+.cmp-wrap{overflow-x:auto;padding-bottom:24px}
+.cmp table{width:100%;border-collapse:collapse;font-size:.95rem;min-width:520px}
+.cmp th,.cmp td{padding:14px 12px;text-align:center;border-top:1px solid var(--line)}
+.cmp thead th{border-top:0;font-weight:600;color:var(--ink);font-size:1rem}
+.cmp tbody th{text-align:left;font-weight:500;color:var(--body);padding-left:0}
+.cmp td{color:var(--ink);font-weight:500}
+.cmp .y{display:inline-block;width:20px;height:20px;border-radius:50%;background:#EEF1FF url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6.5 12.5l3.5 3.5 7.5-8' fill='none' stroke='%23002EFE' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/13px no-repeat;vertical-align:middle}
+.cmp .n{display:inline-block;width:10px;height:2px;border-radius:1px;background:var(--line-2);vertical-align:middle}
+.pricing-notes{max-width:1080px;margin-inline:auto;margin-top:48px}
+@media (max-width:900px){.plans3{grid-template-columns:minmax(0,1fr);max-width:520px}.plans3 .plan{padding:32px 28px}.cmp{padding:0 20px}.ent-strip{padding:20px}}
