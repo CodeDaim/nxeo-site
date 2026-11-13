@@ -1686,3 +1686,13 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 .faq-teaser summary:hover::after{border-color:var(--blue);background-color:transparent}
 .faq-teaser summary:hover::after{border-color:var(--blue);background:linear-gradient(var(--blue),var(--blue)) center/12px 2.5px no-repeat,linear-gradient(var(--blue),var(--blue)) center/2.5px 12px no-repeat}
 .faq-teaser details[open] summary:hover::after{background:linear-gradient(var(--blue),var(--blue)) center/12px 2.5px no-repeat}
+/* veelgestelde vragen: vloeibaar zonder druk te worden */
+.faq-teaser details{transition:box-shadow 520ms var(--liquid)}
+.faq-teaser summary{transition:color 300ms ease}
+@media (hover:hover) and (pointer:fine){.faq-teaser summary:hover{color:var(--blue)}}
+.faq-teaser summary::after,.faq-teaser details[open] summary::after,.faq-teaser summary:hover::after,.faq-teaser details[open] summary:hover::after{background:linear-gradient(var(--blue),var(--blue)) center/12px 2.5px no-repeat,linear-gradient(var(--blue),var(--blue)) center/2.5px 12px no-repeat;transition:background-size 520ms var(--liquid),border-color 300ms ease,transform 420ms var(--liquid)}
+.faq-teaser details[open] summary::after,.faq-teaser details[open] summary:hover::after{background-size:12px 2.5px,2.5px 0px}
+.faq-teaser summary:active::after{transform:scale(.88)}
+.faq-teaser details[open] .body>*{animation:faqin 620ms var(--liquid) both}
+@keyframes faqin{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.faq-teaser details[open] .body>*{animation:none}}

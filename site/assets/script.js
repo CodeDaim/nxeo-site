@@ -257,11 +257,11 @@
       d.dataset.busy='1';
       if(d.open){
         var h=body.offsetHeight;
-        body.animate([{height:h+'px',opacity:1},{height:'0px',opacity:0}],{duration:360,easing:'cubic-bezier(.32,.72,0,1)'}).onfinish=function(){d.open=false;delete d.dataset.busy;};
+        body.animate([{height:h+'px',opacity:1},{height:'0px',opacity:0}],{duration:480,easing:'cubic-bezier(.32,.72,0,1)'}).onfinish=function(){d.open=false;delete d.dataset.busy;};
       }else{
         d.open=true;
         var h2=body.offsetHeight;
-        body.animate([{height:'0px',opacity:0},{height:h2+'px',opacity:1}],{duration:460,easing:'cubic-bezier(.32,.72,0,1)'}).onfinish=function(){delete d.dataset.busy;};
+        body.animate([{height:'0px',opacity:0},{height:h2+'px',opacity:1}],{duration:620,easing:'cubic-bezier(.32,.72,0,1)'}).onfinish=function(){delete d.dataset.busy;};
       }
     });
   });
