@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="/assets/style.css?v=e8a5fc81">
+<link rel="stylesheet" href="/assets/style.css?v=9b7634e5">
 <script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/assets/*"}}]},"eagerness":"moderate"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "NXEO", "url": "https://nxeo.io/", "logo": "https://nxeo.io/assets/img/nxeo.png", "description": "NXEO measures every day how ChatGPT, Gemini, Perplexity and Google mention your company, and adjusts your website and LinkedIn every week until you are in the answer. Fixed subscription, one weekly report.", "email": "hello@nxeo.io", "sameAs": ["https://www.linkedin.com/"], "parentOrganization": [{"@type": "Organization", "name": "IQ Script", "url": "https://iqscript.com/"}, {"@type": "Organization", "name": "The AI Doctor", "url": "https://theaidoctor.nl/"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://nxeo.io/en/"}, {"@type": "ListItem", "position": 2, "name": "Book a call", "item": "https://nxeo.io/en/book-a-call/"}]}</script>
@@ -75,8 +75,8 @@
       <form id="form-sales" class="form-card" novalidate>
         <div class="form-body">
           <p class="form-title">Tell us briefly who you are</p>
-          <div class="fl-grid"><div class="fl"><input id="s-name" name="name" type="text" placeholder=" " required autocomplete="name"><label for="s-name">Full name</label></div><div class="fl"><input id="s-company" name="company" type="text" placeholder=" " required autocomplete="organization"><label for="s-company">Company</label></div></div>
-          <div class="fl-grid"><div class="fl"><input id="s-email" name="email" type="email" placeholder=" " required autocomplete="email"><label for="s-email">Work email</label></div><div class="fl"><input id="s-phone" name="phone" type="tel" placeholder=" " required autocomplete="tel"><label for="s-phone">Phone number</label></div></div>
+          <div class="fl-grid"><div class="fl"><input id="s-name" name="name" type="text" placeholder="Full name" required autocomplete="name"><label class="sr" for="s-name">Full name</label></div><div class="fl"><input id="s-company" name="company" type="text" placeholder="Company" required autocomplete="organization"><label class="sr" for="s-company">Company</label></div></div>
+          <div class="fl-grid"><div class="fl"><input id="s-email" name="email" type="email" placeholder="Work email" required autocomplete="email"><label class="sr" for="s-email">Work email</label></div><div class="fl"><input id="s-phone" name="phone" type="tel" placeholder="Phone number" required autocomplete="tel"><label class="sr" for="s-phone">Phone number</label></div></div>
           <div class="field"><span class="flabel">How many people work at your company?</span><div class="chipset" role="radiogroup"><label class="chipopt"><input type="radio" name="size" value="1 to 20" id="ss0" required><span>1 to 20</span></label><label class="chipopt"><input type="radio" name="size" value="20 to 100" id="ss1" ><span>20 to 100</span></label><label class="chipopt"><input type="radio" name="size" value="100 to 500" id="ss2" ><span>100 to 500</span></label><label class="chipopt"><input type="radio" name="size" value="500+" id="ss3" ><span>500+</span></label></div></div>
           <div class="field"><span class="flabel">What is it about?</span><div class="chipset" role="radiogroup"><label class="chipopt"><input type="radio" name="topic" value="Introduction" id="st0" required><span>Introduction</span></label><label class="chipopt"><input type="radio" name="topic" value="Question about a package" id="st1" ><span>Question about a package</span></label><label class="chipopt"><input type="radio" name="topic" value="Free baseline measurement" id="st2" ><span>Free baseline measurement</span></label><label class="chipopt"><input type="radio" name="topic" value="Enterprise" id="st3" ><span>Enterprise</span></label></div></div>
           <div class="fl fl-area"><textarea id="s-msg" name="message" placeholder=" " required rows="3"></textarea><label for="s-msg">What would you like to discuss?</label></div>
@@ -162,7 +162,7 @@
     <h3 id="nulmodal-title">Where can we send the report?</h3>
     <p class="nm-sub">In your inbox within 48 hours. No newsletter, no spam.</p>
     <div class="nm-site"><span>Website</span><b data-nm-site></b></div>
-    <div class="fl"><input id="nm-email" name="email" type="email" placeholder=" " required autocomplete="email"><label for="nm-email">Work email</label></div>
+    <div class="fl"><input id="nm-email" name="email" type="email" placeholder="Work email" required autocomplete="email"><label class="sr" for="nm-email">Work email</label></div>
     <input type="hidden" name="site">
     <button class="btn btn-blue btn-block" type="submit">Send my baseline <span class="arr">→</span></button>
   </form>
