@@ -1447,3 +1447,16 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 /* knoppen tillen nergens op bij hover */
 .btn:hover,.btn-blue:hover,.site-header .hdr-actions .hdr-cta:hover{transform:none}
 .btn:active,.btn-blue:active,.site-header .hdr-actions .hdr-cta:active{transform:scale(.97)}
+/* dubbele veer: de knop wordt platter, de tekst juist hoger, elk met een eigen veer */
+:root{--spring:linear(0,0.009,0.035 2.1%,0.141 4.4%,0.723 12.9%,0.938 16.7%,1.017,1.077,1.121,1.149 24.3%,1.159,1.163,1.161,1.154 29.9%,1.129 32.8%,1.051 39.6%,1.017 43.1%,0.991,0.977 51%,0.974 53.8%,0.975 57.1%,0.997 69.8%,1.003 76.9%,1.004 83.8%,1)}
+.btn .bt{display:inline-flex;align-items:center;justify-content:center;gap:inherit;transition:transform 900ms var(--spring) 60ms}
+.btn:not(.hdr-contact),.site-header .hdr-actions .hdr-cta{transition:transform 800ms var(--spring),box-shadow 320ms ease,background-color 320ms ease,border-color 200ms ease,color 200ms ease}
+@media (hover:hover) and (pointer:fine){
+  .btn:not(.hdr-contact):hover,.btn-blue:hover,.site-header .hdr-actions .hdr-cta:hover{transform:scale(1.06,.93)}
+  .btn:not(.hdr-contact):hover .bt{transform:scale(.95,1.07)}
+  .combo .btn:hover,.btn-block:hover{transform:scale(1.025,.94)}
+  .combo .btn:hover .bt,.btn-block:hover .bt{transform:scale(.98,1.06)}
+}
+.btn:not(.hdr-contact):active,.btn-blue:active,.site-header .hdr-actions .hdr-cta:active{transform:scale(1.08,.85);transition-duration:140ms;transition-timing-function:ease-out}
+.combo .btn:active,.btn-block:active{transform:scale(1.03,.88)}
+@media (prefers-reduced-motion:reduce){.btn:hover,.btn:active,.btn:hover .bt{transform:none!important}}

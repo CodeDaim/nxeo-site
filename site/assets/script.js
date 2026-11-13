@@ -30,6 +30,10 @@
     group(document.querySelector('.site-header .nav'),'a');
     group(document.querySelector('.site-header .hdr-actions'),'.lang,.hdr-contact');
   })();
+  // Buttons: wrap the label so the button and its text can spring separately
+  document.querySelectorAll('.btn:not(.hdr-contact)').forEach(function(b){
+    if(b.querySelector(':scope>.bt'))return;var w=document.createElement('span');w.className='bt';while(b.firstChild)w.appendChild(b.firstChild);b.appendChild(w);
+  });
   function closeMenu(){mnav.classList.remove('is-open');}
 
   // In page jumps; links to a section on another page are plain links
