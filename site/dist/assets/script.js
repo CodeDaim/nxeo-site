@@ -132,12 +132,15 @@
     });
   });
 
-  // Sales form
+  // Call request form
   var sf=document.getElementById('form-sales');
   if(sf)sf.addEventListener('submit',function(e){
     e.preventDefault();
-    if(!sf.checkValidity()){sf.reportValidity();return;}
-    sf.querySelector('.form-body').hidden=true;sf.querySelector('[data-ok]').hidden=false;
+    var f=sf.querySelectorAll('[required]');for(var k=0;k<f.length;k++){f[k].value=f[k].value.trim();if(!f[k].checkValidity()){f[k].reportValidity();return;}}
+    var d=document.querySelector('[data-sl-done]');
+    var first=sf.elements.name.value.split(/\s+/)[0];var h=d.querySelector('[data-sw="hello"]');h.textContent=h.getAttribute('data-hello')+(first?', '+first:'');
+    d.querySelector('[data-sw="email"]').textContent=sf.elements.email.value;
+    sf.hidden=true;document.querySelector('#page-sales .so-head').hidden=true;d.hidden=false;document.querySelector('#page-sales .so-sec').classList.add('is-done');window.scrollTo(0,0);
   });
 
   // Rotating AI names in the hero headline

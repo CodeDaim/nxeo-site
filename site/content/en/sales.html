@@ -1,33 +1,39 @@
 <section class="page" id="page-sales">
-  <div class="sec">
-    <div class="wrap form2">
-      <div class="form2-side">
-        <span class="eyebrow">Book a call</span>
-        <h1>Fifteen minutes.<br>No sales pitch.</h1>
-        <p class="lead">We show you how AI describes your company today, which package fits and what to expect in 90 days.</p>
-        <ul class="checks"><li>You see live how ChatGPT and Google name you today</li><li>You hear which package fits you</li><li>You get honest advice, even if NXEO is not a fit</li></ul>
-        <div class="side-card">
-          <p class="small">On working days we reply within 24 hours.</p>
-          <p class="small" style="margin-top:.6rem"><b>Prefer direct?</b> <a href="mailto:sales@nxeo.io">sales@nxeo.io</a></p>
+  <div class="sec so-sec">
+    <div class="wrap so-head"><h1>Book a call</h1><p class="lead">Fifteen minutes, online. No sales pitch.</p></div>
+    <form id="form-sales" class="wrap so sl" novalidate>
+      <div class="so-main">
+        <div class="so-card">
+          <div class="so-ch"><h2>Leave your details</h2></div>
+          <div class="so-fields">
+            <div><input id="sl-name" name="name" type="text" placeholder="First and last name" required autocomplete="name"><label class="sr" for="sl-name">First and last name</label></div>
+            <div><input id="sl-company" name="company" type="text" placeholder="Company name" required autocomplete="organization"><label class="sr" for="sl-company">Company name</label></div>
+            <div><input id="sl-site" name="site" type="text" inputmode="url" placeholder="Website" required autocomplete="url"><label class="sr" for="sl-site">Website</label></div>
+            <div><input id="sl-email" name="email" type="email" placeholder="Work email" required autocomplete="email"><label class="sr" for="sl-email">Work email</label></div>
+            <div class="full"><textarea id="sl-msg" name="msg" rows="3" placeholder="What would you like to talk about? (optional)"></textarea><label class="sr" for="sl-msg">What would you like to talk about? (optional)</label></div>
+          </div>
+          <button class="btn btn-blue btn-block" type="submit">Request a call <span class="arr">→</span></button>
+          <p class="sl-fine">We email you within 24 hours on working days with a proposed time.</p>
         </div>
       </div>
-      <form id="form-sales" class="form-card" novalidate>
-        <div class="form-body">
-          <p class="form-title">Tell us briefly who you are</p>
-          <div class="fl-grid"><div class="fl"><input id="s-name" name="name" type="text" placeholder="Full name" required autocomplete="name"><label class="sr" for="s-name">Full name</label></div><div class="fl"><input id="s-company" name="company" type="text" placeholder="Company" required autocomplete="organization"><label class="sr" for="s-company">Company</label></div></div>
-          <div class="fl-grid"><div class="fl"><input id="s-email" name="email" type="email" placeholder="Work email" required autocomplete="email"><label class="sr" for="s-email">Work email</label></div><div class="fl"><input id="s-phone" name="phone" type="tel" placeholder="Phone number" required autocomplete="tel"><label class="sr" for="s-phone">Phone number</label></div></div>
-          <div class="field"><span class="flabel">How many people work at your company?</span><div class="chipset" role="radiogroup"><label class="chipopt"><input type="radio" name="size" value="1 to 20" id="ss0" required><span>1 to 20</span></label><label class="chipopt"><input type="radio" name="size" value="20 to 100" id="ss1" ><span>20 to 100</span></label><label class="chipopt"><input type="radio" name="size" value="100 to 500" id="ss2" ><span>100 to 500</span></label><label class="chipopt"><input type="radio" name="size" value="500+" id="ss3" ><span>500+</span></label></div></div>
-          <div class="field"><span class="flabel">What is it about?</span><div class="chipset" role="radiogroup"><label class="chipopt"><input type="radio" name="topic" value="Introduction" id="st0" required><span>Introduction</span></label><label class="chipopt"><input type="radio" name="topic" value="Question about a package" id="st1" ><span>Question about a package</span></label><label class="chipopt"><input type="radio" name="topic" value="Free baseline measurement" id="st2" ><span>Free baseline measurement</span></label><label class="chipopt"><input type="radio" name="topic" value="Enterprise" id="st3" ><span>Enterprise</span></label></div></div>
-          <div class="fl fl-area"><textarea id="s-msg" name="message" placeholder=" " required rows="3"></textarea><label for="s-msg">What would you like to discuss?</label></div>
-          <button class="btn btn-blue btn-block" type="submit">Book my call <span class="arr">→</span></button>
-          <p class="consent">By sending you agree to our <a href="#privacy" data-link>privacy policy</a>. No newsletter, no spam.</p>
+      <aside class="so-side">
+        <div class="so-sum">
+          <h3>What you get from the call</h3>
+          <ol class="sl-pts"><li><span class="n">1</span><div><b>You see how AI mentions you today</b><span>We look up live what ChatGPT and Google say about your company.</span></div></li><li><span class="n">2</span><div><b>You hear which package fits</b><span>Based on your website and your market, not on what we want to sell.</span></div></li><li><span class="n">3</span><div><b>You get honest advice</b><span>Also if that means NXEO is not right for you.</span></div></li></ol>
+          <p class="so-q">Prefer to email first? <a href="mailto:sales@nxeo.io">sales@nxeo.io</a></p>
         </div>
-        <div class="form-ok" hidden data-ok>
-          <span class="okmark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path class="tick" d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
-          <h3>Done. We will be in touch within 24 hours.</h3>
-          <p>You will get a proposal for a 15 minute slot. Want to know now how AI describes you? Send your website to <a href="mailto:sales@nxeo.io">sales@nxeo.io</a>.</p>
-        </div>
-      </form>
+      </aside>
+    </form>
+    <div class="so-done" hidden data-sl-done>
+      <div class="so-win">
+        <div class="bubble" aria-hidden="true">Request received</div>
+        <h2><span data-sw="hello" data-hello="See you soon">See you soon</span>.<span class="cursor" aria-hidden="true"></span></h2>
+        <p class="so-win-lead">Within 24 hours on working days we email you at <b data-sw="email"></b> with a proposed time.</p>
+      </div>
+      <div class="wrap so-after sl-after">
+        <div class="so-card"><h3>What happens now</h3><ol class="c2-tl so-next"><li><span class="wk">Within 24 hours</span><span class="lbl">You get an email with a proposed time</span></li><li class="hit"><span class="wk">The call</span><span class="lbl">Fifteen minutes online, we look at your company live</span></li><li><span class="wk">After that</span><span class="lbl">You decide whether to start, without obligation</span></li></ol></div>
+      </div>
+      <div class="wrap so-warm"><div class="so-links"><a class="btn btn-ghost" href="#prijzen" data-link>See the packages <span class="arr">→</span></a><a class="btn btn-ghost" href="#faq" data-link>Read the frequently asked questions <span class="arr">→</span></a></div></div>
     </div>
   </div>
 </section>

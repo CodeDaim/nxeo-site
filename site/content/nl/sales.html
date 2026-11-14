@@ -1,33 +1,39 @@
 <section class="page" id="page-sales">
-  <div class="sec">
-    <div class="wrap form2">
-      <div class="form2-side">
-        <span class="eyebrow">Plan een gesprek</span>
-        <h1>Vijftien minuten.<br>Geen salespraatje.</h1>
-        <p class="lead">We laten zien hoe AI jouw bedrijf nu omschrijft, welk pakket past en wat je in 90 dagen kunt verwachten.</p>
-        <ul class="checks"><li>Je ziet live hoe ChatGPT en Google je nu noemen</li><li>Je hoort welk pakket bij je past</li><li>Je krijgt een eerlijk advies, ook als NXEO niet past</li></ul>
-        <div class="side-card">
-          <p class="small">Op werkdagen reageren we binnen 24 uur.</p>
-          <p class="small" style="margin-top:.6rem"><b>Liever direct?</b> <a href="mailto:sales@nxeo.io">sales@nxeo.io</a></p>
+  <div class="sec so-sec">
+    <div class="wrap so-head"><h1>Plan een gesprek</h1><p class="lead">Vijftien minuten, online. Geen salespraatje.</p></div>
+    <form id="form-sales" class="wrap so sl" novalidate>
+      <div class="so-main">
+        <div class="so-card">
+          <div class="so-ch"><h2>Laat je gegevens achter</h2></div>
+          <div class="so-fields">
+            <div><input id="sl-name" name="name" type="text" placeholder="Voor- en achternaam" required autocomplete="name"><label class="sr" for="sl-name">Voor- en achternaam</label></div>
+            <div><input id="sl-company" name="company" type="text" placeholder="Bedrijfsnaam" required autocomplete="organization"><label class="sr" for="sl-company">Bedrijfsnaam</label></div>
+            <div><input id="sl-site" name="site" type="text" inputmode="url" placeholder="Website" required autocomplete="url"><label class="sr" for="sl-site">Website</label></div>
+            <div><input id="sl-email" name="email" type="email" placeholder="Werk e-mail" required autocomplete="email"><label class="sr" for="sl-email">Werk e-mail</label></div>
+            <div class="full"><textarea id="sl-msg" name="msg" rows="3" placeholder="Waar wil je het over hebben? (mag je leeg laten)"></textarea><label class="sr" for="sl-msg">Waar wil je het over hebben? (mag je leeg laten)</label></div>
+          </div>
+          <button class="btn btn-blue btn-block" type="submit">Vraag gesprek aan <span class="arr">→</span></button>
+          <p class="sl-fine">We mailen je binnen 24 uur op werkdagen met een voorstel voor een moment.</p>
         </div>
       </div>
-      <form id="form-sales" class="form-card" novalidate>
-        <div class="form-body">
-          <p class="form-title">Vertel kort wie je bent</p>
-          <div class="fl-grid"><div class="fl"><input id="s-name" name="name" type="text" placeholder="Voor- en achternaam" required autocomplete="name"><label class="sr" for="s-name">Voor- en achternaam</label></div><div class="fl"><input id="s-company" name="company" type="text" placeholder="Bedrijfsnaam" required autocomplete="organization"><label class="sr" for="s-company">Bedrijfsnaam</label></div></div>
-          <div class="fl-grid"><div class="fl"><input id="s-email" name="email" type="email" placeholder="Werk e-mail" required autocomplete="email"><label class="sr" for="s-email">Werk e-mail</label></div><div class="fl"><input id="s-phone" name="phone" type="tel" placeholder="Telefoonnummer" required autocomplete="tel"><label class="sr" for="s-phone">Telefoonnummer</label></div></div>
-          <div class="field"><span class="flabel">Hoeveel mensen werken er bij jullie?</span><div class="chipset" role="radiogroup"><label class="chipopt"><input type="radio" name="size" value="1 tot 20" id="ss0" required><span>1 tot 20</span></label><label class="chipopt"><input type="radio" name="size" value="20 tot 100" id="ss1" ><span>20 tot 100</span></label><label class="chipopt"><input type="radio" name="size" value="100 tot 500" id="ss2" ><span>100 tot 500</span></label><label class="chipopt"><input type="radio" name="size" value="500+" id="ss3" ><span>500+</span></label></div></div>
-          <div class="field"><span class="flabel">Waar gaat het over?</span><div class="chipset" role="radiogroup"><label class="chipopt"><input type="radio" name="topic" value="Kennismaking" id="st0" required><span>Kennismaking</span></label><label class="chipopt"><input type="radio" name="topic" value="Vraag over een pakket" id="st1" ><span>Vraag over een pakket</span></label><label class="chipopt"><input type="radio" name="topic" value="Gratis nulmeting" id="st2" ><span>Gratis nulmeting</span></label><label class="chipopt"><input type="radio" name="topic" value="Enterprise" id="st3" ><span>Enterprise</span></label></div></div>
-          <div class="fl fl-area"><textarea id="s-msg" name="message" placeholder=" " required rows="3"></textarea><label for="s-msg">Wat wil je bespreken?</label></div>
-          <button class="btn btn-blue btn-block" type="submit">Plan mijn gesprek <span class="arr">→</span></button>
-          <p class="consent">Door te versturen ga je akkoord met onze <a href="#privacy" data-link>privacyverklaring</a>. Geen nieuwsbrief, geen spam.</p>
+      <aside class="so-side">
+        <div class="so-sum">
+          <h3>Wat je uit het gesprek haalt</h3>
+          <ol class="sl-pts"><li><span class="n">1</span><div><b>Je ziet hoe AI je nu noemt</b><span>We zoeken live op wat ChatGPT en Google over jouw bedrijf zeggen.</span></div></li><li><span class="n">2</span><div><b>Je hoort welk pakket past</b><span>Op basis van je website en je markt, niet op basis van wat wij willen verkopen.</span></div></li><li><span class="n">3</span><div><b>Je krijgt een eerlijk advies</b><span>Ook als dat betekent dat NXEO niet bij je past.</span></div></li></ol>
+          <p class="so-q">Liever eerst mailen? <a href="mailto:sales@nxeo.io">sales@nxeo.io</a></p>
         </div>
-        <div class="form-ok" hidden data-ok>
-          <span class="okmark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path class="tick" d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
-          <h3>Gelukt. We nemen binnen 24 uur contact op.</h3>
-          <p>Je krijgt een voorstel voor een moment van 15 minuten. Wil je alvast weten hoe AI je nu omschrijft? Stuur dan je website naar <a href="mailto:sales@nxeo.io">sales@nxeo.io</a>.</p>
-        </div>
-      </form>
+      </aside>
+    </form>
+    <div class="so-done" hidden data-sl-done>
+      <div class="so-win">
+        <div class="bubble" aria-hidden="true">Aanvraag ontvangen</div>
+        <h2><span data-sw="hello" data-hello="Tot snel">Tot snel</span>.<span class="cursor" aria-hidden="true"></span></h2>
+        <p class="so-win-lead">Binnen 24 uur op werkdagen mailen we je op <b data-sw="email"></b> met een voorstel voor een moment.</p>
+      </div>
+      <div class="wrap so-after sl-after">
+        <div class="so-card"><h3>Wat er nu gebeurt</h3><ol class="c2-tl so-next"><li><span class="wk">Binnen 24 uur</span><span class="lbl">Je krijgt een mail met een voorstel voor een moment</span></li><li class="hit"><span class="wk">Het gesprek</span><span class="lbl">Vijftien minuten online, we kijken live naar jouw bedrijf</span></li><li><span class="wk">Daarna</span><span class="lbl">Je beslist zelf of je start, zonder verplichting</span></li></ol></div>
+      </div>
+      <div class="wrap so-warm"><div class="so-links"><a class="btn btn-ghost" href="#prijzen" data-link>Bekijk de pakketten <span class="arr">→</span></a><a class="btn btn-ghost" href="#faq" data-link>Lees de veelgestelde vragen <span class="arr">→</span></a></div></div>
     </div>
   </div>
 </section>
