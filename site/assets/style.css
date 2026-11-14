@@ -2077,3 +2077,4 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 /* start en gesprek: geen ring om het actieve veld, alleen een heel lichte tint */
 .so-fields input:focus,.so-fields textarea:focus,.so-fields input:focus-visible,.so-fields textarea:focus-visible{outline:0;box-shadow:none;border-color:var(--line-2,#D7DBE8);background:#F7F8FD}
 .so-fields input,.so-fields textarea{transition:background-color 250ms ease}
+.so-fields input:focus,.so-fields textarea:focus,.so-fields input:focus-visible,.so-fields textarea:focus-visible{border-color:rgba(26, 35, 50, 0.08)}
