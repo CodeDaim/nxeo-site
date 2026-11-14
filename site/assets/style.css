@@ -1980,3 +1980,14 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 .so-term label{position:relative}
 .so-term input,.so-plan input{width:1px;height:1px;left:0;top:0;margin:0;padding:0;border:0}
 @media (max-width:640px){.so-top i{display:none}.so-plan:nth-child(2) .so-top b::after{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--blue);margin-left:8px;vertical-align:middle}}
+/* pakketkaarten ruimer: label boven op de rand, /maand onder de prijs */
+.so{max-width:1200px;grid-template-columns:minmax(0,1fr) 340px}
+.so-plans{gap:16px;padding-top:6px}
+.so-box{padding:24px 22px;gap:6px}
+.so-top{min-height:0}
+.so-top i{position:absolute;top:-11px;right:16px;box-shadow:0 6px 14px -6px rgba(0,46,254,.5)}
+.so-price{display:grid;gap:2px;margin-top:10px;white-space:nowrap}
+.so-price b{font-size:1.9rem}
+.so-price small{font-size:.82rem}
+.so-desc{margin-top:12px}
+@media (max-width:640px){.so-price{margin-top:0;justify-items:end}.so-desc{margin-top:4px}}
