@@ -1885,3 +1885,29 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 .page.is-active{animation:pgfade 320ms ease both}
 @keyframes pgfade{from{opacity:0}to{opacity:1}}
 @media (prefers-reduced-motion:reduce){.page.is-active{animation:none}}
+/* veelgestelde vragen pagina in dezelfde stijl als de vragen op home */
+.faq-page{padding-top:clamp(3rem,6vw,5rem)}
+.faq-head{display:grid;gap:16px;justify-items:center;text-align:center;margin:0 auto 32px}
+.faq-head h1{margin:0;font-size:clamp(2.4rem,5.4vw,4.2rem);letter-spacing:-.045em;line-height:1.03}
+.faq-head .lead{margin:0}
+.faq-head .lead a{color:var(--blue);font-weight:600}
+.faq-tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:0 auto 32px;max-width:880px}
+.ftab{background:#fff;border:1px solid rgba(26,35,50,.06);color:var(--ink);font-weight:600;padding:.6rem 1.1rem;font-size:.92rem;box-shadow:0 6px 16px -10px rgba(26,35,50,.25);transition:background-color 300ms ease,color 300ms ease,box-shadow 300ms ease}
+.ftab:hover{color:var(--blue);transform:none}
+.ftab[aria-selected="true"],.ftab[aria-selected="true"]:hover{background:linear-gradient(135deg,#002EFE,#4E6BFF);color:#fff;border-color:transparent;box-shadow:0 12px 24px -10px rgba(0,46,254,.5)}
+.faq-list{max-width:880px;margin:0 auto}
+.faq-group.is-on{display:grid;gap:12px}
+.faq-list details,.faq-list details:last-child{border:1px solid rgba(255,255,255,.9);border-radius:20px;padding:0 24px;background:var(--glass-strong,#fff);box-shadow:var(--sh-soft);transition:box-shadow 520ms var(--liquid)}
+.faq-list details[open]{box-shadow:0 0 0 1.5px rgba(0,46,254,.18),var(--sh-soft)}
+.faq-list summary{grid-template-columns:1fr 32px;gap:20px;padding:22px 0;font-size:1.1rem;font-weight:600;letter-spacing:-.01em;line-height:1.3}
+.faq-list details[open] .qt{color:var(--ink)}
+.faq-list .chev,.faq-list details[open] .chev{width:32px;height:32px;border-radius:50%;border:1.5px solid rgba(0,46,254,.28);box-shadow:none;transform:none;color:transparent;background:linear-gradient(var(--blue),var(--blue)) center/12px 2.5px no-repeat,linear-gradient(var(--blue),var(--blue)) center/2.5px 12px no-repeat;transition:background-size 520ms var(--liquid),border-color 300ms ease}
+.faq-list .chev svg{display:none}
+.faq-list details[open] .chev{background-size:12px 2.5px,2.5px 0px}
+.faq-list summary:hover .chev{border-color:var(--blue)}
+.faq-list details p,.faq-list details ul{font-size:1rem;line-height:1.6;padding:0 56px 16px 0}
+.faq-list details ul{padding-left:1.2rem}
+.faq-list details>*:last-child,.faq-list details .body>*:last-child{padding-bottom:24px}
+@media (max-width:640px){.faq-list details,.faq-list details:last-child{padding:0 18px}.faq-list summary{font-size:1rem;padding:18px 0}.faq-list details p,.faq-list details ul{padding-right:0}.faq-tabs{justify-content:flex-start}}
+.faq-head .lead a{text-decoration:none}
+.faq-list details>*:last-child,.faq-list details .body>*:last-child{padding-bottom:8px}
