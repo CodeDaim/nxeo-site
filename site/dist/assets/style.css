@@ -1879,3 +1879,9 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 .rt-meta{display:block;font-size:.88rem;font-weight:600;color:var(--blue)}
 .rt h2{font-size:1.5rem;margin-bottom:10px}
 .rt p{margin-bottom:28px}
+/* paginawissel: geen momentopname van de hele pagina meer (gaf een witte rand), alleen de inhoud vloeit in */
+@view-transition{navigation:none}
+.site-header,html.vt .site-header{view-transition-name:none}
+.page.is-active{animation:pgfade 320ms ease both}
+@keyframes pgfade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.page.is-active{animation:none}}
