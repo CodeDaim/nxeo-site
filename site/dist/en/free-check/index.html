@@ -22,11 +22,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="/assets/style.css?v=682d0c57">
+<link rel="stylesheet" href="/assets/style.css?v=bcf5b58e">
 <script>(function(){var h=document.documentElement;addEventListener("pagereveal",function(e){if(e.viewTransition){h.classList.add("vt");e.viewTransition.finished.finally(function(){h.classList.remove("vt")})}else{h.classList.remove("vt")}});addEventListener("pageswap",function(e){if(e.viewTransition)h.classList.add("vt")})})()</script>
 <script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/assets/*"}}]},"eagerness":"moderate"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "NXEO", "url": "https://nxeo.io/", "logo": "https://nxeo.io/assets/img/nxeo.png", "description": "NXEO measures every day how ChatGPT, Gemini, Perplexity and Google mention your company, and adjusts your website and LinkedIn every week until you are in the answer. Fixed subscription, one weekly report.", "email": "hello@nxeo.io", "sameAs": ["https://www.linkedin.com/"], "parentOrganization": [{"@type": "Organization", "name": "IQ Script", "url": "https://iqscript.com/"}, {"@type": "Organization", "name": "The AI Doctor", "url": "https://theaidoctor.nl/"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://nxeo.io/en/"}, {"@type": "ListItem", "position": 2, "name": "Free baseline check", "item": "https://nxeo.io/en/free-check/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is it really free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You pay nothing and there is no obligation. You do not need to enter payment details."}}, {"@type": "Question", "name": "What do you do with my details?", "acceptedAnswer": {"@type": "Answer", "text": "We use your website to measure and your email address to send the report. You get no newsletter and no spam. After the report we send one email to go through it, if you like."}}, {"@type": "Question", "name": "Do I have to become a customer afterwards?", "acceptedAnswer": {"@type": "Answer", "text": "No. The report contains the first three steps. Whether you take them with us or yourself is up to you."}}, {"@type": "Question", "name": "How long does it take?", "acceptedAnswer": {"@type": "Answer", "text": "Filling it in takes a minute. The report is in your inbox within 48 hours."}}]}</script>
 </head>
 <body>
 <header class="site-header" id="hdr">
@@ -61,39 +62,38 @@
 
 <main>
 <section class="page is-active" id="page-nulmeting">
-  <div class="hero hero-c nul-hero">
-    <div class="hero-bg" aria-hidden="true"></div>
-    <div class="wrap hero-stack">
-      <span class="eyebrow">Free baseline check</span>
-      <h1>Does ChatGPT mention your company yet?</h1>
-      <p class="def">Enter your website. Within 48 hours you get a report on how ChatGPT, Claude, Gemini, Perplexity and Google mention your company today, and which questions you lose. Free, no obligation.</p>
-      <form class="combo audit-combo" data-baseline novalidate>
-          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></span>
-          <input name="site" type="url" placeholder="yourwebsite.com" required autocomplete="url" aria-label="Your website">
-          <button class="btn btn-blue" type="submit">Check my visibility <span class="arr">→</span></button>
-        </form>
-      <div class="audit-logos"><img src="/assets/img/openai_dark.png" alt="OpenAI"><img src="/assets/img/claude_dark.png" alt="Claude"><img src="/assets/img/gemini_dark.png" alt="Gemini"><img src="/assets/img/google_dark.png" alt="Google"></div>
+  <div class="hero hero-c nul-hero ab-hero">
+    <div class="hero-stack">
+      <div class="bubble bubble-blue" aria-hidden="true">Does ChatGPT mention your company yet?</div>
+      <h1>Check it. Free.<span class="cursor" aria-hidden="true"></span></h1>
+      <p class="def">Enter your website. Within 48 hours you know how ChatGPT, Claude, Gemini, Perplexity and Google mention your company today.</p>
+      <form class="combo audit-combo " data-baseline novalidate><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></span><input name="site" type="url" placeholder="yourwebsite.com" required autocomplete="url" aria-label="Your website"><button class="btn btn-blue" type="submit">Check my visibility <span class="arr">→</span></button></form>
+      <ul class="so-ticks np-ticks"><li>Free</li><li>In your inbox within 48 hours</li><li>No obligation</li></ul>
     </div>
   </div>
   <div class="sec">
-    <div class="wrap">
-      <div class="sec-head" data-reveal><h2>What the report contains</h2></div>
-      <div class="rep-grid" data-reveal>
-        <div class="rep-item"><span class="n">01</span><div><b>Your Presence score</b><p>One number from 0 to 100 per channel: how often you are mentioned on your customers' questions.</p></div></div>
-        <div class="rep-item"><span class="n">02</span><div><b>The questions you lose</b><p>Which questions customers ask, who is mentioned today and where you are missing.</p></div></div>
-        <div class="rep-item"><span class="n">03</span><div><b>How AI describes you</b><p>The words ChatGPT and Gemini use for you today, and whether they are right.</p></div></div>
-        <div class="rep-item"><span class="n">04</span><div><b>What we would do about it</b><p>The first three steps, concrete. Whether you do them with us or yourself is up to you.</p></div></div>
-      </div>
+    <div class="wrap ed-split np-split" data-reveal>
+      <div class="ed-t"><h2>What is in your report</h2><p>One page, without jargon. In a few minutes you see where you stand.</p><ol class="sl-pts np-pts"><li><span class="n">1</span><div><b>Your Presence score</b><span>One number from 0 to 100: how often you are mentioned for your customers' questions.</span></div></li><li><span class="n">2</span><div><b>The questions you lose</b><span>Which questions customers ask, who is mentioned there now and where you are missing.</span></div></li><li><span class="n">3</span><div><b>How AI describes you</b><span>The words AI uses for your company today, and whether they are right.</span></div></li><li><span class="n">4</span><div><b>What we would do about it</b><span>The first three steps, concrete. Whether you take them with us or yourself is up to you.</span></div></li></ol></div>
+      <div class="ed-v"><div class="rp">
+        <div class="rp-h"><span class="tag">Example</span><b>yourwebsite.com</b></div>
+        <div class="rp-score"><div><span>Presence score</span><b>34</b><i>out of 100</i></div><svg viewBox="0 0 120 60" aria-hidden="true"><path d="M10 55a50 50 0 01100 0" fill="none" stroke="#E3E6EF" stroke-width="10" stroke-linecap="round"/><path d="M10 55a50 50 0 01100 0" fill="none" stroke="url(#rpg)" stroke-width="10" stroke-linecap="round" stroke-dasharray="157" stroke-dashoffset="104"/><defs><linearGradient id="rpg" x1="0" x2="1"><stop stop-color="#002EFE"/><stop offset="1" stop-color="#4E6BFF"/></linearGradient></defs></svg></div>
+        <div class="rp-b"><span class="k">Questions you lose</span><div class="rp-q"><span>Who is the best in the region?</span><i class="no">not mentioned</i></div><div class="rp-q"><span>Which company helps with this problem?</span><i class="mid">spot 6</i></div><div class="rp-q"><span>What does this cost roughly?</span><i class="no">not mentioned</i></div></div>
+        <div class="rp-b"><span class="k">How AI describes you now</span><p>"A smaller company in the region. Little information is available about it."</p></div>
+      </div></div>
     </div>
   </div>
   <div class="sec" style="padding-top:0">
     <div class="wrap">
-      <div class="sec-head" data-reveal><h2>How it works</h2></div>
-      <div class="how-grid" data-reveal>
-        <div class="how-step"><span class="n">1</span><b>Enter your website</b><p>Just your website and an email address. No account.</p></div>
-        <div class="how-step"><span class="n">2</span><b>We measure for 48 hours</b><p>Your customers' questions, asked to five AI systems and Google.</p></div>
-        <div class="how-step"><span class="n">3</span><b>Report in your inbox</b><p>One page. Then one email from us to go through it if you want.</p></div>
-      </div>
+      <div class="sec-head center" data-reveal><h2>How it works</h2></div>
+      <div class="np-steps" data-reveal><div class="np-step"><span class="n">1</span><b>Enter your website</b><p>Only your website and an email address. No account.</p></div><div class="np-step"><span class="n">2</span><b>We measure for 48 hours</b><p>Your customers' questions, asked to four AI systems and Google.</p></div><div class="np-step"><span class="n">3</span><b>Report in your inbox</b><p>After that one email from us to go through it, if you like.</p></div></div>
+      <figure class="so-fq np-fq" data-reveal><span aria-hidden="true">★★★★★</span><blockquote>"Suddenly I get messages from people in the area all day long."</blockquote><figcaption>Ferry, De Scooter Dokter</figcaption></figure>
+    </div>
+  </div>
+  <div class="sec" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head center" data-reveal><h2>Good to know</h2></div>
+      <div class="faq faq-teaser" data-reveal><details><summary>Is it really free?</summary><p>Yes. You pay nothing and there is no obligation. You do not need to enter payment details.</p></details><details><summary>What do you do with my details?</summary><p>We use your website to measure and your email address to send the report. You get no newsletter and no spam. After the report we send one email to go through it, if you like.</p></details><details><summary>Do I have to become a customer afterwards?</summary><p>No. The report contains the first three steps. Whether you take them with us or yourself is up to you.</p></details><details><summary>How long does it take?</summary><p>Filling it in takes a minute. The report is in your inbox within 48 hours.</p></details></div>
+      <div class="np-cta" data-reveal><div><h3>Curious where you stand?</h3><p>Enter your website. In 48 hours you know.</p></div><form class="combo audit-combo np-form" data-baseline novalidate><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></span><input name="site" type="url" placeholder="yourwebsite.com" required autocomplete="url" aria-label="Your website"><button class="btn btn-blue" type="submit">Check my visibility <span class="arr">→</span></button></form></div>
     </div>
   </div>
 </section>
