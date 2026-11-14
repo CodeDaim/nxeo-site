@@ -2343,3 +2343,4 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
   .bp:hover,.post:hover{transform:none;box-shadow:0 0 0 1.5px rgba(0,46,254,.22),var(--sh-soft)}
   .bp:hover .bp-more .arr,.post:hover .more .arr{transform:translateX(3px)}
 }
+@media (hover:hover) and (pointer:fine){.bp:hover,.post:hover{box-shadow:var(--sh-soft)}}
