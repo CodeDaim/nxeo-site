@@ -244,27 +244,32 @@
     });
   });
 
-  // FAQ accordion (height has no transform equivalent; keep it short)
-  document.querySelectorAll('.faq details').forEach(function(d){
-    var s=d.querySelector('summary');
-    var body=document.createElement('div');body.className='body';
-    while(s.nextSibling)body.appendChild(s.nextSibling);
-    d.appendChild(body);
-    s.addEventListener('click',function(e){
-      e.preventDefault();
-      if(d.dataset.busy)return;
-      if(reduce||!body.animate){d.open=!d.open;return;}
-      d.dataset.busy='1';
-      if(d.open){
-        var h=body.offsetHeight;
-        body.animate([{height:h+'px',opacity:1},{height:'0px',opacity:0}],{duration:480,easing:'cubic-bezier(.32,.72,0,1)'}).onfinish=function(){d.open=false;delete d.dataset.busy;};
-      }else{
-        d.open=true;
-        var h2=body.offsetHeight;
-        body.animate([{height:'0px',opacity:0},{height:h2+'px',opacity:1}],{duration:620,easing:'cubic-bezier(.32,.72,0,1)'}).onfinish=function(){delete d.dataset.busy;};
-      }
+  // FAQ accordion: one open at a time per list, the others glide shut
+  (function(){
+    var EASE='cubic-bezier(.32,.72,0,1)';
+    function shut(d){var body=d.querySelector('.body');if(!d.open||d.dataset.busy)return;
+      if(reduce||!body||!body.animate){d.open=false;return;}
+      d.dataset.busy='1';var h=body.offsetHeight;
+      body.animate([{height:h+'px',opacity:1},{height:'0px',opacity:0}],{duration:480,easing:EASE}).onfinish=function(){d.open=false;delete d.dataset.busy;};}
+    function show(d){var body=d.querySelector('.body');
+      if(reduce||!body.animate){d.open=true;return;}
+      d.dataset.busy='1';d.open=true;var h=body.offsetHeight;
+      body.animate([{height:'0px',opacity:0},{height:h+'px',opacity:1}],{duration:620,easing:EASE}).onfinish=function(){delete d.dataset.busy;};}
+    document.querySelectorAll('.faq details').forEach(function(d){
+      var s=d.querySelector('summary');
+      var body=document.createElement('div');body.className='body';
+      while(s.nextSibling)body.appendChild(s.nextSibling);
+      d.appendChild(body);
+      s.addEventListener('click',function(e){
+        e.preventDefault();
+        if(d.dataset.busy)return;
+        if(d.open){shut(d);return;}
+        var box=d.parentNode;
+        Array.prototype.forEach.call(box.children,function(o){if(o!==d&&o.tagName==='DETAILS')shut(o);});
+        show(d);
+      });
     });
-  });
+  })();
 
   // Scroll reveal: only elements below the first viewport are hidden, so the first frame is complete
   var io=null;

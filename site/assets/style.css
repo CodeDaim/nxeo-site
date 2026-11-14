@@ -1911,3 +1911,13 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 @media (max-width:640px){.faq-list details,.faq-list details:last-child{padding:0 18px}.faq-list summary{font-size:1rem;padding:18px 0}.faq-list details p,.faq-list details ul{padding-right:0}.faq-tabs{justify-content:flex-start}}
 .faq-head .lead a{text-decoration:none}
 .faq-list details>*:last-child,.faq-list details .body>*:last-child{padding-bottom:8px}
+/* tabbladen: een blauwe pil glijdt naar het gekozen tabblad, de knoppen zelf wisselen niet van achtergrond */
+.faq-tabs{position:relative;isolation:isolate}
+.ftab,.ftab:hover,.ftab[aria-selected="true"],.ftab[aria-selected="true"]:hover{position:relative;background:none;border-color:transparent;box-shadow:none;transform:none;transition:color 320ms ease}
+.ftab::before{content:"";position:absolute;inset:0;z-index:0;border-radius:var(--pill);background:#fff;box-shadow:0 6px 16px -10px rgba(26,35,50,.25)}
+.ftab .bt{position:relative;z-index:2;transform:none!important}
+.ftab[aria-selected="true"]{color:#fff}
+.faq-tabs .thumb{z-index:1;left:0;top:0;bottom:auto;background:linear-gradient(135deg,#002EFE,#4E6BFF);box-shadow:0 12px 24px -10px rgba(0,46,254,.5);transition:transform 560ms var(--liquid),width 560ms var(--liquid),top 560ms var(--liquid),height 560ms var(--liquid)}
+.faq-tabs .thumb{z-index:0}
+.ftab::before{transition:opacity 320ms ease}
+.ftab[aria-selected="true"]::before{opacity:0}
