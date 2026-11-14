@@ -134,11 +134,30 @@
     });
   });
 
+  // Field messages in our own words and style, instead of the browser's
+  var NL=document.documentElement.lang==='nl';
+  var VMSG=NL?{name:'Vul je naam in.',company:'Vul je bedrijfsnaam in.',site:'Vul je website in.',siteBad:'Dit lijkt geen website. Probeer bijvoorbeeld jouwwebsite.nl.',email:'Vul je e-mailadres in.',emailBad:'Dit e-mailadres klopt niet helemaal.',any:'Vul dit veld in.'}
+    :{name:'Enter your name.',company:'Enter your company name.',site:'Enter your website.',siteBad:'This does not look like a website. Try yourwebsite.com.',email:'Enter your email address.',emailBad:'This email address is not quite right.',any:'Fill in this field.'};
+  function vMsg(f){var v=f.value.trim(),n=f.name;
+    if(!v)return f.required?(VMSG[n]||VMSG.any):'';
+    if(n==='site'&&!/^(https?:\/\/)?[^\s.\/]+(\.[^\s.\/]+)+(\/\S*)?$/i.test(v))return VMSG.siteBad;
+    if(n==='email'&&!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v))return VMSG.emailBad;
+    return '';}
+  function vBox(f){return f.closest('.combo')||f.parentNode;}
+  function vClear(f){var b=vBox(f);b.classList.remove('is-err');f.removeAttribute('aria-invalid');var e=b.classList.contains('combo')?b.nextElementSibling:b.querySelector('.f-err');if(e&&e.classList.contains('f-err'))e.remove();}
+  function vCheck(f,focus){vClear(f);var m=vMsg(f);if(!m)return true;
+    var b=vBox(f);b.classList.add('is-err');f.setAttribute('aria-invalid','true');
+    var e=document.createElement('p');e.className='f-err';e.setAttribute('role','alert');e.textContent=m;
+    if(b.classList.contains('combo')){b.parentNode.insertBefore(e,b.nextSibling);}else{b.appendChild(e);}
+    if(!f.dataset.v){f.dataset.v='1';f.addEventListener('input',function(){if(f.getAttribute('aria-invalid'))vCheck(f,false);});}
+    if(focus)f.focus();return false;}
+  function vForm(form){var ok=true,first=null;Array.prototype.forEach.call(form.querySelectorAll('input:not([type=hidden]):not([type=radio]),textarea'),function(f){f.value=f.value.trim();if(!vCheck(f,false)){ok=false;if(!first)first=f;}});if(first)first.focus();return ok;}
+
   // Call request form
   var sf=document.getElementById('form-sales');
   if(sf)sf.addEventListener('submit',function(e){
     e.preventDefault();
-    var f=sf.querySelectorAll('[required]');for(var k=0;k<f.length;k++){f[k].value=f[k].value.trim();if(!f[k].checkValidity()){f[k].reportValidity();return;}}
+    if(!vForm(sf))return;
     var d=document.querySelector('[data-sl-done]');
     var first=sf.elements.name.value.split(/\s+/)[0];var h=d.querySelector('[data-sw="hello"]');h.textContent=h.getAttribute('data-hello')+(first?', '+first:'');
     d.querySelector('[data-sw="email"]').textContent=sf.elements.email.value;
@@ -176,13 +195,13 @@
         e.preventDefault();
         var inp=f.querySelector('input[name=site]');
         var v=inp.value.trim();if(v&&!/^https?:\/\//i.test(v)){inp.value='https://'+v;}
-        if(!inp.checkValidity()){inp.reportValidity();return;}
+        if(!vCheck(inp,true))return;
         openNm(inp.value.trim());
       });
     });
     nmf.addEventListener('submit',function(e){
       e.preventDefault();
-      if(!nmf.checkValidity()){nmf.reportValidity();return;}
+      if(!vForm(nmf))return;
       nmf.hidden=true;nmok.hidden=false;
       setTimeout(function(){if(nm.open)nm.close();},2600);
     });
@@ -209,7 +228,7 @@
     so.addEventListener('submit',function(e){
       e.preventDefault();
       var site=so.elements.site;site.value=site.value.trim();
-      var f=so.querySelectorAll('input[required]');for(var k=0;k<f.length;k++){if(!f[k].checkValidity()){f[k].reportValidity();return;}}
+      if(!vForm(so))return;
       var d=document.querySelector('[data-so-done]');
       var w=function(k){return d.querySelector('[data-won="'+k+'"]');};
       var first=so.elements.name.value.trim().split(/\s+/)[0];var h=w('hello');h.textContent=h.getAttribute('data-hello')+(first?', '+first:'');

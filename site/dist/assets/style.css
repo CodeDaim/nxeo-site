@@ -2078,3 +2078,14 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 .so-fields input:focus,.so-fields textarea:focus,.so-fields input:focus-visible,.so-fields textarea:focus-visible{outline:0;box-shadow:none;border-color:var(--line-2,#D7DBE8);background:#F7F8FD}
 .so-fields input,.so-fields textarea{transition:background-color 250ms ease}
 .so-fields input:focus,.so-fields textarea:focus,.so-fields input:focus-visible,.so-fields textarea:focus-visible{border-color:rgba(26, 35, 50, 0.08)}
+/* foutmeldingen in onze eigen stijl */
+.f-err{display:flex;align-items:center;gap:7px;margin:8px 0 0 2px;font-size:.86rem;font-weight:600;line-height:1.35;color:var(--rose);text-align:left;animation:ferr 320ms var(--liquid) both}
+.f-err::before{content:"!";flex:none;width:16px;height:16px;border-radius:50%;background:var(--rose);color:#fff;font-size:.7rem;font-weight:700;display:grid;place-items:center}
+@keyframes ferr{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+.is-err>input,.is-err>textarea,.so-fields .is-err input:focus,.so-fields .is-err textarea:focus{border-color:var(--rose)!important;background:var(--rose-bg)}
+.combo.is-err{box-shadow:0 0 0 1.5px var(--rose)}
+.hero-c .f-err,.nm2 .f-err{justify-content:center;margin:10px 0 0;color:#fff}
+.hero-c .f-err::before,.nm2 .f-err::before{background:#fff;color:var(--rose)}
+.hero-c .combo.is-err,.nm2 .combo.is-err{box-shadow:0 0 0 2px #fff}
+.nulmodal .f-err{margin-top:8px}
+@media (prefers-reduced-motion:reduce){.f-err{animation:none}}
