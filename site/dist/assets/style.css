@@ -1924,3 +1924,59 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 /* op blauw blijven links wit bij hover */
 .end a:not(.btn):hover,.hero-c a:not(.btn):hover,.nm2 a:not(.btn):hover,.c2-left a:not(.btn):hover{color:#fff}
 .end-lang a:hover{color:#fff}
+/* start: een bestelpagina, links kiezen en invullen, rechts je aanvraag */
+.so-sec{padding-top:clamp(3rem,6vw,5rem)}
+.so-head{display:grid;gap:14px;justify-items:center;text-align:center;margin-bottom:40px}
+.so-head h1{margin:0;font-size:clamp(2.4rem,5.4vw,4.2rem);letter-spacing:-.045em;line-height:1.03}
+.so-head .lead{margin:0}
+.so{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:24px;align-items:start;max-width:1128px}
+.so-main{display:grid;gap:24px;min-width:0}
+.so-card,.so-sum{background:var(--glass-strong,#fff);border:1px solid rgba(255,255,255,.9);box-shadow:var(--sh-soft);border-radius:var(--r-lg);padding:32px}
+.so-ch{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:24px}
+.so-ch h2{margin:0;font-size:1.3rem;letter-spacing:-.02em;display:flex;align-items:center;gap:12px}
+.so-ch h2 span{width:30px;height:30px;border-radius:50%;background:#EEF1FF;color:var(--blue);display:grid;place-items:center;font-size:.9rem;font-weight:700;font-family:var(--text)}
+.so-term{display:inline-flex;padding:4px;border-radius:var(--pill);background:#F2F3F7}
+.so-term label{cursor:pointer}
+.so-term input,.so-plan input{position:absolute;opacity:0;pointer-events:none}
+.so-term span{display:block;padding:8px 14px;border-radius:var(--pill);font-size:.88rem;font-weight:600;color:var(--body);transition:background-color 300ms ease,color 300ms ease,box-shadow 300ms ease}
+.so-term input:checked+span{background:#fff;color:var(--ink);box-shadow:0 4px 12px -6px rgba(26,35,50,.3)}
+.so-term input:focus-visible+span,.so-plan input:focus-visible+.so-box{box-shadow:0 0 0 4px rgba(0,46,254,.16)}
+.so-plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.so-plan{cursor:pointer;display:block;position:relative}
+.so-box{display:grid;gap:10px;height:100%;padding:20px;border-radius:20px;background:#fff;box-shadow:0 0 0 1px rgba(26,35,50,.1);transition:box-shadow 320ms var(--liquid),background-color 320ms ease}
+.so-plan:hover .so-box{box-shadow:0 0 0 1px rgba(0,46,254,.4)}
+.so-plan input:checked+.so-box{background:#F5F7FF;box-shadow:0 0 0 2px var(--blue),0 16px 30px -18px rgba(0,46,254,.45)}
+.so-top{display:flex;justify-content:space-between;align-items:center;gap:8px;min-height:24px}
+.so-top b{font-family:var(--display);font-size:1.1rem;font-weight:700;color:var(--ink)}
+.so-top i{font-style:normal;font-size:.72rem;font-weight:600;color:#fff;background:linear-gradient(135deg,#002EFE,#4E6BFF);border-radius:var(--pill);padding:4px 9px;white-space:nowrap}
+.so-price{display:flex;align-items:baseline;gap:6px;white-space:nowrap}
+.so-price b{font-family:var(--display);font-size:2rem;font-weight:700;letter-spacing:-.04em;color:var(--ink);line-height:1}
+.so-price small{font-size:.85rem;color:var(--muted)}
+.so-desc{font-size:.88rem;line-height:1.4;color:var(--body)}
+.so-cmp{display:inline-block;margin-top:20px;font-size:.9rem;font-weight:600;color:var(--blue)}
+.so-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.so-fields input{width:100%}
+.so-side{position:sticky;top:104px}
+.so-sum h3{margin:0 0 20px;font-size:1.3rem;letter-spacing:-.02em}
+.so-sum dl{display:grid;grid-template-columns:1fr auto;gap:12px 16px;margin:0 0 24px;padding-bottom:24px;border-bottom:1px solid var(--line);font-size:.95rem}
+.so-sum dt{color:var(--body)}
+.so-sum dd{margin:0;font-weight:600;color:var(--ink);text-align:right}
+.so-sum .btn{padding-block:1rem}
+.so-trust{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:10px;font-size:.9rem;color:var(--body)}
+.so-trust li{position:relative;padding-left:28px;line-height:1.35}
+.so-trust li::before{content:"";position:absolute;left:0;top:0;width:18px;height:18px;border-radius:50%;background:#EEF1FF url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6.5 12.5l3.5 3.5 7.5-8' fill='none' stroke='%23002EFE' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat}
+.so-vat{margin:16px 0 0;font-size:.8rem;color:var(--muted)}
+.so-done{max-width:720px}
+.so-ok{display:grid;gap:14px;justify-items:center;text-align:center;padding:48px 32px}
+.so-ok h2{margin:0;font-size:1.8rem;letter-spacing:-.03em}
+.so-ok p{margin:0;color:var(--body);max-width:44ch}
+.so-ok .next3{margin-top:16px;width:100%}
+@media (max-width:980px){.so{grid-template-columns:minmax(0,1fr)}.so-side{position:static}}
+@media (max-width:640px){.so-plans,.so-fields{grid-template-columns:minmax(0,1fr)}.so-card,.so-sum{padding:24px}.so-box{grid-template-columns:1fr auto;align-items:center}.so-desc{grid-column:1/-1}}
+.so-card,.so-sum,.so-side,.so-plans,.so-fields>div{min-width:0}
+.so-desc{text-wrap:balance}
+@media (max-width:980px){.so{display:flex;flex-direction:column;align-items:stretch}.so-main,.so-side{width:100%}}
+@media (max-width:640px){.so-term{width:100%}.so-term label{flex:1;text-align:center}.so-term span{padding-inline:8px;font-size:.82rem}}
+.so-term label{position:relative}
+.so-term input,.so-plan input{width:1px;height:1px;left:0;top:0;margin:0;padding:0;border:0}
+@media (max-width:640px){.so-top i{display:none}.so-plan:nth-child(2) .so-top b::after{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--blue);margin-left:8px;vertical-align:middle}}

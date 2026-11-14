@@ -185,53 +185,25 @@
     nm.addEventListener('close',function(){document.documentElement.classList.remove('nm-open');document.querySelectorAll('form[data-baseline] input[name=site]').forEach(function(i){if(!nmok.hidden)i.value='';});});
   }
 
-  // Stepped founding partner form (multi field steps, live summary)
-  var ff=document.getElementById('form-fp');
-  if(ff){
-  var qs=Array.prototype.slice.call(ff.querySelectorAll('.q'));
-  var done=ff.querySelector('[data-done]');
-  var prev=ff.querySelector('[data-prev]'),next=ff.querySelector('[data-next]'),sub=ff.querySelector('[data-submit]');
-  var bars=ff.querySelectorAll('.steps-bar i');
-  var i=0;
-  function show(n){
-    i=n;
-    qs.forEach(function(q,k){q.classList.toggle('is-on',k===i);});
-    bars.forEach(function(b,k){b.classList.toggle('done',k<i);b.classList.toggle('on',k===i);});
-    prev.disabled=i===0;next.hidden=i===qs.length-1;sub.hidden=i!==qs.length-1;
-    var f=qs[i].querySelector('input:not([type=radio]),textarea');if(f&&window.matchMedia('(hover:hover)').matches)f.focus();
-  }
-  function valid(){
-    var fields=qs[i].querySelectorAll('input,textarea');
-    for(var k=0;k<fields.length;k++){var f=fields[k];if(!f.checkValidity()){f.reportValidity();return false;}}
-    return true;
-  }
-  next.addEventListener('click',function(){if(valid()&&i<qs.length-1)show(i+1);});
-  prev.addEventListener('click',function(){if(i>0)show(i-1);});
-  ff.addEventListener('keydown',function(e){
-    if(e.key==='Enter'&&!e.shiftKey&&e.target.tagName!=='BUTTON'&&e.target.tagName!=='TEXTAREA'){e.preventDefault();if(i<qs.length-1){if(valid())show(i+1);}else ff.requestSubmit();}
-  });
-  ff.addEventListener('submit',function(e){
-    e.preventDefault();if(!valid())return;
-    ff.querySelector('.form-body').hidden=true;ff.querySelector('.steps-bar').hidden=true;done.hidden=false;
-  });
-  // live summary
-  var outs={};document.querySelectorAll('#page-aanvraag [data-sum-out]').forEach(function(d){outs[d.getAttribute('data-sum-out')]=d;});
-  function setSum(key,val){var d=outs[key];if(!d)return;if(val){d.textContent=val;}else{d.innerHTML='<i>'+d.getAttribute('data-empty')+'</i>';}}
-  Object.keys(outs).forEach(function(k){outs[k].setAttribute('data-empty',outs[k].textContent);});
-  function sumSector(){var s=ff.querySelector('[data-sum=sector]').value.trim(),r=ff.querySelector('[data-sum=region]').value.trim();setSum('sector',[s,r].filter(Boolean).join(', '));}
-  ff.addEventListener('input',function(e){
-    var k=e.target.getAttribute('data-sum');if(!k)return;
-    if(k==='sector'||k==='region')sumSector();else setSum(k,e.target.value.trim());
-  });
-  function sumPrice(){
-    var p=ff.querySelector('input[name=pkg]:checked'),tm=ff.querySelector('input[name=term]:checked');if(!p)return;
-    var m=parseInt(p.getAttribute('data-price').replace(/\D/g,''),10),y=tm&&tm.getAttribute('data-term')==='year';
-    var out=outs.price;if(!out)return;
-    out.textContent=p.value+' · '+(y?money(m*11,false).replace(/\B(?=(\d{3})+(?!\d))/g,dec===','?'.':',')+(document.documentElement.lang==='nl'?' per jaar':' per year'):money(m,false)+(document.documentElement.lang==='nl'?' per maand':' per month'));
-  }
-  ff.addEventListener('change',function(e){var k=e.target.getAttribute('data-sum');if(e.target.type==='radio'&&e.target.checked&&k){setSum(k,e.target.value);sumPrice();}});
-  show(0);
-
+  // Start: one page order form with a live summary
+  var so=document.getElementById('form-start');
+  if(so){
+    var soOut={};so.querySelectorAll('[data-so]').forEach(function(d){soOut[d.getAttribute('data-so')]=d;});
+    var thou=function(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,dec===','?'.':',');};
+    var soSync=function(){
+      var p=so.querySelector('input[name=pkg]:checked'),y=so.querySelector('input[name=term]:checked').value==='year';
+      var m=parseInt(p.getAttribute('data-price'),10);
+      soOut.pkg.textContent=p.value;soOut.term.textContent=so.getAttribute(y?'data-tyr':'data-tmo');
+      soOut.price.textContent=y?'€'+thou(m*11)+so.getAttribute('data-pyr'):'€'+m+so.getAttribute('data-pmo');
+      so.querySelectorAll('.so-plan').forEach(function(l){var i=l.querySelector('input'),v=parseInt(i.getAttribute('data-price'),10);l.querySelector('[data-so-price]').textContent=money(y?v*11/12:v,y);});
+    };
+    so.addEventListener('change',soSync);soSync();
+    so.addEventListener('submit',function(e){
+      e.preventDefault();
+      var site=so.elements.site;site.value=site.value.trim();
+      var f=so.querySelectorAll('input[required]');for(var k=0;k<f.length;k++){if(!f[k].checkValidity()){f[k].reportValidity();return;}}
+      so.hidden=true;var d=document.querySelector('[data-so-done]');d.hidden=false;document.querySelector('.so-head').hidden=true;window.scrollTo(0,0);
+    });
   }
 
   // FAQ topic tabs

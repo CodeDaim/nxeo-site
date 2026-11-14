@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="/assets/style.css?v=2b81d919">
+<link rel="stylesheet" href="/assets/style.css?v=a6c7a862">
 <script>(function(){var h=document.documentElement;addEventListener("pagereveal",function(e){if(e.viewTransition){h.classList.add("vt");e.viewTransition.finished.finally(function(){h.classList.remove("vt")})}else{h.classList.remove("vt")}});addEventListener("pageswap",function(e){if(e.viewTransition)h.classList.add("vt")})})()</script>
 <script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/assets/*"}}]},"eagerness":"moderate"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "NXEO", "url": "https://nxeo.io/", "logo": "https://nxeo.io/assets/img/nxeo.png", "description": "NXEO measures every day how ChatGPT, Gemini, Perplexity and Google mention your company, and adjusts your website and LinkedIn every week until you are in the answer. Fixed subscription, one weekly report.", "email": "hello@nxeo.io", "sameAs": ["https://www.linkedin.com/"], "parentOrganization": [{"@type": "Organization", "name": "IQ Script", "url": "https://iqscript.com/"}, {"@type": "Organization", "name": "The AI Doctor", "url": "https://theaidoctor.nl/"}]}</script>
@@ -61,44 +61,43 @@
 
 <main>
 <section class="page is-active" id="page-aanvraag">
-  <div class="sec">
-    <div class="wrap form2 form2-rev">
-      <aside class="apply-side">
-        <span class="eyebrow">Getting started</span>
-        <h1>Start with NXEO</h1>
-        <p class="lead">Five short steps. Within one working day we schedule your onboarding call.</p>
-        <div class="summary">
-          <div class="sum-head"><span>Your choice</span><b data-sum-out="price">still to choose</b></div>
-          <dl>
-            <dt>Name</dt><dd data-sum-out="name"><i>to be filled in</i></dd>
-            <dt>Company</dt><dd data-sum-out="company"><i>to be filled in</i></dd>
-            <dt>Sector and region</dt><dd data-sum-out="sector"><i>to be filled in</i></dd>
-            <dt>Package</dt><dd data-sum-out="pkg"><i>to be filled in</i></dd>
-            <dt>Billing</dt><dd data-sum-out="term"><i>to be filled in</i></dd>
-          </dl>
-          <span class="slots">Live within 48 hours · no ad budget</span>
+  <div class="sec so-sec">
+    <div class="wrap so-head"><h1>Start with NXEO</h1><p class="lead">Pick your package and leave your details. You pay nothing yet.</p></div>
+    <form id="form-start" class="wrap so" novalidate data-pmo=" per month" data-pyr=" per year" data-tmo="Per month" data-tyr="Per year">
+      <div class="so-main">
+        <div class="so-card">
+          <div class="so-ch"><h2><span>1</span>Pick your package</h2>
+            <div class="so-term" role="radiogroup"><label><input type="radio" name="term" value="month" checked><span>Per month</span></label><label><input type="radio" name="term" value="year"><span>Per year, 1 month free</span></label></div>
+          </div>
+          <div class="so-plans"><label class="so-plan"><input type="radio" name="pkg" value="Launch" data-price="99"><span class="so-box"><span class="so-top"><b>Launch</b></span><span class="so-price"><b data-so-price>€99</b><small>/month</small></span><span class="so-desc">3 posts per week, 1 competitor</span></span></label><label class="so-plan"><input type="radio" name="pkg" value="Growth" data-price="179" checked><span class="so-box"><span class="so-top"><b>Growth</b><i>Most popular</i></span><span class="so-price"><b data-so-price>€179</b><small>/month</small></span><span class="so-desc">5 posts per week, 5 competitors</span></span></label><label class="so-plan"><input type="radio" name="pkg" value="Scale" data-price="299"><span class="so-box"><span class="so-top"><b>Scale</b></span><span class="so-price"><b data-so-price>€299</b><small>/month</small></span><span class="so-desc">7 posts per week, 10 competitors</span></span></label></div>
+          <a class="so-cmp" href="/en/pricing/" data-link>Not sure? Compare the packages</a>
         </div>
-      </aside>
-      <form id="form-fp" class="form-card apply" novalidate>
-        <div class="steps-bar" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i></div>
-        <div class="form-body">
-          <div class="q is-on" data-step="1"><p class="qn">Step 1 of 5</p><h2 class="ask">Who are you?</h2><div class="fl-grid"><div class="fl"><input id="f-name" name="name" type="text" placeholder="Full name" required autocomplete=name data-sum=name><label class="sr" for="f-name">Full name</label></div><div class="fl"><input id="f-company" name="company" type="text" placeholder="Company" required autocomplete=organization data-sum=company><label class="sr" for="f-company">Company</label></div></div><div class="fl"><input id="f-site" name="site" type="url" placeholder="Website"  autocomplete=url><label class="sr" for="f-site">Website</label></div></div><div class="q" data-step="2"><p class="qn">Step 2 of 5</p><h2 class="ask">How do we reach you?</h2><div class="fl-grid"><div class="fl"><input id="f-email" name="email" type="email" placeholder="Work email" required autocomplete=email><label class="sr" for="f-email">Work email</label></div><div class="fl"><input id="f-phone" name="phone" type="tel" placeholder="Phone number" autocomplete=tel><label class="sr" for="f-phone">Phone number</label></div></div><p class=hint>We only call to schedule the onboarding call.</p></div><div class="q" data-step="3"><p class="qn">Step 3 of 5</p><h2 class="ask">Which sector and region do you work in?</h2><div class="fl-grid"><div class="fl"><input id="f-sector" name="sector" type="text" placeholder="Sector" required data-sum=sector><label class="sr" for="f-sector">Sector</label></div><div class="fl"><input id="f-region" name="region" type="text" placeholder="Region" required data-sum=region><label class="sr" for="f-region">Region</label></div></div><p class=hint>This is how we start building your competitor and question list.</p></div><div class="q" data-step="4"><p class="qn">Step 4 of 5</p><h2 class="ask">Which package fits you?</h2><div class="chipset chipset-pkg" role="radiogroup"><label class="chipopt"><input type="radio" name="pkg" data-sum="pkg" value="Launch" data-price="€99 per month" id="fp0" required><span>Launch <small>€99 per month</small></span></label><label class="chipopt"><input type="radio" name="pkg" data-sum="pkg" value="Growth" data-price="€179 per month" id="fp1"><span>Growth <small>€179 per month</small></span></label><label class="chipopt"><input type="radio" name="pkg" data-sum="pkg" value="Scale" data-price="€299 per month" id="fp2"><span>Scale <small>€299 per month</small></span></label></div><h3 class="ask-sub">How do you want to pay?</h3><div class="chipset" role="radiogroup"><label class="chipopt"><input type="radio" name="term" data-sum="term" value="Monthly" data-term="month" id="ft0" required><span>Monthly <small>minimum 6 months</small></span></label><label class="chipopt"><input type="radio" name="term" data-sum="term" value="Yearly" data-term="year" id="ft1"><span>Yearly <small>pay for 11 months</small></span></label></div><p class=hint>Not sure? Pick Growth, most customers do. You can switch any time.</p></div><div class="q" data-step="5"><p class="qn">Step 5 of 5</p><h2 class="ask">Which question would a customer ask ChatGPT that you want to be the answer to?</h2><div class="fl fl-area"><textarea id="f-msg" name="message" placeholder=" " required rows="3"></textarea><label for="f-msg">For example: which accountant in The Hague specialises in hospitality?</label></div><p class=hint>This becomes the first question in your baseline.</p></div>
-          <div class="step-nav">
-            <span class="hint enter">Enter ↵ for next</span>
-            <div class="step-btns">
-              <button type="button" class="btn btn-ghost" data-prev disabled>Back</button>
-              <button type="button" class="btn btn-blue" data-next>Next <span class="arr">→</span></button>
-              <button type="submit" class="btn btn-blue" data-submit hidden>Start with NXEO <span class="arr">→</span></button>
-            </div>
+        <div class="so-card">
+          <div class="so-ch"><h2><span>2</span>Your details</h2></div>
+          <div class="so-fields">
+            <div><input id="so-name" name="name" type="text" placeholder="First and last name" required autocomplete="name"><label class="sr" for="so-name">First and last name</label></div>
+            <div><input id="so-company" name="company" type="text" placeholder="Company name" required autocomplete="organization"><label class="sr" for="so-company">Company name</label></div>
+            <div><input id="so-site" name="site" type="text" inputmode="url" placeholder="Website" required autocomplete="url"><label class="sr" for="so-site">Website</label></div>
+            <div><input id="so-email" name="email" type="email" placeholder="Work email" required autocomplete="email"><label class="sr" for="so-email">Work email</label></div>
           </div>
         </div>
-        <div class="form-ok" hidden data-done>
-          <span class="okmark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path class="tick" d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
-          <h3>Request received</h3>
-          <p>Within one working day we get in touch to schedule your onboarding call and arrange payment.</p>
-          <div class="next3"><div><b>Within 1 working day</b><span>We schedule your onboarding call</span></div><div><b>1 hour onboarding call</b><span>We draw up your question list</span></div><div><b>48 hours later</b><span>Your baseline is live</span></div></div>
+      </div>
+      <aside class="so-side">
+        <div class="so-sum">
+          <h3>Your request</h3>
+          <dl><dt>Package</dt><dd data-so="pkg"></dd><dt>Payment</dt><dd data-so="term"></dd><dt>Price</dt><dd data-so="price"></dd><dt>Setup fee, once</dt><dd>€195</dd></dl>
+          <button class="btn btn-blue btn-block" type="submit">Start with NXEO <span class="arr">→</span></button>
+          <ul class="so-trust"><li>You pay nothing yet</li><li>We schedule your onboarding within 1 working day</li><li>Cancel monthly after 6 months</li></ul>
+          <p class="so-vat">All amounts exclude VAT.</p>
         </div>
-      </form>
+      </aside>
+    </form>
+    <div class="wrap so-done" hidden data-so-done>
+      <div class="so-card so-ok">
+        <span class="okmark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path class="tick" d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+        <h2>Request received</h2><p>Within one working day we get in touch to schedule your onboarding and arrange payment.</p>
+        <div class="next3"><div><b>Within 1 working day</b><span>We schedule your onboarding</span></div><div><b>1 hour onboarding</b><span>We draw up your question list</span></div><div><b>48 hours later</b><span>Your baseline is ready</span></div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -155,6 +154,6 @@
 </div>
 
 
-<script src="/assets/script.js?v=35f656dc" defer></script>
+<script src="/assets/script.js?v=6ee5bb1e" defer></script>
 </body>
 </html>
