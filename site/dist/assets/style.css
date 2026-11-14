@@ -2209,3 +2209,4 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 .ed .st-quote{margin:0;padding:clamp(2rem,4vw,3rem)}
 .ed .st-quote blockquote{font-size:clamp(1.5rem,2.6vw,2.1rem)}
 @media (max-width:900px){.ed-split{grid-template-columns:minmax(0,1fr);gap:28px}.ed-split.rev .ed-t{order:0}.ed-center{text-align:left}}
+.ed .ab-fm{padding-bottom:14px}
