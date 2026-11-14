@@ -1921,3 +1921,6 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 .faq-tabs .thumb{z-index:0}
 .ftab::before{transition:opacity 320ms ease}
 .ftab[aria-selected="true"]::before{opacity:0}
+/* op blauw blijven links wit bij hover */
+.end a:not(.btn):hover,.hero-c a:not(.btn):hover,.nm2 a:not(.btn):hover,.c2-left a:not(.btn):hover{color:#fff}
+.end-lang a:hover{color:#fff}
