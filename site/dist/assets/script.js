@@ -237,6 +237,17 @@
     });
   }
 
+  // Blog: filter by category
+  document.querySelectorAll('[data-bcat]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var k=b.getAttribute('data-bcat');
+      document.querySelectorAll('[data-bcat]').forEach(function(x){x.setAttribute('aria-selected',x===b?'true':'false');});
+      placeThumb(b.parentNode,true);
+      var grid=document.querySelector('.bl-grid');grid.classList.toggle('is-filtered',!!k);
+      grid.querySelectorAll('.bp').forEach(function(a){a.hidden=!!k&&a.getAttribute('data-cat')!==k;});
+    });
+  });
+
   // FAQ topic tabs
   document.querySelectorAll('[data-faqtab]').forEach(function(b){
     b.addEventListener('click',function(){
