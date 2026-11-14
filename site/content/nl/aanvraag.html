@@ -13,19 +13,20 @@
         <div class="so-card">
           <div class="so-ch"><h2><span>2</span>Je gegevens</h2></div>
           <div class="so-fields">
-            <div><input id="so-name" name="name" type="text" placeholder="Voor- en achternaam" required autocomplete="name"><label class="sr" for="so-name">Voor- en achternaam</label></div>
-            <div><input id="so-company" name="company" type="text" placeholder="Bedrijfsnaam" required autocomplete="organization"><label class="sr" for="so-company">Bedrijfsnaam</label></div>
-            <div><input id="so-site" name="site" type="text" inputmode="url" placeholder="Website" required autocomplete="url"><label class="sr" for="so-site">Website</label></div>
-            <div><input id="so-email" name="email" type="email" placeholder="Werk e-mail" required autocomplete="email"><label class="sr" for="so-email">Werk e-mail</label></div>
+            <div><label class="so-lbl" for="so-name">Voor- en achternaam</label><input id="so-name" name="name" type="text" placeholder="" required autocomplete="name"></div>
+            <div><label class="so-lbl" for="so-company">Bedrijfsnaam</label><input id="so-company" name="company" type="text" placeholder="" required autocomplete="organization"></div>
+            <div><label class="so-lbl" for="so-site">Website</label><input id="so-site" name="site" type="text" inputmode="url" placeholder="jouwwebsite.nl" required autocomplete="url"></div>
+            <div><label class="so-lbl" for="so-email">Werk e-mail</label><input id="so-email" name="email" type="email" placeholder="naam@bedrijf.nl" required autocomplete="email"></div>
           </div>
         </div>
       </div>
       <aside class="so-side">
         <div class="so-sum">
           <h3>Je aanvraag</h3>
-          <dl><dt>Pakket</dt><dd data-so="pkg"></dd><dt>Betaling</dt><dd data-so="term"></dd><dt>Prijs</dt><dd data-so="price"></dd><dt>Opstartkosten, eenmalig</dt><dd>€195</dd></dl>
+          <dl><dt>Pakket</dt><dd data-so="pkg"></dd><dt>Betaling</dt><dd data-so="term"></dd><dt>Prijs</dt><dd data-so="price"></dd><dt>Opstartkosten, eenmalig</dt><dd>€195</dd><dt class="save" hidden data-so-save-l>Je bespaart</dt><dd class="save" hidden data-so="save"></dd><dt class="now">Nu te betalen</dt><dd class="now">€0</dd></dl>
           <button class="btn btn-blue btn-block" type="submit">Start met NXEO <span class="arr">→</span></button>
-          <ul class="so-trust"><li>Je betaalt nu nog niets</li><li>Binnen 1 werkdag plannen we je intake</li><li>Na 6 maanden maandelijks opzegbaar</li></ul>
+          <ul class="so-trust"><li>Binnen 1 werkdag plannen we je intake</li><li>Na 6 maanden maandelijks opzegbaar</li></ul>
+          <figure class="so-fq"><span aria-hidden="true">★★★★★</span><blockquote>"Ik word ineens heel de dag bericht door mensen uit de buurt."</blockquote><figcaption>Ferry, De Scooter Dokter</figcaption></figure>
           <p class="so-vat">Alle bedragen exclusief btw.</p>
         </div>
       </aside>

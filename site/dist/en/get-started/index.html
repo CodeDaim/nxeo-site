@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="/assets/style.css?v=c50c6acc">
+<link rel="stylesheet" href="/assets/style.css?v=53d2d684">
 <script>(function(){var h=document.documentElement;addEventListener("pagereveal",function(e){if(e.viewTransition){h.classList.add("vt");e.viewTransition.finished.finally(function(){h.classList.remove("vt")})}else{h.classList.remove("vt")}});addEventListener("pageswap",function(e){if(e.viewTransition)h.classList.add("vt")})})()</script>
 <script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/assets/*"}}]},"eagerness":"moderate"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "NXEO", "url": "https://nxeo.io/", "logo": "https://nxeo.io/assets/img/nxeo.png", "description": "NXEO measures every day how ChatGPT, Gemini, Perplexity and Google mention your company, and adjusts your website and LinkedIn every week until you are in the answer. Fixed subscription, one weekly report.", "email": "hello@nxeo.io", "sameAs": ["https://www.linkedin.com/"], "parentOrganization": [{"@type": "Organization", "name": "IQ Script", "url": "https://iqscript.com/"}, {"@type": "Organization", "name": "The AI Doctor", "url": "https://theaidoctor.nl/"}]}</script>
@@ -75,19 +75,20 @@
         <div class="so-card">
           <div class="so-ch"><h2><span>2</span>Your details</h2></div>
           <div class="so-fields">
-            <div><input id="so-name" name="name" type="text" placeholder="First and last name" required autocomplete="name"><label class="sr" for="so-name">First and last name</label></div>
-            <div><input id="so-company" name="company" type="text" placeholder="Company name" required autocomplete="organization"><label class="sr" for="so-company">Company name</label></div>
-            <div><input id="so-site" name="site" type="text" inputmode="url" placeholder="Website" required autocomplete="url"><label class="sr" for="so-site">Website</label></div>
-            <div><input id="so-email" name="email" type="email" placeholder="Work email" required autocomplete="email"><label class="sr" for="so-email">Work email</label></div>
+            <div><label class="so-lbl" for="so-name">First and last name</label><input id="so-name" name="name" type="text" placeholder="" required autocomplete="name"></div>
+            <div><label class="so-lbl" for="so-company">Company name</label><input id="so-company" name="company" type="text" placeholder="" required autocomplete="organization"></div>
+            <div><label class="so-lbl" for="so-site">Website</label><input id="so-site" name="site" type="text" inputmode="url" placeholder="yourwebsite.com" required autocomplete="url"></div>
+            <div><label class="so-lbl" for="so-email">Work email</label><input id="so-email" name="email" type="email" placeholder="name@company.com" required autocomplete="email"></div>
           </div>
         </div>
       </div>
       <aside class="so-side">
         <div class="so-sum">
           <h3>Your request</h3>
-          <dl><dt>Package</dt><dd data-so="pkg"></dd><dt>Payment</dt><dd data-so="term"></dd><dt>Price</dt><dd data-so="price"></dd><dt>Setup fee, once</dt><dd>€195</dd></dl>
+          <dl><dt>Package</dt><dd data-so="pkg"></dd><dt>Payment</dt><dd data-so="term"></dd><dt>Price</dt><dd data-so="price"></dd><dt>Setup fee, once</dt><dd>€195</dd><dt class="save" hidden data-so-save-l>You save</dt><dd class="save" hidden data-so="save"></dd><dt class="now">To pay now</dt><dd class="now">€0</dd></dl>
           <button class="btn btn-blue btn-block" type="submit">Start with NXEO <span class="arr">→</span></button>
-          <ul class="so-trust"><li>You pay nothing yet</li><li>We schedule your onboarding within 1 working day</li><li>Cancel monthly after 6 months</li></ul>
+          <ul class="so-trust"><li>We schedule your onboarding within 1 working day</li><li>Cancel monthly after 6 months</li></ul>
+          <figure class="so-fq"><span aria-hidden="true">★★★★★</span><blockquote>"Suddenly I get messages from people in the area all day long."</blockquote><figcaption>Ferry, De Scooter Dokter</figcaption></figure>
           <p class="so-vat">All amounts exclude VAT.</p>
         </div>
       </aside>
@@ -170,6 +171,6 @@
 </div>
 
 
-<script src="/assets/script.js?v=67b93aa0" defer></script>
+<script src="/assets/script.js?v=242b1da2" defer></script>
 </body>
 </html>

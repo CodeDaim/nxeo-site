@@ -34,6 +34,8 @@
   document.querySelectorAll('.btn:not(.hdr-contact)').forEach(function(b){
     if(b.querySelector(':scope>.bt'))return;var w=document.createElement('span');w.className='bt';while(b.firstChild)w.appendChild(b.firstChild);b.appendChild(w);
   });
+  // Pricing: remember the package and term someone clicked, so the start page opens on it
+  document.querySelectorAll('[data-pick]').forEach(function(a){a.addEventListener('click',function(){try{sessionStorage.setItem('nxeo-pkg',a.getAttribute('data-pick'));var t=document.querySelector('[data-price][aria-pressed="true"]');sessionStorage.setItem('nxeo-term',t&&t.getAttribute('data-price')==='fp'?'year':'month');}catch(e){}});});
   function closeMenu(){mnav.classList.remove('is-open');}
 
   // In page jumps; links to a section on another page are plain links
@@ -197,9 +199,12 @@
       var p=so.querySelector('input[name=pkg]:checked'),y=so.querySelector('input[name=term]:checked').value==='year';
       var m=parseInt(p.getAttribute('data-price'),10);
       soOut.pkg.textContent=p.value;soOut.term.textContent=so.getAttribute(y?'data-tyr':'data-tmo');
-      soOut.price.textContent=y?'€'+thou(m*11)+so.getAttribute('data-pyr'):'€'+m+so.getAttribute('data-pmo');
+      var sl=so.querySelector('[data-so-save-l]');sl.hidden=!y;soOut.save.hidden=!y;soOut.save.textContent='€'+m;soOut.price.textContent=y?'€'+thou(m*11)+so.getAttribute('data-pyr'):'€'+m+so.getAttribute('data-pmo');
       so.querySelectorAll('.so-plan').forEach(function(l){var i=l.querySelector('input'),v=parseInt(i.getAttribute('data-price'),10);l.querySelector('[data-so-price]').textContent=money(y?v*11/12:v,y);});
     };
+    try{var pk=sessionStorage.getItem('nxeo-pkg'),tm=sessionStorage.getItem('nxeo-term');
+      if(pk){var r=so.querySelector('input[name=pkg][value="'+pk+'"]');if(r)r.checked=true;}
+      if(tm){var r2=so.querySelector('input[name=term][value="'+tm+'"]');if(r2)r2.checked=true;}}catch(e){}
     so.addEventListener('change',soSync);soSync();
     so.addEventListener('submit',function(e){
       e.preventDefault();
