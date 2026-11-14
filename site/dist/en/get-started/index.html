@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="/assets/style.css?v=0eebec2e">
+<link rel="stylesheet" href="/assets/style.css?v=78665f4a">
 <script>(function(){var h=document.documentElement;addEventListener("pagereveal",function(e){if(e.viewTransition){h.classList.add("vt");e.viewTransition.finished.finally(function(){h.classList.remove("vt")})}else{h.classList.remove("vt")}});addEventListener("pageswap",function(e){if(e.viewTransition)h.classList.add("vt")})})()</script>
 <script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/assets/*"}}]},"eagerness":"moderate"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "NXEO", "url": "https://nxeo.io/", "logo": "https://nxeo.io/assets/img/nxeo.png", "description": "NXEO measures every day how ChatGPT, Gemini, Perplexity and Google mention your company, and adjusts your website and LinkedIn every week until you are in the answer. Fixed subscription, one weekly report.", "email": "hello@nxeo.io", "sameAs": ["https://www.linkedin.com/"], "parentOrganization": [{"@type": "Organization", "name": "IQ Script", "url": "https://iqscript.com/"}, {"@type": "Organization", "name": "The AI Doctor", "url": "https://theaidoctor.nl/"}]}</script>
@@ -92,12 +92,21 @@
         </div>
       </aside>
     </form>
-    <div class="wrap so-done" hidden data-so-done>
-      <div class="so-card so-ok">
-        <span class="okmark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path class="tick" d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
-        <h2>Request received</h2><p>Within one working day we get in touch to schedule your onboarding and arrange payment.</p>
-        <div class="next3"><div><b>Within 1 working day</b><span>We schedule your onboarding</span></div><div><b>1 hour onboarding</b><span>We draw up your question list</span></div><div><b>48 hours later</b><span>Your baseline is ready</span></div></div>
+    <div class="so-done" hidden data-so-done>
+      <div class="so-win">
+        <div class="bubble" aria-hidden="true">Request received</div>
+        <h2><span data-won="hello" data-hello="Welcome">Welcome</span>.<span class="cursor" aria-hidden="true"></span></h2>
+        <p class="so-win-lead">We have your request for <b data-won="pkg"></b>. You will hear from us within one working day.</p>
       </div>
+      <div class="wrap so-after">
+        <div class="so-card"><h3>What happens now</h3><ol class="c2-tl so-next"><li><span class="wk">Within 1 working day</span><span class="lbl">We get in touch and schedule your onboarding</span></li><li><span class="wk">1 hour onboarding</span><span class="lbl">We get to know your company and draw up your question list</span></li><li class="hit"><span class="wk">48 hours later</span><span class="lbl">Your baseline is ready</span></li></ol></div>
+        <div class="so-sum"><h3>Your request</h3>
+          <dl><dt>Package</dt><dd data-won="pkg2"></dd><dt>Payment</dt><dd data-won="term"></dd><dt>Price</dt><dd data-won="price"></dd><dt>Setup fee, once</dt><dd>€195</dd><dt>Contact via</dt><dd data-won="email"></dd></dl>
+          <p class="so-pay">You have not paid anything yet. We arrange payment together at the onboarding.</p>
+          <p class="so-q">A question in the meantime? <a href="mailto:sales@nxeo.io">sales@nxeo.io</a></p>
+        </div>
+      </div>
+      <div style="display:grid;justify-items:center;margin-top:32px"><a class="btn btn-ghost" href="/en/" data-link>Back to home</a></div>
     </div>
   </div>
 </section>
@@ -154,6 +163,6 @@
 </div>
 
 
-<script src="/assets/script.js?v=6ee5bb1e" defer></script>
+<script src="/assets/script.js?v=7af5ec82" defer></script>
 </body>
 </html>

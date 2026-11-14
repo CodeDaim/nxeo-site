@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="/assets/style.css?v=0eebec2e">
+<link rel="stylesheet" href="/assets/style.css?v=78665f4a">
 <script>(function(){var h=document.documentElement;addEventListener("pagereveal",function(e){if(e.viewTransition){h.classList.add("vt");e.viewTransition.finished.finally(function(){h.classList.remove("vt")})}else{h.classList.remove("vt")}});addEventListener("pageswap",function(e){if(e.viewTransition)h.classList.add("vt")})})()</script>
 <script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/assets/*"}}]},"eagerness":"moderate"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "NXEO", "url": "https://nxeo.io/", "logo": "https://nxeo.io/assets/img/nxeo.png", "description": "NXEO meet elke dag hoe ChatGPT, Gemini, Perplexity en Google jouw bedrijf noemen en past elke week je website en LinkedIn aan tot je in het antwoord staat. Vast abonnement, één weekrapport.", "email": "hello@nxeo.io", "sameAs": ["https://www.linkedin.com/"], "parentOrganization": [{"@type": "Organization", "name": "IQ Script", "url": "https://iqscript.com/"}, {"@type": "Organization", "name": "The AI Doctor", "url": "https://theaidoctor.nl/"}]}</script>
@@ -92,12 +92,21 @@
         </div>
       </aside>
     </form>
-    <div class="wrap so-done" hidden data-so-done>
-      <div class="so-card so-ok">
-        <span class="okmark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path class="tick" d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
-        <h2>Aanvraag ontvangen</h2><p>Binnen één werkdag nemen we contact op om je intake in te plannen en de betaling te regelen.</p>
-        <div class="next3"><div><b>Binnen 1 werkdag</b><span>We plannen je intake</span></div><div><b>Intake van 1 uur</b><span>We stellen je vragenlijst op</span></div><div><b>48 uur later</b><span>Je nulmeting staat</span></div></div>
+    <div class="so-done" hidden data-so-done>
+      <div class="so-win">
+        <div class="bubble" aria-hidden="true">Aanvraag ontvangen</div>
+        <h2><span data-won="hello" data-hello="Welkom">Welkom</span>.<span class="cursor" aria-hidden="true"></span></h2>
+        <p class="so-win-lead">We hebben je aanvraag voor <b data-won="pkg"></b> binnen. Binnen één werkdag hoor je van ons.</p>
       </div>
+      <div class="wrap so-after">
+        <div class="so-card"><h3>Wat er nu gebeurt</h3><ol class="c2-tl so-next"><li><span class="wk">Binnen 1 werkdag</span><span class="lbl">We nemen contact op en plannen je intake</span></li><li><span class="wk">Intake van 1 uur</span><span class="lbl">We leren je bedrijf kennen en stellen je vragenlijst op</span></li><li class="hit"><span class="wk">48 uur later</span><span class="lbl">Je nulmeting staat klaar</span></li></ol></div>
+        <div class="so-sum"><h3>Je aanvraag</h3>
+          <dl><dt>Pakket</dt><dd data-won="pkg2"></dd><dt>Betaling</dt><dd data-won="term"></dd><dt>Prijs</dt><dd data-won="price"></dd><dt>Opstartkosten, eenmalig</dt><dd>€195</dd><dt>Contact via</dt><dd data-won="email"></dd></dl>
+          <p class="so-pay">Je hebt nog niets betaald. De betaling regelen we samen bij de intake.</p>
+          <p class="so-q">Vraag in de tussentijd? <a href="mailto:sales@nxeo.io">sales@nxeo.io</a></p>
+        </div>
+      </div>
+      <div style="display:grid;justify-items:center;margin-top:32px"><a class="btn btn-ghost" href="/nl/" data-link>Terug naar home</a></div>
     </div>
   </div>
 </section>
@@ -154,6 +163,6 @@
 </div>
 
 
-<script src="/assets/script.js?v=6ee5bb1e" defer></script>
+<script src="/assets/script.js?v=7af5ec82" defer></script>
 </body>
 </html>

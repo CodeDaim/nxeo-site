@@ -202,7 +202,11 @@
       e.preventDefault();
       var site=so.elements.site;site.value=site.value.trim();
       var f=so.querySelectorAll('input[required]');for(var k=0;k<f.length;k++){if(!f[k].checkValidity()){f[k].reportValidity();return;}}
-      so.hidden=true;var d=document.querySelector('[data-so-done]');d.hidden=false;document.querySelector('.so-head').hidden=true;window.scrollTo(0,0);
+      var d=document.querySelector('[data-so-done]');
+      var w=function(k){return d.querySelector('[data-won="'+k+'"]');};
+      var first=so.elements.name.value.trim().split(/\s+/)[0];var h=w('hello');h.textContent=h.getAttribute('data-hello')+(first?', '+first:'');
+      w('pkg').textContent=soOut.pkg.textContent;w('pkg2').textContent=soOut.pkg.textContent;w('term').textContent=soOut.term.textContent;w('price').textContent=soOut.price.textContent;w('email').textContent=so.elements.email.value.trim();
+      so.hidden=true;document.querySelector('.so-head').hidden=true;d.hidden=false;document.querySelector('.so-sec').classList.add('is-done');window.scrollTo(0,0);
     });
   }
 
