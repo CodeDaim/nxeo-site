@@ -2013,3 +2013,10 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 @media (prefers-reduced-motion:reduce){.so-win{animation:none}}
 .so-done{max-width:none;width:100%}
 .so-after{margin-inline:auto}
+/* na de aanvraag: een klant aan het woord en twee vervolgstappen */
+.so-warm{max-width:1128px;margin:24px auto 0;display:grid;gap:20px}
+.so-quote{border-radius:var(--r-lg);background:linear-gradient(135deg,#002EFE,#4E6BFF);color:#fff;padding:40px;display:grid;gap:22px;box-shadow:0 30px 60px -28px rgba(0,46,254,.5)}
+.so-k{justify-self:start;font-size:.85rem;font-weight:600;background:rgba(255,255,255,.18);border-radius:var(--pill);padding:6px 13px}
+.so-quote p{margin:0;font-family:var(--display);font-weight:600;font-size:clamp(1.25rem,2vw,1.7rem);line-height:1.35;letter-spacing:-.02em;max-width:36em;text-wrap:pretty}
+.so-links{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+@media (max-width:640px){.so-quote{padding:28px 24px}.so-links .btn{width:100%}}
