@@ -2334,3 +2334,12 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 }
 @media (max-width:380px){.so-box{padding:18px 16px}.so-price b{font-size:1.6rem}.so-term span{font-size:.74rem}}
 @media (max-width:640px){.faq-tabs{flex-wrap:wrap;justify-content:center;overflow:visible;margin-inline:auto;padding:0}.faq-tabs .ftab{flex:0 1 auto;font-size:.86rem;padding:.55rem .9rem}}
+/* blogkaarten: rustige hover, alleen een zachte blauwe rand en het pijltje */
+.bp,.post{transition:box-shadow 420ms var(--liquid)}
+.bp:hover .bp-pic svg,.post:hover .pic svg{transform:none}
+.bp-pic svg{transition:none}
+.bp h2 a,.bp:hover h2 a{background:none;padding-bottom:0;color:var(--ink)}
+@media (hover:hover) and (pointer:fine){
+  .bp:hover,.post:hover{transform:none;box-shadow:0 0 0 1.5px rgba(0,46,254,.22),var(--sh-soft)}
+  .bp:hover .bp-more .arr,.post:hover .more .arr{transform:translateX(3px)}
+}
