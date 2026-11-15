@@ -1,0 +1,182 @@
+<!doctype html>
+<html class="at-top" lang="en" data-i18n-fpnote="" data-i18n-pct="% completed">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How ChatGPT decides which companies to mention | NXEO</title>
+<meta name="description" content="AI answers are not search results. This is how ChatGPT builds its answer, why most companies are missing from it and what you can do about that.">
+<link rel="canonical" href="https://nxeo.io/en/blog/how-chatgpt-decides-which-companies-to-mention/">
+<link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/hoe-chatgpt-bepaalt-welke-bedrijven-het-noemt/">
+<link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/how-chatgpt-decides-which-companies-to-mention/">
+<link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/blog/hoe-chatgpt-bepaalt-welke-bedrijven-het-noemt/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NXEO">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="How ChatGPT decides which companies to mention | NXEO">
+<meta property="og:description" content="AI answers are not search results. This is how ChatGPT builds its answer, why most companies are missing from it and what you can do about that.">
+<meta property="og:url" content="https://nxeo.io/en/blog/how-chatgpt-decides-which-companies-to-mention/">
+<meta property="og:image" content="https://nxeo.io/assets/img/nxeo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#002EFE">
+<link rel="icon" href="/assets/img/favicon.png" type="image/png" sizes="192x192">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/style.css?v=22559a86">
+<script>(function(){var h=document.documentElement;addEventListener("pagereveal",function(e){if(e.viewTransition){h.classList.add("vt");e.viewTransition.finished.finally(function(){h.classList.remove("vt")})}else{h.classList.remove("vt")}});addEventListener("pageswap",function(e){if(e.viewTransition)h.classList.add("vt")})})()</script>
+<script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/assets/*"}}]},"eagerness":"moderate"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "NXEO", "url": "https://nxeo.io/", "logo": "https://nxeo.io/assets/img/nxeo.png", "description": "NXEO measures every day how ChatGPT, Gemini, Perplexity and Google mention your company, and adjusts your website and LinkedIn every week until you are in the answer. Fixed subscription, one weekly report.", "email": "hello@nxeo.io", "sameAs": ["https://www.linkedin.com/"], "parentOrganization": [{"@type": "Organization", "name": "IQ Script", "url": "https://iqscript.com/"}, {"@type": "Organization", "name": "The AI Doctor", "url": "https://theaidoctor.nl/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://nxeo.io/en/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://nxeo.io/en/blog/"}, {"@type": "ListItem", "position": 3, "name": "How ChatGPT decides which companies to mention", "item": "https://nxeo.io/en/blog/how-chatgpt-decides-which-companies-to-mention/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How ChatGPT decides which companies to mention", "description": "AI answers are not search results. This is how ChatGPT builds its answer, why most companies are missing from it and what you can do about that.", "datePublished": "2026-11-15", "dateModified": "2026-11-15", "inLanguage": "en", "wordCount": 1624, "mainEntityOfPage": "https://nxeo.io/en/blog/how-chatgpt-decides-which-companies-to-mention/", "author": {"@type": "Organization", "name": "NXEO", "url": "https://nxeo.io/"}, "publisher": {"@type": "Organization", "name": "NXEO", "logo": {"@type": "ImageObject", "url": "https://nxeo.io/assets/img/nxeo.png"}}}</script>
+</head>
+<body>
+<header class="site-header" id="hdr">
+  <div class="wrap">
+    <div class="bar">
+      <a class="logo" href="/en/" data-link aria-label="NXEO home"><img src="/assets/img/nxeo_light.png" alt="nxeo"></a>
+      <nav class="nav" aria-label="Main menu">
+        <a href="/en/" data-link data-nav="home">How it works</a>
+        <a href="/en/pricing/" data-link data-nav="prijzen">Pricing</a>
+        <a href="/en/about/" data-link data-nav="over">About</a>
+        <a href="/en/contact/" data-link data-nav="contact">Contact</a>
+      </nav>
+      <div class="hdr-actions">
+        <a class="lang" href="/nl/blog/hoe-chatgpt-bepaalt-welke-bedrijven-het-noemt/" hreflang="nl" aria-label="Schakel naar Nederlands">NL</a>
+        <a class="btn btn-ghost-light hdr-contact" href="/en/book-a-call/" data-link>Book a call</a>
+        <a class="btn hdr-cta" href="/en/get-started/" data-link>Start with NXEO</a>
+      </div>
+      <button class="burger" id="burger" aria-label="Open menu"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-nav" id="mnav">
+  <div class="top"><img src="/assets/img/nxeo_light.png" alt="nxeo" style="height:22px"><button class="close" id="mclose" aria-label="Close menu"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <a class="big" href="/en/" data-link>How it works</a>
+  <a class="big" href="/en/pricing/" data-link>Pricing</a>
+  <a class="big" href="/en/about/" data-link>About</a>
+  <a class="big" href="/en/contact/" data-link>Contact</a>
+  <a class="btn btn-white" href="/en/get-started/" data-link style="justify-self:start">Start with NXEO</a>
+  <a href="/nl/blog/hoe-chatgpt-bepaalt-welke-bedrijven-het-noemt/" hreflang="nl" style="font-weight:600;letter-spacing:.06em;opacity:.8">Nederlandse versie</a>
+</div>
+
+
+<main>
+<section class="page is-active" id="page-art_hoe_chatgpt_bepaalt_welke_bedrijven_het_noemt">
+<div class="ar-bar" aria-hidden="true"><i></i></div>
+<article class="ar2">
+<header class="hero hero-c ar-hero"><div class="hero-stack"><div class="bubble bubble-blue">Insight · 7 min read</div><h1>How ChatGPT decides which companies to mention<span class="cursor" aria-hidden="true"></span></h1><p class="def">AI answers are not search results. This is how ChatGPT builds its answer, why most companies are missing from it and what you can do about that.</p><div class="ar-by"><img src="/assets/img/nxeo_icon.png" alt=""><span>By NXEO · 15 Nov 2026</span></div></div></header>
+<div class="wrap ar-grid"><div class="ar-body"><div class="ar-kort"><b>In short</b><ul><li>ChatGPT does not keep a ranking. It writes a new answer for every question.</li><li>The biggest factor in your own hands is clear content on your own website.</li><li>You cannot force a mention, but you can raise the odds considerably.</li></ul></div><p>Someone types into ChatGPT: "Which installer near Zwolle is good with heat pumps?" A few seconds later there is an answer with three names. No list of ten blue links, no adverts, just three companies with a short explanation next to each.</p>
+<p>Are you one of the three? And if not, why is your competitor?</p>
+<p>That is the question more and more business owners are asking. In this article we explain how ChatGPT arrives at an answer like that, which signals count and what you can do to <strong>get mentioned in ChatGPT</strong>. Without jargon.</p>
+<h2 id="ai-answers-are-not-search-results">AI answers are not search results</h2>
+<p>With Google you are used to a ranking. Your page sits in position three, seven or twenty two, and with enough work you move up. That ranking is largely the same for everyone.</p>
+<p>ChatGPT works differently. There is no fixed list. The system writes a new answer for each question, and that answer depends on how the question is phrased, what the user asked before and which sources the system consults at that moment. Two people with nearly the same question can get different answers.</p>
+<p>That has two consequences:</p>
+<ul><li><strong>There is no position one to claim.</strong> You are mentioned or you are not, and that changes per question.</li><li><strong>You cannot check it with one search.</strong> If you type in your own company name once and see yourself, you have learned nothing.</li></ul>
+<p>That is why we do not look at a single position. We look at how often a company is mentioned across a whole list of questions that customers really ask. You can read more about that in the <a href="/en/faq/" data-link>frequently asked questions</a>.</p>
+<h2 id="where-chatgpt-gets-its-knowledge">Where ChatGPT gets its knowledge</h2>
+<p>To understand why one company is mentioned and another is not, you need to know that an AI system draws on two sources.</p>
+<h3>What the model already knows</h3>
+<p>A language model is trained on an enormous amount of text from the internet. Anything that was written about a company often and clearly before that training can end up in the model. Think of your own website, mentions on other sites, articles, reviews and business directories.</p>
+<p>A company that has been mentioned in many places for years has a head start here. A company that has left hardly any traces online simply does not exist for the model.</p>
+<h3>What the system looks up in the moment</h3>
+<p>On top of that, ChatGPT and similar systems can search the web live. That happens often with questions about local companies, current prices or "the best in the area". The system looks up pages, reads them and summarises what it finds.</p>
+<p>That is good news. It means you do not have to wait for a new model to be trained. What you put on your website today can count in an answer within a few weeks.</p>
+<h2 id="the-signals-that-count">The signals that count</h2>
+<p>Nobody outside the makers of these systems knows exactly how they work, and the workings keep changing. What we can do is test: which companies are mentioned, and what do they have in common? In our own research and client work the same things keep coming back.</p>
+<h3>1. There is a clear answer on your own website</h3>
+<p>This is the most important one. An AI system looks for text that answers a question. If someone asks which installer fits heat pumps in Zwolle, the system needs a page that literally says you fit heat pumps, in Zwolle and the surrounding area, and what is involved.</p>
+<p>Many websites do not say that. They say "we deliver custom work" and "quality comes first", but not what you do, for whom and where. For a person that is already vague. For an AI system it is unusable.</p>
+<h3>2. You write about the questions customers ask</h3>
+<p>People ask ChatGPT whole questions, not loose keywords. "What does a heat pump cost for a terraced house?" "Can I get a heat pump if I do not have underfloor heating?" Companies that answer exactly those questions on their website are used as a source more often.</p>
+<p>It does not need to be a long article. A page with frequently asked questions, a short explanation per service or an article on one topic all work. What matters is that the question and the answer are there.</p>
+<h3>3. Others mention you too</h3>
+<p>A system trusts a company more quickly if it reads the same thing in several places. Reviews, a listing with a trade association, an interview in a local paper, a supplier that names you as a partner: it all counts. Not because it is a trick, but because it confirms the same story.</p>
+<h3>4. Your details match everywhere</h3>
+<p>Name, address, service area and what you do need to match on your website, in your Google Business Profile and in other places. Conflicting information makes a system unsure, and an unsure system prefers to mention someone else.</p>
+<h3>5. Your website is technically readable</h3>
+<p>An AI system reads the raw text of your page. Text that only exists inside an image, or that only appears after a click that loads extra data, is often missed. A clear structure with headings helps. Structured data helps too, such as the markup for frequently asked questions that <a href="https://schema.org/FAQPage" target="_blank" rel="noopener">schema.org describes</a>. With it you tell a system in its own language what the question is and what the answer is.</p>
+<h2 id="why-most-companies-are-missing">Why most companies are missing</h2>
+<p>Reading the above, you can see the pattern. Most websites of small and medium sized companies were built as a business card. They look good, but there is very little in them.</p>
+<p>The three reasons we come across most:</p>
+<ol><li><strong>Too little content.</strong> Five pages with three sentences each. There is nothing for a system to quote.</li><li><strong>Too generic.</strong> The text could sit on any competitor's website. Nothing that sets you apart or makes your service area clear.</li><li><strong>Never updated.</strong> The website was delivered three years ago and has not been touched since. Meanwhile a competitor publishes something new every month.</li></ol>
+<p>The good news is that all three can be fixed. You do not need a bigger marketing budget than your competitor. You need regularity.</p>
+<h2 id="an-example-from-our-own-practice">An example from our own practice</h2>
+<p>We noticed ourselves how fast it can go. On our own website we published a few articles about carpenters: what a good website for a carpentry business needs and which questions their customers ask.</p>
+<p>Five to six weeks later two enquiries came in within one week. Both from a carpenter, both from the same region. In the eight years before that, this had never happened out of the blue.</p>
+<blockquote>A few articles about one topic were enough to be found by exactly the people we wrote about.</blockquote>
+<p>That is no guarantee it will go this way for every company. It does show what happens when you are clear about one topic for one audience.</p>
+<h2 id="it-works-the-other-way-round-too">It works the other way round too</h2>
+<p>Being mentioned is not always the goal. Sometimes you want to be mentioned less in places where you have no business.</p>
+<p>A client of ours, a mobile scooter repair service, received many enquiries from regions he does not serve at all. That cost him time and delivered nothing. Since it became clear where he does and does not work, he is approached more often from his own region and less from outside it.</p>
+<p>For an AI system, "we do not work here" is just as valuable as "we do work here". The clearer you are, the better the answer fits what you want.</p>
+<h2 id="what-you-can-do-this-week">What you can do this week</h2>
+<p>You do not have to wait to get started. These are four things you can do yourself.</p>
+<ol><li><strong>Ask the question yourself.</strong> Open ChatGPT and ask five questions your customers would ask, without naming your own company. Write down who is mentioned.</li><li><strong>Read your homepage as a stranger would.</strong> Do the first three sentences say what you do, for whom and where? If not, start there.</li><li><strong>Write down ten questions customers often ask you.</strong> On the phone, by email or at the first appointment. Each of those questions deserves a page or a paragraph.</li><li><strong>Check your details.</strong> Do your name, address and service area match on your website and in your Google Business Profile?</li></ol>
+<p>Would you like to know where you stand without working it out yourself? With the <a href="/en/free-check/" data-link>free baseline check</a> you receive a report within 48 hours showing the questions you are losing now and how AI describes your company.</p>
+<h2 id="can-you-guarantee-a-mention">Can you guarantee a mention?</h2>
+<p>No, and anyone who promises that is promising too much. Which company an AI system mentions also depends on how strong your competitors are, how well known you already are and how the systems themselves change. Nobody has influence over part of that.</p>
+<p>What you do control is whether there is something to find. A company with clear, current content about its customers' questions has a far greater chance than a company whose website is a business card. And that gap widens as more people put their questions to AI instead of a search engine.</p>
+<h2 id="in-summary">In summary</h2>
+<ul><li>ChatGPT does not keep a ranking. It writes a new answer for every question.</li><li>It draws on what the model already knows and on what it finds online at that moment.</li><li>The biggest factor in your own hands is clear content on your own website about your customers' questions.</li><li>Mentions by others and matching details reinforce that.</li><li>You cannot force it, but you can raise the odds considerably.</li></ul>
+<p>Above all it takes regularity: adding or improving something every week. That is precisely the work NXEO takes off your hands. Curious what that costs? View the <a href="/en/pricing/" data-link>plans</a>, or <a href="/en/get-started/" data-link>get started straight away</a>.</p>
+<div class="np-cta bl-cta ar-cta"><div><h3>Curious how AI mentions your company today?</h3><p>Enter your website. Within 48 hours the report is in your inbox, free.</p></div><form class="combo audit-combo np-form" data-baseline novalidate><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></span><input name="site" type="url" placeholder="yourwebsite.com" required autocomplete="url" aria-label="Your website"><button class="btn btn-blue" type="submit">Check my visibility <span class="arr">→</span></button></form></div></div><aside class="ar-side"><nav class="ar-toc" aria-label="In this article"><b>In this article</b><ol><li><a href="#ai-answers-are-not-search-results">AI answers are not search results</a></li><li><a href="#where-chatgpt-gets-its-knowledge">Where ChatGPT gets its knowledge</a></li><li><a href="#the-signals-that-count">The signals that count</a></li><li><a href="#why-most-companies-are-missing">Why most companies are missing</a></li><li><a href="#an-example-from-our-own-practice">An example from our own practice</a></li><li><a href="#it-works-the-other-way-round-too">It works the other way round too</a></li><li><a href="#what-you-can-do-this-week">What you can do this week</a></li><li><a href="#can-you-guarantee-a-mention">Can you guarantee a mention?</a></li><li><a href="#in-summary">In summary</a></li></ol></nav><div class="ar-mini"><b>Curious how AI mentions your company today?</b><p>Enter your website. Within 48 hours the report is in your inbox, free.</p><a class="btn btn-blue btn-block" href="/en/free-check/" data-link>Check my visibility <span class="arr">→</span></a></div></aside></div>
+</article>
+<div class="sec ar-more"><div class="wrap"><h2>Read next</h2><div class="bl-grid is-filtered"><article class="bp" data-cat="Insight"><a class="bp-pic" href="/en/blog/why-am-i-not-in-ai-recommendations/" data-link tabindex="-1" aria-hidden="true"><svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 400 250" aria-hidden="true"><rect width="400" height="250" fill="#EEF1FD"/><rect x="60" y="44" width="280" height="162" rx="18" fill="#fff"/><rect x="60" y="44" width="280" height="34" rx="18" fill="#002EFE"/><rect x="60" y="64" width="280" height="14" fill="#002EFE"/><g fill="#F3F5FC"><rect x="80" y="94" width="30" height="30" rx="8"/><rect x="118" y="94" width="30" height="30" rx="8"/><rect x="156" y="94" width="30" height="30" rx="8"/><rect x="194" y="94" width="30" height="30" rx="8"/><rect x="232" y="94" width="30" height="30" rx="8"/><rect x="270" y="94" width="30" height="30" rx="8"/><rect x="80" y="132" width="30" height="30" rx="8"/><rect x="118" y="132" width="30" height="30" rx="8"/><rect x="156" y="132" width="30" height="30" rx="8"/><rect x="194" y="132" width="30" height="30" rx="8"/><rect x="232" y="132" width="30" height="30" rx="8"/><rect x="270" y="132" width="30" height="30" rx="8"/></g><g fill="#002EFE"><circle cx="95" cy="109" r="5"/><circle cx="133" cy="109" r="5"/><circle cx="171" cy="109" r="5"/><circle cx="209" cy="109" r="5"/><circle cx="247" cy="109" r="5"/><circle cx="285" cy="109" r="5"/><circle cx="95" cy="147" r="5"/></g><rect x="80" y="176" width="120" height="10" rx="5" fill="#DCE3FF"/></svg></a><div class="bp-b"><div class="bp-m"><b>Insight</b><span>9 Nov 2026</span><span>8 min</span></div><h2><a href="/en/blog/why-am-i-not-in-ai-recommendations/" data-link>Why am I not in AI recommendations?</a></h2><p>You do good work, your customers are happy and still AI keeps naming someone else. These are the seven causes we find most often, and how to see which one applies to you.</p><a class="bp-more" href="/en/blog/why-am-i-not-in-ai-recommendations/" data-link>Read article <span class="arr">→</span></a></div></article><article class="bp" data-cat="Insight"><a class="bp-pic" href="/en/blog/is-chatgpt-the-google-of-2026/" data-link tabindex="-1" aria-hidden="true"><svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 400 250" aria-hidden="true"><rect width="400" height="250" fill="#EEF1FD"/><rect x="56" y="60" width="180" height="130" rx="18" fill="#fff"/><rect x="164" y="88" width="180" height="130" rx="18" fill="#002EFE"/><circle cx="118" cy="112" r="22" fill="none" stroke="#C9D3FF" stroke-width="8"/><path d="M134 128l22 22" stroke="#C9D3FF" stroke-width="8" stroke-linecap="round"/><rect x="80" y="160" width="90" height="10" rx="5" fill="#DCE3FF"/><path d="M254 118l8 22 22 8-22 8-8 22-8-22-22-8 22-8z" fill="#fff"/><rect x="190" y="180" width="110" height="10" rx="5" fill="rgba(255,255,255,.45)"/></svg></a><div class="bp-b"><div class="bp-m"><b>Insight</b><span>7 Nov 2026</span><span>8 min</span></div><h2><a href="/en/blog/is-chatgpt-the-google-of-2026/" data-link>Is ChatGPT the Google of 2026?</a></h2><p>More and more people put their question to ChatGPT. Is it replacing Google? No, but it is changing where customers make their choice. This is what that means for a business owner.</p><a class="bp-more" href="/en/blog/is-chatgpt-the-google-of-2026/" data-link>Read article <span class="arr">→</span></a></div></article><article class="bp" data-cat="Insight"><a class="bp-pic" href="/en/blog/gemini-does-not-mention-my-company/" data-link tabindex="-1" aria-hidden="true"><svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 400 250" aria-hidden="true"><rect width="400" height="250" fill="#EEF1FD"/><rect x="60" y="44" width="280" height="162" rx="18" fill="#fff"/><rect x="60" y="44" width="280" height="34" rx="18" fill="#002EFE"/><rect x="60" y="64" width="280" height="14" fill="#002EFE"/><g fill="#F3F5FC"><rect x="80" y="94" width="30" height="30" rx="8"/><rect x="118" y="94" width="30" height="30" rx="8"/><rect x="156" y="94" width="30" height="30" rx="8"/><rect x="194" y="94" width="30" height="30" rx="8"/><rect x="232" y="94" width="30" height="30" rx="8"/><rect x="270" y="94" width="30" height="30" rx="8"/><rect x="80" y="132" width="30" height="30" rx="8"/><rect x="118" y="132" width="30" height="30" rx="8"/><rect x="156" y="132" width="30" height="30" rx="8"/><rect x="194" y="132" width="30" height="30" rx="8"/><rect x="232" y="132" width="30" height="30" rx="8"/><rect x="270" y="132" width="30" height="30" rx="8"/></g><g fill="#002EFE"><circle cx="95" cy="109" r="5"/><circle cx="133" cy="109" r="5"/><circle cx="171" cy="109" r="5"/><circle cx="209" cy="109" r="5"/><circle cx="247" cy="109" r="5"/><circle cx="285" cy="109" r="5"/><circle cx="95" cy="147" r="5"/></g><rect x="80" y="176" width="120" height="10" rx="5" fill="#DCE3FF"/></svg></a><div class="bp-b"><div class="bp-m"><b>Insight</b><span>2 Nov 2026</span><span>8 min</span></div><h2><a href="/en/blog/gemini-does-not-mention-my-company/" data-link>Gemini does not mention my company. Why?</a></h2><p>Gemini gets its information from Google. If you are weak or unclear there, Gemini will not mention you, even when ChatGPT does. This is how to find the cause and fix it.</p><a class="bp-more" href="/en/blog/gemini-does-not-mention-my-company/" data-link>Read article <span class="arr">→</span></a></div></article></div></div></div>
+</section>
+
+</main>
+
+<footer class="end">
+  <div class="end-in">
+    <div class="end-cta">
+      <div class="bubble" aria-hidden="true">Who will ChatGPT mention tomorrow?</div>
+      <h2>You. Start today.<span class="cursor" aria-hidden="true"></span></h2>
+      <p class="end-lead">Within 48 hours you know where you stand.</p>
+      <div class="end-btns"><a class="btn btn-white" href="/en/get-started/" data-link>Start with NXEO <span class="arr">→</span></a><a class="btn btn-glass" href="/en/free-check/" data-link>Free baseline check</a></div>
+    </div>
+    <div class="end-foot">
+      <div class="end-brand">
+        <a class="logo" href="/en/" data-link aria-label="NXEO home"><img src="/assets/img/nxeo_light.png" alt="nxeo"></a>
+        <p>Your company mentioned by AI. We measure it, create what is missing and publish it on your website.</p>
+        <p class="by">A collaboration between <a href="https://iqscript.com/" target="_blank" rel="noopener">IQ Script</a> &amp; <a href="https://theaidoctor.nl/" target="_blank" rel="noopener">The AI Doctor</a></p>
+      </div>
+      <nav class="end-col" aria-label="Product"><h4>Product</h4><ul><li><a href="/en/" data-link>How it works</a></li><li><a href="/en/pricing/" data-link>Pricing</a></li><li><a href="/en/free-check/" data-link>Free baseline check</a></li><li><a href="/en/faq/" data-link>Frequently asked questions</a></li><li><a href="/en/blog/" data-link>Blog</a></li></ul></nav>
+      <nav class="end-col" aria-label="Company"><h4>Company</h4><ul><li><a href="/en/about/" data-link>About NXEO</a></li><li><a href="/en/contact/" data-link>Contact</a></li><li><a href="/en/book-a-call/" data-link>Book a call</a></li><li><a href="/en/get-started/" data-link>Start with NXEO</a></li></ul></nav>
+      <div class="end-col"><h4>Contact</h4><ul><li><a href="mailto:hello@nxeo.io">hello@nxeo.io</a></li><li><a href="mailto:sales@nxeo.io">sales@nxeo.io</a></li><li><a href="mailto:support@nxeo.io">support@nxeo.io</a></li></ul></div>
+    </div>
+    <div class="end-bar">
+      <div class="end-badges"><span>GDPR compliant</span><span>No ad tracking</span><span>Your data stays yours</span></div>
+      <div class="end-lang" aria-label="Language"><span class="on">English</span><a href="/nl/blog/hoe-chatgpt-bepaalt-welke-bedrijven-het-noemt/" hreflang="nl">Nederlands</a></div>
+    </div>
+    <div class="end-legal">
+      <p><span>© 2026 NXEO. All prices exclude VAT.</span><a href="/en/privacy/" data-link>Privacy policy</a><a href="/en/privacy/" data-link>Cookies</a><a href="mailto:support@nxeo.io">Request your data</a></p>
+      <p class="tm">ChatGPT and OpenAI are trademarks of OpenAI. Gemini and Google are trademarks of Google LLC. Perplexity, Claude, LinkedIn, WordPress, Webflow, Framer, Wix and Shopify are trademarks of their respective owners. These names are used for identification only. NXEO is not affiliated with or endorsed by these parties.</p>
+    </div>
+  </div>
+  <div class="end-mark" aria-hidden="true"><img src="/assets/img/nxeo_light.png" alt=""></div>
+</footer>
+
+
+<dialog class="nulmodal" id="nulmodal" aria-labelledby="nulmodal-title">
+  <form method="dialog" class="nm-close-form"><button class="nm-close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></form>
+  <form class="nm-form" id="form-nul" novalidate>
+    <h3 id="nulmodal-title">Where can we send the report?</h3>
+    <p class="nm-sub">In your inbox within 48 hours. No newsletter, no spam.</p>
+    <div class="nm-site"><span>Website</span><b data-nm-site></b></div>
+    <div class="fl"><input id="nm-email" name="email" type="email" placeholder="name@company.com" required autocomplete="email"><label class="sr" for="nm-email">Work email</label></div>
+    <input type="hidden" name="site">
+    <button class="btn btn-blue btn-block" type="submit">Send my baseline <span class="arr">→</span></button>
+  </form>
+  <div class="nm-ok" hidden data-nm-ok><span class="okmark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path class="tick" d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><b>Your baseline is on its way.</b><span>In your inbox within 48 hours. We start measuring now.</span></div></div>
+</dialog>
+<div class="cookie" id="cookie" role="dialog" aria-label="Cookies">
+  <h3>Cookies on NXEO</h3>
+  <p>We use analytical cookies to understand how visitors use our site. No tracking for advertising. Read our <a href="/en/privacy/" data-link style="text-decoration:underline">privacy policy</a>.</p>
+  <div class="acts"><button class="btn btn-ghost" data-cookie="no">Decline</button><button class="btn btn-blue" data-cookie="yes">Accept</button></div>
+</div>
+
+
+<script src="/assets/script.js?v=1df8264d" defer></script>
+</body>
+</html>
