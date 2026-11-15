@@ -63,12 +63,57 @@
     "cms_wordpress": {
       "slug": "werkt-met/wordpress",
       "title": "NXEO met WordPress | Word genoemd door AI",
-      "description": "NXEO meet hoe AI jouw bedrijf noemt, schrijft de content die ontbreekt en plaatst die in je WordPress website. Jij keurt goed, wij doen de rest."
+      "description": "NXEO meet hoe AI jouw bedrijf noemt, schrijft de content die ontbreekt en plaatst die op je WordPress website. Jij keurt goed, wij doen de rest."
     },
     "meekijken": {
       "slug": "website-doorlopen",
       "title": "Loop je website samen met ons door | NXEO",
       "description": "In vijftien minuten online kijken we samen of AI jouw website kan lezen, hoe AI je nu noemt en wat je als eerste kunt doen. Gratis en zonder verplichting."
+    },
+    "cms_webflow": {
+      "slug": "werkt-met/webflow",
+      "title": "NXEO met Webflow | Word genoemd door AI",
+      "description": "NXEO meet hoe AI jouw bedrijf noemt, schrijft de content die ontbreekt en plaatst die op je Webflow website. Jij keurt goed, wij doen de rest."
+    },
+    "cms_shopify": {
+      "slug": "werkt-met/shopify",
+      "title": "NXEO met Shopify | Word genoemd door AI",
+      "description": "NXEO meet hoe AI jouw bedrijf noemt, schrijft de content die ontbreekt en plaatst die op je Shopify winkel. Jij keurt goed, wij doen de rest."
+    },
+    "cms_wix": {
+      "slug": "werkt-met/wix",
+      "title": "NXEO met Wix | Word genoemd door AI",
+      "description": "NXEO meet hoe AI jouw bedrijf noemt, schrijft de content die ontbreekt en plaatst die op je Wix website. Jij keurt goed, wij doen de rest."
+    },
+    "cms_framer": {
+      "slug": "werkt-met/framer",
+      "title": "NXEO met Framer | Word genoemd door AI",
+      "description": "NXEO meet hoe AI jouw bedrijf noemt, schrijft de content die ontbreekt en plaatst die op je Framer website. Jij keurt goed, wij doen de rest."
+    },
+    "cms_websitebouwers": {
+      "slug": "werkt-met/websitebouwers",
+      "title": "NXEO met de websitebouwer van je hostingpartij | Word genoemd door AI",
+      "description": "NXEO meet hoe AI jouw bedrijf noemt, schrijft de content die ontbreekt en plaatst die op je website. Jij keurt goed, wij doen de rest."
+    },
+    "cms_code": {
+      "slug": "werkt-met/gecodeerde-website",
+      "title": "NXEO met een gecodeerde website | Word genoemd door AI",
+      "description": "NXEO meet hoe AI jouw bedrijf noemt, schrijft de content die ontbreekt en plaatst die op je website. Jij keurt goed, wij doen de rest."
+    },
+    "cms_ai": {
+      "slug": "werkt-met/ai-website",
+      "title": "NXEO met een website gemaakt met AI | Word genoemd door AI",
+      "description": "NXEO meet hoe AI jouw bedrijf noemt, schrijft de content die ontbreekt en plaatst die op je website. Jij keurt goed, wij doen de rest."
+    },
+    "cms_maatwerk": {
+      "slug": "werkt-met/maatwerk",
+      "title": "Koppeling op maat | NXEO werkt met jouw website",
+      "description": "NXEO meet hoe AI jouw bedrijf noemt, schrijft de content die ontbreekt en plaatst die op je website. Jij keurt goed, wij doen de rest."
+    },
+    "koppelingen": {
+      "slug": "werkt-met",
+      "title": "Werkt met jouw website | NXEO",
+      "description": "NXEO werkt met WordPress, Webflow, Shopify, Wix, Framer, de websitebouwers van hostingpartijen, gecodeerde websites en websites die met AI zijn gemaakt."
     }
   },
   "breadcrumb_home": "Home"

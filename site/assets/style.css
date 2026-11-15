@@ -2548,3 +2548,20 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 .cm-case .c2-left .btn-white,.cm-case .c2-left .btn-white:hover{background:#fff;color:var(--blue);border-color:transparent;box-shadow:0 1px 0 #fff inset,0 14px 30px -10px rgba(0,0,0,.3)}
 .cm-case .c2-quote{margin:auto 0 0}
 .cm-cb{display:flex;flex-wrap:wrap;gap:12px}
+/* werkt met: overzicht en tegels met eigen icoon of woordmerk */
+.cm-pair span.w.wide,.cm-link span.w.wide{padding:14px 10px}
+.cm-pair span.w.ic{padding:20px}.cm-link span.w.ic{padding:16px}
+.cm-pair span.ic svg,.cm-link span.ic svg,.kp span.ic svg{width:100%;height:100%;display:block}
+.kp-hero .hero-stack{padding-bottom:clamp(3.5rem,7vw,6rem)}
+.kp-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.kp{display:grid;gap:10px;align-content:start;padding:28px;border-radius:var(--r-lg);background:var(--glass-strong,#fff);border:1px solid rgba(255,255,255,.9);box-shadow:var(--sh-soft);color:var(--ink)}
+.kp:hover{color:var(--ink)}
+.kp span.w{width:56px;height:56px;border-radius:16px;background:#fff;display:grid;place-items:center;padding:12px;box-shadow:0 0 0 1px var(--line),0 10px 22px -12px rgba(26,35,50,.3);margin-bottom:10px}
+.kp span.w.wide{padding:12px 8px}
+.kp span.w img{width:100%;height:100%;object-fit:contain;display:block}
+.kp b{font-family:var(--display);font-size:1.3rem;letter-spacing:-.02em;line-height:1.2}
+.kp p{margin:0;color:var(--body);line-height:1.5}
+.kp i{font-style:normal;font-weight:600;color:var(--blue);margin-top:6px;display:inline-flex;gap:6px;align-items:center}
+.kp i .arr{transition:transform 320ms var(--liquid)}.kp:hover i .arr{transform:translateX(4px)}
+.kp-cta{margin-top:24px;grid-template-columns:minmax(0,1fr) auto;align-items:center}
+@media (max-width:900px){.kp-grid{grid-template-columns:minmax(0,1fr)}.kp-cta{grid-template-columns:minmax(0,1fr)}}

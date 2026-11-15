@@ -13,7 +13,7 @@ OUT=S+('dist-preview/' if MODE=='preview' else 'dist/')
 DOMAIN='https://nxeo.io'
 LANGS=[l for l in ['nl','en','de'] if os.path.exists(S+'i18n/%s.json'%l) and os.path.isdir(S+'content/%s'%l)]
 DEFAULT='nl'
-PAGES=['home','over','prijzen','contact','sales','aanvraag','nulmeting','faq','blog','privacy','cms_wordpress','meekijken']
+PAGES=['home','over','prijzen','contact','sales','aanvraag','nulmeting','faq','blog','privacy','meekijken','koppelingen','cms_wordpress','cms_webflow','cms_shopify','cms_wix','cms_framer','cms_websitebouwers','cms_code','cms_ai','cms_maatwerk']
 I18N={l:json.load(open(S+'i18n/%s.json'%l)) for l in LANGS}
 TODAY=datetime.date.today().isoformat()
 

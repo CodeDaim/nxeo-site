@@ -63,12 +63,57 @@
     "cms_wordpress": {
       "slug": "works-with/wordpress",
       "title": "NXEO with WordPress | Get mentioned by AI",
-      "description": "NXEO measures how AI mentions your company, writes the content that is missing and publishes it in your WordPress website. You approve, we do the rest."
+      "description": "NXEO measures how AI mentions your company, writes the content that is missing and publishes it on your WordPress website. You approve, we do the rest."
     },
     "meekijken": {
       "slug": "website-walkthrough",
       "title": "Go through your website with us | NXEO",
       "description": "In fifteen minutes online we look together at whether AI can read your website, how AI mentions you today and what you can do first. Free and without obligation."
+    },
+    "cms_webflow": {
+      "slug": "works-with/webflow",
+      "title": "NXEO with Webflow | Get mentioned by AI",
+      "description": "NXEO measures how AI mentions your company, writes the content that is missing and publishes it on your Webflow website. You approve, we do the rest."
+    },
+    "cms_shopify": {
+      "slug": "works-with/shopify",
+      "title": "NXEO with Shopify | Get mentioned by AI",
+      "description": "NXEO measures how AI mentions your company, writes the content that is missing and publishes it on your Shopify shop. You approve, we do the rest."
+    },
+    "cms_wix": {
+      "slug": "works-with/wix",
+      "title": "NXEO with Wix | Get mentioned by AI",
+      "description": "NXEO measures how AI mentions your company, writes the content that is missing and publishes it on your Wix website. You approve, we do the rest."
+    },
+    "cms_framer": {
+      "slug": "works-with/framer",
+      "title": "NXEO with Framer | Get mentioned by AI",
+      "description": "NXEO measures how AI mentions your company, writes the content that is missing and publishes it on your Framer website. You approve, we do the rest."
+    },
+    "cms_websitebouwers": {
+      "slug": "works-with/website-builders",
+      "title": "NXEO with your hosting company's website builder | Get mentioned by AI",
+      "description": "NXEO measures how AI mentions your company, writes the content that is missing and publishes it on your website. You approve, we do the rest."
+    },
+    "cms_code": {
+      "slug": "works-with/coded-website",
+      "title": "NXEO with a coded website | Get mentioned by AI",
+      "description": "NXEO measures how AI mentions your company, writes the content that is missing and publishes it on your website. You approve, we do the rest."
+    },
+    "cms_ai": {
+      "slug": "works-with/ai-built-website",
+      "title": "NXEO with a website made with AI | Get mentioned by AI",
+      "description": "NXEO measures how AI mentions your company, writes the content that is missing and publishes it on your website. You approve, we do the rest."
+    },
+    "cms_maatwerk": {
+      "slug": "works-with/custom",
+      "title": "Custom connection | NXEO works with your website",
+      "description": "NXEO measures how AI mentions your company, writes the content that is missing and publishes it on your website. You approve, we do the rest."
+    },
+    "koppelingen": {
+      "slug": "works-with",
+      "title": "Works with your website | NXEO",
+      "description": "NXEO works with WordPress, Webflow, Shopify, Wix, Framer, the website builders of hosting companies, coded websites and websites made with AI."
     }
   },
   "breadcrumb_home": "Home"
