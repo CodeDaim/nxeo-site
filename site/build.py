@@ -171,10 +171,16 @@ def article_body(lang,page):
     tocl=''.join('<li><a href="#%s">%s</a></li>'%(i,html.escape(h)) for i,h in toc)
     globe='<span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></span>'
     cta='<div class="np-cta bl-cta ar-cta"><div><h3>%s</h3><p>%s</p></div><form class="combo audit-combo np-form" data-baseline novalidate>%s<input name="site" type="url" placeholder="%s" required autocomplete="url" aria-label="%s"><button class="btn btn-blue" type="submit">%s <span class="arr">→</span></button></form></div>'%(t['ch'],t['cp'],globe,t['ph'],t['aria'],t['btn'])
-    return ('<section class="page" id="page-%s">\n<article class="ar">\n<header class="wrap ar-head"><a class="ar-back" href="#blog" data-link><span class="arr">←</span> %s</a>'
-            '<div class="bp-m"><b>%s</b><span>%s</span><span>%d %s</span></div><h1>%s</h1><p class="lead">%s</p></header>\n'
-            '<div class="wrap ar-grid"><aside class="ar-toc"><b>%s</b><ol>%s</ol></aside><div class="ar-body">%s\n%s</div></div>\n</article>\n'
-            '%s</section>\n')%(page,t['back'],a['category'],a['nice'],a['mins'],t['min'],html.escape(a['title']),html.escape(a['description']),t['toc'],tocl,body,cta,
+    side=('<aside class="ar-side"><nav class="ar-toc" aria-label="%s"><b>%s</b><ol>%s</ol></nav>'
+          '<div class="ar-mini"><b>%s</b><p>%s</p><a class="btn btn-blue btn-block" href="#nulmeting" data-link>%s <span class="arr">→</span></a></div></aside>')%(t['toc'],t['toc'],tocl,t['ch'],t['cp'],t['btn'])
+    return ('<section class="page" id="page-%s">\n<div class="ar-bar" aria-hidden="true"><i></i></div>\n<article class="ar">\n'
+            '<header class="wrap ar-head"><a class="ar-back" href="#blog" data-link><span class="arr">←</span> %s</a>'
+            '<div class="bp-m"><b>%s</b><span>%s</span><span>%d %s</span></div><h1>%s</h1><p class="lead">%s</p>'
+            '<div class="ar-by"><img src="{{nxeo_icon}}" alt=""><span>%s</span></div></header>\n'
+            '<div class="wrap"><div class="ar-cover">%s</div></div>\n'
+            '<div class="wrap ar-grid"><div class="ar-body">%s\n%s</div>%s</div>\n</article>\n'
+            '%s</section>\n')%(page,t['back'],a['category'],a['nice'],a['mins'],t['min'],html.escape(a['title']),html.escape(a['description']),t['by'],
+            re.sub(r' preserveAspectRatio="[^"]*"','',a['svg']),body,cta,side,
             ('<div class="sec ar-more"><div class="wrap"><h2>%s</h2><div class="bl-grid is-filtered">%s</div></div></div>\n'%(t['more'],more)) if more else '')
 def article_schema(lang,page):
     a=[x for x in ARTS[lang] if x['key']==page][0]

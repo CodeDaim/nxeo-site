@@ -248,6 +248,19 @@
     });
   });
 
+  // Article: reading progress and the active item in the table of contents
+  (function(){
+    var body=document.querySelector('.ar-body');if(!body)return;
+    var bar=document.querySelector('.ar-bar i'),links=document.querySelectorAll('.ar-toc a'),heads=body.querySelectorAll('h2[id]'),tick=false;
+    function upd(){tick=false;var r=body.getBoundingClientRect(),vh=window.innerHeight;
+      var p=Math.min(1,Math.max(0,(vh*0.3-r.top)/(r.height-vh*0.4)));if(bar)bar.style.transform='scaleX('+p+')';
+      var cur=-1;for(var i=0;i<heads.length;i++){if(heads[i].getBoundingClientRect().top<140)cur=i;}
+      for(var k=0;k<links.length;k++){links[k].classList.toggle('on',k===cur);}}
+    function q(){if(!tick){tick=true;requestAnimationFrame(upd);}}
+    upd();window.addEventListener('scroll',q,{passive:true});window.addEventListener('resize',q);
+    Array.prototype.forEach.call(links,function(a){a.addEventListener('click',function(e){var h=document.getElementById(a.getAttribute('href').slice(1));if(!h)return;e.preventDefault();h.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});history.replaceState(null,'',a.getAttribute('href'));});});
+  })();
+
   // FAQ topic tabs
   document.querySelectorAll('[data-faqtab]').forEach(function(b){
     b.addEventListener('click',function(){
