@@ -64,6 +64,11 @@
       "slug": "works-with/wordpress",
       "title": "NXEO with WordPress | Get mentioned by AI",
       "description": "NXEO measures how AI mentions your company, writes the content that is missing and publishes it in your WordPress website. You approve, we do the rest."
+    },
+    "meekijken": {
+      "slug": "website-walkthrough",
+      "title": "Go through your website with us | NXEO",
+      "description": "In fifteen minutes online we look together at whether AI can read your website, how AI mentions you today and what you can do first. Free and without obligation."
     }
   },
   "breadcrumb_home": "Home"

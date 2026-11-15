@@ -177,6 +177,22 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/werkt-met/wordpress/"/>
   </url>
   <url>
+    <loc>https://nxeo.io/nl/website-doorlopen/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/website-doorlopen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/website-walkthrough/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/website-doorlopen/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/en/website-walkthrough/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/website-doorlopen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/website-walkthrough/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/website-doorlopen/"/>
+  </url>
+  <url>
     <loc>https://nxeo.io/nl/blog/ai-zegt-iets-verkeerds-over-mijn-bedrijf/</loc>
     <lastmod>2026-11-15</lastmod>
     <priority>0.7</priority>

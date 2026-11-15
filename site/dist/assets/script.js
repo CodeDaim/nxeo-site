@@ -161,7 +161,7 @@
     var d=document.querySelector('[data-sl-done]');
     var first=sf.elements.name.value.split(/\s+/)[0];var h=d.querySelector('[data-sw="hello"]');h.textContent=h.getAttribute('data-hello')+(first?', '+first:'');
     d.querySelector('[data-sw="email"]').textContent=sf.elements.email.value;
-    sf.hidden=true;document.querySelector('#page-sales .so-head').hidden=true;d.hidden=false;document.querySelector('#page-sales .so-sec').classList.add('is-done');window.scrollTo(0,0);
+    var sec=sf.closest('.so-sec');sf.hidden=true;sec.querySelector('.so-head').hidden=true;d.hidden=false;sec.classList.add('is-done');window.scrollTo(0,0);
   });
 
   // Rotating AI names in the hero headline
