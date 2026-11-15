@@ -77,8 +77,8 @@ def org_schema(lang):
 
 # ---------- articles: markdown files in articles/<lang>/<slug>.md ----------
 MONTHS={'nl':['jan','feb','mrt','apr','mei','jun','jul','aug','sep','okt','nov','dec'],'en':['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']}
-ATXT={'nl':dict(back='Alle artikelen',min='min lezen',more='Lees ook',read='Lees artikel',new='Nieuwste',by='Door NXEO',toc='In dit artikel',ch='Benieuwd hoe AI jouw bedrijf nu noemt?',cp='Vul je website in. Binnen 48 uur heb je het rapport in je mail, gratis.',ph='jouwwebsite.nl',aria='Je website',btn='Check mijn zichtbaarheid'),
-      'en':dict(back='All articles',min='min read',more='Read next',read='Read article',new='Latest',by='By NXEO',toc='In this article',ch='Curious how AI mentions your company today?',cp='Enter your website. Within 48 hours the report is in your inbox, free.',ph='yourwebsite.com',aria='Your website',btn='Check my visibility')}
+ATXT={'nl':dict(back='Alle artikelen',min='min lezen',more='Lees ook',read='Lees artikel',new='Nieuwste',by='Door NXEO',toc='In dit artikel',kort='In het kort',ch='Benieuwd hoe AI jouw bedrijf nu noemt?',cp='Vul je website in. Binnen 48 uur heb je het rapport in je mail, gratis.',ph='jouwwebsite.nl',aria='Je website',btn='Check mijn zichtbaarheid'),
+      'en':dict(back='All articles',min='min read',more='Read next',read='Read article',new='Latest',by='By NXEO',toc='In this article',kort='In short',ch='Curious how AI mentions your company today?',cp='Enter your website. Within 48 hours the report is in your inbox, free.',ph='yourwebsite.com',aria='Your website',btn='Check my visibility')}
 ARTSVG=open(S+'articles/_art.html').read().split('\n<!--split-->\n')
 def md_inline(t):
     t=html.escape(t,quote=False)
@@ -173,14 +173,15 @@ def article_body(lang,page):
     cta='<div class="np-cta bl-cta ar-cta"><div><h3>%s</h3><p>%s</p></div><form class="combo audit-combo np-form" data-baseline novalidate>%s<input name="site" type="url" placeholder="%s" required autocomplete="url" aria-label="%s"><button class="btn btn-blue" type="submit">%s <span class="arr">→</span></button></form></div>'%(t['ch'],t['cp'],globe,t['ph'],t['aria'],t['btn'])
     side=('<aside class="ar-side"><nav class="ar-toc" aria-label="%s"><b>%s</b><ol>%s</ol></nav>'
           '<div class="ar-mini"><b>%s</b><p>%s</p><a class="btn btn-blue btn-block" href="#nulmeting" data-link>%s <span class="arr">→</span></a></div></aside>')%(t['toc'],t['toc'],tocl,t['ch'],t['cp'],t['btn'])
-    return ('<section class="page" id="page-%s">\n<div class="ar-bar" aria-hidden="true"><i></i></div>\n<article class="ar">\n'
-            '<header class="wrap ar-head"><a class="ar-back" href="#blog" data-link><span class="arr">←</span> %s</a>'
-            '<div class="bp-m"><b>%s</b><span>%s</span><span>%d %s</span></div><h1>%s</h1><p class="lead">%s</p>'
-            '<div class="ar-by"><img src="{{nxeo_icon}}" alt=""><span>%s</span></div></header>\n'
-            '<div class="wrap"><div class="ar-cover">%s</div></div>\n'
-            '<div class="wrap ar-grid"><div class="ar-body">%s\n%s</div>%s</div>\n</article>\n'
-            '%s</section>\n')%(page,t['back'],a['category'],a['nice'],a['mins'],t['min'],html.escape(a['title']),html.escape(a['description']),t['by'],
-            re.sub(r' preserveAspectRatio="[^"]*"','',a['svg']),body,cta,side,
+    kort=[k.strip() for k in a.get('kort','').split('|') if k.strip()]
+    kort_html=('<div class="ar-kort"><b>%s</b><ul>%s</ul></div>'%(t['kort'],''.join('<li>%s</li>'%md_inline(k) for k in kort))) if kort else ''
+    return ('<section class="page" id="page-%s">\n<div class="ar-bar" aria-hidden="true"><i></i></div>\n<article class="ar2">\n'
+            '<header class="hero hero-c ar-hero"><div class="hero-stack">'
+            '<div class="bubble bubble-blue">%s · %d %s</div>'
+            '<h1>%s<span class="cursor" aria-hidden="true"></span></h1><p class="def">%s</p>'
+            '<div class="ar-by"><img src="{{nxeo_icon}}" alt=""><span>%s · %s</span></div></div></header>\n'
+            '<div class="wrap ar-grid"><div class="ar-body">%s%s\n%s</div>%s</div>\n</article>\n'
+            '%s</section>\n')%(page,a['category'],a['mins'],t['min'],html.escape(a['title']),html.escape(a['description']),t['by'],a['nice'],kort_html,body,cta,side,
             ('<div class="sec ar-more"><div class="wrap"><h2>%s</h2><div class="bl-grid is-filtered">%s</div></div></div>\n'%(t['more'],more)) if more else '')
 def article_schema(lang,page):
     a=[x for x in ARTS[lang] if x['key']==page][0]
