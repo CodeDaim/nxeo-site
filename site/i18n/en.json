@@ -59,6 +59,11 @@
       "slug": "free-check",
       "title": "Free baseline check | Does ChatGPT mention your company? | NXEO",
       "description": "Enter your website and receive within 48 hours a report on how ChatGPT, Claude, Gemini, Perplexity and Google mention your company today and which questions you lose. Free, no obligation."
+    },
+    "cms_wordpress": {
+      "slug": "works-with/wordpress",
+      "title": "NXEO with WordPress | Get mentioned by AI",
+      "description": "NXEO measures how AI mentions your company, writes the content that is missing and publishes it in your WordPress website. You approve, we do the rest."
     }
   },
   "breadcrumb_home": "Home"

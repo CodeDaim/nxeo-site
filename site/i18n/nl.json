@@ -59,6 +59,11 @@
       "slug": "nulmeting",
       "title": "Gratis nulmeting | Noemt ChatGPT jouw bedrijf? | NXEO",
       "description": "Vul je website in en ontvang binnen 48 uur een rapport met hoe ChatGPT, Claude, Gemini, Perplexity en Google jouw bedrijf nu noemen en welke vragen je verliest. Gratis, zonder verplichting."
+    },
+    "cms_wordpress": {
+      "slug": "werkt-met/wordpress",
+      "title": "NXEO met WordPress | Word genoemd door AI",
+      "description": "NXEO meet hoe AI jouw bedrijf noemt, schrijft de content die ontbreekt en plaatst die in je WordPress website. Jij keurt goed, wij doen de rest."
     }
   },
   "breadcrumb_home": "Home"

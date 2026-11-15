@@ -13,7 +13,7 @@ OUT=S+('dist-preview/' if MODE=='preview' else 'dist/')
 DOMAIN='https://nxeo.io'
 LANGS=[l for l in ['nl','en','de'] if os.path.exists(S+'i18n/%s.json'%l) and os.path.isdir(S+'content/%s'%l)]
 DEFAULT='nl'
-PAGES=['home','over','prijzen','contact','sales','aanvraag','nulmeting','faq','blog','privacy']
+PAGES=['home','over','prijzen','contact','sales','aanvraag','nulmeting','faq','blog','privacy','cms_wordpress']
 I18N={l:json.load(open(S+'i18n/%s.json'%l)) for l in LANGS}
 TODAY=datetime.date.today().isoformat()
 
@@ -237,7 +237,7 @@ def build_page(lang,page):
     if page=='home': body=home_blog(lang,body)
     if '<div data-fp>' in body: body=body.replace('<div data-fp></div>',read(lang,'fp')).replace('<div data-fp>','').replace('</div><!--/fp-->','')
     body=re.sub(r'<section class="page" id="page-\w+">','<section class="page is-active" id="page-%s">'%page,body,count=1)
-    extra=[faq_schema(body)] if page in ('faq','prijzen','nulmeting') else ([article_schema(lang,page)] if page.startswith('art_') else [])
+    extra=[faq_schema(body)] if page in ('faq','prijzen','nulmeting') or page.startswith('cms_') else ([article_schema(lang,page)] if page.startswith('art_') else [])
     hdr,ftr=chrome(lang,page,d)
     doc=head(lang,page,d,extra)+hdr+'\n\n<main>\n'+body+'\n</main>\n\n'+ftr+'\n\n<script src="%s" defer></script>\n</body>\n</html>\n'%asset(d,'script.js')
     if 'class="hero hero-c' in body or 'hero-c' in body: doc=doc.replace('<html lang=','<html class="at-top" lang=',1)
