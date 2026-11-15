@@ -53,7 +53,7 @@ def rewrite_links(h,lang,from_dir):
             if mm: tag=tag.replace(mm.group(0),'href="%s"'%href(from_dir,lang,'home','#'+mm.group(1)))
         elif re.search(r' data-link(?=[\s>])',tag):
             mm=re.search(r'href="#(\w+)"',tag)
-            if mm and mm.group(1) in PAGES: tag=tag.replace(mm.group(0),'href="%s"'%href(from_dir,lang,mm.group(1)))
+            if mm and (mm.group(1) in PAGES or mm.group(1) in I18N[lang]['pages']): tag=tag.replace(mm.group(0),'href="%s"'%href(from_dir,lang,mm.group(1)))
         return tag
     return re.sub(r'<a\b[^>]*>',fix_tag,h)
 
@@ -74,16 +74,124 @@ def org_schema(lang):
             "email":"hello@nxeo.io","sameAs":["https://www.linkedin.com/"],
             "parentOrganization":[{"@type":"Organization","name":"IQ Script","url":"https://iqscript.com/"},{"@type":"Organization","name":"The AI Doctor","url":"https://theaidoctor.nl/"}]}
 
+
+# ---------- articles: markdown files in articles/<lang>/<slug>.md ----------
+MONTHS={'nl':['jan','feb','mrt','apr','mei','jun','jul','aug','sep','okt','nov','dec'],'en':['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']}
+ATXT={'nl':dict(back='Alle artikelen',min='min lezen',more='Lees ook',read='Lees artikel',new='Nieuwste',by='Door NXEO',toc='In dit artikel',ch='Benieuwd hoe AI jouw bedrijf nu noemt?',cp='Vul je website in. Binnen 48 uur heb je het rapport in je mail, gratis.',ph='jouwwebsite.nl',aria='Je website',btn='Check mijn zichtbaarheid'),
+      'en':dict(back='All articles',min='min read',more='Read next',read='Read article',new='Latest',by='By NXEO',toc='In this article',ch='Curious how AI mentions your company today?',cp='Enter your website. Within 48 hours the report is in your inbox, free.',ph='yourwebsite.com',aria='Your website',btn='Check my visibility')}
+ARTSVG=open(S+'articles/_art.html').read().split('\n<!--split-->\n')
+def md_inline(t):
+    t=html.escape(t,quote=False)
+    t=re.sub(r'\*\*(.+?)\*\*',r'<strong>\1</strong>',t)
+    def link(m):
+        txt,u=m.group(1),m.group(2)
+        if u.startswith('#'): return '<a href="%s" data-link>%s</a>'%(u,txt)
+        return '<a href="%s" target="_blank" rel="noopener">%s</a>'%(u,txt)
+    return re.sub(r'\[([^\]]+)\]\(([^)]+)\)',link,t)
+def md(text):
+    out=[];toc=[];para=[];lst=None
+    def flush():
+        nonlocal para,lst
+        if para: out.append('<p>%s</p>'%md_inline(' '.join(para))); para=[]
+        if lst: out.append('<%s>%s</%s>'%(lst[0],''.join('<li>%s</li>'%md_inline(i) for i in lst[1]),lst[0])); lst=None
+    for line in text.strip().split('\n'):
+        s=line.strip()
+        if not s: flush(); continue
+        m=re.match(r'(#{2,3}) (.+)',s)
+        if m:
+            flush(); h=m.group(2); hid=re.sub(r'[^a-z0-9]+','-',h.lower()).strip('-')
+            if len(m.group(1))==2: toc.append((hid,h)); out.append('<h2 id="%s">%s</h2>'%(hid,md_inline(h)))
+            else: out.append('<h3>%s</h3>'%md_inline(h))
+            continue
+        m=re.match(r'(?:[-*]|(\d+)\.) (.+)',s)
+        if m:
+            kind='ol' if m.group(1) else 'ul'
+            if para: out.append('<p>%s</p>'%md_inline(' '.join(para))); para=[]
+            if not lst or lst[0]!=kind: flush(); lst=[kind,[]]
+            lst[1].append(m.group(2)); continue
+        if s.startswith('> '): flush(); out.append('<blockquote>%s</blockquote>'%md_inline(s[2:])); continue
+        if lst: flush()
+        para.append(s)
+    flush()
+    return '\n'.join(out),toc
+def load_articles(lang):
+    d=S+'articles/%s/'%lang; arts=[]
+    if not os.path.isdir(d): return arts
+    for f in sorted(os.listdir(d)):
+        if not f.endswith('.md'): continue
+        raw=open(d+f).read(); _,fm,body=raw.split('---',2)
+        meta=dict((k.strip(),v.strip()) for k,v in (l.split(':',1) for l in fm.strip().split('\n')))
+        slug=f[:-3]; y,mo,da=meta['date'].split('-')
+        words=len(re.findall(r'\w+',body))
+        arts.append(dict(meta,slug=slug,key='art_'+slug.replace('-','_'),body=body,words=words,mins=max(1,round(words/220)),nice='%d %s %s'%(int(da),MONTHS[lang][int(mo)-1],y)))
+    arts.sort(key=lambda a:(a['date'],a['slug']),reverse=True)
+    for i,a in enumerate(arts): a['svg']=ARTSVG[(len(arts)-1-i)%3]
+    return arts
+ARTS={l:load_articles(l) for l in LANGS}
+for l in LANGS:
+    for a in ARTS[l]:
+        I18N[l]['pages'][a['key']]={'slug':I18N[l]['pages']['blog']['slug']+'/'+a['slug'],'title':a['title']+' | NXEO','description':a['description']}
+def card(lang,a,lead=False):
+    t=ATXT[lang]
+    return ('<article class="bp%s" data-cat="%s"><a class="bp-pic" href="#%s" data-link tabindex="-1" aria-hidden="true">%s</a><div class="bp-b"><div class="bp-m"><b>%s</b><span>%s</span><span>%d min</span>%s</div>'
+            '<h2><a href="#%s" data-link>%s</a></h2><p>%s</p><a class="bp-more" href="#%s" data-link>%s <span class="arr">→</span></a></div></article>')%(
+            ' bp-lead' if lead else '',a['category'],a['key'],a['svg'].replace('<svg','<svg preserveAspectRatio="xMidYMid slice"',1) if 'preserveAspectRatio' not in a['svg'] else a['svg'],a['category'],a['nice'],a['mins'],'<i>%s</i>'%t['new'] if lead else '',a['key'],html.escape(a['title']),html.escape(a['description']),a['key'],t['read'])
+def link_existing(lang,body):
+    # fewer than three real articles: keep the static cards, but point a card with a matching title at the real article
+    for a in ARTS[lang]:
+        i=body.find(html.escape(a['title'],quote=False))
+        if i<0: continue
+        s=body.rfind('<article',0,i); e=body.find('</article>',i)
+        body=body[:s]+body[s:e].replace('href="#blog"','href="#%s"'%a['key'])+body[e:]
+    return body
+def blog_overview(lang,body):
+    arts=ARTS[lang]
+    if len(arts)<3: return link_existing(lang,body)
+    cats=[]
+    for a in arts:
+        if a['category'] not in cats: cats.append(a['category'])
+    first=re.search(r'<button class="btn btn-sm ftab" type="button" data-bcat="" aria-selected="true">.*?</button>',body).group(0)
+    tabs=first+''.join('<button class="btn btn-sm ftab" type="button" data-bcat="%s" aria-selected="false">%s</button>'%(c,c) for c in cats)
+    body=re.sub(r'(<div class="faq-tabs bl-tabs" role="tablist">).*?(</div>\s*<div class="bl-grid">)',lambda m:m.group(1)+tabs+m.group(2),body,count=1,flags=re.S)
+    cards=''.join(card(lang,a,i==0) for i,a in enumerate(arts))
+    return re.sub(r'(<div class="bl-grid">).*?(</div>\s*<div class="np-cta bl-cta")',lambda m:m.group(1)+cards+m.group(2),body,count=1,flags=re.S)
+def home_blog(lang,body):
+    arts=ARTS[lang][:3]
+    if len(arts)<3: return link_existing(lang,body)
+    def rep(m):
+        a=arts.pop(0) if arts else None
+        if not a: return m.group(0)
+        return ('<article class="post" data-reveal><div class="pic">%s</div><div class="pb"><div class="meta"><b>%s</b><span>·</span><span>%s</span><span>·</span><span>%d min</span></div><h4>%s</h4><p>%s</p><a class="more" href="#%s" data-link>%s <span class="arr">→</span></a></div></article>')%(a['svg'],a['category'],a['nice'],a['mins'],html.escape(a['title']),html.escape(a['description']),a['key'],ATXT[lang]['read'])
+    return re.sub(r'<article class="post" data-reveal>.*?</article>',rep,body,flags=re.S)
+def article_body(lang,page):
+    t=ATXT[lang]; arts=ARTS[lang]; a=[x for x in arts if x['key']==page][0]
+    body,toc=md(a['body'])
+    rel=[x for x in arts if x is not a and x['category']==a['category']]+[x for x in arts if x is not a and x['category']!=a['category']]
+    more=''.join(card(lang,x) for x in rel[:3])
+    tocl=''.join('<li><a href="#%s">%s</a></li>'%(i,html.escape(h)) for i,h in toc)
+    globe='<span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></span>'
+    cta='<div class="np-cta bl-cta ar-cta"><div><h3>%s</h3><p>%s</p></div><form class="combo audit-combo np-form" data-baseline novalidate>%s<input name="site" type="url" placeholder="%s" required autocomplete="url" aria-label="%s"><button class="btn btn-blue" type="submit">%s <span class="arr">→</span></button></form></div>'%(t['ch'],t['cp'],globe,t['ph'],t['aria'],t['btn'])
+    return ('<section class="page" id="page-%s">\n<article class="ar">\n<header class="wrap ar-head"><a class="ar-back" href="#blog" data-link><span class="arr">←</span> %s</a>'
+            '<div class="bp-m"><b>%s</b><span>%s</span><span>%d %s</span></div><h1>%s</h1><p class="lead">%s</p></header>\n'
+            '<div class="wrap ar-grid"><aside class="ar-toc"><b>%s</b><ol>%s</ol></aside><div class="ar-body">%s\n%s</div></div>\n</article>\n'
+            '%s</section>\n')%(page,t['back'],a['category'],a['nice'],a['mins'],t['min'],html.escape(a['title']),html.escape(a['description']),t['toc'],tocl,body,cta,
+            ('<div class="sec ar-more"><div class="wrap"><h2>%s</h2><div class="bl-grid is-filtered">%s</div></div></div>\n'%(t['more'],more)) if more else '')
+def article_schema(lang,page):
+    a=[x for x in ARTS[lang] if x['key']==page][0]
+    return {"@context":"https://schema.org","@type":"Article","headline":a['title'],"description":a['description'],"datePublished":a['date'],"dateModified":a['date'],"inLanguage":lang,"wordCount":a['words'],
+            "mainEntityOfPage":abs_url(lang,page),"author":{"@type":"Organization","name":"NXEO","url":DOMAIN+'/'},"publisher":{"@type":"Organization","name":"NXEO","logo":{"@type":"ImageObject","url":DOMAIN+'/assets/img/nxeo.png'}}}
+
 def breadcrumb(lang,page):
     t=I18N[lang]
     return {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
         {"@type":"ListItem","position":1,"name":t['breadcrumb_home'],"item":abs_url(lang,'home')},
-        {"@type":"ListItem","position":2,"name":t['pages'][page]['title'].split('|')[0].strip(),"item":abs_url(lang,page)}]}
+        ]+([{"@type":"ListItem","position":2,"name":t['pages']['blog']['title'].split('|')[0].strip(),"item":abs_url(lang,'blog')},{"@type":"ListItem","position":3,"name":t['pages'][page]['title'].split('|')[0].strip(),"item":abs_url(lang,page)}] if page.startswith('art_') else [{"@type":"ListItem","position":2,"name":t['pages'][page]['title'].split('|')[0].strip(),"item":abs_url(lang,page)}])}
 
 def head(lang,page,from_dir,extra_schema):
     t=I18N[lang]; p=t['pages'][page]
-    alts=''.join('<link rel="alternate" hreflang="%s" href="%s">\n'%(l,abs_url(l,page)) for l in LANGS)
-    alts+='<link rel="alternate" hreflang="x-default" href="%s">\n'%abs_url(DEFAULT,page)
+    have=[l for l in LANGS if page in I18N[l]['pages']]
+    alts=''.join('<link rel="alternate" hreflang="%s" href="%s">\n'%(l,abs_url(l,page)) for l in have)
+    alts+='<link rel="alternate" hreflang="x-default" href="%s">\n'%abs_url(DEFAULT if DEFAULT in have else have[0],page)
     schemas=[org_schema(lang)]+([breadcrumb(lang,page)] if page!='home' else [{"@context":"https://schema.org","@type":"WebSite","name":"NXEO","url":DOMAIN+'/',"inLanguage":lang}])+extra_schema
     ld=''.join('<script type="application/ld+json">%s</script>\n'%json.dumps(s,ensure_ascii=False) for s in schemas)
     return ('<!doctype html>\n<html lang="%s" data-i18n-fpnote="%s" data-i18n-pct="%s">\n<head>\n<meta charset="utf-8">\n'
@@ -105,10 +213,11 @@ def chrome(lang,page,from_dir):
     hdr=read(lang,'header'); ftr=read(lang,'footer')
     others=[l for l in LANGS if l!=lang]
     o=others[0] if others else lang
-    sub={'langhref':href(from_dir,o,page),'langcode':o,'langaria':I18N[o]['switch_aria'],'langlabel':I18N[o]['switch_label'],'langswitch':I18N[o]['switch_text']}
+    op=page if page in I18N[o]['pages'] else 'blog'
+    sub={'langhref':href(from_dir,o,op),'langcode':o,'langaria':I18N[o]['switch_aria'],'langlabel':I18N[o]['switch_label'],'langswitch':I18N[o]['switch_text']}
     for k,v in sub.items(): hdr=hdr.replace('{{%s}}'%k,v); ftr=ftr.replace('{{%s}}'%k,v)
     # footer language select: one option per language, pointing at the same page
-    opts=''.join('<option value="%s"%s>%s</option>'%(href(from_dir,l,page),' selected' if l==lang else '',I18N[l]['name']) for l in LANGS)
+    opts=''.join('<option value="%s"%s>%s</option>'%(href(from_dir,l,page if page in I18N[l]['pages'] else 'blog'),' selected' if l==lang else '',I18N[l]['name']) for l in LANGS)
     ftr=re.sub(r'(<select id="langsel"[^>]*>).*?(</select>)',lambda m:m.group(1)+opts+m.group(2),ftr,flags=re.S)
     hdr=re.sub(r'data-nav="(\w+)"',lambda m:m.group(0)+(' aria-current="page"' if m.group(1)==page else ''),hdr)
     if page in ('aanvraag','sales'): ftr=ftr.replace('<footer class="end">','<footer class="end no-cta">',1)
@@ -116,10 +225,12 @@ def chrome(lang,page,from_dir):
 
 def build_page(lang,page):
     d=page_dir(lang,page)
-    body=read(lang,page)
+    body=article_body(lang,page) if page.startswith('art_') else read(lang,page)
+    if page=='blog': body=blog_overview(lang,body)
+    if page=='home': body=home_blog(lang,body)
     if '<div data-fp>' in body: body=body.replace('<div data-fp></div>',read(lang,'fp')).replace('<div data-fp>','').replace('</div><!--/fp-->','')
     body=re.sub(r'<section class="page" id="page-\w+">','<section class="page is-active" id="page-%s">'%page,body,count=1)
-    extra=[faq_schema(body)] if page in ('faq','prijzen','nulmeting') else []
+    extra=[faq_schema(body)] if page in ('faq','prijzen','nulmeting') else ([article_schema(lang,page)] if page.startswith('art_') else [])
     hdr,ftr=chrome(lang,page,d)
     doc=head(lang,page,d,extra)+hdr+'\n\n<main>\n'+body+'\n</main>\n\n'+ftr+'\n\n<script src="%s" defer></script>\n</body>\n</html>\n'%asset(d,'script.js')
     if 'class="hero hero-c' in body or 'hero-c' in body: doc=doc.replace('<html lang=','<html class="at-top" lang=',1)
@@ -142,10 +253,12 @@ def root_redirect():
 
 def sitemap():
     rows=[]
-    for p in PAGES:
-        for l in LANGS:
-            alts=''.join('    <xhtml:link rel="alternate" hreflang="%s" href="%s"/>\n'%(a,abs_url(a,p)) for a in LANGS)
-            alts+='    <xhtml:link rel="alternate" hreflang="x-default" href="%s"/>\n'%abs_url(DEFAULT,p)
+    allp=PAGES+sorted({a['key'] for l in LANGS for a in ARTS[l]})
+    for p in allp:
+        have=[l for l in LANGS if p in I18N[l]['pages']]
+        for l in have:
+            alts=''.join('    <xhtml:link rel="alternate" hreflang="%s" href="%s"/>\n'%(a,abs_url(a,p)) for a in have)
+            alts+='    <xhtml:link rel="alternate" hreflang="x-default" href="%s"/>\n'%abs_url(DEFAULT if DEFAULT in have else have[0],p)
             pri='1.0' if p=='home' else ('0.9' if p in ('prijzen','aanvraag','nulmeting') else ('0.3' if p=='privacy' else '0.7'))
             rows.append('  <url>\n    <loc>%s</loc>\n    <lastmod>%s</lastmod>\n    <priority>%s</priority>\n%s  </url>'%(abs_url(l,p),TODAY,pri,alts))
     return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'+'\n'.join(rows)+'\n</urlset>\n'
@@ -160,7 +273,7 @@ def main():
     for f in os.listdir(S+'assets/img'): shutil.copy(S+'assets/img/'+f,OUT+'assets/img/'+f)
     n=0
     for l in LANGS:
-        for p in PAGES: build_page(l,p); n+=1
+        for p in PAGES+[a['key'] for a in ARTS[l]]: build_page(l,p); n+=1
     if MODE=='prod':
         open(OUT+'index.html','w').write(root_redirect())
         open(OUT+'sitemap.xml','w').write(sitemap())

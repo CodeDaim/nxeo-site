@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="nl" data-i18n-fpnote="" data-i18n-pct="% voltooid">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hoe ChatGPT bepaalt welke bedrijven het noemt | NXEO</title>
+<meta name="description" content="AI antwoorden zijn geen zoekresultaten. Dit is hoe ChatGPT aan zijn antwoord komt, waarom de meeste bedrijven er niet in staan en wat je eraan kunt doen.">
+<link rel="canonical" href="https://nxeo.io/nl/blog/hoe-chatgpt-bepaalt-welke-bedrijven-het-noemt/">
+<link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/hoe-chatgpt-bepaalt-welke-bedrijven-het-noemt/">
+<link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/blog/hoe-chatgpt-bepaalt-welke-bedrijven-het-noemt/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NXEO">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:title" content="Hoe ChatGPT bepaalt welke bedrijven het noemt | NXEO">
+<meta property="og:description" content="AI antwoorden zijn geen zoekresultaten. Dit is hoe ChatGPT aan zijn antwoord komt, waarom de meeste bedrijven er niet in staan en wat je eraan kunt doen.">
+<meta property="og:url" content="https://nxeo.io/nl/blog/hoe-chatgpt-bepaalt-welke-bedrijven-het-noemt/">
+<meta property="og:image" content="https://nxeo.io/assets/img/nxeo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#002EFE">
+<link rel="icon" href="/assets/img/favicon.png" type="image/png" sizes="192x192">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/style.css?v=7fafb91a">
+<script>(function(){var h=document.documentElement;addEventListener("pagereveal",function(e){if(e.viewTransition){h.classList.add("vt");e.viewTransition.finished.finally(function(){h.classList.remove("vt")})}else{h.classList.remove("vt")}});addEventListener("pageswap",function(e){if(e.viewTransition)h.classList.add("vt")})})()</script>
+<script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/assets/*"}}]},"eagerness":"moderate"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "NXEO", "url": "https://nxeo.io/", "logo": "https://nxeo.io/assets/img/nxeo.png", "description": "NXEO meet elke dag hoe ChatGPT, Gemini, Perplexity en Google jouw bedrijf noemen en past elke week je website en LinkedIn aan tot je in het antwoord staat. Vast abonnement, één weekrapport.", "email": "hello@nxeo.io", "sameAs": ["https://www.linkedin.com/"], "parentOrganization": [{"@type": "Organization", "name": "IQ Script", "url": "https://iqscript.com/"}, {"@type": "Organization", "name": "The AI Doctor", "url": "https://theaidoctor.nl/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://nxeo.io/nl/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://nxeo.io/nl/blog/"}, {"@type": "ListItem", "position": 3, "name": "Hoe ChatGPT bepaalt welke bedrijven het noemt", "item": "https://nxeo.io/nl/blog/hoe-chatgpt-bepaalt-welke-bedrijven-het-noemt/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Hoe ChatGPT bepaalt welke bedrijven het noemt", "description": "AI antwoorden zijn geen zoekresultaten. Dit is hoe ChatGPT aan zijn antwoord komt, waarom de meeste bedrijven er niet in staan en wat je eraan kunt doen.", "datePublished": "2026-11-15", "dateModified": "2026-11-15", "inLanguage": "nl", "wordCount": 1600, "mainEntityOfPage": "https://nxeo.io/nl/blog/hoe-chatgpt-bepaalt-welke-bedrijven-het-noemt/", "author": {"@type": "Organization", "name": "NXEO", "url": "https://nxeo.io/"}, "publisher": {"@type": "Organization", "name": "NXEO", "logo": {"@type": "ImageObject", "url": "https://nxeo.io/assets/img/nxeo.png"}}}</script>
+</head>
+<body>
+<header class="site-header" id="hdr">
+  <div class="wrap">
+    <div class="bar">
+      <a class="logo" href="/nl/" data-link aria-label="NXEO home"><img src="/assets/img/nxeo_light.png" alt="nxeo"></a>
+      <nav class="nav" aria-label="Hoofdmenu">
+        <a href="/nl/" data-link data-nav="home">Hoe het werkt</a>
+        <a href="/nl/prijzen/" data-link data-nav="prijzen">Prijzen</a>
+        <a href="/nl/over/" data-link data-nav="over">Over</a>
+        <a href="/nl/contact/" data-link data-nav="contact">Contact</a>
+      </nav>
+      <div class="hdr-actions">
+        <a class="lang" href="/en/blog/" hreflang="en" aria-label="Switch to English">EN</a>
+        <a class="btn btn-ghost-light hdr-contact" href="/nl/plan-een-gesprek/" data-link>Plan een gesprek</a>
+        <a class="btn hdr-cta" href="/nl/start/" data-link>Start met NXEO</a>
+      </div>
+      <button class="burger" id="burger" aria-label="Menu openen"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-nav" id="mnav">
+  <div class="top"><img src="/assets/img/nxeo_light.png" alt="nxeo" style="height:22px"><button class="close" id="mclose" aria-label="Menu sluiten"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <a class="big" href="/nl/" data-link>Hoe het werkt</a>
+  <a class="big" href="/nl/prijzen/" data-link>Prijzen</a>
+  <a class="big" href="/nl/over/" data-link>Over</a>
+  <a class="big" href="/nl/contact/" data-link>Contact</a>
+  <a class="btn btn-white" href="/nl/start/" data-link style="justify-self:start">Start met NXEO</a>
+  <a href="/en/blog/" hreflang="en" style="font-weight:600;letter-spacing:.06em;opacity:.8">English version</a>
+</div>
+
+
+<main>
+<section class="page is-active" id="page-art_hoe_chatgpt_bepaalt_welke_bedrijven_het_noemt">
+<article class="ar">
+<header class="wrap ar-head"><a class="ar-back" href="/nl/blog/" data-link><span class="arr">←</span> Alle artikelen</a><div class="bp-m"><b>Inzicht</b><span>15 nov 2026</span><span>7 min lezen</span></div><h1>Hoe ChatGPT bepaalt welke bedrijven het noemt</h1><p class="lead">AI antwoorden zijn geen zoekresultaten. Dit is hoe ChatGPT aan zijn antwoord komt, waarom de meeste bedrijven er niet in staan en wat je eraan kunt doen.</p></header>
+<div class="wrap ar-grid"><aside class="ar-toc"><b>In dit artikel</b><ol><li><a href="#ai-antwoorden-zijn-geen-zoekresultaten">AI antwoorden zijn geen zoekresultaten</a></li><li><a href="#waar-chatgpt-zijn-kennis-vandaan-haalt">Waar ChatGPT zijn kennis vandaan haalt</a></li><li><a href="#de-signalen-die-meewegen">De signalen die meewegen</a></li><li><a href="#waarom-de-meeste-bedrijven-er-niet-in-staan">Waarom de meeste bedrijven er niet in staan</a></li><li><a href="#een-voorbeeld-uit-onze-eigen-praktijk">Een voorbeeld uit onze eigen praktijk</a></li><li><a href="#het-werkt-ook-de-andere-kant-op">Het werkt ook de andere kant op</a></li><li><a href="#wat-je-deze-week-al-kunt-doen">Wat je deze week al kunt doen</a></li><li><a href="#kun-je-garanderen-dat-je-genoemd-wordt">Kun je garanderen dat je genoemd wordt?</a></li><li><a href="#samengevat">Samengevat</a></li></ol></aside><div class="ar-body"><p>Iemand typt in ChatGPT: "Welke installateur in de buurt van Zwolle is goed in warmtepompen?" Een paar seconden later staat er een antwoord met drie namen. Geen lijst van tien blauwe links, geen advertenties, gewoon drie bedrijven met een korte uitleg erbij.</p>
+<p>Sta jij tussen die drie? En als dat niet zo is: waarom staat je concurrent er wel?</p>
+<p>Dat is de vraag waar steeds meer ondernemers mee zitten. In dit artikel leggen we uit hoe ChatGPT aan zo'n antwoord komt, welke signalen meewegen en wat je kunt doen om <strong>genoemd te worden in ChatGPT</strong>. Zonder vakjargon.</p>
+<h2 id="ai-antwoorden-zijn-geen-zoekresultaten">AI antwoorden zijn geen zoekresultaten</h2>
+<p>Bij Google ben je gewend aan een ranglijst. Jouw pagina staat op plek drie, zeven of tweeëntwintig, en met genoeg werk schuif je omhoog. Die ranglijst is voor iedereen grotendeels hetzelfde.</p>
+<p>Bij ChatGPT werkt het anders. Er is geen vaste lijst. Het systeem schrijft bij elke vraag een nieuw antwoord, en dat antwoord hangt af van hoe de vraag gesteld wordt, wat de gebruiker eerder vroeg en welke bronnen het systeem op dat moment raadpleegt. Twee mensen met bijna dezelfde vraag kunnen een ander antwoord krijgen.</p>
+<p>Dat heeft twee gevolgen:</p>
+<ul><li><strong>Er bestaat geen plek één die je kunt claimen.</strong> Je wordt genoemd of niet, en dat wisselt per vraag.</li><li><strong>Je kunt het niet met één zoekopdracht controleren.</strong> Wie één keer zijn eigen bedrijfsnaam intypt en zichzelf ziet staan, weet nog niets.</li></ul>
+<p>Daarom kijken wij niet naar één positie, maar naar hoe vaak een bedrijf genoemd wordt over een hele lijst vragen die klanten echt stellen. Meer daarover lees je bij de <a href="/nl/veelgestelde-vragen/" data-link>veelgestelde vragen</a>.</p>
+<h2 id="waar-chatgpt-zijn-kennis-vandaan-haalt">Waar ChatGPT zijn kennis vandaan haalt</h2>
+<p>Om te begrijpen waarom het ene bedrijf wel genoemd wordt en het andere niet, moet je weten dat een AI systeem uit twee bronnen put.</p>
+<h3>Wat het model al weet</h3>
+<p>Een taalmodel is getraind op een enorme hoeveelheid tekst van het internet. Alles wat vóór die training vaak en duidelijk over een bedrijf online stond, kan in het model terechtgekomen zijn. Denk aan je eigen website, vermeldingen op andere sites, artikelen, reviews en bedrijvengidsen.</p>
+<p>Een bedrijf dat al jaren op veel plekken genoemd wordt, heeft hier een voorsprong. Een bedrijf dat online nauwelijks sporen heeft, bestaat voor het model simpelweg niet.</p>
+<h3>Wat het systeem op dat moment opzoekt</h3>
+<p>Daarnaast kunnen ChatGPT en vergelijkbare systemen live op het web zoeken. Vooral bij vragen over lokale bedrijven, actuele prijzen of "de beste in de regio" gebeurt dat vaak. Het systeem zoekt dan pagina's op, leest ze en vat samen wat het vindt.</p>
+<p>Dat is goed nieuws. Het betekent dat je niet hoeft te wachten tot er een nieuw model getraind wordt. Wat je vandaag op je website zet, kan binnen enkele weken meewegen in een antwoord.</p>
+<h2 id="de-signalen-die-meewegen">De signalen die meewegen</h2>
+<p>Niemand buiten de makers van deze systemen kent de precieze werking, en die werking verandert ook nog. Wat we wel kunnen doen, is testen: welke bedrijven worden genoemd, en wat hebben die gemeen? Uit ons eigen onderzoek en werk komen steeds dezelfde dingen terug.</p>
+<h3>1. Er staat een duidelijk antwoord op je eigen website</h3>
+<p>Dit is de belangrijkste. Een AI systeem zoekt naar tekst die een vraag beantwoordt. Als iemand vraagt welke installateur warmtepompen plaatst in Zwolle, heeft het systeem een pagina nodig waarop letterlijk staat dat jij warmtepompen plaatst, in Zwolle en omgeving, en wat daarbij komt kijken.</p>
+<p>Veel websites zeggen dat niet. Er staat "wij leveren maatwerk" en "kwaliteit staat voorop", maar niet wat je doet, voor wie en waar. Voor een mens is dat al vaag. Voor een AI systeem is het onbruikbaar.</p>
+<h3>2. Je schrijft over de vragen die klanten stellen</h3>
+<p>Mensen stellen aan ChatGPT hele vragen, geen losse zoekwoorden. "Wat kost een warmtepomp voor een rijtjeshuis?" "Kan ik een warmtepomp nemen als ik geen vloerverwarming heb?" Bedrijven die op hun website antwoord geven op precies die vragen, worden vaker als bron gebruikt.</p>
+<p>Dat hoeft geen lang artikel te zijn. Een pagina met veelgestelde vragen, een korte uitleg per dienst of een artikel over één onderwerp werkt allemaal. Het gaat erom dat de vraag en het antwoord er staan.</p>
+<h3>3. Anderen noemen je ook</h3>
+<p>Een systeem vertrouwt een bedrijf sneller als het op meerdere plekken hetzelfde leest. Reviews, een vermelding bij een brancheorganisatie, een interview in een lokale krant, een leverancier die je als partner noemt: het telt allemaal mee. Niet omdat het een trucje is, maar omdat het hetzelfde verhaal bevestigt.</p>
+<h3>4. Je gegevens kloppen overal</h3>
+<p>Naam, adres, werkgebied en wat je doet moeten op je website, in je Google bedrijfsprofiel en op andere plekken met elkaar overeenkomen. Tegenstrijdige informatie maakt een systeem onzeker, en een onzeker systeem noemt liever iemand anders.</p>
+<h3>5. Je website is technisch leesbaar</h3>
+<p>Een AI systeem leest de ruwe tekst van je pagina. Tekst die alleen in een afbeelding staat, of pas verschijnt na een klik die extra gegevens ophaalt, wordt vaak gemist. Een heldere opbouw met koppen helpt. Ook gestructureerde gegevens helpen, zoals de opmaak voor veelgestelde vragen die <a href="https://schema.org/FAQPage" target="_blank" rel="noopener">schema.org beschrijft</a>. Daarmee vertel je een systeem in zijn eigen taal wat de vraag is en wat het antwoord.</p>
+<h2 id="waarom-de-meeste-bedrijven-er-niet-in-staan">Waarom de meeste bedrijven er niet in staan</h2>
+<p>Als je bovenstaande leest, zie je het patroon. De meeste websites van kleine en middelgrote bedrijven zijn gemaakt als visitekaartje. Ze zien er goed uit, maar er staat weinig in.</p>
+<p>De drie redenen die we het vaakst tegenkomen:</p>
+<ol><li><strong>Te weinig inhoud.</strong> Vijf pagina's met elk drie zinnen. Er valt voor een systeem niets te citeren.</li><li><strong>Te algemeen.</strong> De tekst zou op de website van elke concurrent kunnen staan. Niets wat jou onderscheidt of je werkgebied duidelijk maakt.</li><li><strong>Nooit bijgewerkt.</strong> De website is drie jaar geleden opgeleverd en sindsdien niet aangeraakt. Ondertussen publiceert een concurrent elke maand iets nieuws.</li></ol>
+<p>Het goede nieuws is dat dit alle drie op te lossen is. Je hebt er geen groter marketingbudget voor nodig dan je concurrent. Je hebt er regelmaat voor nodig.</p>
+<h2 id="een-voorbeeld-uit-onze-eigen-praktijk">Een voorbeeld uit onze eigen praktijk</h2>
+<p>We merkten zelf hoe snel het kan gaan. Op onze eigen website plaatsten we een paar artikelen over timmermannen: wat een goede website voor een timmerbedrijf nodig heeft en welke vragen hun klanten stellen.</p>
+<p>Vijf à zes weken later kwamen er in één week twee aanvragen binnen. Allebei van een timmerman, allebei uit dezelfde regio. In de acht jaar daarvoor was dat nog nooit zomaar gebeurd.</p>
+<blockquote>Een paar artikelen over één onderwerp waren genoeg om gevonden te worden door precies de mensen over wie we schreven.</blockquote>
+<p>Dat is geen garantie dat het bij elk bedrijf zo gaat. Het laat wel zien wat er gebeurt als je duidelijk bent over één onderwerp voor één doelgroep.</p>
+<h2 id="het-werkt-ook-de-andere-kant-op">Het werkt ook de andere kant op</h2>
+<p>Genoemd worden is niet altijd het doel. Soms wil je juist minder genoemd worden op plekken waar je niets te zoeken hebt.</p>
+<p>Een klant van ons, een mobiele scooterservice, kreeg veel aanvragen uit regio's waar hij helemaal niet komt. Dat kostte hem tijd en leverde niets op. Sinds duidelijk is waar hij wel en niet werkt, wordt hij vaker benaderd uit zijn eigen regio en minder van daarbuiten.</p>
+<p>Voor een AI systeem is "hier werken wij niet" net zo waardevol als "hier werken wij wel". Hoe duidelijker je bent, hoe beter het antwoord past bij wat je wilt.</p>
+<h2 id="wat-je-deze-week-al-kunt-doen">Wat je deze week al kunt doen</h2>
+<p>Je hoeft niet te wachten met beginnen. Dit zijn vier dingen die je zelf kunt doen.</p>
+<ol><li><strong>Stel de vraag zelf.</strong> Open ChatGPT en stel vijf vragen die jouw klanten zouden stellen, zonder je eigen naam te noemen. Schrijf op wie er genoemd wordt.</li><li><strong>Lees je homepage alsof je een vreemde bent.</strong> Staat er in de eerste drie zinnen wat je doet, voor wie en waar? Zo niet, begin daar.</li><li><strong>Schrijf tien vragen op die klanten je vaak stellen.</strong> Aan de telefoon, per mail of bij de eerste afspraak. Elk van die vragen is een pagina of een alinea waard.</li><li><strong>Controleer je gegevens.</strong> Kloppen je naam, adres en werkgebied op je website en in je Google bedrijfsprofiel?</li></ol>
+<p>Wil je weten hoe je er nu voor staat zonder het zelf uit te zoeken? Met de <a href="/nl/nulmeting/" data-link>gratis nulmeting</a> krijg je binnen 48 uur een rapport met de vragen die je nu verliest en hoe AI je bedrijf omschrijft.</p>
+<h2 id="kun-je-garanderen-dat-je-genoemd-wordt">Kun je garanderen dat je genoemd wordt?</h2>
+<p>Nee, en wie dat belooft, belooft te veel. Welk bedrijf een AI systeem noemt, hangt ook af van hoe sterk je concurrenten zijn, hoe bekend je al bent en hoe de systemen zelf veranderen. Op een deel daarvan heeft niemand invloed.</p>
+<p>Wat je wel in de hand hebt, is of er iets te vinden valt. Een bedrijf met heldere, actuele inhoud over de vragen van zijn klanten heeft een veel grotere kans dan een bedrijf met een visitekaartje als website. En dat verschil wordt groter naarmate meer mensen hun vragen aan AI stellen in plaats van aan een zoekmachine.</p>
+<h2 id="samengevat">Samengevat</h2>
+<ul><li>ChatGPT maakt geen ranglijst. Het schrijft per vraag een nieuw antwoord.</li><li>Het put uit wat het model al weet en uit wat het op dat moment online vindt.</li><li>De grootste factor die je zelf in de hand hebt, is duidelijke inhoud op je eigen website over de vragen van je klanten.</li><li>Vermeldingen door anderen en kloppende gegevens versterken dat.</li><li>Je kunt het niet afdwingen, maar je kunt de kans flink vergroten.</li></ul>
+<p>Het vraagt vooral regelmaat: elke week iets toevoegen of verbeteren. Dat is precies het werk dat we met NXEO uit handen nemen. Benieuwd wat dat kost? Bekijk de <a href="/nl/prijzen/" data-link>pakketten</a>, of <a href="/nl/start/" data-link>start direct</a>.</p>
+<div class="np-cta bl-cta ar-cta"><div><h3>Benieuwd hoe AI jouw bedrijf nu noemt?</h3><p>Vul je website in. Binnen 48 uur heb je het rapport in je mail, gratis.</p></div><form class="combo audit-combo np-form" data-baseline novalidate><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></span><input name="site" type="url" placeholder="jouwwebsite.nl" required autocomplete="url" aria-label="Je website"><button class="btn btn-blue" type="submit">Check mijn zichtbaarheid <span class="arr">→</span></button></form></div></div></div>
+</article>
+</section>
+
+</main>
+
+<footer class="end">
+  <div class="end-in">
+    <div class="end-cta">
+      <div class="bubble" aria-hidden="true">Wie noemt ChatGPT morgen?</div>
+      <h2>Jou. Start vandaag.<span class="cursor" aria-hidden="true"></span></h2>
+      <p class="end-lead">Binnen 48 uur weet je waar je staat.</p>
+      <div class="end-btns"><a class="btn btn-white" href="/nl/start/" data-link>Start met NXEO <span class="arr">→</span></a><a class="btn btn-glass" href="/nl/nulmeting/" data-link>Gratis nulmeting</a></div>
+    </div>
+    <div class="end-foot">
+      <div class="end-brand">
+        <a class="logo" href="/nl/" data-link aria-label="NXEO home"><img src="/assets/img/nxeo_light.png" alt="nxeo"></a>
+        <p>Jouw bedrijf genoemd door AI. Wij meten het, maken wat ontbreekt en plaatsen het op je website.</p>
+        <p class="by">Een samenwerking van <a href="https://iqscript.com/" target="_blank" rel="noopener">IQ Script</a> &amp; <a href="https://theaidoctor.nl/" target="_blank" rel="noopener">The AI Doctor</a></p>
+      </div>
+      <nav class="end-col" aria-label="Product"><h4>Product</h4><ul><li><a href="/nl/" data-link>Hoe het werkt</a></li><li><a href="/nl/prijzen/" data-link>Prijzen</a></li><li><a href="/nl/nulmeting/" data-link>Gratis nulmeting</a></li><li><a href="/nl/veelgestelde-vragen/" data-link>Veelgestelde vragen</a></li><li><a href="/nl/blog/" data-link>Blog</a></li></ul></nav>
+      <nav class="end-col" aria-label="Bedrijf"><h4>Bedrijf</h4><ul><li><a href="/nl/over/" data-link>Over NXEO</a></li><li><a href="/nl/contact/" data-link>Contact</a></li><li><a href="/nl/plan-een-gesprek/" data-link>Plan een gesprek</a></li><li><a href="/nl/start/" data-link>Start met NXEO</a></li></ul></nav>
+      <div class="end-col"><h4>Contact</h4><ul><li><a href="mailto:hello@nxeo.io">hello@nxeo.io</a></li><li><a href="mailto:sales@nxeo.io">sales@nxeo.io</a></li><li><a href="mailto:support@nxeo.io">support@nxeo.io</a></li></ul></div>
+    </div>
+    <div class="end-bar">
+      <div class="end-badges"><span>AVG proof</span><span>Geen advertentie tracking</span><span>Data blijft van jou</span></div>
+      <div class="end-lang" aria-label="Taal"><span class="on">Nederlands</span><a href="/en/blog/" hreflang="en">English</a></div>
+    </div>
+    <div class="end-legal">
+      <p><span>© 2026 NXEO. Alle prijzen exclusief btw.</span><a href="/nl/privacy/" data-link>Privacyverklaring</a><a href="/nl/privacy/" data-link>Cookies</a><a href="mailto:support@nxeo.io">Vraag je gegevens op</a></p>
+      <p class="tm">ChatGPT en OpenAI zijn handelsmerken van OpenAI. Gemini en Google zijn handelsmerken van Google LLC. Perplexity, Claude, LinkedIn, WordPress, Webflow, Framer, Wix en Shopify zijn handelsmerken van hun respectievelijke eigenaren. Deze namen worden alleen ter identificatie gebruikt. NXEO is niet verbonden aan of goedgekeurd door deze partijen.</p>
+    </div>
+  </div>
+  <div class="end-mark" aria-hidden="true"><img src="/assets/img/nxeo_light.png" alt=""></div>
+</footer>
+
+
+<dialog class="nulmodal" id="nulmodal" aria-labelledby="nulmodal-title">
+  <form method="dialog" class="nm-close-form"><button class="nm-close" aria-label="Sluiten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></form>
+  <form class="nm-form" id="form-nul" novalidate>
+    <h3 id="nulmodal-title">Waar mogen we het rapport heen sturen?</h3>
+    <p class="nm-sub">Binnen 48 uur in je mail. Geen nieuwsbrief, geen spam.</p>
+    <div class="nm-site"><span>Website</span><b data-nm-site></b></div>
+    <div class="fl"><input id="nm-email" name="email" type="email" placeholder="naam@bedrijf.nl" required autocomplete="email"><label class="sr" for="nm-email">Werk e-mail</label></div>
+    <input type="hidden" name="site">
+    <button class="btn btn-blue btn-block" type="submit">Stuur mijn nulmeting <span class="arr">→</span></button>
+  </form>
+  <div class="nm-ok" hidden data-nm-ok><span class="okmark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path class="tick" d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><b>Je nulmeting is onderweg.</b><span>Binnen 48 uur in je mail. We meten vanaf nu.</span></div></div>
+</dialog>
+<div class="cookie" id="cookie" role="dialog" aria-label="Cookies">
+  <h3>Cookies op NXEO</h3>
+  <p>We gebruiken analytische cookies om te begrijpen hoe bezoekers onze site gebruiken. Geen tracking voor advertenties. Lees onze <a href="/nl/privacy/" data-link style="text-decoration:underline">privacyverklaring</a>.</p>
+  <div class="acts"><button class="btn btn-ghost" data-cookie="no">Weigeren</button><button class="btn btn-blue" data-cookie="yes">Accepteren</button></div>
+</div>
+
+
+<script src="/assets/script.js?v=f7800c02" defer></script>
+</body>
+</html>
