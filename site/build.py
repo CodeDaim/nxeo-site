@@ -59,6 +59,11 @@ def rewrite_links(h,lang,from_dir):
 
 def strip_tags(s): return html.unescape(re.sub(r'<[^>]+>','',s)).strip()
 
+def imgfile(n):
+    for e in ('png','jpg','webp'):
+        if os.path.exists(os.path.join(S,'assets','img',n+'.'+e)): return 'img/%s.%s'%(n,e)
+    raise SystemExit('missing image '+n)
+
 def faq_schema(h):
     items=re.findall(r'<details(?: open)?><summary>(.*?)</summary>(.*?)</details>',h,re.S)
     q=[]
@@ -67,12 +72,31 @@ def faq_schema(h):
                   "acceptedAnswer":{"@type":"Answer","text":strip_tags(a)}})
     return {"@context":"https://schema.org","@type":"FAQPage","mainEntity":q}
 
+FOUNDERS=[("Tim Huijsmans","https://www.linkedin.com/in/tim-huijsmans-88b9761a7/"),("Damian Zoetemelk","https://www.linkedin.com/in/damian-zoetemelk-8524091a1/"),("Thimo van Soldt","https://www.linkedin.com/in/thimo-van-soldt-37118b220/")]
+ORG_REF={"@type":"Organization","@id":DOMAIN+'/#organization',"name":"NXEO","url":DOMAIN+'/'}
 def org_schema(lang):
     t=I18N[lang]
-    return {"@context":"https://schema.org","@type":"Organization","name":"NXEO","url":DOMAIN+'/',
-            "logo":DOMAIN+'/assets/img/nxeo.png',"description":t['org_description'],
-            "email":"hello@nxeo.io","sameAs":["https://www.linkedin.com/"],
+    return {"@context":"https://schema.org","@type":"Organization","@id":DOMAIN+'/#organization',"name":"NXEO","url":DOMAIN+'/',
+            "logo":{"@type":"ImageObject","url":DOMAIN+'/assets/img/nxeo_icon.png'},"image":DOMAIN+'/assets/img/og.png',"description":t['org_description'],
+            "email":"hello@nxeo.io","foundingDate":"2026","areaServed":[{"@type":"Country","name":"Netherlands"},{"@type":"Country","name":"Belgium"}],
+            "knowsAbout":["Generative engine optimization","Search engine optimization","AI visibility","ChatGPT","Gemini","Claude","Perplexity","Google AI Overviews"],
+            "founder":[{"@type":"Person","name":n,"jobTitle":"Founder","sameAs":[u],"worksFor":{"@id":DOMAIN+'/#organization'}} for n,u in FOUNDERS],
+            "contactPoint":[{"@type":"ContactPoint","contactType":"sales","email":"sales@nxeo.io","availableLanguage":["Dutch","English"]},
+                            {"@type":"ContactPoint","contactType":"customer support","email":"support@nxeo.io","availableLanguage":["Dutch","English"]}],
             "parentOrganization":[{"@type":"Organization","name":"IQ Script","url":"https://iqscript.com/"},{"@type":"Organization","name":"The AI Doctor","url":"https://theaidoctor.nl/"}]}
+
+def product_schema(lang):
+    names=[('Launch',99),('Groei' if lang=='nl' else 'Growth',179),('Schaal' if lang=='nl' else 'Scale',299)]
+    return {"@context":"https://schema.org","@type":"SoftwareApplication","name":"NXEO","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":abs_url(lang,'prijzen'),
+            "description":I18N[lang]['org_description'],"provider":ORG_REF,
+            "offers":[{"@type":"Offer","name":n,"price":str(p),"priceCurrency":"EUR","url":abs_url(lang,'aanvraag'),"availability":"https://schema.org/InStock",
+                       "priceSpecification":{"@type":"UnitPriceSpecification","price":str(p),"priceCurrency":"EUR","unitText":"MONTH","valueAddedTaxIncluded":False}} for n,p in names]}
+
+def service_schema(lang,page):
+    p=I18N[lang]['pages'][page]
+    return {"@context":"https://schema.org","@type":"Service","name":p['title'].split('|')[0].strip(),"description":p['description'],"url":abs_url(lang,page),
+            "serviceType":"AI visibility and website content","provider":ORG_REF,"areaServed":[{"@type":"Country","name":"Netherlands"},{"@type":"Country","name":"Belgium"}],
+            "offers":{"@type":"Offer","price":"99","priceCurrency":"EUR","url":abs_url(lang,'prijzen')}}
 
 
 # ---------- articles: markdown files in articles/<lang>/<slug>.md ----------
@@ -186,7 +210,7 @@ def article_body(lang,page):
 def article_schema(lang,page):
     a=[x for x in ARTS[lang] if x['key']==page][0]
     return {"@context":"https://schema.org","@type":"Article","headline":a['title'],"description":a['description'],"datePublished":a['date'],"dateModified":a['date'],"inLanguage":lang,"wordCount":a['words'],
-            "mainEntityOfPage":abs_url(lang,page),"author":{"@type":"Organization","name":"NXEO","url":DOMAIN+'/'},"publisher":{"@type":"Organization","name":"NXEO","logo":{"@type":"ImageObject","url":DOMAIN+'/assets/img/nxeo.png'}}}
+            "mainEntityOfPage":abs_url(lang,page),"image":DOMAIN+'/assets/img/og.png',"author":ORG_REF,"publisher":{"@type":"Organization","@id":DOMAIN+'/#organization',"name":"NXEO","logo":{"@type":"ImageObject","url":DOMAIN+'/assets/img/nxeo_icon.png'}}}
 
 def breadcrumb(lang,page):
     t=I18N[lang]
@@ -207,7 +231,7 @@ def head(lang,page,from_dir,extra_schema):
             '<link rel="canonical" href="%s">\n%s'
             '<meta property="og:type" content="website">\n<meta property="og:site_name" content="NXEO">\n<meta property="og:locale" content="%s">\n'
             '<meta property="og:title" content="%s">\n<meta property="og:description" content="%s">\n<meta property="og:url" content="%s">\n'
-            '<meta property="og:image" content="%s/assets/img/nxeo.png">\n<meta name="twitter:card" content="summary_large_image">\n'
+            '<meta property="og:image" content="%s/assets/img/og.png">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n<meta name="twitter:card" content="summary_large_image">\n'
             '<meta name="theme-color" content="#002EFE">\n<link rel="icon" href="%s" type="image/png" sizes="192x192">\n'
             '<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
             '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600;700;800&display=swap">\n'
@@ -238,11 +262,13 @@ def build_page(lang,page):
     if '<div data-fp>' in body: body=body.replace('<div data-fp></div>',read(lang,'fp')).replace('<div data-fp>','').replace('</div><!--/fp-->','')
     body=re.sub(r'<section class="page" id="page-\w+">','<section class="page is-active" id="page-%s">'%page,body,count=1)
     extra=[faq_schema(body)] if page in ('faq','prijzen','nulmeting') or page.startswith('cms_') else ([article_schema(lang,page)] if page.startswith('art_') else [])
+    if page=='prijzen': extra.append(product_schema(lang))
+    if page.startswith('cms_') or page in ('nulmeting','meekijken','koppelingen'): extra.append(service_schema(lang,page))
     hdr,ftr=chrome(lang,page,d)
     doc=head(lang,page,d,extra)+hdr+'\n\n<main>\n'+body+'\n</main>\n\n'+ftr+'\n\n<script src="%s" defer></script>\n</body>\n</html>\n'%asset(d,'script.js')
     if 'class="hero hero-c' in body or 'hero-c' in body: doc=doc.replace('<html lang=','<html class="at-top" lang=',1)
     doc=rewrite_links(doc,lang,d)
-    doc=re.sub(r'{{(\w+)}}',lambda m:asset(d,'img/%s.png'%m.group(1)),doc)
+    doc=re.sub(r'{{(\w+)}}',lambda m:asset(d,imgfile(m.group(1))),doc)
     assert '{{' not in doc
     os.makedirs(OUT+d,exist_ok=True)
     open(OUT+d+'index.html','w').write(doc)
@@ -294,7 +320,7 @@ def main():
         hdr,ftr=chrome(DEFAULT,'home',d)
         body=read(DEFAULT,'home'); body=re.sub(r'<section class="page" id="page-\w+">','<section class="page is-active" id="page-home">',body,count=1)
         doc=head(DEFAULT,'home',d,[])+hdr+'\n\n<main>\n'+body+'\n</main>\n\n'+ftr+'\n\n<script src="%s" defer></script>\n</body>\n</html>\n'%asset(d,'script.js')
-        doc=rewrite_links(doc,DEFAULT,d); doc=re.sub(r'{{(\w+)}}',lambda m:asset(d,'img/%s.png'%m.group(1)),doc)
+        doc=rewrite_links(doc,DEFAULT,d); doc=re.sub(r'{{(\w+)}}',lambda m:asset(d,imgfile(m.group(1))),doc)
         open(OUT+'index.html','w').write(doc)
     print(MODE,n,'pages ->',OUT)
 

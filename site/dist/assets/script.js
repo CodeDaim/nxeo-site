@@ -153,15 +153,37 @@
     if(focus)f.focus();return false;}
   function vForm(form){var ok=true,first=null;Array.prototype.forEach.call(form.querySelectorAll('input:not([type=hidden]):not([type=radio]),textarea'),function(f){f.value=f.value.trim();if(!vCheck(f,false)){ok=false;if(!first)first=f;}});if(first)first.focus();return ok;}
 
+  // Versturen naar /api/lead. Lukt het niet, dan zeggen we dat eerlijk en blijft het formulier staan.
+  function sendLead(form,type,extra,done){
+    var btn=form.querySelector('button[type=submit]');if(btn&&btn.disabled)return;
+    var old=form.querySelector('.f-send');if(old)old.remove();
+    var data={type:type,lang:(document.documentElement.lang||'nl').slice(0,2),page:location.pathname};
+    Array.prototype.forEach.call(form.elements,function(el){if(!el.name||el.type==='submit')return;if((el.type==='radio'||el.type==='checkbox')&&!el.checked)return;data[el.name]=el.value;});
+    for(var k in extra){data[k]=extra[k];}
+    if(btn){btn.disabled=true;btn.classList.add('is-busy');}
+    var fail=function(){
+      if(btn){btn.disabled=false;btn.classList.remove('is-busy');}
+      var p=document.createElement('p');p.className='f-err f-send';p.setAttribute('role','alert');
+      p.innerHTML='<span>'+(data.lang==='en'?'Sending did not work just now. Please email us at <a href="mailto:sales@nxeo.io">sales@nxeo.io</a>.':'Versturen lukt nu niet. Mail ons op <a href="mailto:sales@nxeo.io">sales@nxeo.io</a>.')+'</span>';
+      (btn&&btn.parentNode===form?form:(btn?btn.parentNode:form)).appendChild(p);
+    };
+    fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
+      .then(function(r){return r.ok?r.json():Promise.reject();})
+      .then(function(j){if(!j||!j.ok)return Promise.reject();if(btn){btn.disabled=false;btn.classList.remove('is-busy');}done();})
+      .catch(fail);
+  }
+
   // Call request form
   var sf=document.getElementById('form-sales');
   if(sf)sf.addEventListener('submit',function(e){
     e.preventDefault();
     if(!vForm(sf))return;
+    sendLead(sf,document.getElementById('page-meekijken')?'doorloop':'gesprek',{},function(){
     var d=document.querySelector('[data-sl-done]');
     var first=sf.elements.name.value.split(/\s+/)[0];var h=d.querySelector('[data-sw="hello"]');h.textContent=h.getAttribute('data-hello')+(first?', '+first:'');
     d.querySelector('[data-sw="email"]').textContent=sf.elements.email.value;
     var sec=sf.closest('.so-sec');sf.hidden=true;sec.querySelector('.so-head').hidden=true;d.hidden=false;sec.classList.add('is-done');window.scrollTo(0,0);
+    });
   });
 
   // Rotating AI names in the hero headline
@@ -202,8 +224,10 @@
     nmf.addEventListener('submit',function(e){
       e.preventDefault();
       if(!vForm(nmf))return;
+      sendLead(nmf,'nulmeting',{},function(){
       nmf.hidden=true;nmok.hidden=false;
       setTimeout(function(){if(nm.open)nm.close();},2600);
+      });
     });
     nm.addEventListener('click',function(e){if(e.target===nm)nm.close();});
     nm.addEventListener('close',function(){document.documentElement.classList.remove('nm-open');document.querySelectorAll('form[data-baseline] input[name=site]').forEach(function(i){if(!nmok.hidden)i.value='';});});
@@ -229,11 +253,13 @@
       e.preventDefault();
       var site=so.elements.site;site.value=site.value.trim();
       if(!vForm(so))return;
+      sendLead(so,'start',{pkg:soOut.pkg.textContent,term:soOut.term.textContent,price:soOut.price.textContent},function(){
       var d=document.querySelector('[data-so-done]');
       var w=function(k){return d.querySelector('[data-won="'+k+'"]');};
       var first=so.elements.name.value.trim().split(/\s+/)[0];var h=w('hello');h.textContent=h.getAttribute('data-hello')+(first?', '+first:'');
       w('pkg').textContent=soOut.pkg.textContent;w('pkg2').textContent=soOut.pkg.textContent;w('term').textContent=soOut.term.textContent;w('price').textContent=soOut.price.textContent;w('email').textContent=so.elements.email.value.trim();
       so.hidden=true;document.querySelector('.so-head').hidden=true;d.hidden=false;document.querySelector('.so-sec').classList.add('is-done');window.scrollTo(0,0);
+      });
     });
   }
 

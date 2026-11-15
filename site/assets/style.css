@@ -2565,3 +2565,6 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 .kp i .arr{transition:transform 320ms var(--liquid)}.kp:hover i .arr{transform:translateX(4px)}
 .kp-cta{margin-top:24px;grid-template-columns:minmax(0,1fr) auto;align-items:center}
 @media (max-width:900px){.kp-grid{grid-template-columns:minmax(0,1fr)}.kp-cta{grid-template-columns:minmax(0,1fr)}}
+/* formulier wordt verstuurd */
+.btn.is-busy{opacity:.65;pointer-events:none}
+.f-send{margin-top:12px}.f-send a{color:inherit;text-decoration:underline}
