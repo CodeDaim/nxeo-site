@@ -161,10 +161,143 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/privacy/"/>
   </url>
   <url>
+    <loc>https://nxeo.io/nl/blog/ai-zegt-iets-verkeerds-over-mijn-bedrijf/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/ai-zegt-iets-verkeerds-over-mijn-bedrijf/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/blog/ai-zegt-iets-verkeerds-over-mijn-bedrijf/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/nl/blog/ai-zichtbaarheid-zelf-doen-bureau-of-software/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/ai-zichtbaarheid-zelf-doen-bureau-of-software/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/blog/ai-zichtbaarheid-zelf-doen-bureau-of-software/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/nl/blog/als-ai-jouw-bedrijf-niet-noemt-besta-je-niet/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/als-ai-jouw-bedrijf-niet-noemt-besta-je-niet/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/blog/als-ai-jouw-bedrijf-niet-noemt-besta-je-niet/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/nl/blog/claude-gebruikt-brave-om-jouw-bedrijf-te-vinden/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/claude-gebruikt-brave-om-jouw-bedrijf-te-vinden/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/blog/claude-gebruikt-brave-om-jouw-bedrijf-te-vinden/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/nl/blog/gemini-noemt-mijn-bedrijf-niet/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/gemini-noemt-mijn-bedrijf-niet/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/blog/gemini-noemt-mijn-bedrijf-niet/"/>
+  </url>
+  <url>
     <loc>https://nxeo.io/nl/blog/hoe-chatgpt-bepaalt-welke-bedrijven-het-noemt/</loc>
     <lastmod>2026-11-15</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/hoe-chatgpt-bepaalt-welke-bedrijven-het-noemt/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/blog/hoe-chatgpt-bepaalt-welke-bedrijven-het-noemt/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/nl/blog/hoe-lang-duurt-het-voordat-ai-je-bedrijf-noemt/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/hoe-lang-duurt-het-voordat-ai-je-bedrijf-noemt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/blog/hoe-lang-duurt-het-voordat-ai-je-bedrijf-noemt/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/nl/blog/in-de-ai-overzichten-van-google-komen/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/in-de-ai-overzichten-van-google-komen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/blog/in-de-ai-overzichten-van-google-komen/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/nl/blog/is-chatgpt-de-google-van-2026/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/is-chatgpt-de-google-van-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/blog/is-chatgpt-de-google-van-2026/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/nl/blog/je-concurrent-wordt-wel-genoemd-in-chatgpt/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/je-concurrent-wordt-wel-genoemd-in-chatgpt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/blog/je-concurrent-wordt-wel-genoemd-in-chatgpt/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/nl/blog/lokaal-gevonden-worden-in-ai/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/lokaal-gevonden-worden-in-ai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/blog/lokaal-gevonden-worden-in-ai/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/nl/blog/meer-leads-uit-je-website-met-betere-vindbaarheid/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/meer-leads-uit-je-website-met-betere-vindbaarheid/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/blog/meer-leads-uit-je-website-met-betere-vindbaarheid/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/nl/blog/mijn-bedrijf-genoemd-in-ai/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/mijn-bedrijf-genoemd-in-ai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/blog/mijn-bedrijf-genoemd-in-ai/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/nl/blog/mijn-positie-versterken-op-google/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/mijn-positie-versterken-op-google/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/blog/mijn-positie-versterken-op-google/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/nl/blog/reviews-en-vermeldingen-waarom-ai-op-anderen-vertrouwt/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/reviews-en-vermeldingen-waarom-ai-op-anderen-vertrouwt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/blog/reviews-en-vermeldingen-waarom-ai-op-anderen-vertrouwt/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/nl/blog/veelgestelde-vragen-pagina-die-ai-kan-citeren/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/veelgestelde-vragen-pagina-die-ai-kan-citeren/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/blog/veelgestelde-vragen-pagina-die-ai-kan-citeren/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/nl/blog/waarom-sta-ik-niet-in-de-aanbevelingen-van-ai/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/waarom-sta-ik-niet-in-de-aanbevelingen-van-ai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/blog/waarom-sta-ik-niet-in-de-aanbevelingen-van-ai/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/nl/blog/wat-is-geo-en-wat-is-het-verschil-met-seo/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/wat-is-geo-en-wat-is-het-verschil-met-seo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/blog/wat-is-geo-en-wat-is-het-verschil-met-seo/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/nl/blog/wat-is-nxeo/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/wat-is-nxeo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/blog/wat-is-nxeo/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/nl/blog/welke-vragen-stellen-klanten-aan-ai/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/welke-vragen-stellen-klanten-aan-ai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/blog/welke-vragen-stellen-klanten-aan-ai/"/>
   </url>
 </urlset>

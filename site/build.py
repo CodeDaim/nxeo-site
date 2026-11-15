@@ -123,7 +123,7 @@ def load_articles(lang):
         meta=dict((k.strip(),v.strip()) for k,v in (l.split(':',1) for l in fm.strip().split('\n')))
         slug=f[:-3]; y,mo,da=meta['date'].split('-')
         words=len(re.findall(r'\w+',body))
-        arts.append(dict(meta,slug=slug,key='art_'+slug.replace('-','_'),body=body,words=words,mins=max(1,round(words/220)),nice='%d %s %s'%(int(da),MONTHS[lang][int(mo)-1],y)))
+        arts.append(dict(meta,slug=slug,key='art_'+meta.get('ref',slug).replace('-','_'),body=body,words=words,mins=max(1,round(words/220)),nice='%d %s %s'%(int(da),MONTHS[lang][int(mo)-1],y)))
     arts.sort(key=lambda a:(a['date'],a['slug']),reverse=True)
     for i,a in enumerate(arts): a['svg']=ARTSVG[(len(arts)-1-i)%3]
     return arts
