@@ -496,4 +496,20 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/what-questions-do-customers-ask-ai/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/blog/welke-vragen-stellen-klanten-aan-ai/"/>
   </url>
+  <url>
+    <loc>https://nxeo.io/nl/blog/wordpress-controlelijst-vindbaar-voor-ai/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/wordpress-controlelijst-vindbaar-voor-ai/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/wordpress-checklist-readable-for-ai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/blog/wordpress-controlelijst-vindbaar-voor-ai/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/en/blog/wordpress-checklist-readable-for-ai/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/wordpress-controlelijst-vindbaar-voor-ai/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/wordpress-checklist-readable-for-ai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/blog/wordpress-controlelijst-vindbaar-voor-ai/"/>
+  </url>
 </urlset>
