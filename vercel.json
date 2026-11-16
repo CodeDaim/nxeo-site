@@ -21,5 +21,227 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/contact",
+      "destination": "/nl/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/contact/",
+      "destination": "/nl/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/contact/founding-partner-aanvraag",
+      "destination": "/nl/start/",
+      "permanent": true
+    },
+    {
+      "source": "/contact/founding-partner-aanvraag/",
+      "destination": "/nl/start/",
+      "permanent": true
+    },
+    {
+      "source": "/how-it-works",
+      "destination": "/nl/",
+      "permanent": true
+    },
+    {
+      "source": "/how-it-works/",
+      "destination": "/nl/",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio",
+      "destination": "/nl/",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio/",
+      "destination": "/nl/",
+      "permanent": true
+    },
+    {
+      "source": "/ai-execution-layer-from-prompting-tools-to-controlled-output-systems",
+      "destination": "/en/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/ai-execution-layer-from-prompting-tools-to-controlled-output-systems/",
+      "destination": "/en/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/automatisch-bloggen-in-2026-de-ultieme-gids-voor-ai-content-strategieen",
+      "destination": "/nl/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/automatisch-bloggen-in-2026-de-ultieme-gids-voor-ai-content-strategieen/",
+      "destination": "/nl/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "/nl/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/",
+      "destination": "/nl/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/prijzen",
+      "destination": "/nl/prijzen/",
+      "permanent": true
+    },
+    {
+      "source": "/prijzen/",
+      "destination": "/nl/prijzen/",
+      "permanent": true
+    },
+    {
+      "source": "/pricing",
+      "destination": "/en/pricing/",
+      "permanent": true
+    },
+    {
+      "source": "/pricing/",
+      "destination": "/en/pricing/",
+      "permanent": true
+    },
+    {
+      "source": "/over-ons",
+      "destination": "/nl/over/",
+      "permanent": true
+    },
+    {
+      "source": "/over-ons/",
+      "destination": "/nl/over/",
+      "permanent": true
+    },
+    {
+      "source": "/over",
+      "destination": "/nl/over/",
+      "permanent": true
+    },
+    {
+      "source": "/over/",
+      "destination": "/nl/over/",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/en/about/",
+      "permanent": true
+    },
+    {
+      "source": "/about/",
+      "destination": "/en/about/",
+      "permanent": true
+    },
+    {
+      "source": "/about-us",
+      "destination": "/en/about/",
+      "permanent": true
+    },
+    {
+      "source": "/about-us/",
+      "destination": "/en/about/",
+      "permanent": true
+    },
+    {
+      "source": "/privacy",
+      "destination": "/nl/privacy/",
+      "permanent": true
+    },
+    {
+      "source": "/privacy/",
+      "destination": "/nl/privacy/",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/nl/privacy/",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy/",
+      "destination": "/nl/privacy/",
+      "permanent": true
+    },
+    {
+      "source": "/privacybeleid",
+      "destination": "/nl/privacy/",
+      "permanent": true
+    },
+    {
+      "source": "/privacybeleid/",
+      "destination": "/nl/privacy/",
+      "permanent": true
+    },
+    {
+      "source": "/privacyverklaring",
+      "destination": "/nl/privacy/",
+      "permanent": true
+    },
+    {
+      "source": "/privacyverklaring/",
+      "destination": "/nl/privacy/",
+      "permanent": true
+    },
+    {
+      "source": "/faq",
+      "destination": "/nl/veelgestelde-vragen/",
+      "permanent": true
+    },
+    {
+      "source": "/faq/",
+      "destination": "/nl/veelgestelde-vragen/",
+      "permanent": true
+    },
+    {
+      "source": "/nulmeting",
+      "destination": "/nl/nulmeting/",
+      "permanent": true
+    },
+    {
+      "source": "/nulmeting/",
+      "destination": "/nl/nulmeting/",
+      "permanent": true
+    },
+    {
+      "source": "/start",
+      "destination": "/nl/start/",
+      "permanent": true
+    },
+    {
+      "source": "/start/",
+      "destination": "/nl/start/",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio/:path*",
+      "destination": "/nl/",
+      "permanent": true
+    },
+    {
+      "source": "/category/:path*",
+      "destination": "/nl/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/tag/:path*",
+      "destination": "/nl/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/author/:path*",
+      "destination": "/nl/blog/",
+      "permanent": true
+    }
   ]
 }
