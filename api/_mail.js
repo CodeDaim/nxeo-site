@@ -38,7 +38,7 @@ const T = {
         steps: [['We pick a time together', 'You receive a proposal by email.'], ['We look at your company live', 'Fifteen minutes online, in ChatGPT and Google.'], ['You decide whether to start', 'Without obligation.']],
         btn: 'View the plans', url: '/en/pricing/' },
       doorloop: { subject: 'We will go through your website together', pre: 'We will get in touch within one working day to pick a time.', bubble: 'Fifteen minutes, online', title: 'Speak soon, {name}.', titleNoName: 'Speak soon.', lead: 'We will get in touch within one working day to pick a time. There is nothing to prepare.',
-        steps: [['We pick a time together', 'You receive a proposal by email.'], ['We go through your website together', 'We check whether AI can read your website and how AI mentions you today.'], ['You take three steps away', 'To continue with yourself, also if you do it yourself afterwards.']],
+        steps: [['We pick a time together', 'You receive a proposal by email.'], ['We go through your website together', 'We check whether AI can read your website and how AI mentions you today.'], ['You leave with three next steps', 'Yours to act on, also if you carry on without us.']],
         btn: 'View the integrations', url: '/en/works-with/' },
     },
   },
