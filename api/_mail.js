@@ -73,4 +73,37 @@ ${summary}
   const text = `${t.hi}${first ? ' ' + first : ''},\n\n${c.lead}\n\n${t.next}\n${c.steps.map((s, i) => `${i + 1}. ${s[0]}. ${s[1]}`).join('\n')}\n\n${rows.length ? t.yours + '\n' + rows.map((r) => `${r[0]}: ${r[1]}`).join('\n') + '\n\n' : ''}${c.btn}: ${SITE}${c.url}\n\n${t.q}\n\n${t.sign}\n${t.team}`;
   return { subject: c.subject, html, text };
 }
-module.exports = { build };
+// Interne melding naar sales@: zelfde blok, maar kort en zakelijk. Alles wat je nodig hebt om te reageren staat bovenaan.
+const NAMES = { nulmeting: 'Gratis nulmeting', start: 'Start met NXEO', gesprek: 'Gesprek', doorloop: 'Website samen doorlopen' };
+const LAB = { name: 'Naam', company: 'Bedrijf', site: 'Website', email: 'E-mail', phone: 'Telefoon', pkg: 'Pakket', term: 'Looptijd', price: 'Prijs', lang: 'Taal', page: 'Pagina' };
+function internal(type, f) {
+  const first = esc((f.name || '').trim().split(/\s+/)[0]);
+  const bare = (f.site || '').replace(/^https?:\/\//, '').replace(/\/$/, '');
+  const href = f.site ? (/^https?:\/\//.test(f.site) ? f.site : 'https://' + f.site) : '';
+  const link = (u, t) => `<a href="${esc(u)}" style="color:#002EFE;text-decoration:none;font-weight:600">${esc(t)}</a>`;
+  const val = (k) => k === 'email' ? link('mailto:' + f.email, f.email) : k === 'site' ? link(href, bare) : k === 'phone' ? link('tel:' + f.phone.replace(/[^\d+]/g, ''), f.phone) : k === 'lang' ? (f.lang === 'en' ? 'Engels' : 'Nederlands') : esc(f[k]);
+  const keys = Object.keys(LAB).filter((k) => f[k]);
+  const rows = keys.map((k, i) => `<tr><td width="110" valign="top" style="padding:11px 0;${i ? 'border-top:1px solid #E6E8EE;' : ''}font:400 14px/1.5 ${FONT};color:#5B6577">${LAB[k]}</td><td valign="top" style="padding:11px 0;${i ? 'border-top:1px solid #E6E8EE;' : ''}font:500 15px/1.5 ${FONT};color:#1A2332;word-break:break-word">${val(k)}</td></tr>`).join('');
+  const msg = f.msg ? `<tr><td class="pad" style="padding:8px 40px 0"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" bgcolor="#F2F3F7" style="border-radius:18px"><tr><td style="padding:18px 22px 4px;font:600 13px/1.4 ${FONT};color:#002EFE">Bericht</td></tr><tr><td style="padding:0 22px 20px;font:400 15px/1.6 ${FONT};color:#1A2332">${esc(f.msg).replace(/\n/g, '<br>')}</td></tr></table></td></tr>` : '';
+  const subject = 'Nieuwe aanvraag: ' + (NAMES[type] || type).toLowerCase() + (bare ? ' · ' + bare : '');
+  const who = [f.name, f.company].filter(Boolean).map(esc).join(', ');
+  const html = `<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta name="supported-color-schemes" content="light"><title>${esc(subject)}</title><link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"><style>@media (max-width:620px){.wrap{width:100%!important}.pad{padding-left:24px!important;padding-right:24px!important}.h1{font-size:28px!important}}</style></head>
+<body style="margin:0;padding:0;background:#F2F3F7">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" bgcolor="#F2F3F7"><tr><td align="center" style="padding:28px 12px">
+<table role="presentation" class="wrap" width="600" cellpadding="0" cellspacing="0" style="width:600px;max-width:600px;background:#ffffff;border-radius:28px;overflow:hidden">
+<tr><td class="pad" align="left" bgcolor="#002EFE" style="background:#002EFE;background-image:linear-gradient(135deg,#002EFE,#4E6BFF);padding:30px 40px 32px;border-radius:28px 28px 0 0">
+<img src="${SITE}/assets/img/nxeo_light.png" width="84" alt="NXEO" style="display:block;border:0;width:84px;height:auto;margin:0 0 24px">
+<table role="presentation" cellpadding="0" cellspacing="0"><tr><td bgcolor="#ffffff" style="border-radius:20px 20px 20px 6px;padding:9px 16px;font:700 14px/1.2 ${FONT};color:#002EFE">Nieuwe aanvraag</td></tr></table>
+<div class="h1" style="font:700 32px/1.1 ${FONT};letter-spacing:-1px;color:#ffffff;margin:16px 0 8px">${esc(NAMES[type] || type)}</div>
+<div style="font:400 16px/1.5 ${FONT};color:#E6EBFF">${[who, esc(bare)].filter(Boolean).join(' &nbsp;·&nbsp; ') || esc(f.email)}</div>
+</td></tr>
+<tr><td class="pad" style="padding:22px 40px 10px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0">${rows}</table></td></tr>
+${msg}
+<tr><td class="pad" align="left" style="padding:22px 40px 14px"><table role="presentation" cellpadding="0" cellspacing="0"><tr><td bgcolor="#002EFE" style="border-radius:999px;background:#002EFE;background-image:linear-gradient(135deg,#002EFE,#4E6BFF)"><a href="mailto:${esc(f.email)}" style="display:inline-block;padding:14px 26px;font:600 16px/1 ${FONT};color:#ffffff;text-decoration:none">Beantwoord ${first || 'de aanvraag'} &rarr;</a></td></tr></table></td></tr>
+<tr><td class="pad" style="padding:6px 40px 34px;font:400 14px/1.6 ${FONT};color:#5B6577">Een antwoord op deze mail gaat direct naar de aanvrager. De aanvrager krijgt zelf ook een bevestiging.</td></tr>
+</table>
+</td></tr></table></body></html>`;
+  const text = (NAMES[type] || type) + '\n\n' + keys.map((k) => LAB[k] + ': ' + (k === 'lang' ? (f.lang === 'en' ? 'Engels' : 'Nederlands') : f[k])).join('\n') + (f.msg ? '\n\nBericht:\n' + f.msg : '');
+  return { subject, html, text };
+}
+module.exports = { build, internal };

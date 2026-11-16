@@ -7,7 +7,6 @@ const TYPES = {
   gesprek: { nl: 'Nieuwe aanvraag: gesprek', to: 'sales@nxeo.io' },
   doorloop: { nl: 'Nieuwe aanvraag: website samen doorlopen', to: 'sales@nxeo.io' },
 };
-const LABELS = { name: 'Naam', company: 'Bedrijf', site: 'Website', email: 'E-mail', phone: 'Telefoon', pkg: 'Pakket', term: 'Looptijd', price: 'Prijs', msg: 'Bericht', lang: 'Taal', page: 'Pagina' };
 const mail = require('./_mail.js');
 const clean = (v, max) => String(v == null ? '' : v).replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, '').trim().slice(0, max);
 const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -35,12 +34,10 @@ module.exports = async (req, res) => {
   if (!type || !/^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]{2,}$/.test(email)) return res.status(400).json({ ok: false, error: 'invalid' });
   const lang = b.lang === 'en' ? 'en' : 'nl';
   const f = { name: clean(b.name, 120), company: clean(b.company, 160), site: clean(b.site, 300), email, phone: clean(b.phone, 60), pkg: clean(b.pkg, 60), term: clean(b.term, 60), price: clean(b.price, 60), msg: clean(b.msg, 3000), lang, page: clean(b.page, 300) };
-  const rows = Object.keys(LABELS).filter((k) => f[k]);
-  const text = rows.map((k) => LABELS[k] + ': ' + f[k]).join('\n');
-  const html = '<table cellpadding="6" style="font:14px/1.5 Arial,sans-serif;border-collapse:collapse">' + rows.map((k) => '<tr><td style="color:#667;vertical-align:top">' + LABELS[k] + '</td><td>' + esc(f[k]).replace(/\n/g, '<br>') + '</td></tr>').join('') + '</table>';
+  const n = mail.internal(b.type, f);
   const from = process.env.LEAD_FROM || 'NXEO website <website@nxeo.io>';
   try {
-    await send(key, { from, to: [process.env.LEAD_TO || type.to], reply_to: email, subject: type.nl + (f.site ? ' · ' + f.site.replace(/^https?:\/\//, '').replace(/\/$/, '') : ''), text, html });
+    await send(key, { from, to: [process.env.LEAD_TO || type.to], reply_to: email, subject: type.nl + (f.site ? ' · ' + f.site.replace(/^https?:\/\//, '').replace(/\/$/, '') : ''), text: n.text, html: n.html });
   } catch (e) {
     console.error(e.message);
     return res.status(502).json({ ok: false, error: 'send' });
