@@ -207,6 +207,28 @@ def article_body(lang,page):
             '<div class="wrap ar-grid"><div class="ar-body">%s%s\n%s</div>%s</div>\n</article>\n'
             '%s</section>\n')%(page,a['category'],a['mins'],t['min'],html.escape(a['title']),html.escape(a['description']),t['by'],a['nice'],kort_html,body,cta,side,
             ('<div class="sec ar-more"><div class="wrap"><h2>%s</h2><div class="bl-grid is-filtered">%s</div></div></div>\n'%(t['more'],more)) if more else '')
+def about_schema(lang):
+    return {"@context":"https://schema.org","@type":"AboutPage","url":abs_url(lang,'over'),"name":I18N[lang]['pages']['over']['title'].split('|')[0].strip(),"inLanguage":lang,
+            "mainEntity":{"@id":DOMAIN+'/#organization'},
+            "about":[{"@type":"Person","name":n,"jobTitle":"Founder","sameAs":[u],"worksFor":{"@id":DOMAIN+'/#organization'}} for n,u in FOUNDERS]}
+
+def list_schema(lang,keys,name):
+    return {"@context":"https://schema.org","@type":"ItemList","name":name,"numberOfItems":len(keys),
+            "itemListElement":[{"@type":"ListItem","position":i+1,"name":I18N[lang]['pages'][k]['title'].split('|')[0].strip(),"url":abs_url(lang,k)} for i,k in enumerate(keys)]}
+
+def blog_schema(lang):
+    arts=sorted(ARTS[lang],key=lambda a:a['date'],reverse=True)
+    return {"@context":"https://schema.org","@type":"Blog","name":I18N[lang]['pages']['blog']['title'].split('|')[0].strip(),"url":abs_url(lang,'blog'),"inLanguage":lang,"publisher":{"@id":DOMAIN+'/#organization'},
+            "blogPost":[{"@type":"BlogPosting","headline":a['title'],"url":abs_url(lang,a['key']),"datePublished":a['date']} for a in arts]}
+
+def howto_schema(lang,page,body):
+    a=[x for x in ARTS[lang] if x['key']==page][0]
+    steps=[]
+    for m in re.finditer(r'<h2 id="[^"]*">(\d+)\. (.*?)</h2>(.*?)(?=<h2 )',body,re.S):
+        txt=strip_tags(re.split(r'</p>',m.group(3))[0]+' '+' '.join(re.findall(r'<p><strong>(?:Wat je doet|What to do):</strong>(.*?)</p>',m.group(3),re.S)))
+        steps.append({"@type":"HowToStep","position":int(m.group(1)),"name":strip_tags(m.group(2)),"text":' '.join(txt.split())})
+    return {"@context":"https://schema.org","@type":"HowTo","name":a['title'],"description":a['description'],"inLanguage":lang,"totalTime":"PT10M","step":steps}
+
 def article_schema(lang,page):
     a=[x for x in ARTS[lang] if x['key']==page][0]
     return {"@context":"https://schema.org","@type":"Article","headline":a['title'],"description":a['description'],"datePublished":a['date'],"dateModified":a['date'],"inLanguage":lang,"wordCount":a['words'],
@@ -217,6 +239,18 @@ def breadcrumb(lang,page):
     return {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
         {"@type":"ListItem","position":1,"name":t['breadcrumb_home'],"item":abs_url(lang,'home')},
         ]+([{"@type":"ListItem","position":2,"name":t['pages']['blog']['title'].split('|')[0].strip(),"item":abs_url(lang,'blog')},{"@type":"ListItem","position":3,"name":t['pages'][page]['title'].split('|')[0].strip(),"item":abs_url(lang,page)}] if page.startswith('art_') else [{"@type":"ListItem","position":2,"name":t['pages'][page]['title'].split('|')[0].strip(),"item":abs_url(lang,page)}])}
+
+def fit_title(s):
+    s=s.strip()
+    if len(s)>60 and s.endswith(' | NXEO'): s=s[:-7]
+    if len(s)>62 and '. ' in s[:62]: s=s[:s.index('. ')+1]
+    return s
+def fit_desc(s,n=158):
+    s=s.strip()
+    if len(s)<=n: return s
+    cut=s[:n+1]; i=max(cut.rfind('. '),cut.rfind('? '),cut.rfind('! '))
+    if i>=70: return cut[:i+1]
+    return cut[:cut.rfind(' ')].rstrip(',;:')+'.'
 
 def head(lang,page,from_dir,extra_schema):
     t=I18N[lang]; p=t['pages'][page]
@@ -236,8 +270,8 @@ def head(lang,page,from_dir,extra_schema):
             '<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
             '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600;700;800&display=swap">\n'
             '<link rel="stylesheet" href="%s">\n<script>(function(){var h=document.documentElement;addEventListener("pagereveal",function(e){if(e.viewTransition){h.classList.add("vt");e.viewTransition.finished.finally(function(){h.classList.remove("vt")})}else{h.classList.remove("vt")}});addEventListener("pageswap",function(e){if(e.viewTransition)h.classList.add("vt")})})()</script>\n<script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/assets/*"}}]},"eagerness":"moderate"}]}</script>\n%s</head>\n<body>\n')%(
-            lang,html.escape(t['fpnote']),html.escape(t['pct']),html.escape(p['title']),html.escape(p['description']),abs_url(lang,page),alts,
-            t['locale'],html.escape(p['title']),html.escape(p['description']),abs_url(lang,page),DOMAIN,asset(from_dir,'img/favicon.png'),asset(from_dir,'style.css'),ld)
+            lang,html.escape(t['fpnote']),html.escape(t['pct']),html.escape(fit_title(p['title'])),html.escape(fit_desc(p['description'])),abs_url(lang,page),alts,
+            t['locale'],html.escape(fit_title(p['title'])),html.escape(fit_desc(p['description'])),abs_url(lang,page),DOMAIN,asset(from_dir,'img/favicon.png'),asset(from_dir,'style.css'),ld)
 
 def chrome(lang,page,from_dir):
     t=I18N[lang]
@@ -280,6 +314,11 @@ def build_page(lang,page):
     body=re.sub(r'<section class="page" id="page-\w+">','<section class="page is-active" id="page-%s">'%page,body,count=1)
     extra=[faq_schema(body)] if page in ('faq','prijzen','nulmeting') or page.startswith('cms_') else ([article_schema(lang,page)] if page.startswith('art_') else [])
     if page=='prijzen': extra.append(product_schema(lang))
+    if page=='home' and '<details' in body: extra.append(faq_schema(body))
+    if page=='over': extra.append(about_schema(lang))
+    if page=='koppelingen': extra.append(list_schema(lang,[k for k in PAGES if k.startswith('cms_')],I18N[lang]['pages']['koppelingen']['title'].split('|')[0].strip()))
+    if page=='blog': extra.append(blog_schema(lang))
+    if page.startswith('art_') and 'controlelijst' in page: extra.append(howto_schema(lang,page,body))
     if page.startswith('cms_') or page in ('nulmeting','meekijken','koppelingen'): extra.append(service_schema(lang,page))
     hdr,ftr=chrome(lang,page,d)
     doc=head(lang,page,d,extra)+hdr+'\n\n<main>\n'+body+'\n</main>\n\n'+ftr+'\n\n<script src="%s" defer></script>\n</body>\n</html>\n'%asset(d,'script.js')
@@ -316,7 +355,9 @@ def sitemap():
 def main():
     if os.path.exists(OUT): shutil.rmtree(OUT)
     os.makedirs(OUT+'assets/img',exist_ok=True)
-    shutil.copy(S+'assets/style.css',OUT+'assets/style.css')
+    css=open(S+'assets/style.css').read()
+    css=re.sub(r'/\*.*?\*/','',css,flags=re.S); css=re.sub(r'\n\s*','\n',css); css=re.sub(r'[ \t]{2,}',' ',css); css=re.sub(r'\n+','\n',css)
+    open(OUT+'assets/style.css','w').write(css)
     js=open(S+'assets/script.js').read()
     js=js.replace("'__FPNOTE__'","document.documentElement.getAttribute('data-i18n-fpnote')").replace("'__PCT__'","document.documentElement.getAttribute('data-i18n-pct')")
     open(OUT+'assets/script.js','w').write(js)
