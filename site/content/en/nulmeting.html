@@ -1,31 +1,72 @@
 <section class="page" id="page-nulmeting">
-  <div class="hero hero-c nul-hero ab-hero">
-    <div class="hero-stack">
+  <div class="hero hero-c nul-hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="wrap hero-stack">
       <div class="bubble bubble-blue" aria-hidden="true">Does ChatGPT mention your company yet?</div>
       <h1>Check it. Free.<span class="cursor" aria-hidden="true"></span></h1>
       <p class="def">Enter your website. Within 48 hours you know for which buying questions ChatGPT mentions your company, and who is mentioned where you are missing.</p>
-      <form class="combo audit-combo " data-baseline novalidate><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></span><input name="site" type="url" placeholder="yourwebsite.com" required autocomplete="url" aria-label="Your website"><button class="btn btn-blue" type="submit">Check my visibility <span class="arr">→</span></button></form>
-      <ul class="so-ticks np-ticks"><li>Free</li><li>In your inbox within 48 hours</li><li>No obligation</li></ul>
+      <form class="combo audit-combo" data-baseline novalidate><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></span><input name="site" type="url" placeholder="yourwebsite.com" required autocomplete="url" aria-label="Your website"><button class="btn btn-blue" type="submit">Check my visibility <span class="arr">→</span></button></form>
+      <p class="hero-note">Free · in your inbox within 48 hours · no obligation</p>
+      <div class="trust-chip"><span class="stars" aria-hidden="true">★★★★★</span>"Suddenly I get messages all day from people in the neighbourhood." <b>Ferry, De Scooter Dokter</b></div>
     </div>
-  </div>
-  <div class="sec">
-    <div class="wrap ed-split np-split" data-reveal>
-      <div class="ed-t"><h2>What is in your report</h2><p>A report of a few pages, without jargon. Every finding says whether we measured it or whether it is our reading of it.</p><ol class="sl-pts np-pts"><li><span class="n">1</span><div><b>How often you are mentioned</b><span>We ask ChatGPT real buying questions about your service. You see in how many of the answers your company appears.</span></div></li><li><span class="n">2</span><div><b>Where you are missing</b><span>Split by type of question: who does this, who is the best, what does it cost. You see which part of the buying journey you miss.</span></div></li><li><span class="n">3</span><div><b>Who is mentioned instead</b><span>The companies that appear in the answers and how often. Comparison sites and platforms do not count as competitors.</span></div></li><li><span class="n">4</span><div><b>The biggest gaps</b><span>The findings in order of what they cost you, with for each gap the first page that can close it.</span></div></li><li><span class="n">5</span><div><b>What the check does not show</b><span>It is one AI system at one moment. No Google ranking and no verdict on your website. The report says so plainly.</span></div></li></ol></div>
-      <div class="ed-v"><div class="rp">
-        <div class="rp-h"><span class="tag">Example</span><b>yourwebsite.com</b></div>
-        <div class="rp-score"><div><span>Mentioned in</span><b>9</b><i>of 36 buying questions</i></div><svg viewBox="0 0 120 60" aria-hidden="true"><path d="M10 55a50 50 0 01100 0" fill="none" stroke="#E3E6EF" stroke-width="10" stroke-linecap="round"/><path d="M10 55a50 50 0 01100 0" fill="none" stroke="url(#rpg)" stroke-width="10" stroke-linecap="round" stroke-dasharray="157" stroke-dashoffset="118"/><defs><linearGradient id="rpg" x1="0" x2="1"><stop stop-color="#002EFE"/><stop offset="1" stop-color="#4E6BFF"/></linearGradient></defs></svg></div>
-        <div class="rp-b"><span class="k">By type of question</span><div class="rp-q"><span>Who does this?</span><i class="mid">3 of 12</i></div><div class="rp-q"><span>Who is the best?</span><i class="mid">2 of 9</i></div><div class="rp-q"><span>What does it cost?</span><i class="no">0 of 3</i></div></div>
-        <div class="rp-b"><span class="k">The biggest gap</span><p>For the question what it costs you are not mentioned anywhere. That is the question someone asks who has already decided.</p></div>
-      </div></div>
-    </div>
-  </div>
-  <div class="sec" style="padding-top:0">
     <div class="wrap">
-      <div class="sec-head center" data-reveal><h2>How it works</h2></div>
-      <div class="np-steps" data-reveal><div class="np-step"><span class="n">1</span><b>Enter your website</b><p>Only your website and an email address. No account.</p></div><div class="np-step"><span class="n">2</span><b>We measure</b><p>Real buying questions about your service, asked to ChatGPT.</p></div><div class="np-step"><span class="n">3</span><b>Report in your inbox</b><p>After that one email from us to go through it, if you like.</p></div></div>
-      <figure class="so-fq np-fq" data-reveal><span aria-hidden="true">★★★★★</span><blockquote>"Suddenly I get messages from people in the area all day long."</blockquote><figcaption>Ferry, De Scooter Dokter</figcaption></figure>
+      <div class="chat" aria-label="Example: ChatGPT answering a buying question">
+        <div class="chat-head">
+          <span class="ai-src"><img src="{{openai_mark}}" alt="">Example: ChatGPT answering a buying question</span>
+          <div class="tabs" role="tablist"><button class="tab" role="tab" aria-selected="true" data-demo="before">What does it cost?</button><button class="tab" role="tab" aria-selected="false" data-demo="after">Who does this?</button></div>
+        </div>
+        <div class="msg ai"><div class="panes">
+          <div class="ans is-on" data-demo-pane="before"><p>Companies that are often mentioned:</p><div class="list"><div class="li"><span class="rank">1</span>Competitor A<span class="dim">30 of 36 questions</span></div><div class="li"><span class="rank">2</span>Competitor B<span class="dim">20 of 36</span></div><div class="li"><span class="rank">3</span>Competitor C<span class="dim">18 of 36</span></div></div><p><mark>Your company is not mentioned.</mark><span class="cursor" aria-hidden="true"></span></p></div>
+          <div class="ans" data-demo-pane="after"><p>Companies that do this:</p><div class="list"><div class="li"><span class="rank">1</span>Competitor A<span class="dim">30 of 36 questions</span></div><div class="li you"><span class="rank">2</span>Your company<span class="dim">3 of 12 questions</span></div><div class="li"><span class="rank">3</span>Competitor B<span class="dim">20 of 36</span></div></div><p><mark class="warn">Mentioned, but only for this type of question.</mark><span class="cursor" aria-hidden="true"></span></p></div>
+        </div></div>
+      </div>
     </div>
   </div>
+
+  <div class="sec" id="nm-rapport">
+    <div class="wrap">
+      <div class="sec-head" data-reveal><span class="eyebrow">The report</span><h2>What is in your report.</h2></div>
+      <div class="bento2">
+        <div class="bx bx-web cm-lead" data-reveal>
+          <div class="bx-text"><h4>How often you are mentioned</h4><p>We ask ChatGPT real buying questions about your service and save every answer. You see in how many of them your company is mentioned.</p><ul class="cm-an"><li><span>1</span><b>Questions the way your customers ask them</b></li><li><span>2</span><b>Built from what you offer yourself</b></li><li><span>3</span><b>Every answer available on request</b></li></ul></div>
+          <div class="bx-well"><div class="rp nm-rp" aria-hidden="true">
+            <div class="rp-h"><span class="tag">Example</span><b>yourwebsite.com</b></div>
+            <div class="rp-score"><div><span>Mentioned in</span><b>9</b><i>of 36 buying questions</i></div><svg viewBox="0 0 120 60" aria-hidden="true"><path d="M10 55a50 50 0 01100 0" fill="none" stroke="#E3E6EF" stroke-width="10" stroke-linecap="round"/><path d="M10 55a50 50 0 01100 0" fill="none" stroke="url(#rpg)" stroke-width="10" stroke-linecap="round" stroke-dasharray="157" stroke-dashoffset="118"/><defs><linearGradient id="rpg" x1="0" x2="1"><stop stop-color="#002EFE"/><stop offset="1" stop-color="#4E6BFF"/></linearGradient></defs></svg></div>
+          </div></div>
+        </div>
+        <div class="bx" data-reveal>
+          <div class="bx-text"><h4>Where you are missing</h4><p>By type of question, so you see which part of the buying journey you miss.</p></div>
+          <div class="bx-art"><div class="mini-rows cm-mr nm-mr"><div class="mini mini-row"><span class="lbl">Who does this?</span><span class="st mid">3 of 12</span></div><div class="mini mini-row"><span class="lbl">Who is the best?</span><span class="st mid">2 of 9</span></div><div class="mini mini-row"><span class="lbl">Comparing</span><span class="st ok">4 of 6</span></div><div class="mini mini-row"><span class="lbl">What does it cost?</span><span class="st no">0 of 3</span></div></div></div>
+        </div>
+        <div class="bx bx-lav" data-reveal>
+          <div class="bx-text"><h4>Who is mentioned instead</h4><p>The companies in the answers, and how often. Platforms do not count.</p></div>
+          <div class="bx-art"><div class="cmp-mini"><div class="row"><span>Competitor A</span><i style="--w:83%"></i><b>30/36</b></div><div class="row"><span>Competitor B</span><i style="--w:56%"></i><b>20/36</b></div><div class="row"><span>Competitor C</span><i style="--w:50%"></i><b>18/36</b></div><div class="row you"><span>Your company</span><i style="--w:25%"></i><b>9/36</b></div></div></div>
+        </div>
+        <div class="bx" data-reveal>
+          <div class="bx-text"><h4>The biggest gaps</h4><p>In order of what they cost you, with for each gap the first page that can close it.</p></div>
+          <div class="bx-art"><div class="mini mailm"><div class="mh"><img src="{{nxeo_icon}}" alt=""><b>NXEO</b><span>Agenda</span></div><div class="ms">From gap to page</div><ul><li>What does it cost: pricing by size</li><li>Who does this: process and lead time</li><li>Who is the best: what to look for</li></ul></div></div>
+        </div>
+        <div class="bx bx-tint" data-reveal>
+          <div class="bx-text"><h4>Honest about what it is not</h4><p>One AI system at one moment. No Google ranking, no audit of your website.</p></div>
+          <div class="bx-art"><div class="own"><span>Measured</span><span>Our reading</span><span>Not yet known</span></div></div>
+        </div>
+        <div class="bx-also" data-reveal><b>Good to know</b><span>Free</span><span>No account needed</span><span>Within 48 hours</span><span>No obligation</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec" style="padding-top:0" id="nm-stappen">
+    <div class="wrap">
+      <div class="sec-head center" data-reveal><span class="eyebrow">How it works</span><h2>From website to report. In three steps.</h2></div>
+      <div class="steps3">
+        <div class="step-card" data-reveal><span class="num">01</span><div class="art"><div class="mini nm-in"><span>yourwebsite.com</span><b>Check →</b></div></div><h4>Enter your website</h4><p>Only your website and an email address. That is all we need.</p><div class="chips"><span class="chip">One minute</span><span class="chip">No account</span></div></div>
+        <div class="step-card" data-reveal><span class="num">02</span><div class="art"><div class="mini-rows"><div class="mini mini-row"><span class="mk"><img src="{{openai_mark}}" alt=""></span><span class="lbl">Who does this?</span><span class="st ok">mentioned</span></div><div class="mini mini-row"><span class="mk"><img src="{{openai_mark}}" alt=""></span><span class="lbl">Who is the best?</span><span class="st ok">mentioned</span></div><div class="mini mini-row"><span class="mk"><img src="{{openai_mark}}" alt=""></span><span class="lbl">What does it cost?</span><span class="st no">not mentioned</span></div><div class="mini mini-row"><span class="mk"><img src="{{openai_mark}}" alt=""></span><span class="lbl">Who to choose?</span><span class="st no">not mentioned</span></div></div></div><h4>We measure</h4><p>Real buying questions about your service, asked to ChatGPT.</p><div class="chips"><span class="chip">One AI system</span><span class="chip">Every answer saved</span></div></div>
+        <div class="step-card" data-reveal><span class="num">03</span><div class="art"><div class="mini mailm nm-mail"><div class="mh"><img src="{{nxeo_icon}}" alt=""><b>NXEO</b><span>within 48 hours</span></div><div class="ms">Your baseline check is ready</div><ul><li>How often you are mentioned</li><li>Who is mentioned instead</li><li>The biggest gaps</li></ul></div></div><h4>Report in your inbox</h4><p>After that one email from us to go through it, if you like.</p><div class="chips"><span class="chip">Within 48 hours</span><span class="chip">A few minutes to read</span></div></div>
+      </div>
+      <div class="divider-cta" data-reveal><p>In your inbox within 48 hours. Free.</p><a class="btn btn-blue" href="#page-nulmeting" data-nm-top>Request the baseline check <span class="arr">→</span></a></div>
+    </div>
+  </div>
+
   <div class="sec" style="padding-top:0">
     <div class="wrap">
       <div class="sec-head center" data-reveal><h2>Good to know</h2></div>

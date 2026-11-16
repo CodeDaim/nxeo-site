@@ -341,6 +341,8 @@
   }
   setupReveal();
 
+  // Nulmeting pagina: knop onderaan de stappen brengt je terug naar het invulveld
+  document.querySelectorAll('[data-nm-top]').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();var i=document.querySelector('#page-nulmeting form[data-baseline] input[name=site]');window.scrollTo({top:0,behavior:'smooth'});if(i)setTimeout(function(){i.focus({preventScroll:true});},450);});});
   // Cookie bar
   var ck=document.getElementById('cookie');
   // Google Analytics: wordt pas geladen nadat iemand cookies accepteert
