@@ -13,7 +13,7 @@ OUT=S+('dist-preview/' if MODE=='preview' else 'dist/')
 DOMAIN='https://nxeo.io'
 LANGS=[l for l in ['nl','en','de'] if os.path.exists(S+'i18n/%s.json'%l) and os.path.isdir(S+'content/%s'%l)]
 DEFAULT='nl'
-PAGES=['home','over','prijzen','contact','sales','aanvraag','nulmeting','faq','blog','privacy','meekijken','koppelingen','cms_wordpress','cms_webflow','cms_shopify','cms_wix','cms_framer','cms_websitebouwers','cms_code','cms_ai','cms_maatwerk']
+PAGES=['home','over','prijzen','contact','sales','aanvraag','nulmeting','faq','blog','privacy','pagemap','meekijken','koppelingen','cms_wordpress','cms_webflow','cms_shopify','cms_wix','cms_framer','cms_websitebouwers','cms_code','cms_ai','cms_maatwerk']
 I18N={l:json.load(open(S+'i18n/%s.json'%l)) for l in LANGS}
 TODAY=datetime.date.today().isoformat()
 
@@ -254,9 +254,26 @@ def chrome(lang,page,from_dir):
     if page in ('aanvraag','sales','meekijken'): ftr=ftr.replace('<footer class="end">','<footer class="end no-cta">',1)
     return hdr,ftr
 
+def pagemap(lang):
+    # leesbaar overzicht van alle pagina's; sitemap.xml blijft de versie voor zoekmachines
+    t=I18N[lang]; nl=lang=='nl'
+    name=lambda k:'Home' if k=='home' else t['pages'][k]['title'].split('|')[0].strip()
+    main=[k for k in PAGES if not k.startswith('cms_') and k not in ('koppelingen','pagemap','blog')]
+    cms=['koppelingen']+[k for k in PAGES if k.startswith('cms_')]
+    arts=sorted(ARTS[lang],key=lambda a:a['date'],reverse=True)
+    def card(title,items):
+        return '<div class="pm-card" data-reveal><h2>%s<span>%d</span></h2><div class="pm-rows">%s</div></div>'%(title,len(items),''.join('<a href="#%s" data-link><b>%s</b><span class="arr">→</span></a>'%(k,html.escape(n)) for k,n in items))
+    total=len(main)+len(cms)+len(arts)+1
+    lead=("%d pagina's, in drie groepen. Zoekmachines gebruiken <a href=\"/sitemap.xml\">sitemap.xml</a>." if nl else "%d pages, in three groups. Search engines use <a href=\"/sitemap.xml\">sitemap.xml</a>.")%total
+    return ('<section class="page" id="page-pagemap">\n  <div class="faq-page">\n    <div class="wrap">\n      <div class="faq-head"><h1>%s</h1><p class="lead">%s</p></div>\n      <div class="pm-grid">%s%s%s</div>\n    </div>\n  </div>\n</section>\n')%(
+        "Alle pagina's" if nl else 'All pages', lead,
+        card("Pagina's" if nl else 'Pages',[(k,name(k)) for k in main]),
+        card('Werkt met' if nl else 'Works with',[(k,name(k)) for k in cms]),
+        card('Blog',[('blog',name('blog'))]+[(a['key'],a['title']) for a in arts]))
+
 def build_page(lang,page):
     d=page_dir(lang,page)
-    body=article_body(lang,page) if page.startswith('art_') else read(lang,page)
+    body=article_body(lang,page) if page.startswith('art_') else (pagemap(lang) if page=='pagemap' else read(lang,page))
     if page=='blog': body=blog_overview(lang,body)
     if page=='home': body=home_blog(lang,body)
     if '<div data-fp>' in body: body=body.replace('<div data-fp></div>',read(lang,'fp')).replace('<div data-fp>','').replace('</div><!--/fp-->','')
@@ -294,7 +311,7 @@ def sitemap():
             alts+='    <xhtml:link rel="alternate" hreflang="x-default" href="%s"/>\n'%abs_url(DEFAULT if DEFAULT in have else have[0],p)
             pri='1.0' if p=='home' else ('0.9' if p in ('prijzen','aanvraag','nulmeting') else ('0.3' if p=='privacy' else '0.7'))
             rows.append('  <url>\n    <loc>%s</loc>\n    <lastmod>%s</lastmod>\n    <priority>%s</priority>\n%s  </url>'%(abs_url(l,p),TODAY,pri,alts))
-    return '<?xml version="1.0" encoding="UTF-8"?>\n<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'+'\n'.join(rows)+'\n</urlset>\n'
+    return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'+'\n'.join(rows)+'\n</urlset>\n'
 
 def main():
     if os.path.exists(OUT): shutil.rmtree(OUT)
@@ -310,7 +327,6 @@ def main():
     if MODE=='prod':
         open(OUT+'index.html','w').write(root_redirect())
         open(OUT+'sitemap.xml','w').write(sitemap())
-        shutil.copy(S+'assets/sitemap.xsl',OUT+'sitemap.xsl')
         open(OUT+'robots.txt','w').write('User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n'%DOMAIN)
         # a simple 404 in the default language, pointing home
         nf=build_page(DEFAULT,'home')

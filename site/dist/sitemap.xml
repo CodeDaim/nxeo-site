@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nxeo.io/nl/</loc>
@@ -160,6 +159,22 @@
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/privacy/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/privacy/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/privacy/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/nl/sitemap/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/sitemap/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/sitemap/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/sitemap/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/en/sitemap/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/sitemap/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/sitemap/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/sitemap/"/>
   </url>
   <url>
     <loc>https://nxeo.io/nl/website-doorlopen/</loc>

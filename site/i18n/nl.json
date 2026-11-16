@@ -114,6 +114,11 @@
       "slug": "werkt-met",
       "title": "Werkt met jouw website | NXEO",
       "description": "NXEO werkt met WordPress, Webflow, Shopify, Wix, Framer, de websitebouwers van hostingpartijen, gecodeerde websites en websites die met AI zijn gemaakt."
+    },
+    "pagemap": {
+      "slug": "sitemap",
+      "title": "Alle pagina's | NXEO",
+      "description": "Een overzicht van alle pagina's op de website van NXEO: de hoofdpagina's, de koppelingen en alle artikelen."
     }
   },
   "breadcrumb_home": "Home"
