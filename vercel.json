@@ -224,22 +224,22 @@
       "permanent": true
     },
     {
-      "source": "/portfolio/:path*",
+      "source": "/portfolio/(.*)",
       "destination": "/nl/",
       "permanent": true
     },
     {
-      "source": "/category/:path*",
+      "source": "/category/(.*)",
       "destination": "/nl/blog/",
       "permanent": true
     },
     {
-      "source": "/tag/:path*",
+      "source": "/tag/(.*)",
       "destination": "/nl/blog/",
       "permanent": true
     },
     {
-      "source": "/author/:path*",
+      "source": "/author/(.*)",
       "destination": "/nl/blog/",
       "permanent": true
     }
