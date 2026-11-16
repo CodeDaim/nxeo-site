@@ -1,5 +1,5 @@
-// Ontvangt de formulieren van de website en stuurt ze als mail door via Resend.
-// Nodig in Vercel (Settings, Environment Variables): RESEND_API_KEY
+// Ontvangt de formulieren van de website en stuurt ze als mail door via Brevo.
+// Nodig in Vercel (Settings, Environment Variables): BREVO_API_KEY
 // Optioneel: LEAD_FROM (standaard "NXEO website <website@nxeo.io>"), LEAD_TO (standaard sales@nxeo.io)
 const TYPES = {
   nulmeting: { nl: 'Nieuwe aanvraag: gratis nulmeting', to: 'sales@nxeo.io' },
@@ -15,15 +15,19 @@ const CONFIRM = {
 const clean = (v, max) => String(v == null ? '' : v).replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, '').trim().slice(0, max);
 const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
+// Brevo, transactionele mail: https://developers.brevo.com/reference/sendtransacemail
+const addr = (v) => { const m = /^(.*)<([^>]+)>\s*$/.exec(v); return m ? { name: m[1].trim(), email: m[2].trim() } : { email: v.trim() }; };
 async function send(key, mail) {
-  const r = await fetch('https://api.resend.com/emails', { method: 'POST', headers: { Authorization: 'Bearer ' + key, 'Content-Type': 'application/json' }, body: JSON.stringify(mail) });
-  if (!r.ok) throw new Error('resend ' + r.status + ' ' + (await r.text()).slice(0, 300));
+  const body = { sender: addr(mail.from), to: mail.to.map((e) => ({ email: e })), replyTo: { email: mail.reply_to }, subject: mail.subject, textContent: mail.text };
+  if (mail.html) body.htmlContent = mail.html;
+  const r = await fetch('https://api.brevo.com/v3/smtp/email', { method: 'POST', headers: { 'api-key': key, 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(body) });
+  if (!r.ok) throw new Error('brevo ' + r.status + ' ' + (await r.text()).slice(0, 300));
 }
 
 module.exports = async (req, res) => {
   res.setHeader('Cache-Control', 'no-store');
   if (req.method !== 'POST') return res.status(405).json({ ok: false, error: 'method' });
-  const key = process.env.RESEND_API_KEY;
+  const key = process.env.BREVO_API_KEY;
   if (!key) return res.status(503).json({ ok: false, error: 'not_configured' });
   let b = req.body;
   if (typeof b === 'string') { try { b = JSON.parse(b); } catch (e) { b = null; } }
