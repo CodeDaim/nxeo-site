@@ -106,7 +106,7 @@ Een test is pas iets waard als je er wat mee doet. Begin klein.
 3. **Schrijf per vraag één pagina of één duidelijk blok.** De vraag als kop, het antwoord in de eerste twee zinnen, daaronder de uitleg.
 4. **Test over vier tot zes weken opnieuw.** Systemen hebben tijd nodig om nieuwe inhoud op te pikken. Hoe lang precies, lees je in [hoe lang duurt het voordat AI je bedrijf noemt](#art_hoe_lang_duurt_het_voordat_ai_je_bedrijf_noemt).
 
-Wil je de test niet zelf doen? Met de [gratis nulmeting](#nulmeting) doen wij hem voor je. Je vult je website in en hebt binnen 48 uur een rapport met je score, de vragen die je nu verliest en hoe AI je bedrijf omschrijft. Daar zit geen verplichting aan vast.
+Wil je de test niet zelf doen? Met de [gratis nulmeting](#nulmeting) doen wij hem voor je. Je vult je website in en hebt binnen 48 uur een rapport: op hoeveel koopvragen ChatGPT je noemt, welke vragen je nu verliest en wie daar wel genoemd wordt. Daar zit geen verplichting aan vast.
 
 ## Veelgestelde vragen over deze test
 

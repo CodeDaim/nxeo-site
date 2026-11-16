@@ -122,6 +122,6 @@ Wat er nodig is, past op een A4: een pagina over onderhoudsvriendelijke tuinen m
 
 ## Wil je weten welke oorzaak het bij jou is?
 
-Je kunt de lijst hierboven zelf nalopen. Wil je het sneller weten, dan doen wij het voor je. Met de [gratis nulmeting](#nulmeting) zie je binnen 48 uur op welke vragen je nu ontbreekt, wie er wel genoemd wordt en hoe AI je bedrijf omschrijft.
+Je kunt de lijst hierboven zelf nalopen. Wil je het sneller weten, dan doen wij het voor je. Met de [gratis nulmeting](#nulmeting) zie je binnen 48 uur op welke koopvragen je in ChatGPT ontbreekt en wie er wel genoemd wordt.
 
 Wil je daarna dat het wordt opgelost zonder dat je het zelf hoeft te doen? Dat is het werk dat NXEO elke week uit handen neemt. Lees [wat NXEO is](#art_wat_is_nxeo) of bekijk direct de [pakketten](#prijzen).

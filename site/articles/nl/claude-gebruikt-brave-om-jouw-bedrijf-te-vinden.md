@@ -124,4 +124,4 @@ Vrijwel zeker. AI bedrijven wisselen van leveranciers en voegen bronnen toe. Daa
 
 Ja. We stellen de vragen van jouw klanten aan ChatGPT, Gemini, Claude, Perplexity en Google en laten per systeem zien waar je genoemd wordt.
 
-Benieuwd hoe Claude jouw bedrijf nu omschrijft? In de [gratis nulmeting](#nulmeting) staat het naast de andere systemen. Wil je weten hoe wij daarna het werk overnemen, lees dan [wat NXEO is](#art_wat_is_nxeo).
+Benieuwd waar je nu staat? De [gratis nulmeting](#nulmeting) meet ChatGPT: je ziet op welke koopvragen je genoemd wordt en wie er staat waar jij ontbreekt. Wil je weten hoe wij daarna het werk overnemen, lees dan [wat NXEO is](#art_wat_is_nxeo).

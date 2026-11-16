@@ -126,4 +126,4 @@ Er is ook een geruststellende kant. De meeste bedrijven hebben hier nog niets aa
 - Google schuift zelf dezelfde kant op met AI overzichten en de AI modus.
 - Voor een ondernemer betekent het: Google blijven doen, AI erbij meten en schrijven voor vragen.
 
-Wil je weten hoe je er in beide voor staat? Met de [gratis nulmeting](#nulmeting) zie je binnen 48 uur hoe ChatGPT, Gemini, Claude en Google jouw bedrijf noemen. Meer achtergrond vind je bij de [veelgestelde vragen](#faq).
+Wil je weten hoe je er in ChatGPT voor staat? Met de [gratis nulmeting](#nulmeting) zie je binnen 48 uur op welke koopvragen je genoemd wordt en waar je ontbreekt. Meer achtergrond vind je bij de [veelgestelde vragen](#faq).

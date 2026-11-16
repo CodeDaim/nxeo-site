@@ -170,4 +170,4 @@ Test in four to six weeks whether you are mentioned, with the method from [is my
 
 Cannot work it out yourself, or want to be sure it is set up properly? [Go through your website together with us](#meekijken). Fifteen minutes online, free, and there is nothing to prepare.
 
-Would you like to know whether AI systems can read your WordPress website now, and what they say about it? With the [free baseline check](#nulmeting) you see it within 48 hours. If you would then like content added to your WordPress every week without having to write it yourself, read how [NXEO with WordPress](#cms_wordpress) works.
+Would you like to know whether it works? The [free baseline check](#nulmeting) shows within 48 hours for which buying questions ChatGPT mentions your company. It is not an audit of your website, but it is the result that matters. If you would then like content added to your WordPress every week without having to write it yourself, read how [NXEO with WordPress](#cms_wordpress) works.

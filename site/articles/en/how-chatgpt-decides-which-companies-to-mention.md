@@ -110,7 +110,7 @@ You do not have to wait to get started. These are four things you can do yoursel
 3. **Write down ten questions customers often ask you.** On the phone, by email or at the first appointment. Each of those questions deserves a page or a paragraph.
 4. **Check your details.** Do your name, address and service area match on your website and in your Google Business Profile?
 
-Would you like to know where you stand without working it out yourself? With the [free baseline check](#nulmeting) you receive a report within 48 hours showing the questions you are losing now and how AI describes your company.
+Would you like to know where you stand without working it out yourself? With the [free baseline check](#nulmeting) you receive a report within 48 hours showing the buying questions you are mentioned for, the questions you are losing now and who appears there instead.
 
 ## Can you guarantee a mention?
 

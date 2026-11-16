@@ -123,6 +123,6 @@ What is needed fits on one sheet of paper: a page about low maintenance gardens 
 
 ## Would you like to know which cause it is for you?
 
-You can go through the list above yourself. If you want to know sooner, we will do it for you. With the [free baseline check](#nulmeting) you see within 48 hours on which questions you are currently missing, who is mentioned and how AI describes your company.
+You can go through the list above yourself. If you want to know sooner, we will do it for you. With the [free baseline check](#nulmeting) you see within 48 hours for which buying questions you are missing in ChatGPT and who is mentioned instead.
 
 Would you then like it solved without having to do it yourself? That is the work NXEO takes off your hands every week. Read [what NXEO is](#art_wat_is_nxeo) or go straight to the [plans](#prijzen).

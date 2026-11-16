@@ -139,4 +139,4 @@ Yes. We put your customers' questions to ChatGPT, Gemini, Claude, Perplexity and
 
 Once per quarter is enough for most companies, and again after any large change to your website. Look at three things each time: your name, your service with your town, and one question customers ask. If your position drops sharply between two checks, something technical has usually changed, such as a new security setting.
 
-Curious how Claude describes your company right now? The [free baseline check](#nulmeting) shows it next to the other systems. If you want to know how we take over the work after that, read [what NXEO is](#art_wat_is_nxeo).
+Curious where you stand right now? The [free baseline check](#nulmeting) measures ChatGPT: you see for which buying questions you are mentioned and who appears where you are missing. If you want to know how we take over the work after that, read [what NXEO is](#art_wat_is_nxeo).

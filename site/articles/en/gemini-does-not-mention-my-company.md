@@ -125,4 +125,4 @@ ChatGPT read the website. Gemini leaned on the profile. Filling in the repair se
 - After that comes the content: pages that answer a question directly.
 - Special technology is not needed. Regularity is.
 
-Would you like to know how Gemini, ChatGPT and Claude mention your company right now? With the [free baseline check](#nulmeting) you receive that within 48 hours by email, per system side by side. If you have questions afterwards, see the [frequently asked questions](#faq) or [book a call](#sales).
+Would you like a first measurement without working it out yourself? The [free baseline check](#nulmeting) measures ChatGPT. Within 48 hours you see for which buying questions you are mentioned and who appears where you are missing. If you have questions afterwards, see the [frequently asked questions](#faq) or [book a call](#sales).

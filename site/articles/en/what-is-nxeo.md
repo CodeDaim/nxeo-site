@@ -50,7 +50,7 @@ It asks no more than that. Clients tell us it takes them about a quarter of an h
 
 ## What to expect in the first 90 days
 
-**Within 48 hours** you have your baseline check. It shows where you stand now, which questions you are losing and how AI describes your company.
+**Within 48 hours** you have your baseline check. It shows for which buying questions ChatGPT mentions you, which questions you are losing and who is mentioned there instead.
 
 **In the first weeks** we do the onboarding and set up the connection with your website. The first content goes online.
 

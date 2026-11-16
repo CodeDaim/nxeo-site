@@ -181,4 +181,4 @@ Wie de fout herstelt en daarna doorgaat met duidelijk opschrijven wat hij doet, 
 
 ## Wil je weten wat AI nu over je zegt?
 
-In de [gratis nulmeting](#nulmeting) staat hoe ChatGPT, Gemini, Claude en Perplexity je bedrijf omschrijven, naast elkaar. Je ziet in één oogopslag wat klopt en wat niet. Heb je daarna een vraag, kijk dan bij de [veelgestelde vragen](#faq) of neem [contact](#contact) op.
+Wil je weten of ChatGPT jouw bedrijf überhaupt noemt? Met de [gratis nulmeting](#nulmeting) zie je binnen 48 uur op welke koopvragen je genoemd wordt en waar je ontbreekt. Heb je daarna een vraag, kijk dan bij de [veelgestelde vragen](#faq) of neem [contact](#contact) op.

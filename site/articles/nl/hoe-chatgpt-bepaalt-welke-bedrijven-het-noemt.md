@@ -109,7 +109,7 @@ Je hoeft niet te wachten met beginnen. Dit zijn vier dingen die je zelf kunt doe
 3. **Schrijf tien vragen op die klanten je vaak stellen.** Aan de telefoon, per mail of bij de eerste afspraak. Elk van die vragen is een pagina of een alinea waard.
 4. **Controleer je gegevens.** Kloppen je naam, adres en werkgebied op je website en in je Google bedrijfsprofiel?
 
-Wil je weten hoe je er nu voor staat zonder het zelf uit te zoeken? Met de [gratis nulmeting](#nulmeting) krijg je binnen 48 uur een rapport met de vragen die je nu verliest en hoe AI je bedrijf omschrijft.
+Wil je weten hoe je er nu voor staat zonder het zelf uit te zoeken? Met de [gratis nulmeting](#nulmeting) krijg je binnen 48 uur een rapport met de koopvragen waarop je genoemd wordt, de vragen die je nu verliest en wie daar wel staat.
 
 ## Kun je garanderen dat je genoemd wordt?
 

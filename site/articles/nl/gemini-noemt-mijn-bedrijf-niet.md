@@ -116,4 +116,4 @@ De oorzaak ligt vrijwel altijd bij een bron. Oude openingstijden in je profiel, 
 - Daarna komt de inhoud: pagina's die een vraag direct beantwoorden.
 - Speciale techniek is niet nodig. Regelmaat wel.
 
-Wil je weten hoe Gemini, ChatGPT en Claude je bedrijf op dit moment noemen? Met de [gratis nulmeting](#nulmeting) krijg je dat binnen 48 uur in je mail, per systeem naast elkaar. Heb je daarna vragen, kijk dan bij de [veelgestelde vragen](#faq) of [plan een gesprek](#sales).
+Wil je een eerste meting zonder het zelf uit te zoeken? De [gratis nulmeting](#nulmeting) meet ChatGPT. Binnen 48 uur zie je op welke koopvragen je genoemd wordt en wie er staat waar jij ontbreekt. Heb je daarna vragen, kijk dan bij de [veelgestelde vragen](#faq) of [plan een gesprek](#sales).

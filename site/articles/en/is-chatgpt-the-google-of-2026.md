@@ -137,4 +137,4 @@ The same customer, the same need, the same town. In the first route eight compan
 - Google itself is moving in the same direction with AI Overviews and AI Mode.
 - For a business owner it means: keep doing Google, measure AI alongside it and write for questions.
 
-Would you like to know where you stand in both? With the [free baseline check](#nulmeting) you see within 48 hours how ChatGPT, Gemini, Claude and Google mention your company. You will find more background in the [frequently asked questions](#faq).
+Would you like to know where you stand in ChatGPT? With the [free baseline check](#nulmeting) you see within 48 hours for which buying questions you are mentioned and where you are missing. You will find more background in the [frequently asked questions](#faq).

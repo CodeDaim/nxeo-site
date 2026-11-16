@@ -182,4 +182,4 @@ Whoever fixes the mistake and then carries on writing down clearly what they do 
 
 ## Would you like to know what AI says about you now?
 
-The [free baseline check](#nulmeting) shows how ChatGPT, Gemini, Claude and Perplexity describe your company, side by side. You see at a glance what is right and what is not. If you have a question afterwards, see the [frequently asked questions](#faq) or get in [contact](#contact).
+Would you like to know whether ChatGPT mentions your company at all? With the [free baseline check](#nulmeting) you see within 48 hours for which buying questions you are mentioned and where you are missing. If you have a question afterwards, see the [frequently asked questions](#faq) or get in [contact](#contact).

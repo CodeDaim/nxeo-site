@@ -49,7 +49,7 @@ Meer vraagt het niet. We horen van klanten dat het hen ongeveer een kwartier per
 
 ## Wat je in de eerste 90 dagen kunt verwachten
 
-**Binnen 48 uur** heb je je nulmeting. Daarin zie je waar je nu staat, welke vragen je verliest en hoe AI je bedrijf omschrijft.
+**Binnen 48 uur** heb je je nulmeting. Daarin zie je op welke koopvragen ChatGPT je noemt, welke vragen je verliest en wie daar wel genoemd wordt.
 
 **In de eerste weken** doen we de intake en richten we de koppeling met je website in. De eerste content gaat online.
 

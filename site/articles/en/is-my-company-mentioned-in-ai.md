@@ -107,7 +107,7 @@ A test is only worth something if you act on it. Start small.
 3. **Write one page or one clear block per question.** The question as the heading, the answer in the first two sentences, the explanation below.
 4. **Test again in four to six weeks.** Systems need time to pick up new content. How long exactly is covered in [how long until AI mentions your company](#art_hoe_lang_duurt_het_voordat_ai_je_bedrijf_noemt).
 
-Would you prefer not to run the test yourself? With the [free baseline check](#nulmeting) we do it for you. You enter your website and within 48 hours you have a report with your score, the questions you are losing now and how AI describes your company. There is no obligation attached.
+Would you prefer not to run the test yourself? With the [free baseline check](#nulmeting) we do it for you. You enter your website and within 48 hours you have a report: for how many buying questions ChatGPT mentions you, which questions you are losing now and who is mentioned there instead. There is no obligation attached.
 
 ## Frequently asked questions about this test
 

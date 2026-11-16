@@ -169,4 +169,4 @@ Test over vier tot zes weken of je genoemd wordt, met de methode uit [wordt mijn
 
 Kom je er zelf niet uit, of wil je zeker weten dat het goed staat? [Loop je website samen met ons door](#meekijken). Vijftien minuten online, gratis, en je hoeft niets voor te bereiden.
 
-Wil je weten of AI systemen je WordPress website nu kunnen lezen, en wat ze erover zeggen? Met de [gratis nulmeting](#nulmeting) zie je het binnen 48 uur. Wil je daarna dat er elke week content in je WordPress bijkomt zonder dat jij het hoeft te schrijven, lees dan hoe [NXEO met WordPress](#cms_wordpress) werkt.
+Wil je weten of het werkt? De [gratis nulmeting](#nulmeting) laat binnen 48 uur zien op welke koopvragen ChatGPT jouw bedrijf noemt. Het is geen keuring van je website, wel het resultaat waar het om gaat. Wil je daarna dat er elke week content in je WordPress bijkomt zonder dat jij het hoeft te schrijven, lees dan hoe [NXEO met WordPress](#cms_wordpress) werkt.
