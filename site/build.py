@@ -294,7 +294,7 @@ def sitemap():
             alts+='    <xhtml:link rel="alternate" hreflang="x-default" href="%s"/>\n'%abs_url(DEFAULT if DEFAULT in have else have[0],p)
             pri='1.0' if p=='home' else ('0.9' if p in ('prijzen','aanvraag','nulmeting') else ('0.3' if p=='privacy' else '0.7'))
             rows.append('  <url>\n    <loc>%s</loc>\n    <lastmod>%s</lastmod>\n    <priority>%s</priority>\n%s  </url>'%(abs_url(l,p),TODAY,pri,alts))
-    return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'+'\n'.join(rows)+'\n</urlset>\n'
+    return '<?xml version="1.0" encoding="UTF-8"?>\n<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'+'\n'.join(rows)+'\n</urlset>\n'
 
 def main():
     if os.path.exists(OUT): shutil.rmtree(OUT)
@@ -310,6 +310,7 @@ def main():
     if MODE=='prod':
         open(OUT+'index.html','w').write(root_redirect())
         open(OUT+'sitemap.xml','w').write(sitemap())
+        shutil.copy(S+'assets/sitemap.xsl',OUT+'sitemap.xsl')
         open(OUT+'robots.txt','w').write('User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n'%DOMAIN)
         # a simple 404 in the default language, pointing home
         nf=build_page(DEFAULT,'home')

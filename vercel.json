@@ -4,6 +4,19 @@
   "trailingSlash": true,
   "headers": [
     {
+      "source": "/sitemap.xsl",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/xsl; charset=utf-8"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    },
+    {
       "source": "/assets/img/(.*)",
       "headers": [
         {
