@@ -58,7 +58,7 @@ function build(type, lang, f) {
 <table role="presentation" class="wrap" width="600" cellpadding="0" cellspacing="0" style="width:600px;max-width:600px;background:#ffffff;border-radius:28px;overflow:hidden">
 <tr><td class="pad" align="center" bgcolor="#002EFE" style="background:#002EFE;background-image:linear-gradient(135deg,#002EFE,#4E6BFF);padding:36px 40px 44px;border-radius:28px 28px 0 0">
 <a href="${SITE}${t.path}/" style="text-decoration:none"><img src="${SITE}/assets/img/nxeo_light.png" width="104" alt="NXEO" style="display:block;border:0;width:104px;height:auto;margin:0 auto 30px"></a>
-<table role="presentation" cellpadding="0" cellspacing="0" align="center"><tr><td bgcolor="#ffffff" style="border-radius:999px;padding:10px 20px;font:600 15px/1.2 ${FONT};color:#002EFE">${esc(c.bubble)}</td></tr></table>
+<table role="presentation" cellpadding="0" cellspacing="0" align="center"><tr><td bgcolor="#ffffff" style="border-radius:24px 24px 24px 7px;padding:12px 22px;font:700 16px/1.2 ${FONT};color:#002EFE">${esc(c.bubble)}</td></tr></table>
 <div class="h1" style="font:700 42px/1.05 ${FONT};letter-spacing:-1.5px;color:#ffffff;margin:22px 0 14px">${title}</div>
 <div style="font:400 17px/1.5 ${FONT};color:#E6EBFF;max-width:440px;margin:0 auto">${esc(c.lead)}</div>
 </td></tr>
