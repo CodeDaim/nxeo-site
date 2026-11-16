@@ -169,7 +169,7 @@
     };
     fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
       .then(function(r){return r.ok?r.json():Promise.reject();})
-      .then(function(j){if(!j||!j.ok)return Promise.reject();if(btn){btn.disabled=false;btn.classList.remove('is-busy');}done();})
+      .then(function(j){if(!j||!j.ok)return Promise.reject();if(btn){btn.disabled=false;btn.classList.remove('is-busy');}try{if(window.gtag)gtag('event','generate_lead',{form_type:type});}catch(e){}done();})
       .catch(fail);
   }
 
@@ -343,10 +343,19 @@
 
   // Cookie bar
   var ck=document.getElementById('cookie');
-  try{if(localStorage.getItem('nxeo-cookie'))ck.hidden=true;}catch(err){}
+  // Google Analytics: wordt pas geladen nadat iemand cookies accepteert
+  var gaOn=false;
+  function ga(){
+    if(gaOn||!/(^|\.)nxeo\.io$/.test(location.hostname))return;gaOn=true;
+    window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};
+    gtag('js',new Date());gtag('config','G-GFLTYYVEXP',{anonymize_ip:true});
+    var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-GFLTYYVEXP';document.head.appendChild(s);
+  }
+  try{var cv=localStorage.getItem('nxeo-cookie');if(cv)ck.hidden=true;if(cv==='yes')ga();}catch(err){}
   ck.addEventListener('click',function(e){
     var b=e.target.closest('[data-cookie]');if(!b)return;
     try{localStorage.setItem('nxeo-cookie',b.getAttribute('data-cookie'));}catch(err){}
+    if(b.getAttribute('data-cookie')==='yes')ga();
     ck.classList.add('is-leaving');setTimeout(function(){ck.hidden=true;},160);
   });
 })();

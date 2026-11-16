@@ -266,7 +266,7 @@ def head(lang,page,from_dir,extra_schema):
             '<meta property="og:type" content="website">\n<meta property="og:site_name" content="NXEO">\n<meta property="og:locale" content="%s">\n'
             '<meta property="og:title" content="%s">\n<meta property="og:description" content="%s">\n<meta property="og:url" content="%s">\n'
             '<meta property="og:image" content="%s/assets/img/og.png">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n<meta name="twitter:card" content="summary_large_image">\n'
-            '<meta name="theme-color" content="#002EFE">\n<link rel="icon" href="%s" type="image/png" sizes="192x192">\n'
+            '<meta name="theme-color" content="#002EFE">\n<meta name="google-site-verification" content="qTfyv3oxuXIxlGUtY8V4SRJZwc1Yp6CsGb1dBl-M5Hg">\n<link rel="icon" href="%s" type="image/png" sizes="192x192">\n'
             '<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
             '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600;700;800&display=swap">\n'
             '<link rel="stylesheet" href="%s">\n<script>(function(){var h=document.documentElement;addEventListener("pagereveal",function(e){if(e.viewTransition){h.classList.add("vt");e.viewTransition.finished.finally(function(){h.classList.remove("vt")})}else{h.classList.remove("vt")}});addEventListener("pageswap",function(e){if(e.viewTransition)h.classList.add("vt")})})()</script>\n<script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/assets/*"}}]},"eagerness":"moderate"}]}</script>\n%s</head>\n<body>\n')%(
