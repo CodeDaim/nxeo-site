@@ -8,10 +8,7 @@ const TYPES = {
   doorloop: { nl: 'Nieuwe aanvraag: website samen doorlopen', to: 'sales@nxeo.io' },
 };
 const LABELS = { name: 'Naam', company: 'Bedrijf', site: 'Website', email: 'E-mail', phone: 'Telefoon', pkg: 'Pakket', term: 'Looptijd', price: 'Prijs', msg: 'Bericht', lang: 'Taal', page: 'Pagina' };
-const CONFIRM = {
-  nl: { s: 'We hebben je aanvraag ontvangen', b: (n) => `Hoi${n ? ' ' + n : ''},\n\nBedankt voor je aanvraag bij NXEO. We hebben hem ontvangen en nemen binnen één werkdag contact met je op.\n\nHeb je in de tussentijd een vraag? Antwoord dan op deze mail.\n\nGroet,\nNXEO` },
-  en: { s: 'We have received your request', b: (n) => `Hi${n ? ' ' + n : ''},\n\nThank you for your request at NXEO. We have received it and will get in touch within one working day.\n\nIf you have a question in the meantime, just reply to this email.\n\nBest,\nNXEO` },
-};
+const mail = require('./_mail.js');
 const clean = (v, max) => String(v == null ? '' : v).replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, '').trim().slice(0, max);
 const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
@@ -49,8 +46,8 @@ module.exports = async (req, res) => {
     return res.status(502).json({ ok: false, error: 'send' });
   }
   try {
-    const c = CONFIRM[lang];
-    await send(key, { from, to: [email], reply_to: 'sales@nxeo.io', subject: c.s, text: c.b(f.name.split(/\s+/)[0]) });
+    const c = mail.build(b.type, lang, f);
+    await send(key, { from, to: [email], reply_to: 'sales@nxeo.io', subject: c.subject, text: c.text, html: c.html });
   } catch (e) { console.error('confirm ' + e.message); }
   return res.status(200).json({ ok: true });
 };
