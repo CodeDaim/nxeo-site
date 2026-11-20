@@ -2378,7 +2378,14 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 @media (prefers-reduced-motion:reduce){.nm-check .nm-box svg{transition:none}}
 .nulmodal{max-height:calc(100dvh - 24px);overflow-y:auto;overscroll-behavior:contain}
 .wk-hero .hero-cta{display:flex;justify-content:center;margin-top:.4rem}
-.hero.wk-hero .hero-stack{padding-bottom:clamp(3.5rem,8vw,6rem)}
+.hero.wk-hero .hero-stack{padding-bottom:0}
+#page-werken .sec{padding-block:clamp(3rem,6vw,5rem)}
+#page-werken .sec-head{margin-bottom:clamp(1.6rem,3vw,2.4rem)}
+#page-werken .bx{min-height:0;gap:20px}
+#page-werken .bx-art{min-height:0;padding:20px}
+#page-werken .cm-lead .bx-well{padding:20px}
+#page-werken .step-card .art{height:184px;margin-bottom:20px}
+#page-werken .rt{padding:28px}
 .bx-well .wk-rows{position:static;transform:none;inset:auto;display:grid;gap:8px;width:100%;min-width:0;margin:0}.bx-well .wk-rows .mini-row{position:static;transform:none;width:auto;margin:0;animation:none;opacity:1}
 .bx-art .wk-bub{font-size:1rem;padding:.8rem 1.2rem;border-radius:22px 22px 22px 7px;background:linear-gradient(135deg,#002EFE,#4E6BFF);color:#fff;font-weight:700;box-shadow:0 14px 28px -14px rgba(0,46,254,.55)}
 .hp{position:absolute!important;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
