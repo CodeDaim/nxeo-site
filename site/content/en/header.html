@@ -13,16 +13,16 @@
         <a class="btn btn-ghost-light hdr-contact" href="#sales" data-link>Book a call</a>
         <a class="btn hdr-cta" href="#aanvraag" data-link>Start with NXEO</a>
       </div>
-      <button class="burger" id="burger" aria-label="Open menu"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     </div>
   </div>
 </header>
-<div class="mobile-nav" id="mnav">
-  <div class="top"><img src="{{nxeo_light}}" alt="nxeo" style="height:22px"><button class="close" id="mclose" aria-label="Close menu"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
-  <a class="big" href="#home" data-link>How it works</a>
-  <a class="big" href="#prijzen" data-link>Pricing</a>
-  <a class="big" href="#over" data-link>About</a>
-  <a class="big" href="#contact" data-link>Contact</a>
-  <a class="btn btn-white" href="#aanvraag" data-link style="justify-self:start">Start with NXEO</a>
-  <a href="{{langhref}}" hreflang="{{langcode}}" style="font-weight:600;letter-spacing:.06em;opacity:.8">{{langswitch}}</a>
+<div class="mobile-nav" id="mnav" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="top"><a class="mn-logo" href="#home" data-link aria-label="NXEO home"><img src="{{nxeo_light}}" alt="nxeo"></a><button class="close" id="mclose" aria-label="Close menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <nav class="mn-main" aria-label="Menu"><a href="#home" data-link data-nav="home"><span>How it works</span><svg class="mn-ar" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#prijzen" data-link data-nav="prijzen"><span>Pricing</span><svg class="mn-ar" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#over" data-link data-nav="over"><span>About NXEO</span><svg class="mn-ar" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#contact" data-link data-nav="contact"><span>Contact</span><svg class="mn-ar" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></nav>
+  <div class="mn-sub"><a href="#nulmeting" data-link>Free check</a><a href="#faq" data-link>Questions</a><a href="#blog" data-link>Blog</a><a href="#koppelingen" data-link>Works with</a></div>
+  <div class="mn-foot">
+    <div class="mn-card"><div class="bubble mn-bub">Does ChatGPT mention your company yet?</div><a class="btn btn-blue btn-block" href="#nulmeting" data-link>Check it for free <span class="arr">→</span></a><div class="mn-two"><a class="btn btn-ghost" href="#sales" data-link>Book a call</a><a class="btn btn-ghost" href="#aanvraag" data-link>Start with NXEO</a></div></div>
+    <div class="mn-lang"><span aria-current="true">English</span><a href="{{langhref}}" hreflang="{{langcode}}">Nederlands</a></div>
+  </div>
 </div>

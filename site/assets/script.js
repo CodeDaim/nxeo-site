@@ -36,7 +36,17 @@
   });
   // Pricing: remember the package and term someone clicked, so the start page opens on it
   document.querySelectorAll('[data-pick]').forEach(function(a){a.addEventListener('click',function(){try{sessionStorage.setItem('nxeo-pkg',a.getAttribute('data-pick'));var t=document.querySelector('[data-price][aria-pressed="true"]');sessionStorage.setItem('nxeo-term',t&&t.getAttribute('data-price')==='fp'?'year':'month');}catch(e){}});});
-  function closeMenu(){mnav.classList.remove('is-open');}
+  var burger=document.getElementById('burger');
+  function closeMenu(){if(!mnav.classList.contains('is-open'))return;mnav.classList.remove('is-open');document.documentElement.classList.remove('mn-lock');burger.setAttribute('aria-expanded','false');}
+  function openMenu(){
+    // logo en kruisje komen precies op de plek van het logo en het menu icoon in de kop
+    var lg=document.querySelector('#hdr .logo img'),r=lg?lg.getBoundingClientRect():null;
+    if(r&&r.height){var s=mnav.style;s.setProperty('--mn-x',Math.round(r.left)+'px');s.setProperty('--mn-logo',Math.round(r.height)+'px');s.setProperty('--mn-h',Math.max(34,Math.round(r.height))+'px');s.setProperty('--mn-top',Math.max(10,Math.round(r.top-(Math.max(34,r.height)-r.height)/2))+'px');}
+    mnav.scrollTop=0;mnav.classList.add('is-open');document.documentElement.classList.add('mn-lock');burger.setAttribute('aria-expanded','true');
+    setTimeout(function(){document.getElementById('mclose').focus({preventScroll:true});},60);
+  }
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&mnav.classList.contains('is-open')){closeMenu();burger.focus();}});
+  window.addEventListener('resize',function(){if(window.innerWidth>900)closeMenu();});
 
   // In page jumps; links to a section on another page are plain links
   document.addEventListener('click',function(e){
@@ -46,7 +56,7 @@
     e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});history.replaceState(null,'',href.slice(i));
   });
 
-  document.getElementById('burger').addEventListener('click',function(){mnav.classList.add('is-open');});
+  burger.addEventListener('click',openMenu);
   document.getElementById('mclose').addEventListener('click',closeMenu);
 
   // Language select in footer

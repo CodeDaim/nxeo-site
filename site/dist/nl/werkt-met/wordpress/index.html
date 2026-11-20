@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="/assets/style.css?v=ac1f7e3f">
+<link rel="stylesheet" href="/assets/style.css?v=dbbda421">
 <script>(function(){var h=document.documentElement;addEventListener("pagereveal",function(e){if(e.viewTransition){h.classList.add("vt");e.viewTransition.finished.finally(function(){h.classList.remove("vt")})}else{h.classList.remove("vt")}});addEventListener("pageswap",function(e){if(e.viewTransition)h.classList.add("vt")})})()</script>
 <script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/assets/*"}}]},"eagerness":"moderate"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://nxeo.io/#organization", "name": "NXEO", "url": "https://nxeo.io/", "logo": {"@type": "ImageObject", "url": "https://nxeo.io/assets/img/nxeo_icon.png"}, "image": "https://nxeo.io/assets/img/og.png", "description": "NXEO meet elke dag hoe ChatGPT, Gemini, Perplexity en Google jouw bedrijf noemen en past elke week je website en LinkedIn aan tot je in het antwoord staat. Vast abonnement, één weekrapport.", "email": "hello@nxeo.io", "foundingDate": "2026", "areaServed": [{"@type": "Country", "name": "Netherlands"}, {"@type": "Country", "name": "Belgium"}], "knowsAbout": ["Generative engine optimization", "Search engine optimization", "AI visibility", "ChatGPT", "Gemini", "Claude", "Perplexity", "Google AI Overviews"], "founder": [{"@type": "Person", "name": "Tim Huijsmans", "jobTitle": "Founder", "sameAs": ["https://www.linkedin.com/in/tim-huijsmans-88b9761a7/"], "worksFor": {"@id": "https://nxeo.io/#organization"}}, {"@type": "Person", "name": "Damian Zoetemelk", "jobTitle": "Founder", "sameAs": ["https://www.linkedin.com/in/damian-zoetemelk-8524091a1/"], "worksFor": {"@id": "https://nxeo.io/#organization"}}, {"@type": "Person", "name": "Thimo van Soldt", "jobTitle": "Founder", "sameAs": ["https://www.linkedin.com/in/thimo-van-soldt-37118b220/"], "worksFor": {"@id": "https://nxeo.io/#organization"}}], "contactPoint": [{"@type": "ContactPoint", "contactType": "sales", "email": "sales@nxeo.io", "availableLanguage": ["Dutch", "English"]}, {"@type": "ContactPoint", "contactType": "customer support", "email": "support@nxeo.io", "availableLanguage": ["Dutch", "English"]}], "parentOrganization": [{"@type": "Organization", "name": "IQ Script", "url": "https://iqscript.com/"}, {"@type": "Organization", "name": "The AI Doctor", "url": "https://theaidoctor.nl/"}]}</script>
@@ -49,18 +49,18 @@
         <a class="btn btn-ghost-light hdr-contact" href="/nl/plan-een-gesprek/" data-link>Plan een gesprek</a>
         <a class="btn hdr-cta" href="/nl/start/" data-link>Start met NXEO</a>
       </div>
-      <button class="burger" id="burger" aria-label="Menu openen"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <button class="burger" id="burger" aria-label="Menu openen" aria-expanded="false" aria-controls="mnav"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     </div>
   </div>
 </header>
-<div class="mobile-nav" id="mnav">
-  <div class="top"><img src="/assets/img/nxeo_light.png" alt="nxeo" style="height:22px"><button class="close" id="mclose" aria-label="Menu sluiten"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
-  <a class="big" href="/nl/" data-link>Hoe het werkt</a>
-  <a class="big" href="/nl/prijzen/" data-link>Prijzen</a>
-  <a class="big" href="/nl/over/" data-link>Over</a>
-  <a class="big" href="/nl/contact/" data-link>Contact</a>
-  <a class="btn btn-white" href="/nl/start/" data-link style="justify-self:start">Start met NXEO</a>
-  <a href="/en/works-with/wordpress/" hreflang="en" style="font-weight:600;letter-spacing:.06em;opacity:.8">English version</a>
+<div class="mobile-nav" id="mnav" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="top"><a class="mn-logo" href="/nl/" data-link aria-label="NXEO home"><img src="/assets/img/nxeo_light.png" alt="nxeo"></a><button class="close" id="mclose" aria-label="Menu sluiten"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <nav class="mn-main" aria-label="Menu"><a href="/nl/" data-link data-nav="home"><span>Hoe het werkt</span><svg class="mn-ar" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="/nl/prijzen/" data-link data-nav="prijzen"><span>Prijzen</span><svg class="mn-ar" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="/nl/over/" data-link data-nav="over"><span>Over NXEO</span><svg class="mn-ar" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="/nl/contact/" data-link data-nav="contact"><span>Contact</span><svg class="mn-ar" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></nav>
+  <div class="mn-sub"><a href="/nl/nulmeting/" data-link>Gratis nulmeting</a><a href="/nl/veelgestelde-vragen/" data-link>Vragen</a><a href="/nl/blog/" data-link>Blog</a><a href="/nl/werkt-met/" data-link>Werkt met</a></div>
+  <div class="mn-foot">
+    <div class="mn-card"><div class="bubble mn-bub">Noemt ChatGPT jouw bedrijf al?</div><a class="btn btn-blue btn-block" href="/nl/nulmeting/" data-link>Check het gratis <span class="arr">→</span></a><div class="mn-two"><a class="btn btn-ghost" href="/nl/plan-een-gesprek/" data-link>Plan een gesprek</a><a class="btn btn-ghost" href="/nl/start/" data-link>Start met NXEO</a></div></div>
+    <div class="mn-lang"><span aria-current="true">Nederlands</span><a href="/en/works-with/wordpress/" hreflang="en">English</a></div>
+  </div>
 </div>
 
 
@@ -168,6 +168,6 @@
 </div>
 
 
-<script src="/assets/script.js?v=7463aaf9" defer></script>
+<script src="/assets/script.js?v=171c9262" defer></script>
 </body>
 </html>
