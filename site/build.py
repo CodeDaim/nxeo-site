@@ -292,7 +292,7 @@ def pagemap(lang):
     # leesbaar overzicht van alle pagina's; sitemap.xml blijft de versie voor zoekmachines
     t=I18N[lang]; nl=lang=='nl'
     name=lambda k:'Home' if k=='home' else t['pages'][k]['title'].split('|')[0].strip()
-    main=[k for k in PAGES if not k.startswith('cms_') and k not in ('koppelingen','pagemap','blog','werken')]
+    main=[k for k in PAGES if not k.startswith('cms_') and k not in ('koppelingen','pagemap','blog')]
     cms=['koppelingen']+[k for k in PAGES if k.startswith('cms_')]
     arts=sorted(ARTS[lang],key=lambda a:a['date'],reverse=True)
     def card(title,items):

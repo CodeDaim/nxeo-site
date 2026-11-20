@@ -2617,3 +2617,30 @@ html.at-top .site-header .bar{background-image:none;box-shadow:none;transform:tr
 .hero.wk-hero .hero-stack{padding-bottom:clamp(3.5rem,8vw,6rem)}
 .bx-well .wk-rows{position:static;transform:none;inset:auto;display:grid;gap:8px;width:100%;min-width:0;margin:0}.bx-well .wk-rows .mini-row{position:static;transform:none;width:auto;margin:0;animation:none;opacity:1}
 .bx-art .wk-bub{font-size:1rem;padding:.8rem 1.2rem;border-radius:22px 22px 22px 7px;background:linear-gradient(135deg,#002EFE,#4E6BFF);color:#fff;font-weight:700;box-shadow:0 14px 28px -14px rgba(0,46,254,.55)}
+
+/* Werken bij: formulier */
+.hp{position:absolute!important;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.wk-card{max-width:760px;margin:0 auto;display:grid;gap:22px}
+.wk-seg{display:grid;grid-template-columns:1fr 1fr;gap:6px;background:#F2F3F7;border-radius:14px;padding:5px}
+.wk-seg label{position:relative;cursor:pointer}
+.wk-seg input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer;margin:0}
+.wk-seg span{display:block;text-align:center;font-weight:600;font-size:.95rem;color:var(--body);border-radius:10px;padding:.72rem .6rem;transition:background 160ms ease,color 160ms ease,box-shadow 160ms ease}
+.wk-seg input:checked+span{background:#fff;color:var(--blue);box-shadow:0 1px 2px rgba(26,35,50,.12)}
+.wk-seg input:focus-visible+span{box-shadow:0 0 0 4px var(--blue-tint)}
+.wk-file{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:.6rem .9rem}
+.wk-file input[type=file]{position:absolute!important;left:0;top:0;width:1px!important;height:1px!important;padding:0!important;border:0!important;opacity:0;overflow:hidden}
+.wk-pick{cursor:pointer;padding:.7rem 1.1rem;font-size:.92rem}
+.wk-file input:focus-visible+.wk-fn{box-shadow:0 0 0 4px var(--blue-tint);border-radius:8px}
+.wk-fn{font-size:.92rem;color:var(--muted);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}
+.wk-file.has .wk-fn{color:var(--ink);font-weight:600}
+.wk-clr{display:none;border:0;background:none;font:inherit;font-size:.86rem;font-weight:600;color:var(--blue);cursor:pointer;padding:.2rem 0}
+.wk-file.has .wk-clr{display:inline}
+.wk-hint{flex-basis:100%;font-size:.82rem;color:var(--muted)}
+.wk-file .f-err{flex-basis:100%;margin:0}
+.wk-note{margin:-6px 0 0;text-align:center;font-size:.84rem;color:var(--muted)}
+.wk-done{grid-template-columns:auto 1fr;align-items:center;gap:1.1rem}
+.wk-done[hidden],#form-werken[hidden]{display:none}
+.wk-done h3{font-family:var(--display);font-weight:700;font-size:1.35rem;letter-spacing:-.025em;margin:0 0 .3rem}
+.wk-done p{margin:0;color:var(--body)}
+#wk-form{scroll-margin-top:90px}
+@media (max-width:560px){.wk-card{gap:18px}}

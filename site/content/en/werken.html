@@ -5,7 +5,7 @@
       <div class="bubble bubble-blue" aria-hidden="true">Working at NXEO?</div>
       <h1>Your way.<span class="cursor" aria-hidden="true"></span></h1>
       <p class="def">We are a small team that makes business owners visible in AI. You plan your own week and work where you like.</p>
-      <div class="hero-cta"><a class="btn btn-white" href="mailto:hello@nxeo.io?subject=Working%20at%20NXEO">Send us a message <span class="arr">→</span></a></div>
+      <div class="hero-cta"><a class="btn btn-white" href="#wk-form" data-wk-go="">Send us a message <span class="arr">→</span></a></div>
       <p class="hero-note">No CV needed · a few lines is enough</p>
     </div>
   </div>
@@ -30,7 +30,7 @@
   <div class="sec" style="padding-top:0">
     <div class="wrap">
       <div class="sec-head center" data-reveal><span class="eyebrow">Who we are looking for</span><h2>People, not job titles.</h2></div>
-      <div class="rt-grid"><div class="rt" data-reveal><div class="rt-top"><span class="rt-meta"><i>Sales</i></span></div><h2>You talk to business owners</h2><p>You show business owners whether AI mentions their company, and what NXEO does about it. You work with warm requests from the website.</p><div class="rt-act"><a class="btn btn-blue btn-block" href="mailto:hello@nxeo.io?subject=Working%20at%20NXEO%20sales">Respond for sales <span class="arr">→</span></a></div></div><div class="rt" data-reveal><div class="rt-top"><span class="rt-meta"><i>Open application</i></span></div><h2>Something else you are good at</h2><p>Writing, engineering, guiding customers. Do you see how you can make NXEO better? Tell us.</p><div class="rt-act"><a class="btn btn-ghost btn-block" href="mailto:hello@nxeo.io?subject=Working%20at%20NXEO">Tell us what you do <span class="arr">→</span></a></div></div></div>
+      <div class="rt-grid"><div class="rt" data-reveal><div class="rt-top"><span class="rt-meta"><i>Sales</i></span></div><h2>You talk to business owners</h2><p>You show business owners whether AI mentions their company, and what NXEO does about it. You work with warm requests from the website.</p><div class="rt-act"><a class="btn btn-blue btn-block" href="#wk-form" data-wk-go="Sales">Respond for sales <span class="arr">→</span></a></div></div><div class="rt" data-reveal><div class="rt-top"><span class="rt-meta"><i>Open application</i></span></div><h2>Something else you are good at</h2><p>Writing, engineering, guiding customers. Do you see how you can make NXEO better? Tell us.</p><div class="rt-act"><a class="btn btn-ghost btn-block" href="#wk-form" data-wk-go="Something else">Tell us what you do <span class="arr">→</span></a></div></div></div>
     </div>
   </div>
 
@@ -42,7 +42,26 @@
         <div class="step-card" data-reveal><span class="num">02</span><div class="art"><div class="mini-rows"><div class="mini mini-row"><span class="lbl">What do you want?</span><span class="st ok">you tell us</span></div><div class="mini mini-row"><span class="lbl">What do we want?</span><span class="st ok">we tell you</span></div><div class="mini mini-row"><span class="lbl">Does it fit?</span><span class="st mid">we look together</span></div></div></div><h4>Get to know each other</h4><p>Fifteen minutes online. We tell you what we are looking for, you tell us what you are looking for.</p><div class="chips"><span class="chip">Online</span><span class="chip">Fifteen minutes</span></div></div>
         <div class="step-card" data-reveal><span class="num">03</span><div class="art"><div class="mini mailm nm-mail"><div class="mh"><img src="{{nxeo_icon}}" alt=""><b>NXEO</b><span>welcome</span></div><div class="ms">Good to have you</div><ul><li>Agreements in writing</li><li>Your first week</li><li>Who you can call</li></ul></div></div><h4>Get started</h4><p>If it fits, we make clear agreements and you start when it suits you.</p><div class="chips"><span class="chip">Clear agreements</span><span class="chip">Start when it suits</span></div></div>
       </div>
-      <div class="divider-cta" data-reveal><p>Curious whether it suits you?</p><a class="btn btn-blue" href="mailto:hello@nxeo.io?subject=Working%20at%20NXEO">Send us a message <span class="arr">→</span></a></div>
+    </div>
+  </div>
+
+  <div class="sec" style="padding-top:0" id="wk-form">
+    <div class="wrap">
+      <div class="sec-head center" data-reveal><span class="eyebrow">Respond</span><h2>Send us a message.</h2><p class="lead">A few lines is enough. A CV is welcome, but not needed.</p></div>
+      <form id="form-werken" class="so-card wk-card" novalidate data-reveal>
+        <div class="so-fields">
+          <div><label class="so-lbl" for="wk-name">First and last name</label><input id="wk-name" name="name" type="text" placeholder="Sanne Jansen" required autocomplete="name"></div>
+          <div><label class="so-lbl" for="wk-email">Email</label><input id="wk-email" name="email" type="email" placeholder="name@example.com" required autocomplete="email"></div>
+          <div><label class="so-lbl" for="wk-phone">Phone <i>optional</i></label><input id="wk-phone" name="phone" type="tel" placeholder="+31 6 12345678" autocomplete="tel"></div>
+          <div><span class="so-lbl">What is it about?</span><div class="wk-seg" role="radiogroup" aria-label="What is it about?"><label><input type="radio" name="role" value="Sales" checked><span>Sales</span></label><label><input type="radio" name="role" value="Something else"><span>Something else</span></label></div></div>
+          <div class="full"><label class="so-lbl" for="wk-msg">Tell us briefly who you are and what you want to do</label><textarea id="wk-msg" name="msg" rows="4" placeholder="For example: what you do now, and why this appeals to you." required></textarea></div>
+          <div class="full"><span class="so-lbl">CV <i>optional</i></span><div class="wk-file"><label class="btn btn-ghost wk-pick" for="wk-cv">Choose a file</label><input id="wk-cv" class="sr" name="cvfile" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"><span class="wk-fn" data-cv-name data-empty="No file chosen">No file chosen</span><button type="button" class="wk-clr" data-cv-clear>Remove</button><span class="wk-hint">PDF or Word, up to 3 MB</span></div></div>
+        </div>
+        <div class="hp" aria-hidden="true"><label for="wk-web">Leave this field empty</label><input id="wk-web" name="website_url" type="text" tabindex="-1" autocomplete="off"></div>
+        <button class="btn btn-blue btn-block" type="submit">Send my message <span class="arr">→</span></button>
+        <p class="wk-note">We only use your details for your application.</p>
+      </form>
+      <div class="so-card wk-card wk-done" hidden data-wk-done><span class="okmark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path class="tick" d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><h3><span data-wk-hello data-hello="Good to hear from you">Good to hear from you</span>.</h3><p>We have received your message. We will read it properly and get back to you soon. You will also get a confirmation by email.</p></div></div>
     </div>
   </div>
 </section>

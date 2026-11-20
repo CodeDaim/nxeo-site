@@ -21,6 +21,9 @@ const T = {
       doorloop: { subject: 'We lopen je website samen door', pre: 'We nemen binnen één werkdag contact op om een moment te kiezen.', bubble: 'Vijftien minuten, online', title: 'Tot snel, {name}.', titleNoName: 'Tot snel.', lead: 'We nemen binnen één werkdag contact met je op om een moment te kiezen. Je hoeft niets voor te bereiden.',
         steps: [['We kiezen samen een moment', 'Je krijgt een voorstel per mail.'], ['We lopen samen door je website', 'We kijken of AI je website kan lezen en hoe AI je nu noemt.'], ['Je krijgt drie stappen mee', 'Waar je zelf mee verder kunt, ook als je het daarna zelf doet.']],
         btn: 'Bekijk de koppelingen', url: '/nl/werkt-met/' },
+      sollicitatie: { subject: 'Je bericht aan NXEO is binnen', pre: 'We lezen het en laten snel van ons horen.', bubble: 'Werken bij NXEO?', title: 'Fijn dat je reageert, {name}.', titleNoName: 'Fijn dat je reageert.', lead: 'We hebben je bericht ontvangen. We lezen het rustig en laten snel van ons horen.',
+        steps: [['We lezen je bericht', 'En je cv, als je die hebt meegestuurd.'], ['We plannen een kennismaking', 'Een kwartier online, op een moment dat jou past.'], ['We kijken samen of het past', 'Open, van twee kanten.']],
+        btn: 'Bekijk de pagina nog eens', url: '/nl/werken-bij/' },
     },
   },
   en: {
@@ -40,6 +43,9 @@ const T = {
       doorloop: { subject: 'We will go through your website together', pre: 'We will get in touch within one working day to pick a time.', bubble: 'Fifteen minutes, online', title: 'Speak soon, {name}.', titleNoName: 'Speak soon.', lead: 'We will get in touch within one working day to pick a time. There is nothing to prepare.',
         steps: [['We pick a time together', 'You receive a proposal by email.'], ['We go through your website together', 'We check whether AI can read your website and how AI mentions you today.'], ['You leave with three next steps', 'Yours to act on, also if you carry on without us.']],
         btn: 'View the integrations', url: '/en/works-with/' },
+      sollicitatie: { subject: 'Your message to NXEO has arrived', pre: 'We will read it and get back to you soon.', bubble: 'Working at NXEO?', title: 'Good to hear from you, {name}.', titleNoName: 'Good to hear from you.', lead: 'We have received your message. We will read it properly and get back to you soon.',
+        steps: [['We read your message', 'And your CV, if you sent one.'], ['We plan a short introduction', 'Fifteen minutes online, at a time that suits you.'], ['We see together whether it fits', 'Openly, from both sides.']],
+        btn: 'View the page again', url: '/en/careers/' },
     },
   },
 };
@@ -74,8 +80,8 @@ ${summary}
   return { subject: c.subject, html, text };
 }
 // Interne melding naar sales@: zelfde blok, maar kort en zakelijk. Alles wat je nodig hebt om te reageren staat bovenaan.
-const NAMES = { nulmeting: 'Gratis nulmeting', start: 'Start met NXEO', gesprek: 'Gesprek', doorloop: 'Website samen doorlopen' };
-const LAB = { name: 'Naam', company: 'Bedrijf', site: 'Website', email: 'E-mail', phone: 'Telefoon', pkg: 'Pakket', term: 'Looptijd', price: 'Prijs', comp: 'Concurrenten', lang: 'Taal', page: 'Pagina' };
+const NAMES = { nulmeting: 'Gratis nulmeting', start: 'Start met NXEO', gesprek: 'Gesprek', doorloop: 'Website samen doorlopen', sollicitatie: 'Sollicitatie' };
+const LAB = { name: 'Naam', company: 'Bedrijf', site: 'Website', email: 'E-mail', phone: 'Telefoon', role: 'Functie', cv: 'Cv', pkg: 'Pakket', term: 'Looptijd', price: 'Prijs', comp: 'Concurrenten', lang: 'Taal', page: 'Pagina' };
 function internal(type, f) {
   const first = esc((f.name || '').trim().split(/\s+/)[0]);
   const bare = (f.site || '').replace(/^https?:\/\//, '').replace(/\/$/, '');

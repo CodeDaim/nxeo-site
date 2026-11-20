@@ -151,14 +151,30 @@
     if(b.classList.contains('combo')){b.parentNode.insertBefore(e,b.nextSibling);}else{b.appendChild(e);}
     if(!f.dataset.v){f.dataset.v='1';f.addEventListener('input',function(){if(f.getAttribute('aria-invalid'))vCheck(f,false);});}
     if(focus)f.focus();return false;}
-  function vForm(form){var ok=true,first=null;Array.prototype.forEach.call(form.querySelectorAll('input:not([type=hidden]):not([type=radio]),textarea'),function(f){f.value=f.value.trim();if(!vCheck(f,false)){ok=false;if(!first)first=f;}});if(first)first.focus();return ok;}
+  function vForm(form){var ok=true,first=null;Array.prototype.forEach.call(form.querySelectorAll('input:not([type=hidden]):not([type=radio]):not([type=file]),textarea'),function(f){f.value=f.value.trim();if(!vCheck(f,false)){ok=false;if(!first)first=f;}});if(first)first.focus();return ok;}
+
+  // Onzichtbare spambeveiliging. Zodra iemand echt iets aanraakt halen we een kaartje op; bij versturen
+  // lost de browser een kleine rekensom op. De bezoeker ziet hier niets van. Zie api/_guard.js.
+  var gd={p:null,at:0};
+  function gTok(){if(!gd.p){gd.p=fetch('/api/token',{cache:'no-store'}).then(function(r){return r.ok?r.json():Promise.reject();}).then(function(t){gd.at=Date.now();return t;}).catch(function(){gd.p=null;return null;});}return gd.p;}
+  ['pointerdown','keydown','focusin'].forEach(function(ev){document.addEventListener(ev,function h(e){if(e.isTrusted===false)return;document.removeEventListener(ev,h,true);gTok();},true);});
+  function zbits(b){var z=0;for(var i=0;i<b.length;i++){if(b[i]===0){z+=8;continue;}z+=Math.clz32(b[i])-24;break;}return z;}
+  function guardFor(email){
+    return gTok().then(function(t){
+      if(!t||!window.crypto||!crypto.subtle)return null;
+      var enc=new TextEncoder(),base=t.token+':'+String(email).toLowerCase()+':',n=0;
+      function step(){return crypto.subtle.digest('SHA-256',enc.encode(base+n)).then(function(h){if(zbits(new Uint8Array(h))>=t.bits)return String(n);n++;return n>400000?null:step();});}
+      var wait=Math.max(0,(t.wait||2000)+250-(Date.now()-gd.at));
+      return Promise.all([step(),new Promise(function(r){setTimeout(r,wait);})]).then(function(a){gd.p=null;return a[0]===null?null:{t:t.token,n:a[0]};});
+    }).catch(function(){return null;});
+  }
 
   // Versturen naar /api/lead. Lukt het niet, dan zeggen we dat eerlijk en blijft het formulier staan.
   function sendLead(form,type,extra,done){
     var btn=form.querySelector('button[type=submit]');if(btn&&btn.disabled)return;
     var old=form.querySelector('.f-send');if(old)old.remove();
     var data={type:type,lang:(document.documentElement.lang||'nl').slice(0,2),page:location.pathname};
-    Array.prototype.forEach.call(form.elements,function(el){if(!el.name||el.type==='submit')return;if((el.type==='radio'||el.type==='checkbox')&&!el.checked)return;data[el.name]=el.value;});
+    Array.prototype.forEach.call(form.elements,function(el){if(!el.name||el.type==='submit'||el.type==='file')return;if((el.type==='radio'||el.type==='checkbox')&&!el.checked)return;data[el.name]=el.value;});
     for(var k in extra){data[k]=extra[k];}
     if(btn){btn.disabled=true;btn.classList.add('is-busy');}
     var fail=function(){
@@ -167,9 +183,9 @@
       p.innerHTML='<span>'+(data.lang==='en'?'Sending did not work just now. Please email us at <a href="mailto:sales@nxeo.io">sales@nxeo.io</a>.':'Versturen lukt nu niet. Mail ons op <a href="mailto:sales@nxeo.io">sales@nxeo.io</a>.')+'</span>';
       (btn&&btn.parentNode===form?form:(btn?btn.parentNode:form)).appendChild(p);
     };
-    fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
+    guardFor(data.email||'').then(function(g){if(g)data.g=g;return fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});})
       .then(function(r){return r.ok?r.json():Promise.reject();})
-      .then(function(j){if(!j||!j.ok)return Promise.reject();if(btn){btn.disabled=false;btn.classList.remove('is-busy');}try{if(window.gtag)gtag('event','generate_lead',{form_type:type});}catch(e){}done();})
+      .then(function(j){if(!j||!j.ok)return Promise.reject();if(btn){btn.disabled=false;btn.classList.remove('is-busy');}try{if(window.gtag&&type!=='sollicitatie')gtag('event','generate_lead',{form_type:type});}catch(e){}done();})
       .catch(fail);
   }
 
@@ -344,6 +360,26 @@
     });
   }
   setupReveal();
+
+  // Werken bij: sollicitatie met optioneel cv
+  var wf=document.getElementById('form-werken');
+  if(wf){
+    var wFile=wf.querySelector('input[type=file]'),wName=wf.querySelector('[data-cv-name]'),wClr=wf.querySelector('[data-cv-clear]'),wBox=wf.querySelector('.wk-file');
+    var en=(document.documentElement.lang||'nl').slice(0,2)==='en';
+    function cvErr(m){var o=wBox.querySelector('.f-err');if(o)o.remove();if(!m)return;var e=document.createElement('p');e.className='f-err';e.setAttribute('role','alert');e.textContent=m;wBox.appendChild(e);}
+    function cvOk(){var f=wFile.files&&wFile.files[0];if(!f)return true;if(!/\.(pdf|docx?)$/i.test(f.name)){cvErr(en?'Choose a PDF or Word file.':'Kies een pdf of Word bestand.');return false;}if(f.size>3*1024*1024){cvErr(en?'This file is larger than 3 MB.':'Dit bestand is groter dan 3 MB.');return false;}cvErr('');return true;}
+    wFile.addEventListener('change',function(){var f=wFile.files&&wFile.files[0];wName.textContent=f?f.name:wName.getAttribute('data-empty');wBox.classList.toggle('has',!!f);cvOk();});
+    wClr.addEventListener('click',function(){wFile.value='';wName.textContent=wName.getAttribute('data-empty');wBox.classList.remove('has');cvErr('');});
+    document.querySelectorAll('[data-wk-go]').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();var r=b.getAttribute('data-wk-go');if(r){var x=wf.querySelector('input[name=role][value="'+r+'"]');if(x)x.checked=true;}wf.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});setTimeout(function(){wf.elements.name.focus({preventScroll:true});},reduce?0:500);});});
+    wf.addEventListener('submit',function(e){
+      e.preventDefault();
+      if(!vForm(wf)||!cvOk())return;
+      var f=wFile.files&&wFile.files[0];
+      var go=function(cv){sendLead(wf,'sollicitatie',cv?{cv:cv}:{},function(){var d=document.querySelector('[data-wk-done]');var first=wf.elements.name.value.split(/\s+/)[0];var h=d.querySelector('[data-wk-hello]');h.textContent=h.getAttribute('data-hello')+(first?', '+first:'');wf.hidden=true;d.hidden=false;d.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'});});};
+      if(!f){go(null);return;}
+      var rd=new FileReader();rd.onload=function(){go({name:f.name,data:String(rd.result).split(',')[1]||''});};rd.onerror=function(){cvErr(en?'This file could not be read.':'Dit bestand kon niet worden gelezen.');};rd.readAsDataURL(f);
+    });
+  }
 
   // Nulmeting pagina: knop onderaan de stappen brengt je terug naar het invulveld
   document.querySelectorAll('[data-nm-top]').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();var i=document.querySelector('#page-nulmeting form[data-baseline] input[name=site]');window.scrollTo({top:0,behavior:'smooth'});if(i)setTimeout(function(){i.focus({preventScroll:true});},450);});});

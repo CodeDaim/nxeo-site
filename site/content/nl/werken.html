@@ -5,7 +5,7 @@
       <div class="bubble bubble-blue" aria-hidden="true">Werken bij NXEO?</div>
       <h1>Op jouw manier.<span class="cursor" aria-hidden="true"></span></h1>
       <p class="def">We zijn een klein team dat ondernemers zichtbaar maakt in AI. Je deelt je eigen week in en werkt waar je wilt.</p>
-      <div class="hero-cta"><a class="btn btn-white" href="mailto:hello@nxeo.io?subject=Werken%20bij%20NXEO">Stuur ons een bericht <span class="arr">→</span></a></div>
+      <div class="hero-cta"><a class="btn btn-white" href="#wk-form" data-wk-go="">Stuur ons een bericht <span class="arr">→</span></a></div>
       <p class="hero-note">Geen cv nodig · een paar zinnen is genoeg</p>
     </div>
   </div>
@@ -30,7 +30,7 @@
   <div class="sec" style="padding-top:0">
     <div class="wrap">
       <div class="sec-head center" data-reveal><span class="eyebrow">Wie we zoeken</span><h2>Mensen, geen functietitels.</h2></div>
-      <div class="rt-grid"><div class="rt" data-reveal><div class="rt-top"><span class="rt-meta"><i>Sales</i></span></div><h2>Je spreekt ondernemers</h2><p>Je laat ondernemers zien of AI hun bedrijf noemt, en wat NXEO daaraan doet. Je werkt met warme aanvragen van de website.</p><div class="rt-act"><a class="btn btn-blue btn-block" href="mailto:hello@nxeo.io?subject=Werken%20bij%20NXEO%20sales">Reageer op sales <span class="arr">→</span></a></div></div><div class="rt" data-reveal><div class="rt-top"><span class="rt-meta"><i>Open sollicitatie</i></span></div><h2>Iets anders waar je goed in bent</h2><p>Schrijven, techniek, klanten begeleiden. Zie je hoe je NXEO beter kunt maken? Vertel het ons.</p><div class="rt-act"><a class="btn btn-ghost btn-block" href="mailto:hello@nxeo.io?subject=Werken%20bij%20NXEO">Vertel wat je doet <span class="arr">→</span></a></div></div></div>
+      <div class="rt-grid"><div class="rt" data-reveal><div class="rt-top"><span class="rt-meta"><i>Sales</i></span></div><h2>Je spreekt ondernemers</h2><p>Je laat ondernemers zien of AI hun bedrijf noemt, en wat NXEO daaraan doet. Je werkt met warme aanvragen van de website.</p><div class="rt-act"><a class="btn btn-blue btn-block" href="#wk-form" data-wk-go="Sales">Reageer op sales <span class="arr">→</span></a></div></div><div class="rt" data-reveal><div class="rt-top"><span class="rt-meta"><i>Open sollicitatie</i></span></div><h2>Iets anders waar je goed in bent</h2><p>Schrijven, techniek, klanten begeleiden. Zie je hoe je NXEO beter kunt maken? Vertel het ons.</p><div class="rt-act"><a class="btn btn-ghost btn-block" href="#wk-form" data-wk-go="Iets anders">Vertel wat je doet <span class="arr">→</span></a></div></div></div>
     </div>
   </div>
 
@@ -42,7 +42,26 @@
         <div class="step-card" data-reveal><span class="num">02</span><div class="art"><div class="mini-rows"><div class="mini mini-row"><span class="lbl">Wat wil jij?</span><span class="st ok">jij vertelt</span></div><div class="mini mini-row"><span class="lbl">Wat zoeken wij?</span><span class="st ok">wij vertellen</span></div><div class="mini mini-row"><span class="lbl">Past het?</span><span class="st mid">samen kijken</span></div></div></div><h4>Kennismaken</h4><p>Een kwartier online. Wij vertellen wat we zoeken, jij wat jij zoekt.</p><div class="chips"><span class="chip">Online</span><span class="chip">Een kwartier</span></div></div>
         <div class="step-card" data-reveal><span class="num">03</span><div class="art"><div class="mini mailm nm-mail"><div class="mh"><img src="{{nxeo_icon}}" alt=""><b>NXEO</b><span>welkom</span></div><div class="ms">Fijn dat je erbij bent</div><ul><li>Afspraken op papier</li><li>Jouw eerste week</li><li>Wie je kunt bellen</li></ul></div></div><h4>Aan de slag</h4><p>Past het, dan maken we heldere afspraken en begin je wanneer het jou uitkomt.</p><div class="chips"><span class="chip">Heldere afspraken</span><span class="chip">Start wanneer het past</span></div></div>
       </div>
-      <div class="divider-cta" data-reveal><p>Benieuwd of het bij je past?</p><a class="btn btn-blue" href="mailto:hello@nxeo.io?subject=Werken%20bij%20NXEO">Stuur ons een bericht <span class="arr">→</span></a></div>
+    </div>
+  </div>
+
+  <div class="sec" style="padding-top:0" id="wk-form">
+    <div class="wrap">
+      <div class="sec-head center" data-reveal><span class="eyebrow">Reageren</span><h2>Stuur ons een bericht.</h2><p class="lead">Een paar zinnen is genoeg. Een cv mag, maar hoeft niet.</p></div>
+      <form id="form-werken" class="so-card wk-card" novalidate data-reveal>
+        <div class="so-fields">
+          <div><label class="so-lbl" for="wk-name">Voor- en achternaam</label><input id="wk-name" name="name" type="text" placeholder="Sanne Jansen" required autocomplete="name"></div>
+          <div><label class="so-lbl" for="wk-email">E-mail</label><input id="wk-email" name="email" type="email" placeholder="naam@voorbeeld.nl" required autocomplete="email"></div>
+          <div><label class="so-lbl" for="wk-phone">Telefoon <i>optioneel</i></label><input id="wk-phone" name="phone" type="tel" placeholder="06 12345678" autocomplete="tel"></div>
+          <div><span class="so-lbl">Waar gaat het om?</span><div class="wk-seg" role="radiogroup" aria-label="Waar gaat het om?"><label><input type="radio" name="role" value="Sales" checked><span>Sales</span></label><label><input type="radio" name="role" value="Iets anders"><span>Iets anders</span></label></div></div>
+          <div class="full"><label class="so-lbl" for="wk-msg">Vertel kort wie je bent en wat je wilt doen</label><textarea id="wk-msg" name="msg" rows="4" placeholder="Bijvoorbeeld: wat je nu doet, en waarom dit je aanspreekt." required></textarea></div>
+          <div class="full"><span class="so-lbl">Cv <i>optioneel</i></span><div class="wk-file"><label class="btn btn-ghost wk-pick" for="wk-cv">Kies een bestand</label><input id="wk-cv" class="sr" name="cvfile" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"><span class="wk-fn" data-cv-name data-empty="Geen bestand gekozen">Geen bestand gekozen</span><button type="button" class="wk-clr" data-cv-clear>Verwijder</button><span class="wk-hint">Pdf of Word, maximaal 3 MB</span></div></div>
+        </div>
+        <div class="hp" aria-hidden="true"><label for="wk-web">Laat dit veld leeg</label><input id="wk-web" name="website_url" type="text" tabindex="-1" autocomplete="off"></div>
+        <button class="btn btn-blue btn-block" type="submit">Verstuur mijn bericht <span class="arr">→</span></button>
+        <p class="wk-note">We gebruiken je gegevens alleen voor je sollicitatie.</p>
+      </form>
+      <div class="so-card wk-card wk-done" hidden data-wk-done><span class="okmark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path class="tick" d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><h3><span data-wk-hello data-hello="Fijn dat je reageert">Fijn dat je reageert</span>.</h3><p>We hebben je bericht ontvangen. We lezen het rustig en laten snel van ons horen. Je krijgt ook een bevestiging per mail.</p></div></div>
     </div>
   </div>
 </section>
