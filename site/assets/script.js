@@ -205,7 +205,11 @@
   var nm=document.getElementById('nulmodal');
   if(nm){
     var nmf=document.getElementById('form-nul'),nmok=nm.querySelector('[data-nm-ok]'),nmSite=nm.querySelector('[data-nm-site]');
+    var nmC=nmf.querySelector('[data-nm-comp]'),nmCF=nmf.querySelector('[data-nm-comp-fields]');
+    function compSet(on){if(!nmC)return;nmC.checked=on;nmCF.hidden=!on;if(!on)nmCF.querySelectorAll('input').forEach(function(i){i.value='';});}
+    if(nmC)nmC.addEventListener('change',function(){compSet(nmC.checked);if(nmC.checked)nmCF.querySelector('input').focus({preventScroll:true});});
     function openNm(site){
+      compSet(false);
       nmf.hidden=false;nmok.hidden=true;nmf.elements.site.value=site;nmSite.textContent=site.replace(/^https?:\/\//,'').replace(/\/$/,'');
       var y=window.scrollY;document.documentElement.classList.add('nm-open');
       if(typeof nm.showModal==='function'){nm.showModal();}else{nm.setAttribute('open','');}

@@ -33,7 +33,7 @@ module.exports = async (req, res) => {
   const email = clean(b.email, 200);
   if (!type || !/^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]{2,}$/.test(email)) return res.status(400).json({ ok: false, error: 'invalid' });
   const lang = b.lang === 'en' ? 'en' : 'nl';
-  const f = { name: clean(b.name, 120), company: clean(b.company, 160), site: clean(b.site, 300), email, phone: clean(b.phone, 60), pkg: clean(b.pkg, 60), term: clean(b.term, 60), price: clean(b.price, 60), msg: clean(b.msg, 3000), lang, page: clean(b.page, 300) };
+  const f = { name: clean(b.name, 120), company: clean(b.company, 160), site: clean(b.site, 300), email, phone: clean(b.phone, 60), pkg: clean(b.pkg, 60), term: clean(b.term, 60), price: clean(b.price, 60), msg: clean(b.msg, 3000), comp: [b.comp1, b.comp2, b.comp3].map((v) => clean(v, 160)).filter(Boolean).join(', '), lang, page: clean(b.page, 300) };
   const n = mail.internal(b.type, f);
   const from = process.env.LEAD_FROM || 'NXEO website <website@nxeo.io>';
   try {

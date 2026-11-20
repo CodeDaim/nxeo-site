@@ -5,7 +5,7 @@ const FONT = "'Rethink Sans','Helvetica Neue',Helvetica,Arial,sans-serif";
 
 const T = {
   nl: {
-    hi: 'Hoi', next: 'Wat er nu gebeurt', yours: 'Jouw aanvraag', site: 'Website', pkg: 'Pakket', term: 'Looptijd', price: 'Prijs',
+    hi: 'Hoi', next: 'Wat er nu gebeurt', yours: 'Jouw aanvraag', site: 'Website', pkg: 'Pakket', term: 'Looptijd', price: 'Prijs', comp: 'Concurrenten',
     q: 'Vraag je je iets af? Antwoord op deze mail, dan komt het bij ons team terecht.', sign: 'Tot snel,', team: 'Team NXEO',
     foot: 'Je krijgt deze mail omdat je een aanvraag hebt gedaan op nxeo.io.', privacy: 'Privacyverklaring', path: '/nl',
     types: {
@@ -24,7 +24,7 @@ const T = {
     },
   },
   en: {
-    hi: 'Hi', next: 'What happens now', yours: 'Your request', site: 'Website', pkg: 'Plan', term: 'Term', price: 'Price',
+    hi: 'Hi', next: 'What happens now', yours: 'Your request', site: 'Website', pkg: 'Plan', term: 'Term', price: 'Price', comp: 'Competitors',
     q: 'Wondering about something? Reply to this email and it reaches our team.', sign: 'Speak soon,', team: 'Team NXEO',
     foot: 'You are receiving this email because you made a request on nxeo.io.', privacy: 'Privacy statement', path: '/en',
     types: {
@@ -48,7 +48,7 @@ function build(type, lang, f) {
   const t = T[lang] || T.nl; const c = t.types[type] || t.types.gesprek;
   const first = esc((f.name || '').trim().split(/\s+/)[0]);
   const title = first && c.title.includes('{name}') ? c.title.replace('{name}', first) : (c.titleNoName || c.title);
-  const rows = [[t.site, f.site], [t.pkg, f.pkg], [t.term, f.term], [t.price, f.price]].filter((r) => r[1]);
+  const rows = [[t.site, f.site], [t.pkg, f.pkg], [t.term, f.term], [t.price, f.price], [t.comp, f.comp]].filter((r) => r[1]);
   const steps = c.steps.map((s, i) => `<tr><td width="44" valign="top" style="padding:0 0 18px"><table role="presentation" cellpadding="0" cellspacing="0"><tr><td width="30" height="30" align="center" bgcolor="#EEF1FF" style="border-radius:10px;font:700 14px/30px ${FONT};color:#002EFE">${i + 1}</td></tr></table></td><td valign="top" style="padding:3px 0 18px;font:400 15px/1.5 ${FONT};color:#5B6577"><b style="display:block;color:#1A2332;font-weight:600;font-size:16px">${esc(s[0])}</b>${esc(s[1])}</td></tr>`).join('');
   const summary = rows.length ? `<tr><td class="pad" style="padding:0 40px 8px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" bgcolor="#F2F3F7" style="border-radius:18px"><tr><td style="padding:20px 22px 10px;font:600 13px/1.4 ${FONT};color:#002EFE">${t.yours}</td></tr>${rows.map((r) => `<tr><td style="padding:0 22px 10px;font:400 15px/1.5 ${FONT};color:#5B6577">${r[0]}<br><b style="color:#1A2332;font-weight:600">${esc(r[1])}</b></td></tr>`).join('')}<tr><td height="10" style="font-size:0;line-height:0">&nbsp;</td></tr></table></td></tr>` : '';
   const html = `<!doctype html><html lang="${lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta name="supported-color-schemes" content="light"><title>${esc(c.subject)}</title><link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"><style>@media (max-width:620px){.wrap{width:100%!important}.pad{padding-left:24px!important;padding-right:24px!important}.h1{font-size:34px!important}}</style></head>
@@ -75,7 +75,7 @@ ${summary}
 }
 // Interne melding naar sales@: zelfde blok, maar kort en zakelijk. Alles wat je nodig hebt om te reageren staat bovenaan.
 const NAMES = { nulmeting: 'Gratis nulmeting', start: 'Start met NXEO', gesprek: 'Gesprek', doorloop: 'Website samen doorlopen' };
-const LAB = { name: 'Naam', company: 'Bedrijf', site: 'Website', email: 'E-mail', phone: 'Telefoon', pkg: 'Pakket', term: 'Looptijd', price: 'Prijs', lang: 'Taal', page: 'Pagina' };
+const LAB = { name: 'Naam', company: 'Bedrijf', site: 'Website', email: 'E-mail', phone: 'Telefoon', pkg: 'Pakket', term: 'Looptijd', price: 'Prijs', comp: 'Concurrenten', lang: 'Taal', page: 'Pagina' };
 function internal(type, f) {
   const first = esc((f.name || '').trim().split(/\s+/)[0]);
   const bare = (f.site || '').replace(/^https?:\/\//, '').replace(/\/$/, '');
