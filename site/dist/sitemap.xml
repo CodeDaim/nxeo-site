@@ -193,6 +193,22 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/website-doorlopen/"/>
   </url>
   <url>
+    <loc>https://nxeo.io/nl/werken-bij/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/werken-bij/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/careers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/werken-bij/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/en/careers/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/werken-bij/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/careers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/werken-bij/"/>
+  </url>
+  <url>
     <loc>https://nxeo.io/nl/werkt-met/</loc>
     <lastmod>2026-11-20</lastmod>
     <priority>0.7</priority>

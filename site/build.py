@@ -13,7 +13,7 @@ OUT=S+('dist-preview/' if MODE=='preview' else 'dist/')
 DOMAIN='https://nxeo.io'
 LANGS=[l for l in ['nl','en','de'] if os.path.exists(S+'i18n/%s.json'%l) and os.path.isdir(S+'content/%s'%l)]
 DEFAULT='nl'
-PAGES=['home','over','prijzen','contact','sales','aanvraag','nulmeting','faq','blog','privacy','pagemap','meekijken','koppelingen','cms_wordpress','cms_webflow','cms_shopify','cms_wix','cms_framer','cms_websitebouwers','cms_code','cms_ai','cms_maatwerk']
+PAGES=['home','over','prijzen','contact','sales','aanvraag','nulmeting','faq','blog','privacy','pagemap','meekijken','werken','koppelingen','cms_wordpress','cms_webflow','cms_shopify','cms_wix','cms_framer','cms_websitebouwers','cms_code','cms_ai','cms_maatwerk']
 I18N={l:json.load(open(S+'i18n/%s.json'%l)) for l in LANGS}
 TODAY=datetime.date.today().isoformat()
 
@@ -285,14 +285,14 @@ def chrome(lang,page,from_dir):
     opts=''.join('<option value="%s"%s>%s</option>'%(href(from_dir,l,page if page in I18N[l]['pages'] else 'blog'),' selected' if l==lang else '',I18N[l]['name']) for l in LANGS)
     ftr=re.sub(r'(<select id="langsel"[^>]*>).*?(</select>)',lambda m:m.group(1)+opts+m.group(2),ftr,flags=re.S)
     hdr=re.sub(r'data-nav="(\w+)"',lambda m:m.group(0)+(' aria-current="page"' if m.group(1)==page else ''),hdr)
-    if page in ('aanvraag','sales','meekijken'): ftr=ftr.replace('<footer class="end">','<footer class="end no-cta">',1)
+    if page in ('aanvraag','sales','meekijken','werken'): ftr=ftr.replace('<footer class="end">','<footer class="end no-cta">',1)
     return hdr,ftr
 
 def pagemap(lang):
     # leesbaar overzicht van alle pagina's; sitemap.xml blijft de versie voor zoekmachines
     t=I18N[lang]; nl=lang=='nl'
     name=lambda k:'Home' if k=='home' else t['pages'][k]['title'].split('|')[0].strip()
-    main=[k for k in PAGES if not k.startswith('cms_') and k not in ('koppelingen','pagemap','blog')]
+    main=[k for k in PAGES if not k.startswith('cms_') and k not in ('koppelingen','pagemap','blog','werken')]
     cms=['koppelingen']+[k for k in PAGES if k.startswith('cms_')]
     arts=sorted(ARTS[lang],key=lambda a:a['date'],reverse=True)
     def card(title,items):
