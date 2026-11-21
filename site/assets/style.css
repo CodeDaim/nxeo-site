@@ -2702,3 +2702,5 @@ html.mn-lock,html.mn-lock body{overflow:hidden}
 .br-page .bento2 .bx:not(.bx-web) .own span{white-space:nowrap}
 @media (max-width:1000px) and (min-width:641px){.br-page .bento2{grid-template-columns:repeat(3,minmax(0,1fr))}.br-page .bento2 .bx:not(.bx-web){padding:22px}.br-page .bento2 .bx:not(.bx-web) .bx-art{padding:16px 10px}}
 @media (max-width:560px){.br-more b{flex-basis:100%;margin:0 0 2px}}
+/* Alle pagina's: vier groepen, twee aan twee */
+@media (min-width:981px){.pm-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}

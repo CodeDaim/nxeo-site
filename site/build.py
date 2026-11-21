@@ -349,11 +349,10 @@ def sitemap():
     for p in allp:
         have=[l for l in LANGS if p in I18N[l]['pages']]
         for l in have:
-            alts=''.join('    <xhtml:link rel="alternate" hreflang="%s" href="%s"/>\n'%(a,abs_url(a,p)) for a in have)
-            alts+='    <xhtml:link rel="alternate" hreflang="x-default" href="%s"/>\n'%abs_url(DEFAULT if DEFAULT in have else have[0],p)
+            alts=''  # de taalkoppeling staat in de kop van elke pagina zelf; hier weggelaten zodat het bestand in een browser als nette lijst opent
             pri='1.0' if p=='home' else ('0.9' if p in ('prijzen','aanvraag','nulmeting') else ('0.3' if p=='privacy' else '0.7'))
             rows.append('  <url>\n    <loc>%s</loc>\n    <lastmod>%s</lastmod>\n    <priority>%s</priority>\n%s  </url>'%(abs_url(l,p),TODAY,pri,alts))
-    return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'+'\n'.join(rows)+'\n</urlset>\n'
+    return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+'\n'.join(rows)+'\n</urlset>\n'
 
 def main():
     if os.path.exists(OUT): shutil.rmtree(OUT)
