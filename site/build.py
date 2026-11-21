@@ -13,7 +13,7 @@ OUT=S+('dist-preview/' if MODE=='preview' else 'dist/')
 DOMAIN='https://nxeo.io'
 LANGS=[l for l in ['nl','en','de'] if os.path.exists(S+'i18n/%s.json'%l) and os.path.isdir(S+'content/%s'%l)]
 DEFAULT='nl'
-PAGES=['home','over','prijzen','contact','sales','aanvraag','nulmeting','faq','blog','privacy','pagemap','meekijken','werken','koppelingen','cms_wordpress','cms_webflow','cms_shopify','cms_wix','cms_framer','cms_websitebouwers','cms_code','cms_ai','cms_maatwerk','branches']+['br_'+k for k in ['loodgieters', 'timmermannen', 'schilders', 'hoveniers', 'aannemers', 'tandartsen', 'fysiotherapeuten', 'makelaars', 'accountants', 'advocaten', 'restaurants', 'kappers']]
+PAGES=['home','over','prijzen','contact','sales','aanvraag','nulmeting','faq','blog','privacy','pagemap','meekijken','werken','koppelingen','cms_wordpress','cms_webflow','cms_shopify','cms_wix','cms_framer','cms_websitebouwers','cms_code','cms_ai','cms_maatwerk','kennisbank','begrippen','branches']+['br_'+k for k in ['loodgieters', 'timmermannen', 'schilders', 'hoveniers', 'aannemers', 'tandartsen', 'fysiotherapeuten', 'makelaars', 'accountants', 'advocaten', 'restaurants', 'kappers']]
 I18N={l:json.load(open(S+'i18n/%s.json'%l)) for l in LANGS}
 TODAY=datetime.date.today().isoformat()
 
@@ -152,6 +152,7 @@ def load_articles(lang):
     for i,a in enumerate(arts): a['svg']=ARTSVG[(len(arts)-1-i)%3]
     return arts
 ARTS={l:load_articles(l) for l in LANGS}
+import kennis
 for l in LANGS:
     for a in ARTS[l]:
         I18N[l]['pages'][a['key']]={'slug':I18N[l]['pages']['blog']['slug']+'/'+a['slug'],'title':a['title']+' | NXEO','description':a['description']}
@@ -309,7 +310,7 @@ def pagemap(lang):
 
 def build_page(lang,page):
     d=page_dir(lang,page)
-    body=article_body(lang,page) if page.startswith('art_') else (pagemap(lang) if page=='pagemap' else read(lang,page))
+    body=article_body(lang,page) if page.startswith('art_') else (pagemap(lang) if page=='pagemap' else (kennis.hub(lang,ARTS['nl'],ARTS[lang],None) if page=='kennisbank' else (kennis.glossary(lang,abs_url(lang,'begrippen')) if page=='begrippen' else read(lang,page))))
     if page=='blog': body=blog_overview(lang,body)
     if page=='home': body=home_blog(lang,body)
     if '<div data-fp>' in body: body=body.replace('<div data-fp></div>',read(lang,'fp')).replace('<div data-fp>','').replace('</div><!--/fp-->','')

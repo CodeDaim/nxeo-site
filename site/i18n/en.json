@@ -189,6 +189,16 @@
       "slug": "for",
       "title": "NXEO for your sector | Mentioned by ChatGPT",
       "description": "NXEO for plumbers, carpenters, painters, dentists, estate agents and more. See which questions your customers ask AI and how you get mentioned there."
+    },
+    "kennisbank": {
+      "slug": "knowledge-base",
+      "title": "Knowledge base | Everything about being mentioned by AI",
+      "description": "The NXEO knowledge base: explanations, steps and terms about visibility in ChatGPT, Gemini, Claude, Perplexity and Google. Free and without jargon."
+    },
+    "begrippen": {
+      "slug": "knowledge-base/glossary",
+      "title": "Glossary of AI visibility terms | NXEO",
+      "description": "What is GEO, an AI Overview, a crawler or llms.txt? The terms around AI and findability, explained briefly in plain language."
     }
   },
   "breadcrumb_home": "Home"

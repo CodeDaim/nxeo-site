@@ -189,6 +189,16 @@
       "slug": "voor",
       "title": "NXEO voor jouw branche | Genoemd door ChatGPT",
       "description": "NXEO voor loodgieters, timmermannen, schilders, tandartsen, makelaars en meer. Bekijk welke vragen jouw klanten aan AI stellen en hoe je daar genoemd wordt."
+    },
+    "kennisbank": {
+      "slug": "kennisbank",
+      "title": "Kennisbank | Alles over genoemd worden door AI",
+      "description": "De kennisbank van NXEO: uitleg, stappen en begrippen over zichtbaarheid in ChatGPT, Gemini, Claude, Perplexity en Google. Gratis en zonder vakjargon."
+    },
+    "begrippen": {
+      "slug": "kennisbank/begrippen",
+      "title": "Begrippen over AI zichtbaarheid | NXEO",
+      "description": "Wat is GEO, een AI overzicht, een crawler of llms.txt? De begrippen rond AI en vindbaarheid, kort uitgelegd in gewone taal."
     }
   },
   "breadcrumb_home": "Home"

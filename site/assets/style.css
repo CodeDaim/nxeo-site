@@ -2704,3 +2704,15 @@ html.mn-lock,html.mn-lock body{overflow:hidden}
 @media (max-width:560px){.br-more b{flex-basis:100%;margin:0 0 2px}}
 /* Alle pagina's: vier groepen, twee aan twee */
 @media (min-width:981px){.pm-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Kennisbank en begrippen */
+.kb-page .kb-grid{margin-top:0}
+@media (min-width:981px){.kb-page .kb-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.gl-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.gl-term{padding:26px 28px;border-radius:var(--r-lg);background:var(--glass-strong,#fff);border:1px solid rgba(255,255,255,.9);box-shadow:var(--sh-soft);display:grid;gap:10px;align-content:start;scroll-margin-top:100px}
+.gl-term h2{font-size:1.3rem;letter-spacing:-.02em;margin:0}
+.gl-term p{margin:0;color:var(--body);line-height:1.6}
+.gl-term a{font-weight:600;font-size:.92rem;color:var(--blue);justify-self:start}
+.gl-term:target{box-shadow:0 0 0 2px var(--blue),var(--sh-soft)}
+.gl-back{margin:clamp(2rem,4vw,3rem) 0 0;text-align:center}
+@media (max-width:760px){.gl-grid{grid-template-columns:1fr;gap:14px}.gl-term{padding:22px}}
