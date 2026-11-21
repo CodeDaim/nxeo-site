@@ -251,7 +251,8 @@ def overview(lang):
     <div class="hero-stack">
       <div class="bubble bubble-blue">{c['o_bub']}</div>
       <h1>{c['o_h1']}<span class="cursor" aria-hidden="true"></span></h1>
-      <p class="lead">{c['o_lead']}</p>
+      <p class="def">{c['o_lead']}</p>
+      <div class="cm-btns"><a class="btn btn-white" href="#nulmeting" data-link>{c['o_cb']} <span class="arr">→</span></a></div>
     </div>
   </div>
   <div class="sec">
