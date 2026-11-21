@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nxeo.io/nl/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/"/>
@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/"/>
@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/over/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/over/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/about/"/>
@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/about/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/over/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/about/"/>
@@ -34,7 +34,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/prijzen/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/prijzen/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/pricing/"/>
@@ -42,7 +42,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/pricing/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/prijzen/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/pricing/"/>
@@ -50,7 +50,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/contact/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/contact/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/contact/"/>
@@ -58,7 +58,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/contact/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/contact/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/contact/"/>
@@ -66,7 +66,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/plan-een-gesprek/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/plan-een-gesprek/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/book-a-call/"/>
@@ -74,7 +74,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/book-a-call/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/plan-een-gesprek/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/book-a-call/"/>
@@ -82,7 +82,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/start/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/start/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/get-started/"/>
@@ -90,7 +90,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/get-started/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/start/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/get-started/"/>
@@ -98,7 +98,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/nulmeting/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/nulmeting/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/free-check/"/>
@@ -106,7 +106,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/free-check/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/nulmeting/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/free-check/"/>
@@ -114,7 +114,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/veelgestelde-vragen/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/veelgestelde-vragen/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/faq/"/>
@@ -122,7 +122,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/faq/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/veelgestelde-vragen/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/faq/"/>
@@ -130,7 +130,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/blog/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/"/>
@@ -138,7 +138,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/blog/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/"/>
@@ -146,7 +146,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/privacy/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/privacy/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/privacy/"/>
@@ -154,7 +154,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/privacy/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/privacy/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/privacy/"/>
@@ -162,7 +162,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/sitemap/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/sitemap/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/sitemap/"/>
@@ -170,7 +170,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/sitemap/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/sitemap/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/sitemap/"/>
@@ -178,7 +178,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/website-doorlopen/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/website-doorlopen/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/website-walkthrough/"/>
@@ -186,7 +186,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/website-walkthrough/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/website-doorlopen/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/website-walkthrough/"/>
@@ -194,7 +194,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/werken-bij/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/werken-bij/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/careers/"/>
@@ -202,7 +202,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/careers/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/werken-bij/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/careers/"/>
@@ -210,7 +210,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/werkt-met/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/werkt-met/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/works-with/"/>
@@ -218,7 +218,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/works-with/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/werkt-met/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/works-with/"/>
@@ -226,7 +226,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/werkt-met/wordpress/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/werkt-met/wordpress/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/works-with/wordpress/"/>
@@ -234,7 +234,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/works-with/wordpress/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/werkt-met/wordpress/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/works-with/wordpress/"/>
@@ -242,7 +242,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/werkt-met/webflow/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/werkt-met/webflow/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/works-with/webflow/"/>
@@ -250,7 +250,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/works-with/webflow/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/werkt-met/webflow/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/works-with/webflow/"/>
@@ -258,7 +258,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/werkt-met/shopify/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/werkt-met/shopify/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/works-with/shopify/"/>
@@ -266,7 +266,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/works-with/shopify/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/werkt-met/shopify/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/works-with/shopify/"/>
@@ -274,7 +274,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/werkt-met/wix/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/werkt-met/wix/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/works-with/wix/"/>
@@ -282,7 +282,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/works-with/wix/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/werkt-met/wix/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/works-with/wix/"/>
@@ -290,7 +290,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/werkt-met/framer/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/werkt-met/framer/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/works-with/framer/"/>
@@ -298,7 +298,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/works-with/framer/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/werkt-met/framer/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/works-with/framer/"/>
@@ -306,7 +306,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/werkt-met/websitebouwers/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/werkt-met/websitebouwers/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/works-with/website-builders/"/>
@@ -314,7 +314,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/works-with/website-builders/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/werkt-met/websitebouwers/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/works-with/website-builders/"/>
@@ -322,7 +322,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/werkt-met/gecodeerde-website/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/werkt-met/gecodeerde-website/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/works-with/coded-website/"/>
@@ -330,7 +330,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/works-with/coded-website/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/werkt-met/gecodeerde-website/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/works-with/coded-website/"/>
@@ -338,7 +338,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/werkt-met/ai-website/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/werkt-met/ai-website/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/works-with/ai-built-website/"/>
@@ -346,7 +346,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/works-with/ai-built-website/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/werkt-met/ai-website/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/works-with/ai-built-website/"/>
@@ -354,7 +354,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/werkt-met/maatwerk/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/werkt-met/maatwerk/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/works-with/custom/"/>
@@ -362,15 +362,223 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/works-with/custom/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/werkt-met/maatwerk/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/works-with/custom/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/werkt-met/maatwerk/"/>
   </url>
   <url>
+    <loc>https://nxeo.io/nl/voor/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/voor/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/for/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/voor/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/en/for/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/voor/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/for/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/voor/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/nl/voor/loodgieters/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/voor/loodgieters/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/for/plumbers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/voor/loodgieters/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/en/for/plumbers/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/voor/loodgieters/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/for/plumbers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/voor/loodgieters/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/nl/voor/timmermannen/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/voor/timmermannen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/for/carpenters/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/voor/timmermannen/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/en/for/carpenters/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/voor/timmermannen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/for/carpenters/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/voor/timmermannen/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/nl/voor/schilders/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/voor/schilders/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/for/painters/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/voor/schilders/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/en/for/painters/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/voor/schilders/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/for/painters/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/voor/schilders/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/nl/voor/hoveniers/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/voor/hoveniers/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/for/gardeners/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/voor/hoveniers/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/en/for/gardeners/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/voor/hoveniers/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/for/gardeners/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/voor/hoveniers/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/nl/voor/aannemers/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/voor/aannemers/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/for/builders/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/voor/aannemers/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/en/for/builders/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/voor/aannemers/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/for/builders/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/voor/aannemers/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/nl/voor/tandartsen/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/voor/tandartsen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/for/dentists/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/voor/tandartsen/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/en/for/dentists/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/voor/tandartsen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/for/dentists/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/voor/tandartsen/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/nl/voor/fysiotherapeuten/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/voor/fysiotherapeuten/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/for/physiotherapists/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/voor/fysiotherapeuten/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/en/for/physiotherapists/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/voor/fysiotherapeuten/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/for/physiotherapists/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/voor/fysiotherapeuten/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/nl/voor/makelaars/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/voor/makelaars/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/for/estate-agents/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/voor/makelaars/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/en/for/estate-agents/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/voor/makelaars/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/for/estate-agents/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/voor/makelaars/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/nl/voor/accountants/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/voor/accountants/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/for/accountants/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/voor/accountants/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/en/for/accountants/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/voor/accountants/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/for/accountants/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/voor/accountants/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/nl/voor/advocaten/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/voor/advocaten/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/for/lawyers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/voor/advocaten/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/en/for/lawyers/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/voor/advocaten/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/for/lawyers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/voor/advocaten/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/nl/voor/restaurants/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/voor/restaurants/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/for/restaurants/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/voor/restaurants/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/en/for/restaurants/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/voor/restaurants/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/for/restaurants/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/voor/restaurants/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/nl/voor/kappers/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/voor/kappers/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/for/hairdressers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/voor/kappers/"/>
+  </url>
+  <url>
+    <loc>https://nxeo.io/en/for/hairdressers/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/voor/kappers/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/for/hairdressers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nxeo.io/nl/voor/kappers/"/>
+  </url>
+  <url>
     <loc>https://nxeo.io/nl/blog/ai-zegt-iets-verkeerds-over-mijn-bedrijf/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/ai-zegt-iets-verkeerds-over-mijn-bedrijf/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/ai-says-something-wrong-about-my-company/"/>
@@ -378,7 +586,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/blog/ai-says-something-wrong-about-my-company/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/ai-zegt-iets-verkeerds-over-mijn-bedrijf/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/ai-says-something-wrong-about-my-company/"/>
@@ -386,7 +594,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/blog/ai-zichtbaarheid-zelf-doen-bureau-of-software/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/ai-zichtbaarheid-zelf-doen-bureau-of-software/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/ai-visibility-diy-agency-or-software/"/>
@@ -394,7 +602,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/blog/ai-visibility-diy-agency-or-software/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/ai-zichtbaarheid-zelf-doen-bureau-of-software/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/ai-visibility-diy-agency-or-software/"/>
@@ -402,7 +610,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/blog/als-ai-jouw-bedrijf-niet-noemt-besta-je-niet/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/als-ai-jouw-bedrijf-niet-noemt-besta-je-niet/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/if-ai-does-not-mention-your-company-you-do-not-exist/"/>
@@ -410,7 +618,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/blog/if-ai-does-not-mention-your-company-you-do-not-exist/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/als-ai-jouw-bedrijf-niet-noemt-besta-je-niet/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/if-ai-does-not-mention-your-company-you-do-not-exist/"/>
@@ -418,7 +626,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/blog/claude-gebruikt-brave-om-jouw-bedrijf-te-vinden/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/claude-gebruikt-brave-om-jouw-bedrijf-te-vinden/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/claude-uses-brave-to-find-your-company/"/>
@@ -426,7 +634,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/blog/claude-uses-brave-to-find-your-company/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/claude-gebruikt-brave-om-jouw-bedrijf-te-vinden/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/claude-uses-brave-to-find-your-company/"/>
@@ -434,7 +642,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/blog/gemini-noemt-mijn-bedrijf-niet/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/gemini-noemt-mijn-bedrijf-niet/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/gemini-does-not-mention-my-company/"/>
@@ -442,7 +650,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/blog/gemini-does-not-mention-my-company/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/gemini-noemt-mijn-bedrijf-niet/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/gemini-does-not-mention-my-company/"/>
@@ -450,7 +658,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/blog/hoe-chatgpt-bepaalt-welke-bedrijven-het-noemt/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/hoe-chatgpt-bepaalt-welke-bedrijven-het-noemt/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/how-chatgpt-decides-which-companies-to-mention/"/>
@@ -458,7 +666,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/blog/how-chatgpt-decides-which-companies-to-mention/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/hoe-chatgpt-bepaalt-welke-bedrijven-het-noemt/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/how-chatgpt-decides-which-companies-to-mention/"/>
@@ -466,7 +674,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/blog/hoe-lang-duurt-het-voordat-ai-je-bedrijf-noemt/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/hoe-lang-duurt-het-voordat-ai-je-bedrijf-noemt/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/how-long-until-ai-mentions-your-company/"/>
@@ -474,7 +682,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/blog/how-long-until-ai-mentions-your-company/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/hoe-lang-duurt-het-voordat-ai-je-bedrijf-noemt/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/how-long-until-ai-mentions-your-company/"/>
@@ -482,7 +690,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/blog/in-de-ai-overzichten-van-google-komen/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/in-de-ai-overzichten-van-google-komen/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/getting-into-google-ai-overviews/"/>
@@ -490,7 +698,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/blog/getting-into-google-ai-overviews/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/in-de-ai-overzichten-van-google-komen/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/getting-into-google-ai-overviews/"/>
@@ -498,7 +706,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/blog/is-chatgpt-de-google-van-2026/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/is-chatgpt-de-google-van-2026/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/is-chatgpt-the-google-of-2026/"/>
@@ -506,7 +714,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/blog/is-chatgpt-the-google-of-2026/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/is-chatgpt-de-google-van-2026/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/is-chatgpt-the-google-of-2026/"/>
@@ -514,7 +722,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/blog/je-concurrent-wordt-wel-genoemd-in-chatgpt/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/je-concurrent-wordt-wel-genoemd-in-chatgpt/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/your-competitor-is-mentioned-in-chatgpt/"/>
@@ -522,7 +730,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/blog/your-competitor-is-mentioned-in-chatgpt/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/je-concurrent-wordt-wel-genoemd-in-chatgpt/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/your-competitor-is-mentioned-in-chatgpt/"/>
@@ -530,7 +738,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/blog/lokaal-gevonden-worden-in-ai/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/lokaal-gevonden-worden-in-ai/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/getting-found-locally-in-ai/"/>
@@ -538,7 +746,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/blog/getting-found-locally-in-ai/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/lokaal-gevonden-worden-in-ai/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/getting-found-locally-in-ai/"/>
@@ -546,7 +754,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/blog/meer-leads-uit-je-website-met-betere-vindbaarheid/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/meer-leads-uit-je-website-met-betere-vindbaarheid/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/more-leads-from-your-website-with-better-findability/"/>
@@ -554,7 +762,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/blog/more-leads-from-your-website-with-better-findability/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/meer-leads-uit-je-website-met-betere-vindbaarheid/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/more-leads-from-your-website-with-better-findability/"/>
@@ -562,7 +770,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/blog/mijn-bedrijf-genoemd-in-ai/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/mijn-bedrijf-genoemd-in-ai/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/is-my-company-mentioned-in-ai/"/>
@@ -570,7 +778,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/blog/is-my-company-mentioned-in-ai/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/mijn-bedrijf-genoemd-in-ai/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/is-my-company-mentioned-in-ai/"/>
@@ -578,7 +786,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/blog/mijn-positie-versterken-op-google/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/mijn-positie-versterken-op-google/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/strengthen-my-position-on-google/"/>
@@ -586,7 +794,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/blog/strengthen-my-position-on-google/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/mijn-positie-versterken-op-google/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/strengthen-my-position-on-google/"/>
@@ -594,7 +802,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/blog/reviews-en-vermeldingen-waarom-ai-op-anderen-vertrouwt/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/reviews-en-vermeldingen-waarom-ai-op-anderen-vertrouwt/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/reviews-and-mentions-why-ai-trusts-others/"/>
@@ -602,7 +810,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/blog/reviews-and-mentions-why-ai-trusts-others/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/reviews-en-vermeldingen-waarom-ai-op-anderen-vertrouwt/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/reviews-and-mentions-why-ai-trusts-others/"/>
@@ -610,7 +818,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/blog/veelgestelde-vragen-pagina-die-ai-kan-citeren/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/veelgestelde-vragen-pagina-die-ai-kan-citeren/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/an-faq-page-ai-can-quote/"/>
@@ -618,7 +826,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/blog/an-faq-page-ai-can-quote/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/veelgestelde-vragen-pagina-die-ai-kan-citeren/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/an-faq-page-ai-can-quote/"/>
@@ -626,7 +834,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/blog/waarom-sta-ik-niet-in-de-aanbevelingen-van-ai/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/waarom-sta-ik-niet-in-de-aanbevelingen-van-ai/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/why-am-i-not-in-ai-recommendations/"/>
@@ -634,7 +842,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/blog/why-am-i-not-in-ai-recommendations/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/waarom-sta-ik-niet-in-de-aanbevelingen-van-ai/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/why-am-i-not-in-ai-recommendations/"/>
@@ -642,7 +850,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/blog/wat-is-geo-en-wat-is-het-verschil-met-seo/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/wat-is-geo-en-wat-is-het-verschil-met-seo/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/what-is-geo-and-how-does-it-differ-from-seo/"/>
@@ -650,7 +858,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/blog/what-is-geo-and-how-does-it-differ-from-seo/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/wat-is-geo-en-wat-is-het-verschil-met-seo/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/what-is-geo-and-how-does-it-differ-from-seo/"/>
@@ -658,7 +866,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/blog/wat-is-nxeo/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/wat-is-nxeo/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/what-is-nxeo/"/>
@@ -666,7 +874,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/blog/what-is-nxeo/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/wat-is-nxeo/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/what-is-nxeo/"/>
@@ -674,7 +882,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/blog/welke-vragen-stellen-klanten-aan-ai/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/welke-vragen-stellen-klanten-aan-ai/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/what-questions-do-customers-ask-ai/"/>
@@ -682,7 +890,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/blog/what-questions-do-customers-ask-ai/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/welke-vragen-stellen-klanten-aan-ai/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/what-questions-do-customers-ask-ai/"/>
@@ -690,7 +898,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/nl/blog/wordpress-controlelijst-vindbaar-voor-ai/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/wordpress-controlelijst-vindbaar-voor-ai/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/wordpress-checklist-readable-for-ai/"/>
@@ -698,7 +906,7 @@
   </url>
   <url>
     <loc>https://nxeo.io/en/blog/wordpress-checklist-readable-for-ai/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="nl" href="https://nxeo.io/nl/blog/wordpress-controlelijst-vindbaar-voor-ai/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nxeo.io/en/blog/wordpress-checklist-readable-for-ai/"/>

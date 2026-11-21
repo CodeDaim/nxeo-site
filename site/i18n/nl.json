@@ -124,6 +124,71 @@
       "slug": "sitemap",
       "title": "Alle pagina's | NXEO",
       "description": "Een overzicht van alle pagina's op de website van NXEO: de hoofdpagina's, de koppelingen en alle artikelen."
+    },
+    "br_loodgieters": {
+      "slug": "voor/loodgieters",
+      "title": "NXEO voor loodgieters | Genoemd door ChatGPT",
+      "description": "Wie een loodgieter zoekt, vraagt het steeds vaker aan ChatGPT. NXEO meet of jouw bedrijf genoemd wordt, schrijft wat ontbreekt en plaatst het op je website."
+    },
+    "br_timmermannen": {
+      "slug": "voor/timmermannen",
+      "title": "NXEO voor timmermannen | Genoemd door ChatGPT",
+      "description": "Wie een timmerman zoekt, vraagt het steeds vaker aan ChatGPT. NXEO meet of jouw bedrijf genoemd wordt, schrijft wat ontbreekt en plaatst het op je website."
+    },
+    "br_schilders": {
+      "slug": "voor/schilders",
+      "title": "NXEO voor schilders | Genoemd door ChatGPT",
+      "description": "Wie een schilder zoekt, vraagt het steeds vaker aan ChatGPT. NXEO meet of jouw bedrijf genoemd wordt, schrijft wat ontbreekt en plaatst het op je website."
+    },
+    "br_hoveniers": {
+      "slug": "voor/hoveniers",
+      "title": "NXEO voor hoveniers | Genoemd door ChatGPT",
+      "description": "Wie een hovenier zoekt, vraagt het steeds vaker aan ChatGPT. NXEO meet of jouw bedrijf genoemd wordt, schrijft wat ontbreekt en plaatst het op je website."
+    },
+    "br_aannemers": {
+      "slug": "voor/aannemers",
+      "title": "NXEO voor aannemers | Genoemd door ChatGPT",
+      "description": "Wie een aannemer zoekt, vraagt het steeds vaker aan ChatGPT. NXEO meet of jouw bedrijf genoemd wordt, schrijft wat ontbreekt en plaatst het op je website."
+    },
+    "br_tandartsen": {
+      "slug": "voor/tandartsen",
+      "title": "NXEO voor tandartsen | Genoemd door ChatGPT",
+      "description": "Wie een tandarts zoekt, vraagt het steeds vaker aan ChatGPT. NXEO meet of jouw bedrijf genoemd wordt, schrijft wat ontbreekt en plaatst het op je website."
+    },
+    "br_fysiotherapeuten": {
+      "slug": "voor/fysiotherapeuten",
+      "title": "NXEO voor fysiotherapeuten | Genoemd door ChatGPT",
+      "description": "Wie een fysiotherapeut zoekt, vraagt het steeds vaker aan ChatGPT. NXEO meet of jouw bedrijf genoemd wordt, schrijft wat ontbreekt en plaatst het op je website."
+    },
+    "br_makelaars": {
+      "slug": "voor/makelaars",
+      "title": "NXEO voor makelaars | Genoemd door ChatGPT",
+      "description": "Wie een makelaar zoekt, vraagt het steeds vaker aan ChatGPT. NXEO meet of jouw bedrijf genoemd wordt, schrijft wat ontbreekt en plaatst het op je website."
+    },
+    "br_accountants": {
+      "slug": "voor/accountants",
+      "title": "NXEO voor accountants | Genoemd door ChatGPT",
+      "description": "Wie een accountant zoekt, vraagt het steeds vaker aan ChatGPT. NXEO meet of jouw bedrijf genoemd wordt, schrijft wat ontbreekt en plaatst het op je website."
+    },
+    "br_advocaten": {
+      "slug": "voor/advocaten",
+      "title": "NXEO voor advocaten | Genoemd door ChatGPT",
+      "description": "Wie een advocaat zoekt, vraagt het steeds vaker aan ChatGPT. NXEO meet of jouw bedrijf genoemd wordt, schrijft wat ontbreekt en plaatst het op je website."
+    },
+    "br_restaurants": {
+      "slug": "voor/restaurants",
+      "title": "NXEO voor restaurants | Genoemd door ChatGPT",
+      "description": "Wie een restaurant zoekt, vraagt het steeds vaker aan ChatGPT. NXEO meet of jouw bedrijf genoemd wordt, schrijft wat ontbreekt en plaatst het op je website."
+    },
+    "br_kappers": {
+      "slug": "voor/kappers",
+      "title": "NXEO voor kappers | Genoemd door ChatGPT",
+      "description": "Wie een kapper zoekt, vraagt het steeds vaker aan ChatGPT. NXEO meet of jouw bedrijf genoemd wordt, schrijft wat ontbreekt en plaatst het op je website."
+    },
+    "branches": {
+      "slug": "voor",
+      "title": "NXEO voor jouw branche | Genoemd door ChatGPT",
+      "description": "NXEO voor loodgieters, timmermannen, schilders, tandartsen, makelaars en meer. Bekijk welke vragen jouw klanten aan AI stellen en hoe je daar genoemd wordt."
     }
   },
   "breadcrumb_home": "Home"

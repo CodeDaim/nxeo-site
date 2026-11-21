@@ -13,7 +13,7 @@ OUT=S+('dist-preview/' if MODE=='preview' else 'dist/')
 DOMAIN='https://nxeo.io'
 LANGS=[l for l in ['nl','en','de'] if os.path.exists(S+'i18n/%s.json'%l) and os.path.isdir(S+'content/%s'%l)]
 DEFAULT='nl'
-PAGES=['home','over','prijzen','contact','sales','aanvraag','nulmeting','faq','blog','privacy','pagemap','meekijken','werken','koppelingen','cms_wordpress','cms_webflow','cms_shopify','cms_wix','cms_framer','cms_websitebouwers','cms_code','cms_ai','cms_maatwerk']
+PAGES=['home','over','prijzen','contact','sales','aanvraag','nulmeting','faq','blog','privacy','pagemap','meekijken','werken','koppelingen','cms_wordpress','cms_webflow','cms_shopify','cms_wix','cms_framer','cms_websitebouwers','cms_code','cms_ai','cms_maatwerk','branches']+['br_'+k for k in ['loodgieters', 'timmermannen', 'schilders', 'hoveniers', 'aannemers', 'tandartsen', 'fysiotherapeuten', 'makelaars', 'accountants', 'advocaten', 'restaurants', 'kappers']]
 I18N={l:json.load(open(S+'i18n/%s.json'%l)) for l in LANGS}
 TODAY=datetime.date.today().isoformat()
 
@@ -292,17 +292,19 @@ def pagemap(lang):
     # leesbaar overzicht van alle pagina's; sitemap.xml blijft de versie voor zoekmachines
     t=I18N[lang]; nl=lang=='nl'
     name=lambda k:'Home' if k=='home' else t['pages'][k]['title'].split('|')[0].strip()
-    main=[k for k in PAGES if not k.startswith('cms_') and k not in ('koppelingen','pagemap','blog')]
+    main=[k for k in PAGES if not k.startswith(('cms_','br_')) and k not in ('koppelingen','pagemap','blog','branches')]
+    brs=['branches']+[k for k in PAGES if k.startswith('br_')]
     cms=['koppelingen']+[k for k in PAGES if k.startswith('cms_')]
     arts=sorted(ARTS[lang],key=lambda a:a['date'],reverse=True)
     def card(title,items):
         return '<div class="pm-card" data-reveal><h2>%s<span>%d</span></h2><div class="pm-rows">%s</div></div>'%(title,len(items),''.join('<a href="#%s" data-link><b>%s</b><span class="arr">→</span></a>'%(k,html.escape(n)) for k,n in items))
-    total=len(main)+len(cms)+len(arts)+1
-    lead=("%d pagina's, in drie groepen. Zoekmachines gebruiken <a href=\"/sitemap.xml\">sitemap.xml</a>." if nl else "%d pages, in three groups. Search engines use <a href=\"/sitemap.xml\">sitemap.xml</a>.")%total
-    return ('<section class="page" id="page-pagemap">\n  <div class="faq-page">\n    <div class="wrap">\n      <div class="faq-head"><h1>%s</h1><p class="lead">%s</p></div>\n      <div class="pm-grid">%s%s%s</div>\n    </div>\n  </div>\n</section>\n')%(
+    total=len(main)+len(cms)+len(brs)+len(arts)+1
+    lead=("%d pagina's, in vier groepen. Zoekmachines gebruiken <a href=\"/sitemap.xml\">sitemap.xml</a>." if nl else "%d pages, in four groups. Search engines use <a href=\"/sitemap.xml\">sitemap.xml</a>.")%total
+    return ('<section class="page" id="page-pagemap">\n  <div class="faq-page">\n    <div class="wrap">\n      <div class="faq-head"><h1>%s</h1><p class="lead">%s</p></div>\n      <div class="pm-grid">%s%s%s%s</div>\n    </div>\n  </div>\n</section>\n')%(
         "Alle pagina's" if nl else 'All pages', lead,
         card("Pagina's" if nl else 'Pages',[(k,name(k)) for k in main]),
         card('Werkt met' if nl else 'Works with',[(k,name(k)) for k in cms]),
+        card('Branches' if nl else 'Sectors',[(k,name(k)) for k in brs]),
         card('Blog',[('blog',name('blog'))]+[(a['key'],a['title']) for a in arts]))
 
 def build_page(lang,page):
@@ -312,14 +314,15 @@ def build_page(lang,page):
     if page=='home': body=home_blog(lang,body)
     if '<div data-fp>' in body: body=body.replace('<div data-fp></div>',read(lang,'fp')).replace('<div data-fp>','').replace('</div><!--/fp-->','')
     body=re.sub(r'<section class="page" id="page-\w+">','<section class="page is-active" id="page-%s">'%page,body,count=1)
-    extra=[faq_schema(body)] if page in ('faq','prijzen','nulmeting') or page.startswith('cms_') else ([article_schema(lang,page)] if page.startswith('art_') else [])
+    extra=[faq_schema(body)] if page in ('faq','prijzen','nulmeting') or page.startswith(('cms_','br_')) else ([article_schema(lang,page)] if page.startswith('art_') else [])
     if page=='prijzen': extra.append(product_schema(lang))
     if page=='home' and '<details' in body: extra.append(faq_schema(body))
     if page=='over': extra.append(about_schema(lang))
     if page=='koppelingen': extra.append(list_schema(lang,[k for k in PAGES if k.startswith('cms_')],I18N[lang]['pages']['koppelingen']['title'].split('|')[0].strip()))
     if page=='blog': extra.append(blog_schema(lang))
     if page.startswith('art_') and 'controlelijst' in page: extra.append(howto_schema(lang,page,body))
-    if page.startswith('cms_') or page in ('nulmeting','meekijken','koppelingen'): extra.append(service_schema(lang,page))
+    if page.startswith(('cms_','br_')) or page in ('nulmeting','meekijken','koppelingen'): extra.append(service_schema(lang,page))
+    if page=='branches': extra.append(list_schema(lang,[k for k in PAGES if k.startswith('br_')],I18N[lang]['pages']['branches']['title'].split('|')[0].strip()))
     hdr,ftr=chrome(lang,page,d)
     doc=head(lang,page,d,extra)+hdr+'\n\n<main>\n'+body+'\n</main>\n\n'+ftr+'\n\n<script src="%s" defer></script>\n</body>\n</html>\n'%asset(d,'script.js')
     if 'class="hero hero-c' in body or 'hero-c' in body: doc=doc.replace('<html lang=','<html class="at-top" lang=',1)

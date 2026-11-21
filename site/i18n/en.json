@@ -124,6 +124,71 @@
       "slug": "sitemap",
       "title": "All pages | NXEO",
       "description": "An overview of every page on the NXEO website: the main pages, the integrations and all articles."
+    },
+    "br_loodgieters": {
+      "slug": "for/plumbers",
+      "title": "NXEO for plumbers | Mentioned by ChatGPT",
+      "description": "People looking for a plumber increasingly ask ChatGPT. NXEO measures whether your company is mentioned, writes what is missing and publishes it on your website."
+    },
+    "br_timmermannen": {
+      "slug": "for/carpenters",
+      "title": "NXEO for carpenters | Mentioned by ChatGPT",
+      "description": "People looking for a carpenter increasingly ask ChatGPT. NXEO measures whether your company is mentioned, writes what is missing and publishes it on your website."
+    },
+    "br_schilders": {
+      "slug": "for/painters",
+      "title": "NXEO for painters | Mentioned by ChatGPT",
+      "description": "People looking for a painter increasingly ask ChatGPT. NXEO measures whether your company is mentioned, writes what is missing and publishes it on your website."
+    },
+    "br_hoveniers": {
+      "slug": "for/gardeners",
+      "title": "NXEO for landscape gardeners | Mentioned by ChatGPT",
+      "description": "People looking for a landscape gardener increasingly ask ChatGPT. NXEO measures whether your company is mentioned, writes what is missing and publishes it on your website."
+    },
+    "br_aannemers": {
+      "slug": "for/builders",
+      "title": "NXEO for builders | Mentioned by ChatGPT",
+      "description": "People looking for a builder increasingly ask ChatGPT. NXEO measures whether your company is mentioned, writes what is missing and publishes it on your website."
+    },
+    "br_tandartsen": {
+      "slug": "for/dentists",
+      "title": "NXEO for dentists | Mentioned by ChatGPT",
+      "description": "People looking for a dentist increasingly ask ChatGPT. NXEO measures whether your company is mentioned, writes what is missing and publishes it on your website."
+    },
+    "br_fysiotherapeuten": {
+      "slug": "for/physiotherapists",
+      "title": "NXEO for physiotherapists | Mentioned by ChatGPT",
+      "description": "People looking for a physiotherapist increasingly ask ChatGPT. NXEO measures whether your company is mentioned, writes what is missing and publishes it on your website."
+    },
+    "br_makelaars": {
+      "slug": "for/estate-agents",
+      "title": "NXEO for estate agents | Mentioned by ChatGPT",
+      "description": "People looking for an estate agent increasingly ask ChatGPT. NXEO measures whether your company is mentioned, writes what is missing and publishes it on your website."
+    },
+    "br_accountants": {
+      "slug": "for/accountants",
+      "title": "NXEO for accountants | Mentioned by ChatGPT",
+      "description": "People looking for an accountant increasingly ask ChatGPT. NXEO measures whether your company is mentioned, writes what is missing and publishes it on your website."
+    },
+    "br_advocaten": {
+      "slug": "for/lawyers",
+      "title": "NXEO for lawyers | Mentioned by ChatGPT",
+      "description": "People looking for a lawyer increasingly ask ChatGPT. NXEO measures whether your company is mentioned, writes what is missing and publishes it on your website."
+    },
+    "br_restaurants": {
+      "slug": "for/restaurants",
+      "title": "NXEO for restaurants | Mentioned by ChatGPT",
+      "description": "People looking for a restaurant increasingly ask ChatGPT. NXEO measures whether your company is mentioned, writes what is missing and publishes it on your website."
+    },
+    "br_kappers": {
+      "slug": "for/hairdressers",
+      "title": "NXEO for hairdressers | Mentioned by ChatGPT",
+      "description": "People looking for a hairdresser increasingly ask ChatGPT. NXEO measures whether your company is mentioned, writes what is missing and publishes it on your website."
+    },
+    "branches": {
+      "slug": "for",
+      "title": "NXEO for your sector | Mentioned by ChatGPT",
+      "description": "NXEO for plumbers, carpenters, painters, dentists, estate agents and more. See which questions your customers ask AI and how you get mentioned there."
     }
   },
   "breadcrumb_home": "Home"
