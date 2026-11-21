@@ -2698,7 +2698,7 @@ html.mn-lock,html.mn-lock body{overflow:hidden}
 .kp.br-tile{grid-template-rows:1fr auto auto;align-content:stretch}
 .kp.br-tile .br-bub{align-self:start}
 .br-page .bento2 .bx:not(.bx-web) .bx-art{min-height:86px;display:grid;align-content:center}
-.br-page .bento2 .bx:not(.bx-web) .own{flex-wrap:nowrap;justify-content:center;height:auto}
+.br-page .bento2 .bx:not(.bx-web) .own{flex-direction:column;flex-wrap:nowrap;align-items:center;justify-content:center;height:auto}
 .br-page .bento2 .bx:not(.bx-web) .own span{white-space:nowrap}
-@media (max-width:1000px) and (min-width:641px){.br-page .bento2{grid-template-columns:repeat(3,minmax(0,1fr))}.br-page .bento2 .bx:not(.bx-web){padding:22px}.br-page .bento2 .bx:not(.bx-web) .own{flex-wrap:wrap}}
+@media (max-width:1000px) and (min-width:641px){.br-page .bento2{grid-template-columns:repeat(3,minmax(0,1fr))}.br-page .bento2 .bx:not(.bx-web){padding:22px}.br-page .bento2 .bx:not(.bx-web) .bx-art{padding:16px 10px}}
 @media (max-width:560px){.br-more b{flex-basis:100%;margin:0 0 2px}}
